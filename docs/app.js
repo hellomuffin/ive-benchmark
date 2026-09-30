@@ -1,3 +1,4 @@
+import {validateManifest} from './submission.js';
 const $ = s => document.querySelector(s),
     $$ = s => [...document.querySelectorAll(s)];
 const escape = s => String(s ?? '').replace(/[&<>"']/g, c => ({
@@ -31,7 +32,8 @@ let episode, playing = false,
     muted = false,
     rate = 1,
     images = new Map(),
-    generation = 0;
+    generation = 0,
+    view = 'combined';
 const canvas = $('#scene'),
     ctx = canvas.getContext('2d');
 
@@ -69,13 +71,18 @@ async function loadEpisode(id) {
     $('#record-link').href = `data/${id}.json`;
     $('#video-link').href = `assets/media/${id}.mp4`;
     $('#captions-link').href = `assets/media/${id}.vtt`;
+    view = 'combined';
+    $$('[data-view]').forEach(b => {
+        b.classList.toggle('active', b.dataset.view === view);
+        b.hidden = id === 'mobile';
+    });
     $$('.tabs button').forEach(b => {
         b.classList.toggle('active', b.dataset.episode === id);
         b.setAttribute('aria-selected', String(b.dataset.episode === id))
     });
     $('#persona-axes').innerHTML = episode.axes.map((n, i) => `<div class="axis"><div class="axis-label">${axisNames[i]}<span>${levels[i][n-1]}</span></div><div class="axis-level">${[1,2,3].map(x=>`<i class="${x===n?'on':''}"></i>`).join('')}</div></div>`).join('');
     $('#milestones').innerHTML = episode.milestones.map(m => `<div class="milestone" data-tick="${m.tick}"><i></i>${escape(m.label)}</div>`).join('');
-    $('#events').innerHTML = episode.events.map((e, i) => `<button class="event-chip" data-index="${i}" title="Scheduled at tick ${e.tick}">${escape(e.label)}</button>`).join('');
+    $('#events').innerHTML = episode.events.map((e, i) => `<button class="event-chip" data-index="${i}" title="Scheduled at tick ${e.tick}${e.detail ? ': '+escape(e.detail):''}">${escape(e.label)}<small>Scheduled</small></button>`).join('');
     $$('#events button').forEach(b => b.onclick = () => seekTick(episode.events[+b.dataset.index].tick));
     $('#episode-score').textContent = episode.quality.overall == null ? 'Rubric details' : `${(episode.quality.overall*100).toFixed(1)} / 100 overall ↗`;
     const names = ['Factual grounding', 'Situational relevance', 'Actionable guidance', 'User intent uptake', 'Guidance conciseness'];
@@ -142,12 +149,13 @@ function renderFrame(t) {
         gen = generation;
     if (!im.complete) {
         im.onload = () => {
-            if (gen === generation) renderFrame(t)
+            if (gen === generation && t === lastTick) renderFrame(t)
         };
         return
     }
     ctx.fillStyle = '#e9eee7';
     ctx.fillRect(0, 0, 1000, 680);
+    for (let n = 1; n < 4; n++) getImage(Math.min(t + n, episode.ticks));
     if (episode.id === 'mobile') {
         contain(im, 0, 0, im.width, im.height, 245, 12, 510, 656);
         ctx.fillStyle = '#617975';
@@ -161,6 +169,13 @@ function renderFrame(t) {
             main: [0, 24, 640, 456],
             context: [640, 24, 480, 456]
         });
+        if (view !== 'combined') {
+            contain(im, ...(view === 'map' ? c.context : c.main), 12, 10, 976, 610);
+            ctx.fillStyle = '#526c62';
+            ctx.font = '17px sans-serif';
+            ctx.fillText(view === 'map' ? 'Environment map · viewer context' : 'Egocentric observation', 24, 652);
+            return;
+        }
         contain(im, ...c.main, 12, 10, 976, 525);
         ctx.fillStyle = '#dce5db';
         ctx.fillRect(14, 544, 972, 124);
@@ -171,7 +186,6 @@ function renderFrame(t) {
         ctx.font = '15px sans-serif';
         ctx.fillText('A second view of the same recorded state.', 265, 618)
     }
-    for (let n = 1; n < 4; n++) getImage(Math.min(t + n, episode.ticks));
 }
 
 function draw() {
@@ -191,7 +205,13 @@ function draw() {
         $$('.event-chip').forEach((x, i) => {
             const e = episode.events[i];
             x.classList.toggle('fired', t >= e.tick);
-            x.classList.toggle('resolved', t >= e.tick && e.detected && t >= (e.detectedAt ?? e.end))
+            let status = t < e.tick ? 'Scheduled' : 'Triggered';
+            if (e.kind === 'error' && e.detected && t >= (e.detectedAt ?? e.end)) status = 'Flag credited';
+            if (e.answeredAt != null && t >= e.answeredAt) status = 'Answered';
+            if (e.alertAt != null && t >= e.alertAt) status = 'Alert delivered';
+            if (e.kind === 'plan_change' && t >= e.end) status = 'Goal revised';
+            x.classList.toggle('resolved', !['Scheduled','Triggered'].includes(status));
+            x.querySelector('small').textContent = status;
         });
         const ev = episode.events.filter(e => t >= e.tick && t < e.tick + 4).at(-1);
         $('#event-overlay').innerHTML = ev ? `<div class="event-flash">◆ &nbsp; Scheduled event: ${escape(ev.label)}</div>` : '';
@@ -232,6 +252,40 @@ $('#inspect-grade').onclick = () => {
     $('#grade-dialog').showModal()
 };
 $('#close-grade').onclick = () => $('#grade-dialog').close();
+$$('[data-view]').forEach(b => b.onclick = () => {
+    view = b.dataset.view;
+    $$('[data-view]').forEach(x => x.classList.toggle('active', x === b));
+    renderFrame(Math.max(0, lastTick));
+});
+$('#watch-film').onclick = () => {
+    pause();
+    const film = $('#film');
+    film.src = episode.media;
+    film.poster = episode.poster;
+    film.innerHTML = `<track kind="captions" src="assets/media/${episode.id}.vtt" srclang="en" label="English transcript">`;
+    $('#film-title').textContent = `${episode.engine} · ${episode.model}`;
+    $('#film-dialog').showModal();
+    film.play().catch(() => {});
+};
+$('#close-film').onclick = () => { $('#film').pause(); $('#film-dialog').close(); };
+$('#film-dialog').onclose = () => $('#film').pause();
+$('#share-moment').onclick = async () => {
+    const url = new URL(location.href);
+    url.search = '';
+    url.searchParams.set('episode', episode.id);
+    url.searchParams.set('tick', Math.max(0, lastTick));
+    url.hash = 'experience';
+    try {
+        await navigator.clipboard.writeText(url.href);
+        $('#share-moment').textContent = 'Link copied ✓';
+        setTimeout(() => { $('#share-moment').textContent = 'Copy moment link'; }, 2200);
+    } catch {
+        $('#share-fallback').hidden = false;
+        $('#share-fallback').value = url.href;
+        $('#share-fallback').select();
+    }
+};
+document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
 $('#play').onclick = () => playing ? pause() : play();
 $('#seek').oninput = e => {
     elapsed = +e.target.value / 100 * episode.playback.duration;
@@ -377,23 +431,24 @@ $('#submission-file').onchange = async e => {
     if (!file) return;
     try {
         if (file.size > 10e6) throw Error('Please select a JSON file smaller than 10 MB.');
-        const d = JSON.parse(await file.text()),
-            errors = [];
-        for (const k of ['benchmark_version', 'model', 'runs'])
-            if (!d[k]) errors.push(`Missing ${k}`);
-        if (!Array.isArray(d.runs) || !d.runs.length) errors.push('runs must be a non-empty array');
-        else d.runs.forEach((r, i) => {
-            for (const k of ['engine', 'run_id', 'episodes'])
-                if (r[k] == null) errors.push(`Run ${i+1}: missing ${k}`);
-            if (!['cooksim', 'vhhome', 'screensim'].includes(r.engine)) errors.push(`Run ${i+1}: unknown engine`);
-            if (!Array.isArray(r.episodes) || !r.episodes.length) errors.push(`Run ${i+1}: episodes must be a non-empty array`)
-        });
-        $('#validation-result').textContent = errors.length ? 'Needs attention:\n' + errors.join('\n') : 'Basic structure passed. This is not score verification and does not publish a leaderboard entry.'
+        const d = JSON.parse(await file.text());
+        const catalog = await fetch('data/benchmark-catalog.json').then(r => r.json());
+        const demo = d?.demo_only === true;
+        const errors = validateManifest(d, catalog, !demo);
+        $('#validation-result').textContent = errors.length ? 'Needs attention:\n' + errors.slice(0,20).join('\n') + (errors.length > 20 ? `\n… ${errors.length-20} more issues.` : '') : demo ? 'Valid single-episode demo manifest—not a full benchmark submission. Use the local validator to verify its trace hash.' : 'Structure and benchmark membership passed. Trace hashes and scores still require verification; this does not publish a leaderboard entry.'
     } catch (err) {
         $('#validation-result').textContent = err.message
     }
 };
-Promise.all([loadEpisode('cooking'), initBoard()]).catch(e => {
+const initialParams = new URLSearchParams(location.search);
+const initialEpisode = ['cooking','household','mobile'].includes(initialParams.get('episode')) ? initialParams.get('episode') : 'cooking';
+Promise.all([loadEpisode(initialEpisode), initBoard()]).then(() => {
+    const tick = Number(initialParams.get('tick'));
+    if (initialParams.has('tick') && Number.isFinite(tick) && tick >= 0) {
+        seekTick(Math.min(Math.floor(tick), episode.ticks));
+        $('#experience').scrollIntoView({behavior:'instant'});
+    }
+}).catch(e => {
     $('#task').textContent = 'The preview data could not be loaded. Please reload the page.';
     console.error(e)
 });

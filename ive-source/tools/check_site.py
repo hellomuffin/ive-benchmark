@@ -19,6 +19,13 @@ with sync_playwright() as p:
  assert page.evaluate('window.__audioStarts>0'),'Narration never began playing'
  page.locator('#play').click()
  page.locator('#episode').screenshot(path=str(OUT/'player.png'))
+ page.locator('[data-view="map"]').click()
+ page.locator('#scene').screenshot(path=str(OUT/'enlarged-map.png'))
+ page.locator('[data-view="combined"]').click()
+ page.locator('#watch-film').click()
+ page.wait_for_function('document.querySelector("#film").currentTime > 0')
+ page.locator('#close-film').click()
+ assert page.locator('#film').evaluate('(v)=>v.paused')
  assert page.locator('#leaderboard-table tbody tr').count()==14
  page.locator('[data-engine="cooksim"]').click()
  page.locator('#model-search').fill('Astra')
@@ -36,6 +43,18 @@ with sync_playwright() as p:
    response=page.request.get(BASE+page.locator(selector).get_attribute('href'))
    assert response.ok,selector
  print('Loaded fonts:',page.evaluate('Array.from(document.fonts).map(f=>({family:f.family,status:f.status}))'))
+ page.locator('#submission-file').set_input_files(str(ROOT/'site/submission/example.json'))
+ page.wait_for_function('document.querySelector("#validation-result").textContent.includes("Valid single-episode")')
+ page.locator('#submission-file').set_input_files({'name':'invalid.json','mimeType':'application/json','buffer':b'[]'})
+ page.wait_for_function('document.querySelector("#validation-result").textContent.includes("JSON object")')
+ result=page.evaluate('''async()=>{const {validateManifest}=await import('./submission.js');const c=await fetch('data/benchmark-catalog.json').then(r=>r.json());
+ const d={benchmark_version:'ive-v1',model:{name:'Test only',revision:'test',family:'Frontier API'},runs:[]};
+ for(const [engine,cells] of Object.entries(c.engines))for(const run_id of [1,2,3])d.runs.push({engine,run_id,episodes:cells.map(x=>({...x,trace_uri:'test.json',trace_sha256:'0'.repeat(64)}))});
+ return validateManifest(d,c,true)}''')
+ assert result==[],result
+ page.goto(BASE+'?episode=mobile&tick=9#experience',wait_until='networkidle')
+ assert page.locator('#clock').inner_text()=='TICK 009'
+ assert page.locator('#assistant').inner_text()=='Gemini 3.1 Pro'
  page.set_viewport_size({'width':390,'height':844})
  page.goto(BASE,wait_until='networkidle')
  page.screenshot(path=str(OUT/'mobile.png'),full_page=True)

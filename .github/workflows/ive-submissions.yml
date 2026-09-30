@@ -16,7 +16,10 @@ jobs:
           ref: ${{ github.event.pull_request.base.sha || github.sha }}
           path: trusted
           persist-credentials: false
-          sparse-checkout: ive-source/tools
+          sparse-checkout: |
+            ive-source/tools
+            docs/data/benchmark-catalog.json
+          sparse-checkout-cone-mode: false
       - name: Check out submission data
         uses: actions/checkout@v4
         with:

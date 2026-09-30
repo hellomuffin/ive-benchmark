@@ -91,7 +91,7 @@ def cook():
   {'label':'Serve','tick':r['ticks']}]
  e['goalChanges']=[{'tick':193,'text':'User adds fresh lettuce to the recipe.'}]
  e['ticks']=r['ticks'];e['outcome']='Task completed';e['rawVideo']=COOK.replace('.json','.mp4');e['rawTicksPerSecond']=6
- e['crops']={'main':[521,26,521,370],'context':[0,26,520,370]}
+ e['crops']={'main':[522,26,520,370],'context':[0,26,520,370]}
  e['quality']=quality(COOK.replace('/frames/','/sq_v4/frames/'),e['dialogue'])
  e['detection']={'detected':sum(x['detected'] for x in e['events'] if x['kind']=='error'),'triggered':sum(x['kind']=='error' for x in e['events'])}
  e['caption']='The assistant catches mistakes, responds to a readiness request, and negotiates a recipe change.'

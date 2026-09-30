@@ -136,3 +136,15 @@ dialog article p {
         padding: 4px
     }
 }
+.viewer-options {display:flex;justify-content:space-between;gap:12px;padding:10px 14px;background:#e9eee7;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.viewer-options button {font-size:10px;border:0;background:transparent;color:var(--muted);padding:5px 9px;border-radius:3px}
+.viewer-options button.active {background:white;color:var(--teal)}
+.viewer-options #watch-film {color:var(--teal)}
+.event-chip small {display:block;font-size:8px;opacity:.8;margin-top:3px;text-align:left}
+#film-dialog {max-width:1200px;width:92vw;padding:20px}
+#film-dialog h3 {font:500 18px 'DM Sans',sans-serif;margin:0 0 12px}
+#film {width:100%;max-height:74vh;display:block;background:#172f35}
+#close-film {float:right;background:none;border:0;font-size:24px;cursor:pointer}
+@media (max-width:600px) {.viewer-options {flex-wrap:wrap}.viewer-options button {font-size:9px;padding:4px 6px}}
+#share-fallback {width:100%;padding:10px;border:1px solid var(--line);font-size:11px;background:var(--paper);color:var(--ink)}
+@media (prefers-reduced-motion: reduce) {html, .conversation #dialogue {scroll-behavior:auto}*, *::before, *::after {animation:none!important;transition:none!important}}

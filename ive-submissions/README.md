@@ -2,7 +2,7 @@
 
 Add one JSON manifest per model/configuration in a pull request. The website provides the schema and an example. Include a stable model/API revision, the benchmark version, all three independent runs, and the 150/75/90 case–persona episodes per run for CookSim/VHSim/ScreenSim.
 
-Automated checks validate manifest structure, episode counts, and duplicate IDs. They do **not** certify scores or run submitted code. Provide trace archives and engine/harness/judge versions in your pull request description so maintainers can reproduce and verify results. Do not commit credentials or human participant data. A passing manifest check does not publish a leaderboard result.
+Automated checks validate manifest structure, exact case/persona membership against the versioned catalog, repeated-run consistency, and duplicate IDs. They do **not** certify scores or run submitted code. Provide trace archives and engine/harness/judge versions in your pull request description so maintainers can reproduce and verify results. Do not commit credentials or human participant data. A passing manifest check does not publish a leaderboard result.
 
 The local verifier additionally checks SHA-256 hashes when `--traces` points to a downloaded trace directory:
 

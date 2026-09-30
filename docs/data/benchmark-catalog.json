@@ -1,0 +1,1354 @@
+{
+  "benchmark_version": "ive-v1",
+  "underlying_cases": 105,
+  "episodes_per_run": 315,
+  "independent_runs": 3,
+  "source_files": {
+    "cooksim": {
+      "path": "cook-bench-engine/tmp/interact_eval/cases_composite_v4.json",
+      "sha256": "8260c4a465f738eb1a9e2cc9a7362ad94ca97f16f26d5a118db9f2768212da13"
+    },
+    "vhhome": {
+      "path": "vh-streaming-engine/docs/BENCH_V1_CELLS.json",
+      "sha256": "19cd75095c14f27489e4f7c65262cadab7075c1aada175d45264de5df7f5a418"
+    },
+    "screensim": {
+      "path": "screensim/docs/bench_persona_assignment.json",
+      "sha256": "1825c433a0d06d239365e2e792809ef114b1a602abf90e6676a0a7f158027a0f"
+    }
+  },
+  "engines": {
+    "cooksim": [
+      {
+        "case_id": "b3_easy_nops_medium_map_1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_4",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_4",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_4",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_5",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_5",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_easy_nops_medium_map_5",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_4",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_4",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_4",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_5",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_5",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_easy_nops_hard_map_5",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_4",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_4",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_4",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_5",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_5",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_medium_nops_medium_map_5",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_4",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_4",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_4",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_5",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_5",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_medium_nops_hard_map_5",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_4",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_4",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_4",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_5",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_5",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_hard_nops_medium_map_5",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_4",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_4",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_4",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_5",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_5",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_hard_nops_hard_map_5",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_4",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_4",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_4",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_5",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_5",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_expert_nops_medium_map_5",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_4",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_4",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_4",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_5",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_5",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_expert_nops_hard_map_5",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_4",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_4",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_4",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_5",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_5",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_master_nops_medium_map_5",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_4",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_4",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_4",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_5",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_5",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "b3_master_nops_hard_map_5",
+        "persona_id": "classic_expert"
+      }
+    ],
+    "vhhome": [
+      {
+        "case_id": "cx_routine_skip_obj",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "cx_routine_skip_obj",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "cx_routine_skip_obj",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "cx_routine_skip_obj_stall",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "cx_routine_skip_obj_stall",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "cx_routine_skip_obj_stall",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "cx_routine_nav_place",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "cx_routine_nav_place",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "cx_routine_nav_place",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "cx_routine_rep_obj",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "cx_routine_rep_obj",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "cx_routine_rep_obj",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "cx_tidy_missing_rep",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "cx_tidy_missing_rep",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "cx_tidy_missing_rep",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "cx_tidy_missing_stall",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "cx_tidy_missing_stall",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "cx_tidy_missing_stall",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "cx_appliance_obj_stall",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "cx_appliance_obj_stall",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "cx_appliance_obj_stall",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "cx_appliance_nav_place",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "cx_appliance_nav_place",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "cx_appliance_nav_place",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "cx_search_skip_stall",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "cx_search_skip_stall",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "cx_search_skip_stall",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "cx_putback_skip_place",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "cx_putback_skip_place",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "cx_putback_skip_place",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "cx_putback_nav_place",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "cx_putback_nav_place",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "cx_putback_nav_place",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "cx_dishes_missing_stall",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "cx_dishes_missing_stall",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "cx_dishes_missing_stall",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "cx_dishes_nav_place",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "cx_dishes_nav_place",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "cx_dishes_nav_place",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "cx_groceries_stall_place",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "cx_groceries_stall_place",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "cx_groceries_stall_place",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "cx_groceries_skip_stall",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "cx_groceries_skip_stall",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "cx_groceries_skip_stall",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "cx_shutdown_missing_rep",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "cx_shutdown_missing_rep",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "cx_shutdown_missing_rep",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "cx_shutdown_skip_stall",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "cx_shutdown_skip_stall",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "cx_shutdown_skip_stall",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "cx_mugs_missing_stall",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "cx_mugs_missing_stall",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "cx_mugs_missing_stall",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "cx_mugs_nav_place",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "cx_mugs_nav_place",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "cx_mugs_nav_place",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "cx_guest_skip_stall",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "cx_guest_skip_stall",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "cx_guest_skip_stall",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "cx_guest_stall_place",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "cx_guest_stall_place",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "cx_guest_stall_place",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "cx_aftermeal_missing_obj",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "cx_aftermeal_missing_obj",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "cx_aftermeal_missing_obj",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "cx_aftermeal_stall_place",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "cx_aftermeal_stall_place",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "cx_aftermeal_stall_place",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "cx_tidybedroom_skip_rep",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "cx_tidybedroom_skip_rep",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "cx_tidybedroom_skip_rep",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "cx_tidybedroom_stall_place",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "cx_tidybedroom_stall_place",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "cx_tidybedroom_stall_place",
+        "persona_id": "safety_stepper"
+      }
+    ],
+    "screensim": [
+      {
+        "case_id": "lost_phone_lockdown__c1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "lost_phone_lockdown__c1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "lost_phone_lockdown__c1",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "lost_phone_lockdown__c2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "lost_phone_lockdown__c2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "lost_phone_lockdown__c2",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "lost_phone_lockdown__c3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "lost_phone_lockdown__c3",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "lost_phone_lockdown__c3",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "app_privacy_quarantine__c1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "app_privacy_quarantine__c1",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "app_privacy_quarantine__c1",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "app_privacy_quarantine__c2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "app_privacy_quarantine__c2",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "app_privacy_quarantine__c2",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "app_privacy_quarantine__c3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "app_privacy_quarantine__c3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "app_privacy_quarantine__c3",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "parent_phone_readability__c1",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "parent_phone_readability__c1",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "parent_phone_readability__c1",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "parent_phone_readability__c2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "parent_phone_readability__c2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "parent_phone_readability__c2",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "parent_phone_readability__c3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "parent_phone_readability__c3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "parent_phone_readability__c3",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "lock_screen_lockdown__c1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "lock_screen_lockdown__c1",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "lock_screen_lockdown__c1",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "lock_screen_lockdown__c2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "lock_screen_lockdown__c2",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "lock_screen_lockdown__c2",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "lock_screen_lockdown__c3",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "lock_screen_lockdown__c3",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "lock_screen_lockdown__c3",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "rent_share_standard__c1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "rent_share_standard__c1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "rent_share_standard__c1",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "hearing_setup__c1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "hearing_setup__c1",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "hearing_setup__c1",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "hearing_setup__c2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "hearing_setup__c2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "hearing_setup__c2",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "hearing_setup__c3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "hearing_setup__c3",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "hearing_setup__c3",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "stop_profiling__c1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "stop_profiling__c1",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "stop_profiling__c1",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "stop_profiling__c2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "stop_profiling__c2",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "stop_profiling__c2",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "stop_profiling__c3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "stop_profiling__c3",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "stop_profiling__c3",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "siri_lock_screen_privacy__c1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "siri_lock_screen_privacy__c1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "siri_lock_screen_privacy__c1",
+        "persona_id": "speed_demon"
+      },
+      {
+        "case_id": "siri_lock_screen_privacy__c2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "siri_lock_screen_privacy__c2",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "siri_lock_screen_privacy__c2",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "siri_lock_screen_privacy__c3",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "siri_lock_screen_privacy__c3",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "siri_lock_screen_privacy__c3",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "keyboard_stop_correcting__c1",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "keyboard_stop_correcting__c1",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "keyboard_stop_correcting__c1",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "keyboard_stop_correcting__c2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "keyboard_stop_correcting__c2",
+        "persona_id": "classic_novice"
+      },
+      {
+        "case_id": "keyboard_stop_correcting__c2",
+        "persona_id": "eager_parallel_novice"
+      },
+      {
+        "case_id": "keyboard_stop_correcting__c3",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "keyboard_stop_correcting__c3",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "keyboard_stop_correcting__c3",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "standby_bedside__c1",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "standby_bedside__c1",
+        "persona_id": "credulous_expert"
+      },
+      {
+        "case_id": "standby_bedside__c1",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "standby_bedside__c2",
+        "persona_id": "classic_expert"
+      },
+      {
+        "case_id": "standby_bedside__c2",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "standby_bedside__c2",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "standby_bedside__c3",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "standby_bedside__c3",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "standby_bedside__c3",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "rent_landlord_instant__c1",
+        "persona_id": "defiant_novice"
+      },
+      {
+        "case_id": "rent_landlord_instant__c1",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "rent_landlord_instant__c1",
+        "persona_id": "quiet_perfectionist"
+      },
+      {
+        "case_id": "rent_landlord_instant__c2",
+        "persona_id": "baseline"
+      },
+      {
+        "case_id": "rent_landlord_instant__c2",
+        "persona_id": "safety_stepper"
+      },
+      {
+        "case_id": "rent_landlord_instant__c2",
+        "persona_id": "quiet_perfectionist"
+      }
+    ]
+  },
+  "personas": {
+    "baseline": {
+      "skill": "medium",
+      "trust": "medium",
+      "pace_level": 2,
+      "alerting_level": 2,
+      "interruption_level": 2
+    },
+    "classic_novice": {
+      "skill": "low",
+      "trust": "high",
+      "pace_level": 1,
+      "alerting_level": 3,
+      "interruption_level": 1
+    },
+    "classic_expert": {
+      "skill": "high",
+      "trust": "low",
+      "pace_level": 2,
+      "alerting_level": 1,
+      "interruption_level": 3
+    },
+    "defiant_novice": {
+      "skill": "low",
+      "trust": "low",
+      "pace_level": 2,
+      "alerting_level": 2,
+      "interruption_level": 1
+    },
+    "credulous_expert": {
+      "skill": "high",
+      "trust": "high",
+      "pace_level": 3,
+      "alerting_level": 3,
+      "interruption_level": 2
+    },
+    "speed_demon": {
+      "skill": "medium",
+      "trust": "low",
+      "pace_level": 3,
+      "alerting_level": 2,
+      "interruption_level": 3
+    },
+    "safety_stepper": {
+      "skill": "medium",
+      "trust": "high",
+      "pace_level": 1,
+      "alerting_level": 3,
+      "interruption_level": 1
+    },
+    "quiet_perfectionist": {
+      "skill": "high",
+      "trust": "medium",
+      "pace_level": 1,
+      "alerting_level": 1,
+      "interruption_level": 3
+    },
+    "eager_parallel_novice": {
+      "skill": "low",
+      "trust": "medium",
+      "pace_level": 3,
+      "alerting_level": 1,
+      "interruption_level": 2
+    }
+  },
+  "note": "Membership catalog for submission checks. This is not the executable task specification or a substitute for simulator packages."
+}

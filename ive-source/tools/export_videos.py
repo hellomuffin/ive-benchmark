@@ -5,7 +5,8 @@ import numpy as np
 from functools import lru_cache
 from PIL import Image,ImageDraw,ImageFont,ImageOps
 ROOT=Path(__file__).resolve().parents[1]; SITE=ROOT/'site';WORK=ROOT/'.work'
-FONT=Path.home()/'.local/share/fonts/InterVariable.ttf'
+if not SITE.exists() and (ROOT.parent/'docs').exists():SITE=ROOT.parent/'docs'
+FONT=SITE/'assets/fonts/font-0.woff2'
 W,H,FPS=1600,1000,10
 INK='#18353b';MUT='#71817c';TEAL='#27796d';BG='#f6f6ef';LINE='#d8e0d5'
 @lru_cache(maxsize=32)
@@ -86,12 +87,18 @@ def render(e,tick,sec,frames):
  return im
 
 def export(key):
+ WORK.mkdir(exist_ok=True)
  e=json.loads((SITE/f'data/{key}.json').read_text());assert all('audio' in d for d in e['dialogue'])
  frames=[Image.open(p).convert('RGB') for p in sorted((SITE/f'assets/media/{key}').glob('*.jpg'))]
  duration=e['playback']['duration'];dest=SITE/f'assets/media/{key}.mp4';temp=WORK/f'{key}-silent.mp4'
  rate=24000;waveform=np.zeros(math.ceil((duration+1)*rate),dtype=np.int32)
  for m in e['dialogue']:
-  with wave.open(str(SITE/m['audio'])) as f:sample=np.frombuffer(f.readframes(f.getnframes()),dtype='<i2').astype(np.int32)
+  audio_path=SITE/m['audio']
+  if audio_path.suffix=='.wav':
+   with wave.open(str(audio_path)) as f:pcm=f.readframes(f.getnframes())
+  else:
+   pcm=subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-i',str(audio_path),'-f','s16le','-ac','1','-ar',str(rate),'-'],check=True,capture_output=True).stdout
+  sample=np.frombuffer(pcm,dtype='<i2').astype(np.int32)
   start=round(m['start']*rate);waveform[start:start+len(sample)]+=sample
  wav=WORK/f'{key}-mix.wav'
  with wave.open(str(wav),'wb') as f:f.setnchannels(1);f.setsampwidth(2);f.setframerate(rate);f.writeframes(np.clip(waveform,-32768,32767).astype('<i2').tobytes())

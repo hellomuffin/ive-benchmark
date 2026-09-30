@@ -16,5 +16,26 @@ class SubmissionTests(unittest.TestCase):
  def test_path_escape(self):
   d=self.sample();d['runs'][0]['episodes'][0]['trace_uri']='../outside.json';self.assertTrue(validate(d,Path('/tmp/example')))
  def test_empty(self):self.assertTrue(validate({}))
+ def test_malformed_types(self):
+  for x in [None, [], 7, 'not an object']:
+   self.assertTrue(validate(x))
+  for field in ['engine','run_id']:
+   d=self.sample();d['runs'][0][field]=[];self.assertTrue(validate(d))
+  for field in ['case_id','persona_id','trace_uri','trace_sha256']:
+   d=self.sample();d['runs'][0]['episodes'][0][field]=[];self.assertTrue(validate(d))
+ def test_full_valid(self):
+  d=self.sample();prototype=d['runs'][0]['episodes'][0];d['runs']=[]
+  for engine,n in {'cooksim':150,'vhhome':75,'screensim':90}.items():
+   for run in [1,2,3]:d['runs'].append({'engine':engine,'run_id':run,'episodes':[dict(prototype,case_id=str(i)) for i in range(n)]})
+  self.assertEqual(validate(d,full=True),[])
+  d['runs'][-1]['episodes'][-1]['case_id']='mismatched-case'
+  self.assertTrue(validate(d,full=True))
+ def test_demo_is_not_full(self):
+  d=self.sample();d['demo_only']=True;self.assertTrue(validate(d,full=True))
+ def test_catalog_membership(self):
+  c={'engines':{'cooksim':[{'case_id':'one','persona_id':'baseline'}]}}
+  d=self.sample();self.assertEqual(validate(d,catalog=c),[])
+  d['runs'][0]['episodes'][0]['case_id']='not-in-benchmark'
+  self.assertTrue(validate(d,catalog=c))
 
 if __name__=='__main__':unittest.main()

@@ -6,6 +6,8 @@ A source-grounded website for IVE: three voiced episode replays, synchronized ob
 
 ## One-minute quickstart (no API key or GPU)
 
+Run these commands from the repository root or the extracted replay-kit root.
+
 ```bash
 python -m http.server 8000 --directory docs
 ```
@@ -23,10 +25,18 @@ Open `http://localhost:8000`. Select an environment, press play, and jump to a s
 ## Submission validation
 
 ```bash
-python tools/validate_submission.py my-submission.json --traces ./submission --full
+python ive-source/tools/validate_submission.py my-submission.json --traces ./submission --full
 ```
 
-The full check requires all three environments, three runs, the expected episode counts, unique case/persona IDs within each run, and matching trace hashes. It does not independently establish that traces came from the claimed model or reproduce judge scores. A result must pass engine/judge verification before it can become a verified leaderboard entry. The example manifest contains placeholders and intentionally cannot pass the full validator.
+The full check requires all three environments, three runs, exact membership in the versioned case/persona catalog, unique IDs within each run, and matching trace hashes when a trace directory is supplied. It does not independently establish that traces came from the claimed model or reproduce judge scores. A result must pass engine/judge verification before it can become a verified leaderboard entry.
+
+The example manifest is a valid, single-episode demonstration with a real trace hash. Try it without `--full`:
+
+```bash
+python ive-source/tools/validate_submission.py docs/submission/example.json --traces docs
+```
+
+It is explicitly labeled `demo_only` and is rejected as a full benchmark submission.
 
 For a public submission service, accept manifests and trace archives, run validation in an isolated job, retain provenance and coverage counts, and publish a separate provisional entry until verification completes. Never execute submitted code or load pickle files in the validation service.
 
@@ -34,7 +44,9 @@ The preview's GitHub intake runs read-only manifest checks on pull requests. It 
 
 ## Rebuilding from the research workspace
 
-`tools/build_data.py` reads the pinned paper snapshots and selected engine records. `tools/build_media.py` extracts observations, verifies ScreenSim replay, and synthesizes labelled presentation audio. `tools/export_videos.py` creates standalone MP4s. These build tools require the original sibling engine repositories and are not needed to view the website. API credentials remain outside the repository.
+`tools/build_data.py` reads the pinned paper snapshots and selected engine records. `tools/build_media.py` extracts observations, verifies ScreenSim replay, and synthesizes labelled presentation audio. These two tools require the original sibling engine repositories and are not needed to view the website. API credentials remain outside the repository.
+
+The extracted replay kit also supports rebuilding the narrated MP4s from its bundled frames, audio, data, and fonts using `python ive-source/tools/export_videos.py`. This requires Pillow, NumPy, and FFmpeg, but no simulator, API key, or GPU.
 
 `tools/check_site.py` tests the desktop/mobile page, model filtering, and horizontal overflow using Playwright. It expects a local server on port 8793.
 
