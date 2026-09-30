@@ -2,6 +2,8 @@
 
 A source-grounded website for IVE: three voiced episode replays, synchronized observations and dialogue, task progress, scheduled events, personas, contextual rubric scores, and a model leaderboard.
 
+[Live preview](https://hellomuffin.github.io/ive-benchmark/) · [Submission intake](https://github.com/hellomuffin/ive-benchmark/tree/main/ive-submissions)
+
 ## One-minute quickstart (no API key or GPU)
 
 ```bash
@@ -27,6 +29,8 @@ python tools/validate_submission.py my-submission.json --traces ./submission --f
 The full check requires all three environments, three runs, the expected episode counts, unique case/persona IDs within each run, and matching trace hashes. It does not independently establish that traces came from the claimed model or reproduce judge scores. A result must pass engine/judge verification before it can become a verified leaderboard entry. The example manifest contains placeholders and intentionally cannot pass the full validator.
 
 For a public submission service, accept manifests and trace archives, run validation in an isolated job, retain provenance and coverage counts, and publish a separate provisional entry until verification completes. Never execute submitted code or load pickle files in the validation service.
+
+The preview's GitHub intake runs read-only manifest checks on pull requests. It does not automatically trust submitted scores or promote them to the verified leaderboard. Full simulator execution and judge re-evaluation require scoring workers beyond static website hosting.
 
 ## Rebuilding from the research workspace
 

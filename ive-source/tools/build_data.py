@@ -79,10 +79,13 @@ def cook():
   k=inj.get('report_keys',{}); t=k.get('injected_at'); fam=inj['family']
   if t is None:continue
   label=labels.get(inj.get('err'),{'qa_probe':'Ask a temporal question','qa_proactive':'Request a readiness alert','plan_change':'Add fresh lettuce'}.get(fam,fam))
+  if fam=='qa_probe':label='Recall earlier fryer advice' if t==98 else 'Ask about cooking status'
   e['events'].append({'label':label,'kind':fam,'tick':t,'detectedAt':inj.get('detected_at') or inj.get('cook_detected_at'),
    'end':k.get('released_at',inj.get('archived_at',t)), 'commit':k.get('committed_at'),
    'detected':bool(inj.get('flagged_valid')),'prevented':bool(inj.get('prevented')),
    'detail':(inj.get('qa') or {}).get('question_as_asked',''),
+   'answeredAt':(inj.get('qa') or {}).get('answered_at'),
+   'alertAt':(inj.get('proactive') or {}).get('alert_t'),
    'result':(inj.get('proactive') or {}).get('verdict')})
  # Milestones are derived from recorded physical state changes, not assistant estimates.
  e['milestones']=[{'label':'Prepare fish','tick':r['prepped']['fish']}, {'label':'Cook fish','tick':r['heat_events'][0]['cooked_at']},
@@ -157,10 +160,22 @@ def leaderboard():
 def main():
  PUBLIC.mkdir(parents=True,exist_ok=True)
  eps=[cook(),vh(),screen()]
- for e in eps:e['events'].sort(key=lambda x:x['tick'])
+ for e in eps:
+  e['events'].sort(key=lambda x:x['tick'])
+  old=PUBLIC/f'data/{e["id"]}.json'
+  if old.exists():
+   previous=json.loads(old.read_text())
+   if previous.get('sourceHash')==e['sourceHash']:
+    for key in ['playback','frameCount']:
+     if key in previous:e[key]=previous[key]
+    lookup={(d['tick'],d['speaker'],d['text']):d for d in previous['dialogue']}
+    for d in e['dialogue']:
+     match=lookup.get((d['tick'],d['speaker'],d['text']),{})
+     for key in ['audio','duration','start']:
+      if key in match:d[key]=match[key]
  dump(ROOT/'.work/episodes-source.json',eps)
  for e in eps:
-  public={k:v for k,v in e.items() if k not in ['rawVideo','rawTicksPerSecond','crops']}
+  public={k:v for k,v in e.items() if k not in ['rawVideo','rawTicksPerSecond']}
   dump(PUBLIC/f'data/{e["id"]}.json',public)
  dump(PUBLIC/'data/leaderboard.json',leaderboard())
  for n in ['results_snapshot','qa_snapshot','recall_snapshot','latency_snapshot']:
