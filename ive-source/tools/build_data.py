@@ -6,8 +6,6 @@ participant data, and machine-specific absolute paths never enter the site.
 from pathlib import Path
 import hashlib
 import json
-import sys
-import re
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = ROOT.parent
@@ -139,7 +137,6 @@ def screen():
 
 def leaderboard():
  snap=json.loads((PAPER/'tables/results_snapshot.json').read_text());rec=json.loads((PAPER/'tables/recall_snapshot.json').read_text())
- qa=json.loads((PAPER/'tables/qa_snapshot.json').read_text())
  out=[]
  for family,names in FAMILIES:
   for name in names:
@@ -178,9 +175,6 @@ def main():
   public={k:v for k,v in e.items() if k not in ['rawVideo','rawTicksPerSecond']}
   dump(PUBLIC/f'data/{e["id"]}.json',public)
  dump(PUBLIC/'data/leaderboard.json',leaderboard())
- for n in ['results_snapshot','qa_snapshot','recall_snapshot','latency_snapshot']:
-  # Publish only leaderboard-facing values; source hashes and local paths remain private.
-  pass
  print('Built three episodes and 14 model rows from the pinned paper snapshot.')
 
 if __name__=='__main__':main()

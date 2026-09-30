@@ -7,12 +7,16 @@ BASE=(sys.argv[1] if len(sys.argv)>1 else 'http://localhost:8793').rstrip('/')+'
 with sync_playwright() as p:
  browser=p.chromium.launch(args=['--no-sandbox'])
  page=browser.new_page(viewport={'width':1440,'height':1000},device_scale_factor=1)
+ page.add_init_script("""window.__audioStarts=0;const original=HTMLMediaElement.prototype.play;
+ HTMLMediaElement.prototype.play=function(...args){const result=original.apply(this,args);
+ if(result)result.then(()=>window.__audioStarts++).catch(()=>{});return result};""")
  errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
  page.on('response',lambda r:errors.append(f'HTTP {r.status}: {r.url}') if r.status>=400 and r.url.startswith(BASE) else None)
  page.goto(BASE,wait_until='networkidle')
  page.screenshot(path=str(OUT/'desktop.png'),full_page=True)
  page.locator('[data-jump="56"]').click()
  page.wait_for_timeout(1400)
+ assert page.evaluate('window.__audioStarts>0'),'Narration never began playing'
  page.locator('#play').click()
  page.locator('#episode').screenshot(path=str(OUT/'player.png'))
  assert page.locator('#leaderboard-table tbody tr').count()==14
