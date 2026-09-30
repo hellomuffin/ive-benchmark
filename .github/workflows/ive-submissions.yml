@@ -1,0 +1,29 @@
+name: IVE submission checks
+on:
+  pull_request:
+    paths: ['ive-submissions/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out trusted validator
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
+          path: trusted
+          persist-credentials: false
+          sparse-checkout: ive-source/tools
+      - name: Check out submission data
+        uses: actions/checkout@v4
+        with:
+          path: incoming
+          persist-credentials: false
+          sparse-checkout: ive-submissions
+      - name: Test validator
+        run: python3 trusted/ive-source/tools/test_submission.py
+      - name: Validate manifests only
+        run: python3 trusted/ive-source/tools/ci_submissions.py incoming/ive-submissions

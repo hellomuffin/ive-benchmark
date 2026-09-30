@@ -1,0 +1,1 @@
+{"benchmark_version":"ive-v1","model":{"name":"Your assistant","family":"Open non-streaming","revision":"checkpoint-or-api-version"},"runs":[{"engine":"cooksim","run_id":1,"episodes":[{"case_id":"example-case","persona_id":"example-persona","trace_uri":"relative/path/to/trace.json","trace_sha256":"replace-with-trace-sha256"}]}]}

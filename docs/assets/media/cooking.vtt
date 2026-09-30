@@ -1,0 +1,77 @@
+WEBVTT
+
+1
+00:00:17.100 --> 00:00:34.831
+GPT-6 Astra: You scooped raw fish from the crate onto your plate; the order needs cooked fish. Go to the trash and dump the plate's contents. Then park the empty plate on an empty counter and, with empty hands, go to the pan on the top wall and turn it on to cook the fish already there.
+
+2
+00:00:35.081 --> 00:00:38.812
+Simulated user: Good catch, grabbed raw fish. Clearing the plate.
+
+3
+00:00:46.712 --> 00:00:53.203
+GPT-6 Astra: Don't serve that plate. Go to the trash in the bottom-right corner and use “trash” to clear the raw fish.
+
+4
+00:00:53.453 --> 00:00:54.384
+Simulated user: Already did that.
+
+5
+00:00:56.434 --> 00:01:00.125
+GPT-6 Astra: Yes, I can see the plate is empty now—thanks.
+
+6
+00:01:07.575 --> 00:01:10.506
+Simulated user: Is anything on the heat already done and sitting?
+
+7
+00:01:13.456 --> 00:01:21.787
+GPT-6 Astra: No—nothing is done and sitting. The fish in the top-wall pan has only just started cooking; its progress bar is still filling.
+
+8
+00:01:27.437 --> 00:01:30.208
+Simulated user: What did you mention about the fryer earlier?
+
+9
+00:01:36.758 --> 00:01:40.209
+Simulated user: Give me a shout the moment the potato on the heat is done, would you?
+
+10
+00:01:40.459 --> 00:01:53.910
+GPT-6 Astra: I hadn't mentioned the fryer earlier. It accepts chopped potato; with only two potatoes loaded, turn it on with empty hands. The fish in the top-wall pan is now done, so retrieve your plate and scoop that first soon.
+
+11
+00:01:56.860 --> 00:02:01.991
+GPT-6 Astra: Yes—I'll watch for it. The potato has just started cooking; it isn't done yet.
+
+12
+00:02:04.941 --> 00:02:14.912
+GPT-6 Astra: The fish has been left on the heat until it's smoking. Pick up the empty plate from the top-wall counter beside the potato crate, then go to the top-wall pan and scoop the fish now.
+
+13
+00:02:17.862 --> 00:02:23.672
+GPT-6 Astra: The potato is done now too. Scoop the fish first, then the potato from the central-island fryer.
+
+14
+00:02:39.222 --> 00:02:51.753
+GPT-6 Astra: You've picked up another potato, but both cooked potatoes are already on the finished plate. Trash the extra raw potato, then pick up the plate from the right-wall counter and take it to the serving pass to serve.
+
+15
+00:02:52.003 --> 00:02:55.334
+Simulated user: The plate only has one potato on it.
+
+16
+00:02:59.184 --> 00:03:13.035
+GPT-6 Astra: Sorry—I may have miscounted the portions. If there's only one potato on the plate, you're right to make the second. Finish chopping it, load the fryer and turn it on with empty hands, then retrieve the plate and scoop it when cooked.
+
+17
+00:03:19.135 --> 00:03:24.546
+Simulated user: I want to modify the original recipe: add some fresh lettuce on top before serving.
+
+18
+00:03:29.296 --> 00:03:40.467
+GPT-6 Astra: Lettuce would make the pass reject the plate—the order allows no extras. The second potato is done now: scoop it from the central-island fryer, then serve without lettuce.
+
+19
+00:03:40.717 --> 00:03:42.568
+Simulated user: I'm adding the lettuce anyway.
