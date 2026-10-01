@@ -67,7 +67,7 @@ def render_mobile(e,tick,sec):
  labels=['Skill level','Trust in AI','Pace','Alert tolerance','Interruption']
  levels=[['Novice','Intermediate','Expert'],['Low','Medium','High'],['Cautious','Balanced','Fast'],['Strict','Balanced','Broad'],['Step-by-step','Balanced','Avoid']]
  for i,n in enumerate(e['axes']):
-  x=696+i*238;put(d,(x,259),labels[i],12,MUT);put(d,(x,281),levels[i][n-1],15,BLUE,bold=True)
+  x=696+i*238;put(d,(x,259),labels[i],16,MUT);put(d,(x,281),levels[i][n-1],19,BLUE,bold=True)
   for k in range(3):d.rounded_rectangle((x+k*66,310,x+k*66+60,314),2,fill='#6285ba' if k==n-1 else '#e5eaf2')
  panel(d,(696,340,1876,825))
  put(d,(718,356),'Conversation',17,BLUE,bold=True);put(d,(1774,358),f'Tick {tick:03d}',14,MUT)
@@ -88,16 +88,16 @@ def render_mobile(e,tick,sec):
  actions=[a for a in e['actions'] if a['start']<=tick]
  panel(d,(696,841,1876,889),'#edf2f9');put(d,(714,856),'USER ACTION',11,MUT)
  put(d,(833,853),actions[-1]['text'] if actions else 'Observe the interface',17,width=1000)
- put(d,(696,914),'TASK PROGRESS',12,BLUE,bold=True)
+ put(d,(696,914),'TASK PROGRESS',17,BLUE,bold=True)
  for i,m in enumerate(e['milestones']):
   x=696+i*220;done=tick>=m['tick'];d.rounded_rectangle((x,943,x+202,948),2,fill='#6488b5' if done else LINE)
-  put(d,(x,960),m['label'],13,'#476b98' if done else MUT,width=208)
- put(d,(1404,914),'SCHEDULED EVENT',12,BLUE,bold=True)
+  put(d,(x,960),m['label'],19,'#476b98' if done else MUT,width=208)
+ put(d,(1404,914),'SCHEDULED EVENT',17,BLUE,bold=True)
  active=[ev for ev in e['events'] if ev['tick']<=tick]
  if active:
-  ev=max(active,key=lambda v:v['tick']);put(d,(1404,941),ev['label'],16,width=472)
-  put(d,(1404,991),f'Tick {ev["tick"]} · '+event_status(ev,tick),12,MUT)
- else:put(d,(1404,945),'No event triggered.',16,MUT)
+  ev=max(active,key=lambda v:v['tick']);put(d,(1404,941),ev['label'],20,width=472)
+  put(d,(1404,991),f'Tick {ev["tick"]} · '+event_status(ev,tick),18,MUT)
+ else:put(d,(1404,945),'No event triggered.',20,MUT)
  d.line((44,1038,1876,1038),fill=LINE)
  put(d,(44,1051),'Recorded trajectory · synthetic speech · reconstructed touch gestures · presentation time expanded',11,MUT)
  return im
@@ -116,7 +116,7 @@ def render(e,tick,sec):
  labels=['Skill level','Trust in AI','Pace','Alert tolerance','Interruption preference']
  levels=[['Novice','Intermediate','Expert'],['Low','Medium','High'],['Cautious','Balanced','Fast'],['Strict','Balanced','Broad'],['Step-by-step','Balanced','Avoid']]
  for i,n in enumerate(e['axes']):
-  x=44+i*370;put(d,(x,204),labels[i],13,MUT);put(d,(x+190,204),levels[i][n-1],13,BLUE,bold=True)
+  x=44+i*370;put(d,(x,202),labels[i],17,MUT);put(d,(x+190,202),levels[i][n-1],17,BLUE,bold=True)
   for k in range(3):d.rounded_rectangle((x+k*105,231,x+k*105+98,235),2,fill='#6285ba' if k==n-1 else '#e5eaf2')
  src=source_frame(e,tick,sec)
  if e['id']=='mobile':
@@ -131,7 +131,7 @@ def render(e,tick,sec):
   crops=e.get('presentation',{}).get('crops',e['crops'])
   for x,key,title in [(44,'main','Egocentric view'),(652,'context','Top-down view')]:
    panel(d,(x,260,x+584,850),WASH)
-   put(d,(x+20,279),title,17,BLUE,bold=True)
+   put(d,(x+20,279),title,22,BLUE,bold=True)
    sx,sy,sw,sh=crops[key]
    pastefit(im,src.crop((sx,sy,sx+sw,sy+sh)),(x+12,325,x+572,807))
   panel(d,(44,866,1236,914),'#edf2f9')
@@ -144,14 +144,14 @@ def render(e,tick,sec):
   put(d,(62,882),'USER ACTION',11,MUT)
   put(d,(182,879),action,17,width=1020)
  panel(d,(conversation_left,260,1876,914))
- put(d,(conversation_left+20,279),'Conversation',17,BLUE,bold=True)
+ put(d,(conversation_left+20,279),'Conversation',22,BLUE,bold=True)
  tick_label=f'Tick {tick:03d}'
  put(d,(1856-font(14).getlength(tick_label),280),tick_label,14,MUT)
  d.line((conversation_left,315,1876,315),fill=LINE)
  msgs=[m for m in e['dialogue'] if m['start']<=sec]
  blocks=[];used=0;cw=1876-conversation_left;tw=cw-78
  for m in reversed(msgs):
-  lines=wrap(m['text'],21,tw);height=52+len(lines)*29
+  lines=wrap(m['text'],23,tw);height=52+len(lines)*31
   if used+height>558 and blocks:break
   assert height<=558,(e['id'],m['tick'],'Dialogue exceeds panel')
   blocks.insert(0,(m,lines,height));used+=height+13
@@ -163,20 +163,20 @@ def render(e,tick,sec):
   fill='#f7f4ee' if user else '#eef3fb'
   d.rounded_rectangle((xx,yy2,1860,yy2+height),8,fill=fill)
   put(d,(xx+15,yy2+11),('Simulated user' if user else e['model'])+f' · tick {m["tick"]}',12,'#9a7b53' if user else '#6482ad',bold=True)
-  for j,line in enumerate(lines):put(d,(xx+15,yy2+35+j*29),line,21,'#675741' if user else '#344b69')
+  for j,line in enumerate(lines):put(d,(xx+15,yy2+35+j*31),line,23,'#675741' if user else '#344b69')
   yy+=height+13
- put(d,(44,947),'TASK PROGRESS',12,BLUE,bold=True)
+ put(d,(44,943),'TASK PROGRESS',17,BLUE,bold=True)
  mw=1146/len(e['milestones'])
  for i,m in enumerate(e['milestones']):
   x=44+i*mw;done=tick>=m['tick']
   d.rounded_rectangle((x,975,x+mw-12,980),2,fill='#6488b5' if done else '#e5eaf2')
-  put(d,(x,990),m['label'],13,'#476b98' if done else MUT,width=mw-15)
+  put(d,(x,990),m['label'],19,'#476b98' if done else MUT,width=mw-15)
  active=[v for v in e['events'] if v['tick']<=tick]
- put(d,(1260,947),'SCHEDULED EVENT',12,BLUE,bold=True)
+ put(d,(1260,943),'SCHEDULED EVENT',17,BLUE,bold=True)
  if active:
   ev=max(active,key=lambda x:x['tick']);status=event_status(ev,tick)
-  put(d,(1260,975),ev['label'],17,width=590)
-  put(d,(1260,1007),f'Tick {ev["tick"]} · {status}',12,'#967139' if status=='Triggered' else '#59816b')
+  put(d,(1260,975),ev['label'],21,width=590)
+  put(d,(1260,1007),f'Tick {ev["tick"]} · {status}',18,'#967139' if status=='Triggered' else '#59816b')
  else:put(d,(1260,980),'No event triggered.',17,MUT)
  d.line((44,1038,1876,1038),fill=LINE)
  note='Recorded trajectory · synthetic speech · presentation time expanded'

@@ -59,6 +59,24 @@ with sync_playwright() as p:
  page.goto(BASE,wait_until='networkidle')
  page.screenshot(path=str(OUT/'mobile.png'),full_page=True)
  assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), 'Horizontal overflow'
+ for width in [390,768,1440]:
+  page.set_viewport_size({'width':width,'height':1000})
+  page.goto(BASE+'?episode=cooking&tick=56#experience',wait_until='networkidle')
+  for selector in ['.milestone','.event-chip b','.message']:
+   size=page.locator(selector).first.evaluate('(e)=>parseFloat(getComputedStyle(e).fontSize)')
+   assert size>=15,(selector,width,size)
+  assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'),width
+ page.locator('.state-grid').screenshot(path=str(OUT/'research-status.png'))
+ page.goto(BASE+'submission.html',wait_until='networkidle')
+ page.wait_for_function('document.querySelector("#manifest-example").textContent.includes("benchmark_version")')
+ assert page.locator('h1').inner_text()=='Submission guide'
+ page.locator('#submission-file').set_input_files(str(ROOT/'site/submission/example.json'))
+ page.wait_for_function('document.querySelector("#validation-result").textContent.includes("Valid single-episode")')
+ page.screenshot(path=str(OUT/'submission-guide.png'),full_page=True)
+ page.set_viewport_size({'width':390,'height':844})
+ page.goto(BASE+'submission.html',wait_until='networkidle')
+ assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'),'Guide overflow'
+ page.screenshot(path=str(OUT/'submission-guide-mobile.png'),full_page=True)
  browser.close()
  print('Browser errors:',errors)
  assert not errors

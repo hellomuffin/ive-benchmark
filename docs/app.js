@@ -90,8 +90,14 @@ async function loadEpisode(id) {
         b.setAttribute('aria-selected', String(b.dataset.episode === id))
     });
     $('#persona-axes').innerHTML = episode.axes.map((n, i) => `<div class="axis"><div class="axis-label">${axisNames[i]}<span>${levels[i][n-1]}</span></div><div class="axis-level">${[1,2,3].map(x=>`<i class="${x===n?'on':''}"></i>`).join('')}</div></div>`).join('');
-    $('#milestones').innerHTML = episode.milestones.map(m => `<div class="milestone" data-tick="${m.tick}"><i></i>${escape(m.label)}</div>`).join('');
-    $('#events').innerHTML = episode.events.map((e, i) => `<button class="event-chip" data-index="${i}" title="Scheduled at tick ${e.tick}${e.detail ? ': '+escape(e.detail):''}">${escape(e.label)}<small>Scheduled</small></button>`).join('');
+    $('#milestones').innerHTML = episode.milestones.map((m, i) => `<div class="milestone" data-tick="${m.tick}"><i aria-hidden="true">${i+1}</i><span>${escape(m.label)}</span></div>`).join('');
+    const eventKinds = {
+        error: 'Execution error',
+        qa_probe: 'Question',
+        qa_proactive: 'Proactive request',
+        plan_change: 'Plan change'
+    };
+    $('#events').innerHTML = episode.events.map((e, i) => `<button class="event-chip" data-index="${i}" title="View event at tick ${e.tick}${e.detail ? ': '+escape(e.detail):''}"><span class="event-kind">${eventKinds[e.kind]??'Human event'}</span><b>${escape(e.label)}</b><small>Scheduled</small></button>`).join('');
     $$('#events button').forEach(b => b.onclick = () => seekTick(episode.events[+b.dataset.index].tick));
     $('#episode-score').textContent = episode.quality.overall == null ? 'Rubric details' : `${(episode.quality.overall*100).toFixed(1)} / 100 overall ↗`;
     const names = ['Factual grounding', 'Situational relevance', 'Actionable guidance', 'User intent uptake', 'Guidance conciseness'];
@@ -228,11 +234,15 @@ function draw() {
         const a = episode.actions.filter(a => a.start <= t).at(-1);
         $('#action').textContent = a?.text ?? 'Observing the environment';
         $$('.milestone').forEach(x => x.classList.toggle('done', t >= +x.dataset.tick));
+        $('#progress-count').textContent = episode.milestones.filter(m => t >= m.tick).length + ' / ' + episode.milestones.length;
+        $$('.milestone').forEach((x, i) => {
+            x.querySelector('i').textContent = t >= +x.dataset.tick ? '✓' : i + 1;
+        });
         $$('.event-chip').forEach((x, i) => {
             const e = episode.events[i];
             x.classList.toggle('fired', t >= e.tick);
             let status = t < e.tick ? 'Scheduled' : 'Triggered';
-            if (e.kind === 'error' && e.detected && t >= (e.detectedAt ?? e.end)) status = 'Flag credited';
+            if (e.kind === 'error' && e.detected && t >= (e.detectedAt ?? e.end)) status = 'Error detected';
             if (e.answeredAt != null && t >= e.answeredAt) status = 'Answered';
             if (e.alertAt != null && t >= e.alertAt) status = 'Alert delivered';
             if (e.kind === 'plan_change' && t >= e.end) status = 'Goal revised';
@@ -289,8 +299,8 @@ $$('[data-view]').forEach(b => b.onclick = () => {
 $('#watch-film').onclick = () => {
     pause();
     const film = $('#film');
-    film.src = episode.media + '?v=20261001';
-    film.poster = episode.poster + '?v=20261001';
+    film.src = episode.media + '?v=20261001b';
+    film.poster = episode.poster + '?v=20261001b';
     film.innerHTML = `<track kind="captions" src="assets/media/${episode.id}.vtt" srclang="en" label="English transcript">`;
     $('#film-title').textContent = `${episode.engine} · ${episode.model}`;
     $('#film-dialog').showModal();
@@ -388,7 +398,7 @@ function drawBoard() {
             x = 65 + s.success * xs,
             y = 385 - s.quality * 3.35;
         const short = m.model.replace('-Thinking', '').replace('Qwen3-Omni-30B', 'Qwen3-Omni'),
-            w = short.length * 5.4;
+            w = short.length * 6.4;
         const candidates = [];
         for (const dy of [-10, 18, -28, 36, -46, 54])
             for (const dx of [10, -w - 10]) {

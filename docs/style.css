@@ -1,5 +1,7 @@
 @import url('assets/fonts/fonts.css');
 
+/* Core typography is refined below for normal-size reading, not zoomed previews. */
+
 :root {
     --ink: #202c40;
     --muted: #69758a;

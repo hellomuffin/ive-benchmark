@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Submission guide · IVE</title><link rel="stylesheet" href="style.css?v=20261001"><link rel="stylesheet" href="reading.css?v=20261001b"><link rel="stylesheet" href="submission-guide.css"></head>
+<body>
+<header><a class="brand" href="./"><span class="brandmark">IVE</span><span>Interactive Visual Evaluation</span></a><nav><a href="./#leaderboard">Leaderboard</a><a href="#files">Required files</a><a href="#format">File format</a><a href="#validate">Validation</a></nav></header>
+<main class="guide">
+<section class="guide-intro"><h1>Submission guide</h1><p>Submit one result file per assistant configuration, together with the corresponding execution traces.</p><aside class="release-notice"><strong>Release status.</strong> The submission format and file validator are available. Public simulator packages, end-to-end evaluation instructions, and automatic score verification are not yet released. A valid result file is not a verified leaderboard result.</aside></section>
+<div class="guide-layout"><aside class="guide-nav"><a href="#files">1. Required files</a><a href="#coverage">2. Evaluation coverage</a><a href="#format">3. JSON format</a><a href="#validate">4. Validate locally</a><a href="#send">5. Submit for review</a></aside><div>
+<section id="files"><h2>1. What to submit</h2>
+<dl><dt>A result manifest: <code>my-model.json</code></dt><dd>Identifies the model version, the benchmark version, and every episode’s trace file and SHA-256 hash. The manifest is a JSON index—not a table of claimed scores.</dd>
+<dt>An archive of execution traces</dt><dd>Include the original JSON record for every episode, including failed and timed-out episodes. Retain actions, observations or their references, dialogue, event outcomes, and any engine or judge outputs in the original records. Include referenced assets needed for review; do not substitute a manually written score summary.</dd>
+<dt>Reproduction details in the pull request</dt><dd>Provide engine, user-harness, prompt, and judge versions; model/API revision; inference settings; latency configuration; and run identifiers or seeds. Explain how reported scores and event-coverage counts were obtained.</dd></dl>
+<p>Do not upload credentials or identifiable human-participant data.</p>
+</section>
+<section id="coverage"><h2>2. Which episodes and runs?</h2><p>Use the same case–persona pairs in each of three independent runs. A full submission contains nine engine/run entries and <strong>945 episode records</strong>.</p>
+<div class="table-scroll"><table><thead><tr><th>Environment</th><th>JSON engine ID</th><th>Episodes per run</th><th>Across three runs</th></tr></thead><tbody><tr><td>CookSim</td><td><code>cooksim</code></td><td>150</td><td>450</td></tr><tr><td>VHSim</td><td><code>vhhome</code></td><td>75</td><td>225</td></tr><tr><td>ScreenSim</td><td><code>screensim</code></td><td>90</td><td>270</td></tr></tbody></table></div>
+<p>Use the exact <code>case_id</code> and <code>persona_id</code> pairs in the <a href="data/benchmark-catalog.json" download>benchmark catalog</a>. Do not drop episodes or change the cohort based on whether the assistant succeeded.</p>
+</section>
+<section id="format"><h2>3. Result-file format</h2><p>The following is a valid <strong>one-episode example</strong> from the cooking demonstration. It illustrates the format; it is not a complete benchmark submission.</p>
+<div class="code-toolbar"><a href="submission/example.json" download>Download example JSON ↓</a><a href="submission/schema.json" download>JSON schema ↓</a></div>
+<pre id="manifest-example" aria-label="Example submission JSON">Loading example…</pre>
+<dl class="field-list"><dt><code>benchmark_version</code></dt><dd>Use <code>ive-v1</code>.</dd><dt><code>model</code></dt><dd>Provide a model name, a stable checkpoint or API revision, and one family: <code>Frontier API</code>, <code>Streaming API</code>, <code>Open non-streaming</code>, or <code>Open streaming</code>.</dd><dt><code>runs</code></dt><dd>For each engine, include run IDs <code>1</code>, <code>2</code>, and <code>3</code>. Each entry lists that run’s complete episode cohort.</dd><dt><code>trace_uri</code></dt><dd>A relative file path inside the extracted trace directory—not a URL or an absolute path. You may choose your own directory structure.</dd><dt><code>trace_sha256</code></dt><dd>The 64-character lowercase SHA-256 hash of the exact trace-file bytes. Regenerate it if the file changes.</dd><dt><code>demo_only</code></dt><dd>Marks this example as partial. Omit this field for a complete submission; full validation rejects <code>demo_only: true</code>.</dd></dl>
+<h3>Recommended archive structure</h3>
+<pre>my-traces/
+  cooksim/
+    run-1/
+      b3_hard_nops_medium_map_1__classic_expert.json
+      …
+    run-2/…
+    run-3/…
+  vhhome/run-1/…
+  vhhome/run-2/…
+  vhhome/run-3/…
+  screensim/run-1/…
+  screensim/run-2/…
+  screensim/run-3/…</pre>
+<p>For this structure, the example trace path is <code>cooksim/run-1/b3_hard_nops_medium_map_1__classic_expert.json</code>. Paths are resolved relative to <code>my-traces/</code>.</p>
+</section>
+<section id="validate"><h2>4. Generate and validate the manifest</h2><p>Clone the <a href="https://github.com/hellomuffin/ive-benchmark">release repository</a>. If your trace files follow the structure above, the helper generates the manifest and computes their hashes:</p>
+<pre>python ive-source/tools/create_manifest.py \
+  --traces ./my-traces \
+  --name "My assistant" \
+  --family "Open non-streaming" \
+  --revision "checkpoint-or-api-version" \
+  --output my-model.json
+
+python ive-source/tools/validate_submission.py \
+  my-model.json --full --traces ./my-traces</pre>
+<p>The validator checks all nine engine/run entries, exact case–persona membership, duplicate records, readable JSON traces, and matching hashes. It does not judge response quality or verify that the claimed model produced the traces.</p>
+<h3>Check a manifest in your browser</h3><p>This checks the JSON structure and episode membership only. Your file is not uploaded, and local trace files are not inspected.</p>
+<label class="upload">Select JSON manifest<input id="submission-file" type="file" accept=".json,application/json"></label><pre id="validation-result" aria-live="polite"></pre>
+</section>
+<section id="send"><h2>5. Submit for review</h2><ol><li>Add your manifest under <code>ive-submissions/</code> in a <a href="https://github.com/hellomuffin/ive-benchmark/upload/main/ive-submissions">GitHub pull request</a>.</li><li>In the pull-request description, link the trace archive and include the reproduction details listed above. The archive must be accessible to reviewers.</li><li>File checks run on the pull request. Leaderboard inclusion follows a separate review of traces, evaluation settings, event coverage, and scores.</li></ol><p>Do not commit large trace archives directly to the website repository. A file-validation pass alone does not publish a leaderboard entry.</p></section>
+</div></div></main>
+<footer><a href="./">← Back to IVE</a><a href="https://github.com/hellomuffin/ive-benchmark">GitHub ↗</a></footer>
+<script type="module">
+import {validateManifest} from './submission.js';
+const example=await fetch('submission/example.json').then(r=>r.json());
+document.querySelector('#manifest-example').textContent=JSON.stringify(example,null,2);
+document.querySelector('#submission-file').onchange=async event=>{
+ const file=event.target.files[0];if(!file)return;
+ const out=document.querySelector('#validation-result');
+ try {
+  if(file.size>10000000)throw new Error('Manifest exceeds 10 MB.');
+  const data=JSON.parse(await file.text()),catalog=await fetch('data/benchmark-catalog.json').then(r=>r.json());
+  const errors=validateManifest(data,catalog,!data.demo_only);
+  out.textContent=errors.length?errors.slice(0,20).join('\n'):data.demo_only?'Valid single-episode example. Not a full submission.':'Manifest checks passed. Trace hashes and scores require separate verification.';
+ }catch(error){out.textContent='Invalid manifest: '+error.message;}
+};
+</script></body></html>

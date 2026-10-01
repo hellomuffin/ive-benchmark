@@ -38,4 +38,24 @@ class SubmissionTests(unittest.TestCase):
   d['runs'][0]['episodes'][0]['case_id']='not-in-benchmark'
   self.assertTrue(validate(d,catalog=c))
 
+class ManifestBuilderTests(unittest.TestCase):
+ def test_complete_manifest_and_missing_trace(self):
+  from create_manifest import build
+  from validate_submission import load_catalog
+  import tempfile
+  catalog=load_catalog()
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp)
+   for engine,cells in catalog['engines'].items():
+    for run in [1,2,3]:
+     folder=root/engine/f'run-{run}';folder.mkdir(parents=True)
+     for cell in cells:
+      file=folder/f'{cell["case_id"]}__{cell["persona_id"]}.json'
+      file.write_text('{"test_fixture":true}')
+   result=build(root,'Test fixture','Frontier API','test',catalog)
+   self.assertEqual(sum(len(r['episodes']) for r in result['runs']),945)
+   self.assertEqual(validate(result,root=root,full=True,catalog=catalog),[])
+   file.unlink()
+   with self.assertRaisesRegex(ValueError,'1 missing traces'):build(root,'Test fixture','Frontier API','test',catalog)
+
 if __name__=='__main__':unittest.main()

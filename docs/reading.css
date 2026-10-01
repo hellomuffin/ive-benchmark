@@ -1,0 +1,836 @@
+/* Research content takes priority over interface density. */
+#scatter text, #scatter .point text {font-size:12px}
+@media(max-width:800px){.chart-layout>div:first-child{overflow-x:auto}#scatter{min-width:780px}}
+.section-heading p {
+    font-size: 17px;
+    line-height: 1.75;
+    max-width: 1040px;
+    color: #506078
+}
+
+.hero>p {
+    font-size: 18px;
+    color: #4a5970
+}
+
+nav,
+.brand {
+    font-size: 14px
+}
+
+.facts,
+.button {
+    font-size: 14px
+}
+
+.facts strong {
+    font-size: 20px
+}
+
+.tabs small {
+    font-size: 14px;
+    color: #586a83
+}
+
+.tabs b {
+    font-size: 18px
+}
+
+.eyebrow {
+    font-size: 14px;
+    color: #526780;
+    letter-spacing: 0
+}
+
+.task-head h3 {
+    font-size: 20px
+}
+
+.model-badge {
+    font-size: 15px;
+    min-width: 190px
+}
+
+.model-badge small {
+    font-size: 13px;
+    color: #64738a
+}
+
+.persona-strip {
+    gap: 26px;
+    padding: 22px 24px
+}
+
+.persona-strip>div:first-child {
+    min-width: 170px
+}
+
+.persona-strip strong {
+    font-size: 16px;
+    color: #35465f;
+    line-height: 1.45
+}
+
+#persona-axes {
+    gap: 18px
+}
+
+.axis-label {
+    display: block;
+    font-size: 14px;
+    color: #596b84
+}
+
+.axis-label span {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #294f85
+}
+
+.axis-level {
+    margin-top: 10px
+}
+
+.axis-level i {
+    height: 5px
+}
+
+.view-heading {
+    height: 48px;
+    font-size: 16px
+}
+
+.view-heading>span:last-child {
+    font-size: 13px;
+    color: #63758e
+}
+
+.conversation #dialogue {
+    inset: 48px 0 0;
+    padding: 18px
+}
+
+.message,
+.playback.mobile .message {
+    font-size: 16px;
+    line-height: 1.65
+}
+
+.message small {
+    font-size: 12px;
+    color: #496b99
+}
+
+.message.user small {
+    color: #846635
+}
+
+.waiting {
+    font-size: 15px
+}
+
+.action-caption {
+    font-size: 15px;
+    min-height: 49px
+}
+
+.action-caption>span {
+    font-size: 13px;
+    color: #5b6d85
+}
+
+.viewer-options button {
+    font-size: 13px;
+    padding: 7px 10px
+}
+
+.transport button,
+.transport select,
+.transport #time {
+    font-size: 14px
+}
+
+.transport {
+    padding: 14px 17px
+}
+
+.transport .play-button {
+    width: 36px;
+    height: 36px;
+    font-size: 14px
+}
+
+.event-flash {
+    font-size: 14px
+}
+
+#event-overlay {
+    top: 57px
+}
+
+.state-grid {
+    grid-template-columns: minmax(230px, .78fr) minmax(0, 2fr);
+    gap: 42px;
+    padding: 30px 0
+}
+
+.state-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 28px
+}
+
+.state-title h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 650;
+    color: #293e5d
+}
+
+#progress-count {
+    font-size: 14px;
+    color: #315ea8;
+    background: #edf3fc;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-variant-numeric: tabular-nums
+}
+
+.state-explanation {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #596b82;
+    margin: 7px 0 19px
+}
+
+#milestones {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0
+}
+
+.milestone {
+    flex: initial;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 12px;
+    min-height: 45px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #5c6a80
+}
+
+.milestone i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    border-radius: 50%;
+    border: 1px solid #cfdaea;
+    background: #f3f6fa;
+    color: #64768e;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600
+}
+
+.milestone:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 19px;
+    top: 35px;
+    left: 12px;
+    background: #dce4ef
+}
+
+.milestone.done {
+    color: #294e80
+}
+
+.milestone.done i {
+    background: #416fa8;
+    color: white;
+    border-color: #416fa8
+}
+
+#events {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0
+}
+
+.event-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    min-height: 112px;
+    padding: 13px 15px;
+    background: #fff;
+    border: 1px solid #d4deeb;
+    border-radius: 7px;
+    color: #53627a;
+    font-size: 15px;
+    line-height: 1.4;
+    transition: background .15s, border-color .15s
+}
+
+.event-chip:hover {
+    border-color: #7d9cca
+}
+
+.event-chip b {
+    font-size: 16px;
+    font-weight: 550;
+    color: inherit;
+    line-height: 1.45;
+    text-align: left
+}
+
+.event-kind {
+    font-size: 12px;
+    font-weight: 500;
+    color: #5b6d88
+}
+
+.event-chip small {
+    font-size: 13px;
+    margin-top: auto;
+    padding-top: 4px;
+    opacity: 1;
+    color: inherit
+}
+
+.event-chip.fired {
+    background: #fff6e8;
+    border-color: #d8bb8c;
+    color: #825718
+}
+
+.event-chip.resolved {
+    background: #edf5f0;
+    border-color: #b7d0c1;
+    color: #35634a
+}
+
+.event-chip.fired .event-kind,
+.event-chip.resolved .event-kind {
+    color: inherit;
+    opacity: .85
+}
+
+.turn-grade {
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 20px 0
+}
+
+.turn-grade>span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #354b6a
+}
+
+#turn-dimensions {
+    font-size: 14px;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.verdict {
+    padding: 5px 9px
+}
+
+.turn-grade button {
+    font-size: 14px
+}
+
+.score-details {
+    font-size: 16px;
+    padding: 20px 0
+}
+
+.score-details p {
+    font-size: 14px;
+    color: #5b6c83
+}
+
+.rubric {
+    font-size: 14px;
+    color: #4c6281
+}
+
+.rubric strong {
+    font-size: 26px
+}
+
+.playback-details {
+    margin: 17px 0;
+    font-size: 13px;
+    color: #67778d
+}
+
+.playback-details p {
+    font-size: 14px;
+    max-width: 1000px;
+    margin: 10px 0 0
+}
+
+.episode-downloads {
+    font-size: 14px
+}
+
+.segmented button,
+.search input {
+    font-size: 14px
+}
+
+.chart-aside h3 {
+    font-size: 16px
+}
+
+#legend button {
+    font-size: 14px;
+    line-height: 1.5
+}
+
+.metric-definition b {
+    font-size: 15px
+}
+
+.metric-definition p,
+.chart-aside .small {
+    font-size: 14px
+}
+
+#chart-tip {
+    font-size: 13px;
+    height: auto;
+    min-height: 24px
+}
+
+table {
+    font-size: 16px
+}
+
+th,
+th button {
+    font-size: 14px
+}
+
+td small {
+    font-size: 12px;
+    color: #62738a
+}
+
+.table-note,
+.data-links {
+    font-size: 14px;
+    color: #5d6d84
+}
+
+.insight h3 {
+    font-size: 21px
+}
+
+.tag {
+    font-size: 14px
+}
+
+.mini-chat>div {
+    font-size: 16px
+}
+
+.mini-chat small {
+    font-size: 12px;
+    color: #627591
+}
+
+.insight p {
+    font-size: 16px;
+    color: #53657e
+}
+
+.text-button {
+    font-size: 15px
+}
+
+.submission-steps h3 {
+    font-size: 18px
+}
+
+.submission-steps p {
+    font-size: 15px;
+    color: #566881
+}
+
+.submission-steps a,
+.upload {
+    font-size: 14px
+}
+
+footer {
+    font-size: 14px
+}
+
+footer span,
+footer>a {
+    font-size: 13px
+}
+
+dialog p,
+dialog article {
+    font-size: 15px
+}
+
+@media(max-width:1100px) {
+    .persona-strip {
+        display: block
+    }
+
+    .persona-strip>div:first-child {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 16px
+    }
+
+    .persona-strip strong {
+        margin: 0
+    }
+
+    .tabs img {
+        width: 65px;
+        height: 55px
+    }
+
+    .tabs small {
+        font-size: 12px
+    }
+
+    .tabs b {
+        font-size: 17px
+    }
+
+    .state-grid {
+        grid-template-columns: minmax(200px, .8fr) minmax(0, 1.5fr);
+        gap: 25px
+    }
+
+    #events {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .chart-layout {
+        grid-template-columns: minmax(0, 1fr) 235px
+    }
+
+    .submission-steps {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:800px) {
+
+    .section-heading p,
+    .hero>p {
+        font-size: 16px
+    }
+
+    nav {
+        font-size: 13px;
+        gap: 14px
+    }
+
+    .task-head {
+        display: block
+    }
+
+    .task-head h3 {
+        font-size: 19px
+    }
+
+    .model-badge {
+        margin-top: 16px;
+        min-width: 0
+    }
+
+    .model-badge small {
+        display: inline;
+        margin-left: 9px
+    }
+
+    #persona-axes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 17px 24px
+    }
+
+    .axis-label {
+        font-size: 14px
+    }
+
+    .axis-label span {
+        font-size: 16px
+    }
+
+    .conversation {
+        height: 380px
+    }
+
+    .conversation #dialogue {
+        inset: 48px 0 0
+    }
+
+    .chart-layout {
+        grid-template-columns: 1fr
+    }
+
+    #legend {
+        gap: 14px 22px
+    }
+
+    #legend button {
+        font-size: 13px
+    }
+
+    .facts {
+        font-size: 13px;
+        gap: 15px
+    }
+
+    .hero-links .button {
+        font-size: 13px
+    }
+
+    .viewer-options {
+        flex-wrap: wrap
+    }
+}
+
+@media(max-width:560px) {
+    header {
+        height: auto;
+        min-height: 62px;
+        gap: 18px;
+        flex-wrap: wrap;
+        padding-top: 12px;
+        padding-bottom: 12px
+    }
+
+    nav {
+        font-size: 12px;
+        gap: 16px
+    }
+
+    .hero h1 {
+        font-size: 30px
+    }
+
+    .hero-links {
+        flex-wrap: wrap
+    }
+
+    .hero-links .button {
+        font-size: 13px;
+        padding: 9px 12px
+    }
+
+    .tabs {
+        gap: 8px
+    }
+
+    .tabs b {
+        font-size: 16px
+    }
+
+    .tabs small {
+        display: none
+    }
+
+    .tabs button {
+        justify-content: center;
+        padding: 13px 5px
+    }
+
+    .persona-strip {
+        padding: 18px 14px
+    }
+
+    .persona-strip>div:first-child {
+        display: block
+    }
+
+    .persona-strip strong {
+        font-size: 17px;
+        margin-top: 3px
+    }
+
+    #persona-axes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 17px 20px
+    }
+
+    .view-heading {
+        padding: 0 12px;
+        height: 48px;
+        font-size: 15px
+    }
+
+    .view-heading>span:last-child {
+        font-size: 12px
+    }
+
+    .message,
+    .playback.mobile .message {
+        font-size: 15px
+    }
+
+    .action-caption {
+        font-size: 14px;
+        gap: 10px
+    }
+
+    .action-caption>span {
+        font-size: 12px
+    }
+
+    .viewer-options button {
+        font-size: 12px;
+        padding: 7px 6px
+    }
+
+    .transport {
+        flex-wrap: wrap;
+        gap: 12px
+    }
+
+    .transport #seek {
+        min-width: 160px
+    }
+
+    .transport button,
+    .transport select,
+    .transport #time {
+        font-size: 13px
+    }
+
+    .transport #mute {
+        max-width: none
+    }
+
+    .event-flash {
+        font-size: 12px
+    }
+
+    .state-grid {
+        grid-template-columns: 1fr;
+        gap: 28px
+    }
+
+    #milestones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7px 12px
+    }
+
+    .milestone {
+        font-size: 15px;
+        min-height: 43px;
+        gap: 9px
+    }
+
+    .milestone::after {
+        display: none
+    }
+
+    #events {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px
+    }
+
+    .event-chip {
+        padding: 12px;
+        min-height: 130px
+    }
+
+    .event-chip b {
+        font-size: 15px
+    }
+
+    .event-chip small {
+        font-size: 13px
+    }
+
+    .state-title h4 {
+        font-size: 18px
+    }
+
+    .state-explanation {
+        font-size: 14px
+    }
+
+    #turn-dimensions {
+        font-size: 13px;
+        gap: 6px
+    }
+
+    .turn-grade button {
+        font-size: 14px
+    }
+
+    .score-details {
+        font-size: 15px
+    }
+
+    .score-details summary {
+        align-items: center
+    }
+
+    .score-details summary>span:first-child {
+        max-width: 60%
+    }
+
+    .rubric {
+        font-size: 13px
+    }
+
+    #rubric-scores {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .episode-downloads {
+        font-size: 13px;
+        flex-wrap: wrap
+    }
+
+    .segmented button,
+    .search input {
+        font-size: 13px
+    }
+
+    .segmented button {
+        padding: 7px 11px
+    }
+
+    .table-note,
+    .data-links {
+        font-size: 13px
+    }
+
+    .insight h3 {
+        font-size: 20px
+    }
+
+    .section-heading h2 {
+        font-size: 25px
+    }
+}

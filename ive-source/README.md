@@ -26,6 +26,8 @@ The replay kit uses the high-resolution CookSim presentation frames. The origina
 
 ## Submission validation
 
+The [submission guide](https://hellomuffin.github.io/ive-benchmark/submission.html) specifies required files, JSON fields, the trace archive layout, and all nine engine/run cohorts. For traces following the recommended naming convention, `tools/create_manifest.py` generates a complete manifest and computes hashes without making model calls.
+
 ```bash
 python ive-source/tools/validate_submission.py my-submission.json --traces ./submission --full
 ```

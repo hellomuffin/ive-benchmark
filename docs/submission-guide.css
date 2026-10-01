@@ -1,0 +1,194 @@
+.guide {
+    max-width: 1220px
+}
+
+.guide-intro {
+    padding: 48px 0 30px
+}
+
+.guide h1 {
+    font-size: 40px;
+    margin-bottom: 14px
+}
+
+.guide-intro>p {
+    font-size: 18px;
+    max-width: 850px
+}
+
+.release-notice {
+    padding: 17px 20px;
+    background: #f4f7fc;
+    border-left: 3px solid #7596c4;
+    color: #4c607d;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 1000px
+}
+
+.guide-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 40px
+}
+
+.guide-nav {
+    position: sticky;
+    top: 25px;
+    align-self: start;
+    display: grid;
+    gap: 15px;
+    padding-top: 37px;
+    font-size: 15px
+}
+
+.guide section {
+    padding: 36px 0
+}
+
+.guide h2 {
+    font-size: 26px
+}
+
+.guide h3 {
+    font-size: 20px;
+    margin: 30px 0 15px
+}
+
+.guide p,
+.guide dd,
+.guide li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4f6079
+}
+
+.guide dl {
+    margin: 0
+}
+
+.guide dt {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 22px
+}
+
+.guide dd {
+    margin: 7px 0 0
+}
+
+.guide code {
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: .88em;
+    overflow-wrap: anywhere;
+    color: #345985
+}
+
+.guide pre {
+    font: 14px/1.75 ui-monospace, SFMono-Regular, Consolas, monospace;
+    background: #f4f7fc;
+    border: 1px solid #dce5f2;
+    border-radius: 7px;
+    padding: 22px;
+    overflow-x: auto;
+    color: #344b6b
+}
+
+.code-toolbar {
+    display: flex;
+    gap: 25px;
+    font-size: 14px
+}
+
+.guide .table-scroll {
+    margin: 23px 0
+}
+
+.guide li {
+    margin-bottom: 12px
+}
+
+.guide #validation-result:empty {
+    display: none
+}
+
+.guide .field-list {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 14px 20px
+}
+
+.guide .field-list dt,
+.guide .field-list dd {
+    margin: 0
+}
+
+.guide .field-list dt {
+    font-size: 15px
+}
+
+.guide .field-list dd {
+    font-size: 15px
+}
+
+@media(max-width:800px) {
+    .guide-layout {
+        grid-template-columns: 1fr;
+        gap: 0
+    }
+
+    .guide-nav {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px 20px;
+        padding: 20px 0;
+        font-size: 14px
+    }
+
+    .guide h1 {
+        font-size: 32px
+    }
+
+    .guide .field-list {
+        grid-template-columns: 1fr;
+        gap: 8px
+    }
+
+    .guide .field-list dd {
+        margin-bottom: 12px
+    }
+
+    .guide pre {
+        font-size: 12px;
+        padding: 14px
+    }
+
+    .guide th,
+    .guide td {
+        font-size: 13px;
+        padding: 12px
+    }
+
+    .guide h2 {
+        font-size: 23px
+    }
+}
+
+.guide-layout>* {
+    min-width: 0
+}
+
+.guide pre {
+    max-width: 100%
+}
+
+.guide .table-scroll {
+    max-width: 100%
+}
+
+@media(max-width:800px) {
+    .guide-layout {
+        grid-template-columns: minmax(0, 1fr)
+    }
+}
