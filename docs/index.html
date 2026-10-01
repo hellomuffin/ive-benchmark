@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<meta name="description" content="Interactive Visual Evaluation: a benchmark for closed-loop evaluation of visual assistants.">
-<meta property="og:title" content="IVE — Interactive Visual Evaluation"><meta property="og:description" content="Closed-loop evaluation through joint simulation of task environments and human users."><meta property="og:image" content="https://hellomuffin.github.io/ive-benchmark/assets/media/cooking.jpg"><meta property="og:url" content="https://hellomuffin.github.io/ive-benchmark/"><meta name="twitter:card" content="summary_large_image">
-<title>IVE · Interactive Visual Evaluation</title><link rel="icon" href="favicon.svg?v=20261001" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001"><link rel="stylesheet" href="reading.css?v=20261001b"><link rel="stylesheet" href="comparisons.css?v=20261001c">
+<meta name="description" content="Interactive Visual Gym: closed-loop evaluation and training of visual assistants through joint simulation of task environments and human users.">
+<meta property="og:title" content="Interactive Visual Gym"><meta property="og:description" content="Closed-loop evaluation through joint simulation of task environments and human users."><meta property="og:image" content="https://hellomuffin.github.io/ive-benchmark/assets/media/cooking.jpg"><meta property="og:url" content="https://hellomuffin.github.io/ive-benchmark/"><meta name="twitter:card" content="summary_large_image">
+<title>Interactive Visual Gym</title><link rel="icon" href="favicon.svg?v=20261001d" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001"><link rel="stylesheet" href="reading.css?v=20261001b"><link rel="stylesheet" href="comparisons.css?v=20261001c">
 </head><body>
-<header><a class="brand" href="#"><span class="brandmark">IVE</span><span>Interactive Visual Evaluation</span></a><nav aria-label="Main navigation"><a href="#experience">Demos</a><a href="#leaderboard">Leaderboard</a><a href="#failures">Qualitative examples</a><a href="submission.html">Submission guide</a><a href="https://github.com/hellomuffin/ive-benchmark">GitHub ↗</a></nav></header>
+<header><a class="brand" href="#"><span class="brandmark">IVG</span><span>Interactive Visual Gym</span></a><nav aria-label="Main navigation"><a href="#experience">Demos</a><a href="#leaderboard">Leaderboard</a><a href="#failures">Qualitative examples</a><a href="submission.html">Submission guide</a><a href="https://github.com/hellomuffin/ive-benchmark">GitHub ↗</a></nav></header>
 <main>
 <section class="hero">
-<h1><span>IVE</span> Interactive Visual Evaluation</h1><h2>A benchmark for closed-loop visual assistance</h2>
-<p>We evaluate visual assistants that observe a user’s ongoing activity and provide guidance during task execution. Built on Interactive Visual Gym, IVE jointly simulates task environments and human users to measure how assistance affects task outcomes and interaction quality.</p>
+<h1>Interactive Visual Gym</h1><h2>Closed-loop evaluation and training of visual assistants</h2>
+<p>We jointly simulate task environments and human users to evaluate visual assistants that observe ongoing activities and provide guidance during task execution. Our framework measures how assistance affects task outcomes and interaction quality.</p>
 <div class="hero-links"><a class="button dark" href="#experience">▶ &nbsp; View demonstrations</a><a class="button" href="#leaderboard">Leaderboard</a><a class="button" href="https://github.com/hellomuffin/ive-benchmark">Code &amp; data ↗</a></div>
 </section>
 <section id="experience">
-<div class="section-heading"><h2>Visual assistance in a closed loop</h2><p>Compare two assistants guiding the same user through the same task and scheduled events. Their responses change the user’s actions—and the resulting task outcome and interaction quality.</p></div>
+<div class="section-heading"><h2>Closed-Loop Assistant Evaluation</h2><p>Compare two assistants guiding the same user through the same task and scheduled events. Their responses change the user’s actions—and the resulting task outcome and interaction quality.</p></div>
 <div class="tabs" role="tablist" aria-label="Environment">
 <button role="tab" class="active" data-episode="cooking"><img src="assets/media/cooking-thumb.jpg" alt="CookSim kitchen"><span><b>CookSim</b><small>Cooking · GPT-6 Astra</small></span></button>
 <button role="tab" data-episode="household"><img src="assets/media/household-thumb.jpg" alt="VirtualHome apartment"><span><b>VHSim</b><small>Household · Gemini 3.8 Flash</small></span></button>
@@ -37,26 +37,26 @@
 <div class="episode-downloads"><a id="record-link" href="#" download>Episode record ↓</a><a id="video-link" href="#" download>Video ↓</a><a id="captions-link" href="#" download>Transcript ↓</a></div>
 </div></details></section>
 <section id="leaderboard">
-<div class="section-heading"><h2>Leaderboard</h2><p>Task completion alone does not measure whether guidance is accurate, relevant, or responsive to the user. We evaluate both task outcomes and interaction quality.</p></div>
+<div class="section-heading"><h2>IVE Leaderboard</h2><p>Interactive Visual Evaluation (IVE) benchmarks assistants on task outcomes and interaction quality. Task completion alone does not measure whether guidance is accurate, relevant, or responsive to the user.</p></div>
 <div class="board-tools"><div class="segmented" id="engine-filter"><button class="active" data-engine="overall">Overall</button><button data-engine="cooksim">CookSim</button><button data-engine="vhhome">VHSim</button><button data-engine="screensim">ScreenSim</button></div><label class="search"><input id="model-search" placeholder="Search models" aria-label="Find a model"></label></div>
 <div class="chart-layout"><div><svg id="scatter" viewBox="0 0 780 440" role="img" aria-label="Task success versus interaction quality"></svg><div id="chart-tip" role="status">Select a model to inspect its scores.</div></div><div class="chart-aside"><h3>Model families</h3><div id="legend"></div><div class="metric-definition"><b>In-time success</b><p>Engine-verified task completion within the episode budget.</p><b>Interaction quality</b><p>Contextual rubric evaluation of assistant responses, gated by factual grounding.</p></div><p class="small">Select a family to filter the plot and table.</p></div></div>
 <div class="table-scroll"><table id="leaderboard-table"><thead><tr><th>Assistant</th><th><button data-sort="success">In-time success ↓</button></th><th><button data-sort="recall">Detection recall</button></th><th><button data-sort="quality">Interaction quality</button></th><th>Rubric profile</th></tr></thead><tbody></tbody></table></div>
 <p class="table-note" id="aggregation"></p><div class="data-links"><a href="data/leaderboard.json" download>Download results ↓</a><span>Paper baseline · September 2026 · All scores in percent</span></div></section>
 <section id="failures">
-<div class="section-heading"><h2>When assistance fails</h2></div>
+<div class="section-heading"><h2>Assistant Failure Modes</h2></div>
 <div id="recorded-failures"></div>
 </section>
 <section id="persona-comparison">
-<div class="section-heading"><h2>Different users, different assistance</h2><p>The same assistant supports three users with different skills and preferences. The kitchen, recipe, and scheduled events stay fixed.</p></div>
+<div class="section-heading"><h2>Persona-Conditioned User Simulation</h2><p>The same assistant supports three users with different skills and preferences. The kitchen, recipe, and scheduled events stay fixed.</p></div>
 <div id="persona-replays"></div>
 </section>
 <section id="submit">
-<div class="section-heading"><h2>Evaluate your assistant</h2><a class="button dark" href="submission.html">Submission guide: files, format, and validation →</a></div>
+<div class="section-heading"><h2>IVE Benchmark Submission</h2><a class="button dark" href="submission.html">Submission guide →</a></div>
 <div class="submission-steps">
 <article><span>1</span><div><h3>Evaluation protocol</h3><p>IVE contains 105 task cases, each paired with three user personas: 150 cooking, 75 household, and 90 mobile-interface episodes. We evaluate each assistant over three independent runs.</p><a href="submission.html#coverage">Required episodes and runs →</a><a href="data/benchmark-catalog.json" download>Case–persona catalog ↓</a></div></article>
 <article><span>2</span><div><h3>Report reproducible results</h3><p>Identify the model version and include execution traces for every case–persona episode. Retain event coverage counts, since assistants may reach different subsets of scheduled events.</p><a href="submission/example.json" download>Example result file ↓</a><a href="submission/schema.json" download>Submission format ↓</a><label class="upload">Check result file<input id="submission-file" type="file" accept=".json,application/json"></label><pre id="validation-result" aria-live="polite"></pre></div></article>
 <article><span>3</span><div><h3>Submit for evaluation</h3><p>Submit results and execution traces through a pull request. File validation is available in preview; scores require verification before leaderboard inclusion.</p><a href="submission.html#files">What to submit →</a><a href="https://github.com/hellomuffin/ive-benchmark/upload/main/ive-submissions">Open a submission ↗</a></div></article>
 </div></section>
 </main>
-<footer><div><b>Interactive Visual Evaluation</b><span>Built on Interactive Visual Gym · Release preview</span></div><a href="https://github.com/hellomuffin/ive-benchmark">GitHub ↗</a></footer>
+<footer><div><b>Interactive Visual Gym</b><span>Release preview</span></div><a href="https://github.com/hellomuffin/ive-benchmark">GitHub ↗</a></footer>
 <script src="app.js?v=20261001c" type="module"></script><script src="comparisons.js?v=20261001c" type="module"></script></body></html>

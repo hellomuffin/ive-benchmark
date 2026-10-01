@@ -1,6 +1,6 @@
-# Interactive Visual Evaluation — release preview
+# Interactive Visual Gym — release preview
 
-A website for IVE with matched assistant comparisons, recorded failure excerpts, a three-persona comparison, and the paper's model leaderboard.
+Interactive Visual Gym supports closed-loop evaluation of visual assistants through joint simulation of task environments and human users. This website presents matched assistant comparisons, recorded failure examples, persona-conditioned user simulation, and results from the Interactive Visual Evaluation (IVE) benchmark.
 
 [Live preview](https://hellomuffin.github.io/ive-benchmark/) · [Submission intake](https://github.com/hellomuffin/ive-benchmark/tree/main/ive-submissions)
 

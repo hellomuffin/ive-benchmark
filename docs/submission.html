@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Submission guide · IVE</title><link rel="stylesheet" href="style.css?v=20261001"><link rel="stylesheet" href="reading.css?v=20261001b"><link rel="stylesheet" href="submission-guide.css"></head>
 <body>
-<header><a class="brand" href="./"><span class="brandmark">IVE</span><span>Interactive Visual Evaluation</span></a><nav><a href="./#leaderboard">Leaderboard</a><a href="#files">Required files</a><a href="#format">File format</a><a href="#validate">Validation</a></nav></header>
+<header><a class="brand" href="./"><span class="brandmark">IVG</span><span>Interactive Visual Gym</span></a><nav><a href="./#leaderboard">Leaderboard</a><a href="#files">Required files</a><a href="#format">File format</a><a href="#validate">Validation</a></nav></header>
 <main class="guide">
-<section class="guide-intro"><h1>Submission guide</h1><p>Submit one result file per assistant configuration, together with the corresponding execution traces.</p><aside class="release-notice"><strong>Release status.</strong> The submission format and file validator are available. Public simulator packages, end-to-end evaluation instructions, and automatic score verification are not yet released. A valid result file is not a verified leaderboard result.</aside></section>
+<section class="guide-intro"><h1>IVE Submission Guide</h1><p>Submit one result file per assistant configuration, together with the corresponding execution traces.</p><aside class="release-notice"><strong>Release status.</strong> The submission format and file validator are available. Public simulator packages, end-to-end evaluation instructions, and automatic score verification are not yet released. A valid result file is not a verified leaderboard result.</aside></section>
 <div class="guide-layout"><aside class="guide-nav"><a href="#files">1. Required files</a><a href="#coverage">2. Evaluation coverage</a><a href="#format">3. JSON format</a><a href="#validate">4. Validate locally</a><a href="#send">5. Submit for review</a></aside><div>
-<section id="files"><h2>1. What to submit</h2>
+<section id="files"><h2>1. Required Submission Files</h2>
 <dl><dt>A result manifest: <code>my-model.json</code></dt><dd>Identifies the model version, the benchmark version, and every episode’s trace file and SHA-256 hash. The manifest is a JSON index—not a table of claimed scores.</dd>
 <dt>An archive of execution traces</dt><dd>Include the original JSON record for every episode, including failed and timed-out episodes. Retain actions, observations or their references, dialogue, event outcomes, and any engine or judge outputs in the original records. Include referenced assets needed for review; do not substitute a manually written score summary.</dd>
 <dt>Reproduction details in the pull request</dt><dd>Provide engine, user-harness, prompt, and judge versions; model/API revision; inference settings; latency configuration; and run identifiers or seeds. Explain how reported scores and event-coverage counts were obtained.</dd></dl>
@@ -51,7 +51,7 @@ python ive-source/tools/validate_submission.py \
 </section>
 <section id="send"><h2>5. Submit for review</h2><ol><li>Add your manifest under <code>ive-submissions/</code> in a <a href="https://github.com/hellomuffin/ive-benchmark/upload/main/ive-submissions">GitHub pull request</a>.</li><li>In the pull-request description, link the trace archive and include the reproduction details listed above. The archive must be accessible to reviewers.</li><li>File checks run on the pull request. Leaderboard inclusion follows a separate review of traces, evaluation settings, event coverage, and scores.</li></ol><p>Do not commit large trace archives directly to the website repository. A file-validation pass alone does not publish a leaderboard entry.</p></section>
 </div></div></main>
-<footer><a href="./">← Back to IVE</a><a href="https://github.com/hellomuffin/ive-benchmark">GitHub ↗</a></footer>
+<footer><a href="./">← Interactive Visual Gym</a><a href="https://github.com/hellomuffin/ive-benchmark">GitHub ↗</a></footer>
 <script type="module">
 import {validateManifest} from './submission.js';
 const example=await fetch('submission/example.json').then(r=>r.json());
