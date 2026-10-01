@@ -4,7 +4,7 @@ const axisLevels = [['Novice','Intermediate','Expert'],['Low','Medium','High'],[
 const cache = new Map();
 const players = new Set();
 async function data(id) {
-  if (!cache.has(id)) cache.set(id, fetch(`data/${id}.json`).then(r => {if(!r.ok)throw Error(`Episode unavailable: ${id}`);return r.json();}));
+  if (!cache.has(id)) cache.set(id, fetch(`data/${id}.json`,{cache:'no-cache'}).then(r => {if(!r.ok)throw Error(`Episode unavailable: ${id}`);return r.json();}));
   return cache.get(id);
 }
 function axes(e,cls) {return `<div class="${cls}">${e.axes.map((n,i)=>`<span>${axisNames[i]} <b>${axisLevels[i][n-1]}</b></span>`).join('')}</div>`;}
@@ -19,7 +19,7 @@ class Replay {
     const quality=e.quality?.overall;
     const metrics=e.metrics;
     const results=persona?`<div><label>Task outcome</label><strong class="${completed(e)?'completed':'incomplete'}">${completed(e)?'Completed':'Incomplete'}</strong></div><div><label>Simulation ticks</label><strong>${e.ticks}</strong></div>`:
-      `<div><label>In-time success</label><strong class="${metrics?.inTimeSuccess?'completed':'incomplete'}">${metrics?.inTimeSuccess?'Yes':'No'}</strong><small>${e.ticks} / ${metrics?.budget??'—'} ticks</small></div><div><label>Error detection</label><strong>${metrics?.triggered?`${(100*metrics.detected/metrics.triggered).toFixed(1)}%`:'—'}</strong><small>${metrics?.detected??'—'} / ${metrics?.triggered??'—'} triggered errors</small></div><div><label>Interaction quality</label><strong class="quality-score">${quality==null?'—':(quality*100).toFixed(1)}<span style="font-size:14px;font-weight:400"> / 100</span></strong><div class="score-track"><i style="width:${(quality??0)*100}%"></i></div></div>`;
+      `<div><label>In-time success</label><strong class="${metrics?.inTimeSuccess?'completed':metrics?'incomplete':''}">${metrics?(metrics.inTimeSuccess?'Yes':'No'):'—'}</strong><small>${e.ticks} / ${metrics?.budget??'—'} ticks</small></div><div><label>Error detection</label><strong>${metrics?.triggered?`${(100*metrics.detected/metrics.triggered).toFixed(1)}%`:'—'}</strong><small>${metrics?.detected??'—'} / ${metrics?.triggered??'—'} triggered errors</small></div><div><label>Interaction quality</label><strong class="quality-score">${quality==null?'—':(quality*100).toFixed(1)}<span style="font-size:14px;font-weight:400"> / 100</span></strong><div class="score-track"><i style="width:${(quality??0)*100}%"></i></div></div>`;
     container.className=`recorded-replay${this.phone?' phone':''}`;
     container.innerHTML=`<div class="replay-title"><h3>${esc(persona?e.persona:e.model)}</h3><p>${esc(persona?e.model:failure?`${e.engine} · ticks ${e.clip.start}–${e.clip.end}`:e.persona)}</p></div>
       ${persona?axes(e,'persona-dials'):''}
