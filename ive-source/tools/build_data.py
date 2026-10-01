@@ -163,7 +163,7 @@ def main():
   if old.exists():
    previous=json.loads(old.read_text())
    if previous.get('sourceHash')==e['sourceHash']:
-    for key in ['playback','frameCount']:
+    for key in ['playback','frameCount','presentation']:
      if key in previous:e[key]=previous[key]
     lookup={(d['tick'],d['speaker'],d['text']):d for d in previous['dialogue']}
     for d in e['dialogue']:

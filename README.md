@@ -16,11 +16,13 @@ Open `http://localhost:8000`. Select an environment, press play, and jump to a s
 
 ## What is included
 
-- Three original recorded trajectories with new presentation voices and a new visualization. Dialogue is not rewritten. Native simulation ticks remain visible; playback is deliberately time-expanded for speech.
+- Three recorded trajectories with synthetic presentation voices. Dialogue is not rewritten. Native simulation ticks remain visible; playback is deliberately time-expanded for speech and gesture animation. CookSim's two views are re-rendered from saved states at 960 × 720 each. ScreenSim uses its native filming code for hand gestures and page transitions, with replay outcomes checked against the source record. These presentation reconstructions do not change the assistants' evaluation inputs; original observation files remain included.
 - A 14-model paper baseline, pinned to source commit `69f62e53e294cb56dfb48eaa2ae542c2cbac0070`. Overall scores average the three environments equally. Success and quality summarize three runs; detection recall is run 1.
 - 105 underlying cases × three personas = 315 case–persona episodes (150 cooking, 75 household, 90 mobile). These are not 315 independently constructed tasks.
 - Downloadable normalized demo records and leaderboard JSON.
 - A submission manifest schema, browser structure checks, and a local validator.
+
+The replay kit uses the high-resolution CookSim presentation frames. The original lower-resolution CookSim observations remain available in the website repository under `docs/assets/media/cooking`; they are not duplicated inside the kit.
 
 ## Submission validation
 
@@ -46,7 +48,7 @@ The preview's GitHub intake runs read-only manifest checks on pull requests. It 
 
 `tools/build_data.py` reads the pinned paper snapshots and selected engine records. `tools/build_media.py` extracts observations, verifies ScreenSim replay, and synthesizes labelled presentation audio. These two tools require the original sibling engine repositories and are not needed to view the website. API credentials remain outside the repository.
 
-The extracted replay kit also supports rebuilding the narrated MP4s from its bundled frames, audio, data, and fonts using `python ive-source/tools/export_videos.py`. This requires Pillow, NumPy, and FFmpeg, but no simulator, API key, or GPU.
+The extracted replay kit also supports rebuilding the narrated MP4s from its bundled frames, audio, data, and fonts using `python ive-source/tools/export_videos.py`. This requires Pillow, NumPy, and FFmpeg, but no simulator, API key, or GPU. `tools/build_presentation_media.py` regenerates the high-resolution CookSim views and ScreenSim gestures from the research repositories; this step is unnecessary when using the included presentation frames.
 
 `tools/check_site.py` tests the desktop/mobile page, model filtering, and horizontal overflow using Playwright. It expects a local server on port 8793.
 

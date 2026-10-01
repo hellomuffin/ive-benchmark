@@ -1,4 +1,6 @@
-import {validateManifest} from './submission.js';
+import {
+    validateManifest
+} from './submission.js';
 const $ = s => document.querySelector(s),
     $$ = s => [...document.querySelectorAll(s)];
 const escape = s => String(s ?? '').replace(/[&<>"']/g, c => ({
@@ -57,9 +59,16 @@ function fallbackTimeline(e) {
 async function loadEpisode(id) {
     const request = ++generation;
     pause();
-    const loaded = await fetch(`data/${id}.json`).then(r => r.json());
+    const loaded = await fetch(`data/${id}.json`, {
+        cache: 'no-cache'
+    }).then(r => r.json());
     if (request !== generation) return;
     episode = loaded;
+    canvas.width = id === 'mobile' ? 780 : 1320;
+    canvas.height = id === 'mobile' ? 1000 : 740;
+    $('.playback').classList.toggle('mobile', id === 'mobile');
+    $('#presentation-note').textContent = 'Original dialogue with synthetic speech; playback is time-expanded. ' +
+        (episode.presentation?.description ?? 'Visual observations follow the recorded simulation ticks.');
     episode.playback ??= fallbackTimeline(episode);
     elapsed = 0;
     lastTick = -1;
@@ -127,8 +136,22 @@ function seekTick(t) {
 }
 
 function getImage(t) {
-    const n = Math.min(t, (episode.frameCount ?? episode.ticks) - 1),
-        url = `assets/media/${episode.id}/${String(n).padStart(4,'0')}.jpg`;
+    const presentation = episode.presentation;
+    const n = Math.min(t, (presentation?.frameCount ?? episode.frameCount ?? episode.ticks) - 1);
+    let url = `${presentation?.frameRoot ?? 'assets/media/'+episode.id}/${String(n).padStart(4,'0')}.jpg`;
+    const gesture = presentation?.gestures?.[String(t)];
+    if (gesture) {
+        const seg = episode.playback.segments.find(s => s.tick === t);
+        const i = Math.max(0, Math.min(gesture.frames.length - 1, Math.floor((elapsed - seg.start) * gesture.fps)));
+        url = gesture.frames[i];
+        for (const next of gesture.frames.slice(i + 1, i + 6)) {
+            if (!images.has(next)) {
+                const im = new Image();
+                im.src = next;
+                images.set(next, im);
+            }
+        }
+    }
     if (!images.has(url)) {
         const im = new Image();
         im.src = url;
@@ -153,16 +176,15 @@ function renderFrame(t) {
         };
         return
     }
-    ctx.fillStyle = '#e9eee7';
-    ctx.fillRect(0, 0, 1000, 680);
+    ctx.fillStyle = '#f4f6fa';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     for (let n = 1; n < 4; n++) getImage(Math.min(t + n, episode.ticks));
     if (episode.id === 'mobile') {
-        contain(im, 0, 0, im.width, im.height, 245, 12, 510, 656);
-        ctx.fillStyle = '#617975';
-        ctx.font = '16px sans-serif';
-        ctx.fillText('Recorded device state', 30, 648)
+        const gesture = episode.presentation?.gestures?.[String(t)];
+        if (gesture) contain(im, 0, 0, im.width, im.height, 144, 30, 492, 940);
+        else contain(im, 0, 0, im.width, im.height, 168, 54, 412, 892);
     } else {
-        const c = episode.crops ?? (episode.id === 'cooking' ? {
+        const c = episode.presentation?.crops ?? episode.crops ?? (episode.id === 'cooking' ? {
             main: [521, 26, 521, 370],
             context: [0, 26, 520, 370]
         } : {
@@ -170,21 +192,25 @@ function renderFrame(t) {
             context: [640, 24, 480, 456]
         });
         if (view !== 'combined') {
-            contain(im, ...(view === 'map' ? c.context : c.main), 12, 10, 976, 610);
-            ctx.fillStyle = '#526c62';
-            ctx.font = '17px sans-serif';
-            ctx.fillText(view === 'map' ? 'Environment map · viewer context' : 'Egocentric observation', 24, 652);
+            contain(im, ...(view === 'map' ? c.context : c.main), 30, 60, 1260, 650);
+            ctx.fillStyle = '#536882';
+            ctx.font = '20px "DM Sans", sans-serif';
+            ctx.fillText(view === 'map' ? 'Top-down view' : 'Egocentric view', 30, 36);
             return;
         }
-        contain(im, ...c.main, 12, 10, 976, 525);
-        ctx.fillStyle = '#dce5db';
-        ctx.fillRect(14, 544, 972, 124);
-        contain(im, ...c.context, 22, 550, 220, 112);
-        ctx.fillStyle = '#526c62';
-        ctx.font = '17px sans-serif';
-        ctx.fillText('TOP-DOWN VIEW', 265, 588);
-        ctx.font = '15px sans-serif';
-        ctx.fillText('A second view of the same recorded state.', 265, 618)
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(20, 90, 630, 556);
+        ctx.fillRect(670, 90, 630, 556);
+        contain(im, ...c.main, 26, 130, 618, 480);
+        contain(im, ...c.context, 676, 130, 618, 480);
+        ctx.fillStyle = '#536882';
+        ctx.font = '20px "DM Sans",sans-serif';
+        ctx.fillText('Egocentric view', 38, 120);
+        ctx.fillText('Top-down view', 688, 120);
+        ctx.strokeStyle = '#dbe2ed';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(20, 90, 630, 556);
+        ctx.strokeRect(670, 90, 630, 556);
     }
 }
 
@@ -210,20 +236,22 @@ function draw() {
             if (e.answeredAt != null && t >= e.answeredAt) status = 'Answered';
             if (e.alertAt != null && t >= e.alertAt) status = 'Alert delivered';
             if (e.kind === 'plan_change' && t >= e.end) status = 'Goal revised';
-            x.classList.toggle('resolved', !['Scheduled','Triggered'].includes(status));
+            x.classList.toggle('resolved', !['Scheduled', 'Triggered'].includes(status));
             x.querySelector('small').textContent = status;
         });
         const ev = episode.events.filter(e => t >= e.tick && t < e.tick + 4).at(-1);
         $('#event-overlay').innerHTML = ev ? `<div class="event-flash">◆ &nbsp; Scheduled event: ${escape(ev.label)}</div>` : '';
     }
+    if (episode.id === 'mobile' && t === lastTick) renderFrame(t);
     const ds = episode.dialogue.filter(d => d.start != null ? d.start <= elapsed : d.tick <= t),
         key = ds.length + ':' + (ds.at(-1)?.start ?? '');
     if (key !== lastMessages) {
-        $('#dialogue').innerHTML = ds.length ? ds.map(d => `<div class="message ${d.speaker}"><small>${d.speaker==='assistant'?escape(episode.model):'Simulated user'} · tick ${d.tick}</small>${escape(d.text)}</div>`).join('') : '<div class="waiting">The user begins the task.<br>The assistant observes.</div>';
+        $('#dialogue').innerHTML = ds.length ? ds.map(d => `<div class="message ${d.speaker}"><small>${d.speaker==='assistant'?escape(episode.model):'Simulated user'} · tick ${d.tick}</small>${escape(d.text)}</div>`).join('') : '<div class="waiting">No utterances yet.</div>';
         $('#dialogue').scrollTop = $('#dialogue').scrollHeight;
         lastMessages = key;
     }
-    const round = episode.quality.rounds.filter(r => r.tick <= t).at(-1),
+    const lastResponseTick = ds.filter(d => d.speaker === 'assistant').at(-1)?.tick ?? -1;
+    const round = episode.quality.rounds.filter(r => r.tick <= lastResponseTick).at(-1),
         shorts = ['Grounding', 'Relevance', 'Guidance', 'Intent', 'Conciseness'];
     $('#turn-dimensions').innerHTML = round ? Object.entries(round.categories).map(([k, v], i) => `<span class="verdict ${v==null?'na':v===1?'pass':v===0?'fail':'mixed'}" title="${v==null?'Not applicable':v===1?'All applicable rubric items pass':v===0?'At least one applicable item fails':'Judges differ'}">${v==null?'—':v===1?'✓':v===0?'×':'◐'} ${shorts[i]}</span>`).join('') : 'Evaluation appears as the assistant responds.';
     $('#inspect-grade').disabled = !round;
@@ -246,7 +274,8 @@ function draw() {
 }
 $('#inspect-grade').onclick = () => {
     pause();
-    const r = episode.quality.rounds.filter(r => r.tick <= lastTick).at(-1);
+    const lastResponseTick = episode.dialogue.filter(d => d.speaker === 'assistant' && d.start <= elapsed).at(-1)?.tick ?? -1;
+    const r = episode.quality.rounds.filter(r => r.tick <= lastResponseTick).at(-1);
     if (!r) return;
     $('#grade-evidence').innerHTML = `<p>Tick ${r.tick} · Round score ${(r.score*100).toFixed(1)}/100. These are stored judge assessments, not human annotations.</p>` + r.evidence.map(x => `<article><b>${escape(x.id)} · ${x.pass===true?'Pass':x.pass===false?'Fail':'Not applicable'}${x.judgeIndex!=null?' · Judge '+(x.judgeIndex+1):''}</b><p>${escape(x.reason)}</p></article>`).join('');
     $('#grade-dialog').showModal()
@@ -260,14 +289,17 @@ $$('[data-view]').forEach(b => b.onclick = () => {
 $('#watch-film').onclick = () => {
     pause();
     const film = $('#film');
-    film.src = episode.media;
-    film.poster = episode.poster;
+    film.src = episode.media + '?v=20261001';
+    film.poster = episode.poster + '?v=20261001';
     film.innerHTML = `<track kind="captions" src="assets/media/${episode.id}.vtt" srclang="en" label="English transcript">`;
     $('#film-title').textContent = `${episode.engine} · ${episode.model}`;
     $('#film-dialog').showModal();
     film.play().catch(() => {});
 };
-$('#close-film').onclick = () => { $('#film').pause(); $('#film-dialog').close(); };
+$('#close-film').onclick = () => {
+    $('#film').pause();
+    $('#film-dialog').close();
+};
 $('#film-dialog').onclose = () => $('#film').pause();
 $('#share-moment').onclick = async () => {
     const url = new URL(location.href);
@@ -278,14 +310,18 @@ $('#share-moment').onclick = async () => {
     try {
         await navigator.clipboard.writeText(url.href);
         $('#share-moment').textContent = 'Link copied ✓';
-        setTimeout(() => { $('#share-moment').textContent = 'Copy moment link'; }, 2200);
+        setTimeout(() => {
+            $('#share-moment').textContent = 'Copy moment link';
+        }, 2200);
     } catch {
         $('#share-fallback').hidden = false;
         $('#share-fallback').value = url.href;
         $('#share-fallback').select();
     }
 };
-document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) pause();
+});
 $('#play').onclick = () => playing ? pause() : play();
 $('#seek').oninput = e => {
     elapsed = +e.target.value / 100 * episode.playback.duration;
@@ -435,18 +471,20 @@ $('#submission-file').onchange = async e => {
         const catalog = await fetch('data/benchmark-catalog.json').then(r => r.json());
         const demo = d?.demo_only === true;
         const errors = validateManifest(d, catalog, !demo);
-        $('#validation-result').textContent = errors.length ? 'Needs attention:\n' + errors.slice(0,20).join('\n') + (errors.length > 20 ? `\n… ${errors.length-20} more issues.` : '') : demo ? 'Valid single-episode demo manifest—not a full benchmark submission. Use the local validator to verify its trace hash.' : 'Structure and benchmark membership passed. Trace hashes and scores still require verification; this does not publish a leaderboard entry.'
+        $('#validation-result').textContent = errors.length ? 'Needs attention:\n' + errors.slice(0, 20).join('\n') + (errors.length > 20 ? `\n… ${errors.length-20} more issues.` : '') : demo ? 'Valid single-episode demo manifest—not a full benchmark submission. Use the local validator to verify its trace hash.' : 'Structure and benchmark membership passed. Trace hashes and scores still require verification; this does not publish a leaderboard entry.'
     } catch (err) {
         $('#validation-result').textContent = err.message
     }
 };
 const initialParams = new URLSearchParams(location.search);
-const initialEpisode = ['cooking','household','mobile'].includes(initialParams.get('episode')) ? initialParams.get('episode') : 'cooking';
+const initialEpisode = ['cooking', 'household', 'mobile'].includes(initialParams.get('episode')) ? initialParams.get('episode') : 'cooking';
 Promise.all([loadEpisode(initialEpisode), initBoard()]).then(() => {
     const tick = Number(initialParams.get('tick'));
     if (initialParams.has('tick') && Number.isFinite(tick) && tick >= 0) {
         seekTick(Math.min(Math.floor(tick), episode.ticks));
-        $('#experience').scrollIntoView({behavior:'instant'});
+        $('#experience').scrollIntoView({
+            behavior: 'instant'
+        });
     }
 }).catch(e => {
     $('#task').textContent = 'The preview data could not be loaded. Please reload the page.';

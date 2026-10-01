@@ -18,9 +18,14 @@ def copy_tree(src,dst,skip=()):
 kit=SITE/'ive-preview-kit.zip'
 with zipfile.ZipFile(kit,'w',zipfile.ZIP_DEFLATED,compresslevel=4) as z:
  for p in SITE.rglob('*'):
-  if p.is_file() and p!=kit and p.suffix!='.wav':z.write(p,Path('ive-preview/site')/p.relative_to(SITE))
+  relative=p.relative_to(SITE)
+  # The replay uses the high-resolution CookSim frames. Keep native observations
+  # in the public repository, without duplicating them inside the download.
+  native_cook=relative.parts[:3]==('assets','media','cooking')
+  if p.is_file() and p!=kit and p.suffix!='.wav' and not native_cook:z.write(p,Path('ive-preview/site')/relative)
  z.write(ROOT/'README.md','ive-preview/README.md')
  for p in (ROOT/'tools').glob('*.py'):z.write(p,Path('ive-preview/tools')/p.name)
+assert kit.stat().st_size < 100*1024*1024, 'Replay kit exceeds GitHub file size limit'
 copy_tree(SITE,TARGET/'docs',skip=('__pycache__',))
 copy_tree(ROOT/'tools',TARGET/'ive-source/tools',skip=('__pycache__',))
 (TARGET/'ive-source').mkdir(exist_ok=True)
