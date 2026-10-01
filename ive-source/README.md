@@ -1,12 +1,12 @@
 # Interactive Visual Evaluation — release preview
 
-A source-grounded website for IVE: three voiced episode replays, synchronized observations and dialogue, task progress, scheduled events, personas, contextual rubric scores, and a model leaderboard.
+A website for IVE with matched assistant comparisons, recorded failure excerpts, a three-persona comparison, and the paper's model leaderboard.
 
 [Live preview](https://hellomuffin.github.io/ive-benchmark/) · [Submission intake](https://github.com/hellomuffin/ive-benchmark/tree/main/ive-submissions)
 
-## One-minute quickstart (no API key or GPU)
+## View the recorded episodes locally
 
-Run these commands from the repository root or the extracted replay-kit root.
+Run this command from the repository root.
 
 ```bash
 python -m http.server 8000 --directory docs
@@ -16,13 +16,13 @@ Open `http://localhost:8000`. Select an environment, press play, and jump to a s
 
 ## What is included
 
-- Three recorded trajectories with synthetic presentation voices. Dialogue is not rewritten. Native simulation ticks remain visible; playback is deliberately time-expanded for speech and gesture animation. CookSim's two views are re-rendered from saved states at 960 × 720 each. ScreenSim uses its native filming code for hand gestures and page transitions, with replay outcomes checked against the source record. These presentation reconstructions do not change the assistants' evaluation inputs; original observation files remain included.
+- Two assistants under matched task, persona, and scheduled-event settings in each environment; original failure excerpts from the paper; and three CookSim personas with the same assistant and task. Dialogue is transcribed verbatim. Speech is synthetic and playback is time-expanded. CookSim's views are re-rendered from saved states at 960 × 720 each. ScreenSim's reconstructed gestures are checked against the recorded action outcomes. Presentation reconstructions do not change the assistants' evaluation inputs.
 - A 14-model paper baseline, pinned to source commit `69f62e53e294cb56dfb48eaa2ae542c2cbac0070`. Overall scores average the three environments equally. Success and quality summarize three runs; detection recall is run 1.
 - 105 underlying cases × three personas = 315 case–persona episodes (150 cooking, 75 household, 90 mobile). These are not 315 independently constructed tasks.
 - Downloadable normalized demo records and leaderboard JSON.
 - A submission manifest schema, browser structure checks, and a local validator.
 
-The replay kit uses the high-resolution CookSim presentation frames. The original lower-resolution CookSim observations remain available in the website repository under `docs/assets/media/cooking`; they are not duplicated inside the kit.
+The legacy `ive-preview-kit.zip` contains the earlier three-demo preview, not the expanded comparison page. Clone this repository for the current website.
 
 ## Submission validation
 
@@ -54,6 +54,8 @@ The extracted replay kit also supports rebuilding the narrated MP4s from its bun
 
 `tools/check_site.py` tests the desktop/mobile page, model filtering, and horizontal overflow using Playwright. It expects a local server on port 8793.
 
+`tools/build_comparison_data.py` checks shared task/event specifications and exports the matched trajectories. `tools/build_comparison_media.py` builds their recorded observations and presentation speech. `tools/build_failure_data.py` traces the qualitative figure back to original episode records. `tools/check_comparisons.py` checks verbatim dialogue, narration, replay controls, and responsive layouts.
+
 ## Production-release checklist
 
 - Publish versioned engine distributions, full case definitions, runtime dependencies, and model adapter instructions after their separate dependency/licensing and secret audits. This website does not claim those packages have been released.
@@ -62,4 +64,4 @@ The extracted replay kit also supports rebuilding the narrated MP4s from its bun
 - Add paper/citation links once final public metadata is available; do not invent an arXiv identifier or author list.
 - Review demo transcript fidelity, synthetic voices, case/persona descriptions, and model display names before announcing the public launch.
 
-No participant conversations are included; the three demos use simulated users.
+No participant conversations are included; all displayed users are simulated.

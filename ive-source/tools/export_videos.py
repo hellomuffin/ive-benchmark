@@ -165,19 +165,24 @@ def render(e,tick,sec):
   put(d,(xx+15,yy2+11),('Simulated user' if user else e['model'])+f' · tick {m["tick"]}',12,'#9a7b53' if user else '#6482ad',bold=True)
   for j,line in enumerate(lines):put(d,(xx+15,yy2+35+j*31),line,23,'#675741' if user else '#344b69')
   yy+=height+13
- put(d,(44,943),'TASK PROGRESS',17,BLUE,bold=True)
- mw=1146/len(e['milestones'])
+ put(d,(44,943),'RECORDED EXCERPT' if e.get('clip') else 'TASK PROGRESS',17,BLUE,bold=True)
+ mw=1146/max(1,len(e['milestones']))
  for i,m in enumerate(e['milestones']):
   x=44+i*mw;done=tick>=m['tick']
   d.rounded_rectangle((x,975,x+mw-12,980),2,fill='#6488b5' if done else '#e5eaf2')
   put(d,(x,990),m['label'],19,'#476b98' if done else MUT,width=mw-15)
  active=[v for v in e['events'] if v['tick']<=tick]
- put(d,(1260,943),'SCHEDULED EVENT',17,BLUE,bold=True)
- if active:
+ if e.get('clip'):
+  annotation=next((a['text'] for a in e.get('annotations',[]) if a['start']<=tick<=a['end']),'The user continues acting while the assistant observes.')
+  put(d,(44,978),annotation,22,width=1770)
+ elif active:
+  put(d,(1260,943),'SCHEDULED EVENT',17,BLUE,bold=True)
   ev=max(active,key=lambda x:x['tick']);status=event_status(ev,tick)
   put(d,(1260,975),ev['label'],21,width=590)
   put(d,(1260,1007),f'Tick {ev["tick"]} · {status}',18,'#967139' if status=='Triggered' else '#59816b')
- else:put(d,(1260,980),'No event triggered.',17,MUT)
+ else:
+  put(d,(1260,943),'SCHEDULED EVENT',17,BLUE,bold=True)
+  put(d,(1260,980),'No event triggered.',17,MUT)
  d.line((44,1038,1876,1038),fill=LINE)
  note='Recorded trajectory · synthetic speech · presentation time expanded'
  if e.get('presentation'):note+=' · reconstructed visuals'

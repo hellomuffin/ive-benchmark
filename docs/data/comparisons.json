@@ -1,0 +1,41 @@
+{
+  "comparisons": [
+    {
+      "id": "cooking",
+      "engine": "CookSim",
+      "episodes": [
+        "cooking",
+        "cooking-peer"
+      ],
+      "setting": "Same kitchen, recipe, persona, and state-triggered event schedule."
+    },
+    {
+      "id": "household",
+      "engine": "VHSim",
+      "episodes": [
+        "household",
+        "household-peer"
+      ],
+      "setting": "Same apartment, task, persona, and scheduled pause and placement error."
+    },
+    {
+      "id": "mobile",
+      "engine": "ScreenSim",
+      "episodes": [
+        "mobile",
+        "mobile-peer"
+      ],
+      "setting": "Same phone configuration, task, persona, and two scheduled setting errors."
+    }
+  ],
+  "personas": {
+    "episodes": [
+      "persona-classic_novice",
+      "persona-baseline",
+      "persona-classic_expert"
+    ],
+    "model": "GPT-6 Astra",
+    "task": "Prepare a Loaded Burrito: tortilla, cooked rice, cooked steak, chopped tomato, and chopped lettuce, plated in this order.",
+    "setting": "Same kitchen, recipe, assistant, and scheduled events; only the persona changes."
+  }
+}

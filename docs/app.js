@@ -101,7 +101,7 @@ async function loadEpisode(id) {
     $$('#events button').forEach(b => b.onclick = () => seekTick(episode.events[+b.dataset.index].tick));
     $('#episode-score').textContent = episode.quality.overall == null ? 'Rubric details' : `${(episode.quality.overall*100).toFixed(1)} / 100 overall ↗`;
     const names = ['Factual grounding', 'Situational relevance', 'Actionable guidance', 'User intent uptake', 'Guidance conciseness'];
-    $('#rubric-scores').innerHTML = Object.entries(episode.quality.categories).map(([k, v], i) => `<div class="rubric">${names[i]}<strong>${(v*100).toFixed(1)}</strong><div class="rubric-track"><i style="width:${v*100}%"></i></div></div>`).join('');
+    $('#rubric-scores').innerHTML = Object.entries(episode.quality.categories).map(([k, v], i) => `<div class="rubric">${names[i]}<strong>${v==null?'Not applicable':(v*100).toFixed(1)}</strong><div class="rubric-track"><i style="width:${(v??0)*100}%"></i></div></div>`).join('');
     draw();
 }
 
@@ -491,6 +491,8 @@ const initialEpisode = ['cooking', 'household', 'mobile'].includes(initialParams
 Promise.all([loadEpisode(initialEpisode), initBoard()]).then(() => {
     const tick = Number(initialParams.get('tick'));
     if (initialParams.has('tick') && Number.isFinite(tick) && tick >= 0) {
+        const singleReplay = document.querySelector('.single-replay');
+        if (singleReplay) singleReplay.open = true;
         seekTick(Math.min(Math.floor(tick), episode.ticks));
         $('#experience').scrollIntoView({
             behavior: 'instant'

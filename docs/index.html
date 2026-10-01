@@ -3,7 +3,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <meta name="description" content="Interactive Visual Evaluation: a benchmark for closed-loop evaluation of visual assistants.">
 <meta property="og:title" content="IVE — Interactive Visual Evaluation"><meta property="og:description" content="Closed-loop evaluation through joint simulation of task environments and human users."><meta property="og:image" content="https://hellomuffin.github.io/ive-benchmark/assets/media/cooking.jpg"><meta property="og:url" content="https://hellomuffin.github.io/ive-benchmark/"><meta name="twitter:card" content="summary_large_image">
-<title>IVE · Interactive Visual Evaluation</title><link rel="icon" href="favicon.svg?v=20261001" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001"><link rel="stylesheet" href="reading.css?v=20261001b">
+<title>IVE · Interactive Visual Evaluation</title><link rel="icon" href="favicon.svg?v=20261001" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001"><link rel="stylesheet" href="reading.css?v=20261001b"><link rel="stylesheet" href="comparisons.css?v=20261001c">
 </head><body>
 <header><a class="brand" href="#"><span class="brandmark">IVE</span><span>Interactive Visual Evaluation</span></a><nav aria-label="Main navigation"><a href="#experience">Demos</a><a href="#leaderboard">Leaderboard</a><a href="#failures">Qualitative examples</a><a href="submission.html">Submission guide</a><a href="https://github.com/hellomuffin/ive-benchmark">GitHub ↗</a></nav></header>
 <main>
@@ -13,12 +13,13 @@
 <div class="hero-links"><a class="button dark" href="#experience">▶ &nbsp; View demonstrations</a><a class="button" href="#leaderboard">Leaderboard</a><a class="button" href="https://github.com/hellomuffin/ive-benchmark">Code &amp; data ↗</a></div>
 </section>
 <section id="experience">
-<div class="section-heading"><h2>Visual assistance in a closed loop</h2><p>A VLM-based user plans and acts in the environment, while the assistant intervenes only through communication. User personas and state-triggered events test how assistance changes task execution.</p></div>
+<div class="section-heading"><h2>Visual assistance in a closed loop</h2><p>Compare two assistants guiding the same user through the same task and scheduled events. Their responses change the user’s actions—and the resulting task outcome and interaction quality.</p></div>
 <div class="tabs" role="tablist" aria-label="Environment">
 <button role="tab" class="active" data-episode="cooking"><img src="assets/media/cooking-thumb.jpg" alt="CookSim kitchen"><span><b>CookSim</b><small>Cooking · GPT-6 Astra</small></span></button>
 <button role="tab" data-episode="household"><img src="assets/media/household-thumb.jpg" alt="VirtualHome apartment"><span><b>VHSim</b><small>Household · Gemini 3.8 Flash</small></span></button>
 <button role="tab" data-episode="mobile"><img src="assets/media/mobile-thumb.jpg" alt="ScreenSim phone settings"><span><b>ScreenSim</b><small>Mobile interface · Gemini 3.1 Pro</small></span></button></div>
-<div id="episode">
+<div id="matched-comparison" aria-live="polite"></div>
+<details class="single-replay"><summary>Inspect a single episode and its rubric evidence</summary><div id="episode">
 <div class="task-head"><div><span class="eyebrow">Task</span><h3 id="task"></h3></div><div class="model-badge"><span class="status-dot"></span><span id="assistant"></span><small>Visual assistant</small></div></div>
 <div class="persona-strip"><div><span class="eyebrow">Simulated user</span><strong id="persona"></strong></div><div id="persona-axes"></div></div>
 <div class="playback">
@@ -34,7 +35,7 @@
 <details class="score-details"><summary><span>Episode-level interaction quality</span><span id="episode-score"></span></summary><div id="rubric-scores"></div><p>Overall interaction quality averages applicable rubric categories with a factual-grounding gate. These scores describe this episode, not the model’s benchmark average.</p></details>
 <details class="playback-details"><summary>Playback details</summary><p id="presentation-note"></p></details>
 <div class="episode-downloads"><a id="record-link" href="#" download>Episode record ↓</a><a id="video-link" href="#" download>Video ↓</a><a id="captions-link" href="#" download>Transcript ↓</a></div>
-</div></section>
+</div></details></section>
 <section id="leaderboard">
 <div class="section-heading"><h2>Leaderboard</h2><p>Task completion alone does not measure whether guidance is accurate, relevant, or responsive to the user. We evaluate both task outcomes and interaction quality.</p></div>
 <div class="board-tools"><div class="segmented" id="engine-filter"><button class="active" data-engine="overall">Overall</button><button data-engine="cooksim">CookSim</button><button data-engine="vhhome">VHSim</button><button data-engine="screensim">ScreenSim</button></div><label class="search"><input id="model-search" placeholder="Search models" aria-label="Find a model"></label></div>
@@ -43,10 +44,12 @@
 <p class="table-note" id="aggregation"></p><div class="data-links"><a href="data/leaderboard.json" download>Download results ↓</a><span>Paper baseline · September 2026 · All scores in percent</span></div></section>
 <section id="failures">
 <div class="section-heading"><h2>When assistance fails</h2></div>
-<div class="insight-grid">
-<article class="insight"><span class="tag">Outdated guidance</span><h3>Guidance arrives after the corrective action.</h3><div class="mini-chat"><div class="assistant"><small>GPT-6 Astra · tick 56</small>“Don't serve that plate. Go to the trash…”</div><div class="user"><small>Simulated user · tick 56</small>“Already did that.”</div></div><p>The assistant instructs the user to discard an ingredient after the plate has already been cleared.</p><button class="text-button" data-jump="56">View episode at tick 56 →</button></article>
-<article class="insight"><span class="tag">Incorrect warning</span><h3>The user must correct the assistant.</h3><div class="mini-chat"><div class="user"><small>Simulated user · tick 169</small>“The plate only has one potato on it.”</div><div class="assistant"><small>Episode summary · tick 178</small>The assistant subsequently retracts its warning.</div></div><p>A warning about a repeated ingredient prompts the user to clarify the current plate contents.</p><button class="text-button" data-jump="169">View episode at tick 169 →</button></article>
-</div></section>
+<div id="recorded-failures"></div>
+</section>
+<section id="persona-comparison">
+<div class="section-heading"><h2>Different users, different assistance</h2><p>The same assistant supports three users with different skills and preferences. The kitchen, recipe, and scheduled events stay fixed.</p></div>
+<div id="persona-replays"></div>
+</section>
 <section id="submit">
 <div class="section-heading"><h2>Evaluate your assistant</h2><a class="button dark" href="submission.html">Submission guide: files, format, and validation →</a></div>
 <div class="submission-steps">
@@ -56,4 +59,4 @@
 </div></section>
 </main>
 <footer><div><b>Interactive Visual Evaluation</b><span>Built on Interactive Visual Gym · Release preview</span></div><a href="https://github.com/hellomuffin/ive-benchmark">GitHub ↗</a></footer>
-<script src="app.js?v=20261001b" type="module"></script></body></html>
+<script src="app.js?v=20261001c" type="module"></script><script src="comparisons.js?v=20261001c" type="module"></script></body></html>

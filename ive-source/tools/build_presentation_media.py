@@ -6,7 +6,7 @@ from PIL import Image,ImageDraw
 
 ROOT=Path(__file__).resolve().parents[1];WS=ROOT.parent;SITE=ROOT/'site'
 
-def cook():
+def cook(key='cooking',start_frame=0):
  from playwright.sync_api import sync_playwright
  web=WS/'cook-bench-engine/web'
  class Handler(SimpleHTTPRequestHandler):
@@ -17,10 +17,10 @@ def cook():
   def log_message(self,*a):pass
  server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
  threading.Thread(target=server.serve_forever,daemon=True).start()
- record=SITE/'data/cooking.json';e=json.loads(record.read_text())
+ record=SITE/f'data/{key}.json';e=json.loads(record.read_text())
  states_path=(WS/e['source']).with_suffix('.states.jsonl')
  states=[json.loads(l) for l in states_path.read_text().splitlines() if l.strip()]
- dest=SITE/'assets/media/cooking-hd';dest.mkdir(exist_ok=True)
+ dest=SITE/f'assets/media/{key}-hd';dest.mkdir(exist_ok=True)
  w,h=960,720
  with sync_playwright() as p:
   b=p.chromium.launch(args=['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
@@ -30,6 +30,7 @@ def cook():
   page.evaluate('(s)=>window.__renderFrame(s)',states[0])
   page.wait_for_function('()=>window.__envReady === true && (window.__loadsPending || 0) === 0',timeout=180000)
   for i,st in enumerate(states):
+   if i<start_frame:continue
    path=dest/f'{i:04d}.jpg'
    if path.exists():
     if path.stat().st_size>250000:
@@ -42,24 +43,27 @@ def cook():
    if i%10==0:print(f'CookSim HD {i+1}/{len(states)} ({time.monotonic()-start:.1f}s/frame)',flush=True)
   b.close()
  server.shutdown()
- assert len(list(dest.glob('*.jpg')))==len(states)
- e['presentation']={'frameRoot':'assets/media/cooking-hd','frameCount':len(states),
+ if len(list(dest.glob('*.jpg')))!=len(states):
+  print('Frame range complete; remaining frames are being rendered by the other worker.',flush=True)
+  return
+ e=json.loads(record.read_text())
+ e['presentation']={'frameRoot':f'assets/media/{key}-hd','frameCount':len(states),
   'crops':{'main':[w+2,26,w,h],'context':[0,26,w,h]},
   'description':'CookSim views re-rendered at 960 × 720 per view from the recorded world states. Evaluation observations are unchanged.',
   'stateSha256':hashlib.sha256(states_path.read_bytes()).hexdigest()}
  record.write_text(json.dumps(e,ensure_ascii=False))
  print('CookSim HD complete',flush=True)
 
-def mobile():
+def mobile(key='mobile'):
  sys.path.insert(0,str(WS/'screensim'))
  import tools.film_hand as fh
  from screensim.core.engine import Device
  from screensim.tasks import by_id,resolve_dynamic
  from screensim.render.capture import Capturer
- record=json.loads((ROOT/'.work/screensim-record.json').read_text())
+ record=json.loads((ROOT/('.work/screensim-record.json' if key=='mobile' else f'.work/{key}-record.json')).read_text())
  task=by_id(record['task']);dev=Device(task.seed)
  if task.start_app!='home':dev.open_app(task.start_app)
- dest=SITE/'assets/media/mobile-gestures';dest.mkdir(exist_ok=True)
+ dest=SITE/f'assets/media/{key}-gestures';dest.mkdir(exist_ok=True)
  class GestureFilm(fh.Film):
   def __init__(self,cap):
    self.cap=cap;self.hand=fh.Hand();self.hx=fh.SCREEN_W*.72;self.hy=fh.SCREEN_H*.86
@@ -95,7 +99,7 @@ def mobile():
    gestures[str(dev.st.tick)]={'frames':film.files.copy(),'fps':fh.FPS,'action':row['text']}
    print('ScreenSim gesture',dev.st.tick,len(film.files),'frames',flush=True)
  assert bool(task.goal(dev.st)[0])==record['goal_ok'] and dev.st.tick==record['final_tick']
- path=SITE/'data/mobile.json';e=json.loads(path.read_text())
+ path=SITE/f'data/{key}.json';e=json.loads(path.read_text())
  e['presentation']={'gestures':gestures,'description':'Touch gestures and page transitions reconstructed with ScreenSim’s filming renderer. Action outcomes and the final goal are verified against the recorded episode.'}
  # Allocate gesture time before speech. Both films and the browser share this timeline.
  elapsed=0
@@ -110,5 +114,6 @@ def mobile():
  print('ScreenSim verified presentation complete',flush=True)
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('engine',choices=['cooking','mobile']);a=p.parse_args()
- (cook if a.engine=='cooking' else mobile)()
+ p=argparse.ArgumentParser();p.add_argument('engine',choices=['cooking','mobile']);p.add_argument('--key');p.add_argument('--start-frame',type=int,default=0);a=p.parse_args()
+ if a.engine=='cooking':cook(a.key or a.engine,a.start_frame)
+ else:mobile(a.key or a.engine)

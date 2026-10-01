@@ -1,0 +1,108 @@
+/* Recorded comparisons: model outcomes above, observations and dialogue below. */
+[hidden] { display: none !important; }
+.comparison-context { margin: 26px 0 22px; }
+.comparison-context h3 { font-size: 23px; line-height: 1.45; margin: 8px 0 14px; max-width: 1080px; }
+.comparison-context p { font-size: 16px; color: #536278; margin: 8px 0; }
+.comparison-jumps { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 17px; }
+.comparison-jumps button { border: 1px solid #d0dce9; border-radius: 5px; padding: 7px 13px; color: #3d587a; font-size: 14px; background: white; }
+.comparison-jumps button:hover { background: #eef3fa; border-color: #8ea8c7; }
+.shared-persona, .persona-dials { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 15px; }
+.shared-persona span, .persona-dials span { color: #566278; }
+.shared-persona b, .persona-dials b { color: #253951; font-weight: 600; }
+.replay-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; align-items: start; }
+.replay-grid.persona-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.recorded-replay { border: 1px solid #d4dfeb; border-radius: 12px; overflow: hidden; min-width: 0; background: white; }
+.recorded-replay:nth-child(2) { --accent: #986739; --wash: #faf5ef; }
+.recorded-replay { --accent: #365e99; --wash: #edf3fb; }
+.recorded-replay:nth-child(3) { --accent: #34776a; --wash: #eef6f2; }
+.replay-title { padding: 18px 20px; background: var(--wash); border-top: 3px solid var(--accent); }
+.replay-title h3 { font-size: 22px; margin: 0; color: #24374e; }
+.replay-title p { font-size: 15px; margin: 5px 0 0; color: #586579; }
+.episode-results { display: grid; grid-template-columns: 1fr 1fr 1.15fr; padding: 16px 20px; gap: 14px; border-bottom: 1px solid #e0e7ef; }
+.episode-results small { display: block; font-size: 13px; margin-top: 7px; color: #647287; }
+.episode-results label { font-size: 14px; color: #566278; display: block; line-height: 1.35; min-height: 36px; }
+.episode-results strong { display: block; font-size: 23px; margin-top: 6px; color: #2a3e55; font-weight: 650; }
+.episode-results strong.completed { color: #23785b; }
+.episode-results strong.incomplete { color: #a2513d; }
+.episode-results .quality-score { color: var(--accent); font-size: 29px; }
+.score-track { height: 5px; background: #e6ebf2; margin-top: 8px; border-radius: 3px; overflow: hidden; }
+.score-track i { display: block; height: 100%; background: var(--accent); }
+.replay-views { display: grid; grid-template-columns: 1fr 1fr; background: #f3f5f8; gap: 2px; }
+.replay-view { min-width: 0; }
+.replay-view span { display: block; font-size: 14px; padding: 9px 12px 5px; font-weight: 600; color: #51637a; }
+.replay-view canvas { width: 100%; display: block; aspect-ratio: 4/3; }
+.recorded-replay.phone .replay-views { grid-template-columns: 1fr; }
+.recorded-replay.phone { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+.recorded-replay.phone > * { grid-column: 1/-1; }
+.recorded-replay.phone .replay-views { grid-column: 1; grid-row: 3; }
+.recorded-replay.phone .replay-chat { grid-column: 2; grid-row: 3; height: 600px; border-left: 1px solid #e0e7ef; }
+.recorded-replay.phone .replay-action { grid-row: 4; }
+.recorded-replay.phone .replay-controls { grid-row: 5; }
+.recorded-replay.phone .replay-view canvas { height: 560px; width: 100%; aspect-ratio: auto; object-fit: contain; }
+.replay-action { padding: 10px 15px; min-height: 62px; background: #f3f5f8; border-bottom: 1px solid #e0e7ef; font-size: 15px; line-height: 1.45; }
+.replay-action small { color: #66748a; font-size: 13px; display: block; }
+.replay-controls { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid #e0e7ef; }
+.replay-controls button { background: var(--wash); border: 1px solid #d5dfeb; padding: 6px 11px; border-radius: 6px; color: #253c58; font-size: 15px; white-space: nowrap; }
+.replay-controls input { flex: 1; min-width: 35px; accent-color: var(--accent); }
+.replay-controls output { color: #566278; font-size: 14px; white-space: nowrap; }
+.replay-chat { height: 255px; overflow: auto; padding: 14px; scroll-behavior: smooth; }
+.replay-message { padding: 11px 13px; border-radius: 7px; margin-bottom: 10px; font-size: 16px; line-height: 1.55; color: #263a51; background: #eef3fa; }
+.replay-message.user { background: #f5f1ea; margin-left: 20px; color: #5e5140; }
+.replay-message small { display: block; font-size: 13px; color: #647287; margin-bottom: 5px; }
+.replay-empty { color: #788497; font-size: 16px; padding: 10px 2px; }
+.replay-state { padding: 13px 16px 16px; border-top: 1px solid #e0e7ef; }
+.replay-state h4 { font-size: 15px; margin: 0 0 10px; color: #34475f; }
+.progress-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 13px; }
+.progress-pills span { font-size: 14px; padding: 5px 8px; border: 1px solid #e1e6ed; border-radius: 5px; color: #727c8b; }
+.progress-pills span.done { color: #28674e; background: #edf6ef; border-color: #cfdfd4; }
+.replay-event { font-size: 15px; line-height: 1.5; padding: 7px 0; border-top: 1px solid #edf0f4; display: flex; justify-content: space-between; gap: 12px; }
+.replay-event small { font-size: 13px; color: #627189; white-space: nowrap; }
+.replay-event.active { color: #97652c; }
+.replay-event.resolved { color: #2f7155; }
+.replay-links { font-size: 14px; padding: 10px 16px; border-top: 1px solid #e0e7ef; display: flex; gap: 22px; }
+.replay-rubric { padding: 12px 16px; border-top: 1px solid #e0e7ef; font-size: 14px; }
+.replay-rubric summary { cursor: pointer; font-size: 15px; color: #465c77; }
+.replay-rubric strong { color: var(--accent); float: right; }
+.replay-rubric > div { max-height: 260px; overflow: auto; line-height: 1.6; }
+.paired-rubrics { margin-top: 22px; padding: 20px 24px; border-radius: 10px; background: #f6f8fb; }
+.paired-rubrics h4 { font-size: 18px; margin: 0 0 16px; }
+.paired-rubric-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 24px; }
+.paired-rubric-grid h5 { font-size: 15px; margin: 0 0 12px; min-height: 40px; }
+.paired-bar { position: relative; height: 24px; margin: 8px 30px 8px 0; background: #e4eaf2; border-radius: 4px; }
+.paired-bar i { display: block; background: #7599c4; height: 100%; border-radius: 4px; }
+.paired-bar.model-1 i { background: #c59a73; }
+.paired-bar span { position: absolute; left: calc(100% + 6px); top: 2px; font-size: 13px; color: #526078; }
+.paired-rubrics > p { font-size: 14px; color: #626f82; margin-bottom: 0; }
+.comparison-note { font-size: 14px; color: #6b7685; margin: 13px 0 22px; line-height: 1.6; }
+.single-replay { margin-top: 18px; border-top: 1px solid #dbe3ed; padding-top: 14px; }
+.single-replay > summary { font-size: 16px; cursor: pointer; color: #3d5f8b; }
+.failure-explanation { font-size: 17px; line-height: 1.6; margin: 0 0 20px; color: #48596d; }
+.failure-intro h3 { font-size: 23px; line-height: 1.3; margin: 8px 0 10px; }
+.failure-intro { min-height: 145px; }
+.replay-annotation { background: #fff7e9; color: #866022; padding: 10px 15px; font-size: 15px; min-height: 68px; line-height: 1.5; }
+.persona-dials { padding: 14px 16px; flex-direction: column; gap: 6px; border-bottom: 1px solid #e0e7ef; }
+.persona-dials span { display: flex; justify-content: space-between; }
+.persona-grid .episode-results { grid-template-columns: 1fr 1fr; }
+.persona-grid .episode-results > div:nth-child(3) { display: none; }
+.persona-grid .replay-chat { height: 300px; }
+.persona-grid .replay-title h3 { font-size: 21px; }
+.persona-grid .replay-controls { gap: 6px; padding: 10px; }
+.persona-grid .replay-controls button { padding: 6px 8px; }
+.persona-grid .replay-state { display: none; }
+@media (max-width: 1050px) {
+ .replay-grid.persona-grid { grid-template-columns: 1fr; }
+ .persona-grid .replay-views { float: left; width: 48%; }
+ .persona-grid .replay-chat { height: 270px; }
+ .persona-grid .replay-action { min-height: 65px; }
+ .persona-grid .replay-links { clear: both; }
+}
+@media (max-width: 760px) {
+ .recorded-replay.phone { display: block; }
+ .recorded-replay.phone .replay-chat { height: 255px; border-left: 0; }
+ .paired-rubric-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .replay-grid { grid-template-columns: 1fr; gap: 20px; }
+ .persona-grid .replay-views { float: none; width: 100%; }
+ .comparison-context h3 { font-size: 20px; }
+ .replay-title h3 { font-size: 21px; }
+ .failure-intro { min-height: 0; }
+}

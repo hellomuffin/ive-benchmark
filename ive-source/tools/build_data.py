@@ -57,7 +57,10 @@ def quality(path, dialogue):
   out.append({'tick':t,'score':score,'categories':flags,'evidence':[
    {'id':k,'judgeIndex':j,'pass':v.get('pass'),'reason':v.get('reason','')}
    for j,its in enumerate(groups) for k,v in its.items() if any(k in ids for ids in CATEGORIES.values())]})
- means={c:sum(v[c] for v in [x['categories'] for x in out] if v[c] is not None)/max(1,sum(x['categories'][c] is not None for x in out)) for c in CATEGORIES}
+ means={}
+ for c in CATEGORIES:
+  values=[x['categories'][c] for x in out if x['categories'][c] is not None]
+  means[c]=sum(values)/len(values) if values else None
  return {'overall':sum(x['score'] for x in out)/len(out) if out else None,'categories':means,'rounds':out,'source':path,'judge':d.get('judge',d.get('judges'))}
 
 def common(key,engine,model,persona,axes,task,record,source):

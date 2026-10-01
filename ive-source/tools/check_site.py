@@ -14,7 +14,9 @@ with sync_playwright() as p:
  page.on('response',lambda r:errors.append(f'HTTP {r.status}: {r.url}') if r.status>=400 and r.url.startswith(BASE) else None)
  page.goto(BASE,wait_until='networkidle')
  page.screenshot(path=str(OUT/'desktop.png'),full_page=True)
- page.locator('[data-jump="56"]').click()
+ page.locator('.single-replay > summary').click()
+ page.evaluate('''async()=>{const e=await fetch('data/cooking.json').then(r=>r.json());const s=e.playback.segments.find(s=>s.tick===56);const input=document.querySelector('#seek');input.value=s.start/e.playback.duration*100;input.dispatchEvent(new Event('input',{bubbles:true}));}''')
+ page.locator('#play').click()
  page.wait_for_timeout(1400)
  assert page.evaluate('window.__audioStarts>0'),'Narration never began playing'
  page.locator('#play').click()

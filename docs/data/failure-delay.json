@@ -1,0 +1,343 @@
+{
+  "id": "failure-delay",
+  "engine": "VHSim",
+  "model": "Gemini 3.1 Pro",
+  "persona": "Fast, low-trust user",
+  "axes": [
+    2,
+    1,
+    3,
+    2,
+    3
+  ],
+  "task": "Collect three plates and two glasses into the dishwasher, then close it.",
+  "source": "vh-streaming-engine/tmp/bench_v1/gemini-3.1-pro-preview/gemini-3.1-pro-preview__cx_dishes_missing_stall__speed_demon.json",
+  "sourceHash": "509b5da0f295ddb72a900c13acc7b8b686f7ed57492fab1e1ad33c07825919ef",
+  "engineVersion": "2026-09-20.f118",
+  "media": "assets/media/failure-delay.mp4",
+  "poster": "assets/media/failure-delay.jpg",
+  "timingNote": "Recorded text interaction. Synthetic voices added for presentation; playback is time-expanded. Tick stamps preserve the original sequence.",
+  "clip": {
+    "start": 360,
+    "end": 385
+  },
+  "ticks": 407,
+  "dialogue": [
+    {
+      "tick": 368,
+      "speaker": "assistant",
+      "text": "You seem to have stopped moving. Please head to the living room to find the plate and glass on the coffee table.",
+      "audio": "assets/media/voice/a3296eec4a2e1264a330.mp3",
+      "duration": 5.890958333333334,
+      "start": 3.6000000000000005
+    },
+    {
+      "tick": 368,
+      "speaker": "user",
+      "text": "I'm looking around for them.",
+      "audio": "assets/media/voice/90e01e483a2c67c18d6a.mp3",
+      "duration": 2.0509583333333334,
+      "start": 9.740958333333335
+    },
+    {
+      "tick": 376,
+      "speaker": "assistant",
+      "text": "You are in the living room now. Turn left to face the coffee table, then go to it to fetch the plate and glass.",
+      "audio": "assets/media/voice/dc814bdb09c69c61d4de.mp3",
+      "duration": 7.730958333333334,
+      "start": 15.191916666666664
+    },
+    {
+      "tick": 378,
+      "speaker": "user",
+      "text": "I already grabbed them both.",
+      "audio": "assets/media/voice/62ee3e5d0b4257d68300.mp3",
+      "duration": 1.8109583333333332,
+      "start": 23.622874999999997
+    }
+  ],
+  "actions": [
+    {
+      "start": 353,
+      "end": 360,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 360,
+      "end": 361,
+      "text": "turn right"
+    },
+    {
+      "start": 361,
+      "end": 362,
+      "text": "turn right"
+    },
+    {
+      "start": 362,
+      "end": 363,
+      "text": "turn right"
+    },
+    {
+      "start": 363,
+      "end": 363,
+      "text": "walk to the coffeetable"
+    },
+    {
+      "start": 364,
+      "end": 364,
+      "text": "walk to the plate"
+    },
+    {
+      "start": 365,
+      "end": 365,
+      "text": "grab the plate"
+    },
+    {
+      "start": 365,
+      "end": 365,
+      "text": "walk to the waterglass"
+    },
+    {
+      "start": 366,
+      "end": 366,
+      "text": "grab the waterglass"
+    },
+    {
+      "start": 366,
+      "end": 367,
+      "text": "turn right"
+    },
+    {
+      "start": 367,
+      "end": 368,
+      "text": "turn right"
+    },
+    {
+      "start": 368,
+      "end": 369,
+      "text": "turn right"
+    },
+    {
+      "start": 369,
+      "end": 370,
+      "text": "turn right"
+    },
+    {
+      "start": 370,
+      "end": 372,
+      "text": "walk to the coffeetable"
+    },
+    {
+      "start": 372,
+      "end": 373,
+      "text": "walk to the plate"
+    },
+    {
+      "start": 373,
+      "end": 376,
+      "text": "grab the plate"
+    },
+    {
+      "start": 376,
+      "end": 377,
+      "text": "walk to the waterglass"
+    },
+    {
+      "start": 377,
+      "end": 380,
+      "text": "grab the waterglass"
+    },
+    {
+      "start": 380,
+      "end": 381,
+      "text": "turn right"
+    },
+    {
+      "start": 381,
+      "end": 382,
+      "text": "turn right"
+    },
+    {
+      "start": 382,
+      "end": 383,
+      "text": "turn right"
+    },
+    {
+      "start": 383,
+      "end": 388,
+      "text": "go through the visible door"
+    }
+  ],
+  "events": [],
+  "milestones": [],
+  "quality": {
+    "overall": null,
+    "categories": {},
+    "rounds": []
+  },
+  "crops": {
+    "main": [
+      0,
+      24,
+      640,
+      456
+    ],
+    "context": [
+      640,
+      24,
+      480,
+      456
+    ]
+  },
+  "annotations": [
+    {
+      "start": 370,
+      "end": 375,
+      "text": "Assistant response pending · the user continues acting"
+    },
+    {
+      "start": 376,
+      "end": 385,
+      "text": "Guidance arrives after the plate has been collected"
+    }
+  ],
+  "frameCount": 386,
+  "presentation": {
+    "description": "Original recorded observations. The displayed excerpt preserves the original actions and dialogue."
+  },
+  "playback": {
+    "duration": 32.38383333333333,
+    "segments": [
+      {
+        "tick": 360,
+        "start": 0,
+        "duration": 0.45
+      },
+      {
+        "tick": 361,
+        "start": 0.45,
+        "duration": 0.45
+      },
+      {
+        "tick": 362,
+        "start": 0.9,
+        "duration": 0.45
+      },
+      {
+        "tick": 363,
+        "start": 1.35,
+        "duration": 0.45
+      },
+      {
+        "tick": 364,
+        "start": 1.8,
+        "duration": 0.45
+      },
+      {
+        "tick": 365,
+        "start": 2.25,
+        "duration": 0.45
+      },
+      {
+        "tick": 366,
+        "start": 2.7,
+        "duration": 0.45
+      },
+      {
+        "tick": 367,
+        "start": 3.1500000000000004,
+        "duration": 0.45
+      },
+      {
+        "tick": 368,
+        "start": 3.6000000000000005,
+        "duration": 8.441916666666668
+      },
+      {
+        "tick": 369,
+        "start": 12.041916666666669,
+        "duration": 0.45
+      },
+      {
+        "tick": 370,
+        "start": 12.491916666666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 371,
+        "start": 12.941916666666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 372,
+        "start": 13.391916666666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 373,
+        "start": 13.841916666666666,
+        "duration": 0.45
+      },
+      {
+        "tick": 374,
+        "start": 14.291916666666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 375,
+        "start": 14.741916666666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 376,
+        "start": 15.191916666666664,
+        "duration": 7.980958333333334
+      },
+      {
+        "tick": 377,
+        "start": 23.172874999999998,
+        "duration": 0.45
+      },
+      {
+        "tick": 378,
+        "start": 23.622874999999997,
+        "duration": 2.060958333333332
+      },
+      {
+        "tick": 379,
+        "start": 25.68383333333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 380,
+        "start": 26.133833333333328,
+        "duration": 0.45
+      },
+      {
+        "tick": 381,
+        "start": 26.583833333333327,
+        "duration": 0.45
+      },
+      {
+        "tick": 382,
+        "start": 27.033833333333327,
+        "duration": 0.45
+      },
+      {
+        "tick": 383,
+        "start": 27.483833333333326,
+        "duration": 0.45
+      },
+      {
+        "tick": 384,
+        "start": 27.933833333333325,
+        "duration": 0.45
+      },
+      {
+        "tick": 385,
+        "start": 28.383833333333325,
+        "duration": 4
+      }
+    ]
+  }
+}

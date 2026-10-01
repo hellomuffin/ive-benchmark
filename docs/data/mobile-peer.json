@@ -1,0 +1,1110 @@
+{
+  "id": "mobile-peer",
+  "engine": "ScreenSim",
+  "model": "GPT-6 Astra",
+  "persona": "Hurried, skeptical user",
+  "axes": [
+    2,
+    1,
+    3,
+    2,
+    3
+  ],
+  "task": "Stop TripSnap from accessing location, tracking activity, and refreshing in the background. Preserve every other app’s settings.",
+  "source": "screensim/tmp/bench_v2/gpt-6-astra.records.jsonl",
+  "sourceHash": "3ddf889019d6bc42457184ae52e3ebc3c63f05de05bb700d8bebcf11f95b31b1",
+  "engineVersion": "ed3a0c6841",
+  "timingNote": "Recorded text interaction. Synthetic voices added for presentation; playback is time-expanded. Tick stamps preserve the original sequence.",
+  "case": "app_privacy_quarantine__c2",
+  "personaId": "speed_demon",
+  "run": 2,
+  "ticks": 21,
+  "completed": true,
+  "outcome": "Task completed",
+  "dialogue": [
+    {
+      "tick": 10,
+      "speaker": "assistant",
+      "text": "You selected “Ask Next Time Or When I Share,” which still lets TripSnap ask for location access. Tap “Never” instead.",
+      "audio": "assets/media/voice/b3fc10258c3291ed28ec.mp3",
+      "duration": 8.090958333333333,
+      "start": 13.899999999999999
+    },
+    {
+      "tick": 10,
+      "speaker": "user",
+      "text": "Right, let me change that to Never.",
+      "audio": "assets/media/voice/3bd5920da19bc16d3aae.mp3",
+      "duration": 2.6509583333333335,
+      "start": 22.24095833333333
+    },
+    {
+      "tick": 19,
+      "speaker": "assistant",
+      "text": "You turned off “Allow Apps to Request to Track,” which affects every app. Turn that back on, then turn off only the switch beside TripSnap. Leave Weatherly and QuickPay on.",
+      "audio": "assets/media/voice/7f129cd2fbc593442600.mp3",
+      "duration": 11.450958333333332,
+      "start": 36.69191666666668
+    },
+    {
+      "tick": 19,
+      "speaker": "user",
+      "text": "Ah, right. Fixing that now.",
+      "audio": "assets/media/voice/37285e82c76757cd041f.mp3",
+      "duration": 2.1309583333333335,
+      "start": 48.39287500000001
+    }
+  ],
+  "actions": [
+    {
+      "start": 1,
+      "end": 1,
+      "text": "swipe up"
+    },
+    {
+      "start": 2,
+      "end": 2,
+      "text": "swipe up"
+    },
+    {
+      "start": 3,
+      "end": 3,
+      "text": "swipe up"
+    },
+    {
+      "start": 4,
+      "end": 4,
+      "text": "tap Apps"
+    },
+    {
+      "start": 5,
+      "end": 5,
+      "text": "swipe up"
+    },
+    {
+      "start": 6,
+      "end": 6,
+      "text": "swipe up"
+    },
+    {
+      "start": 7,
+      "end": 7,
+      "text": "tap TripSnap"
+    },
+    {
+      "start": 8,
+      "end": 8,
+      "text": "tap Background App Refresh"
+    },
+    {
+      "start": 9,
+      "end": 9,
+      "text": "tap Location"
+    },
+    {
+      "start": 10,
+      "end": 10,
+      "text": "tap Ask Next Time Or When I Share"
+    },
+    {
+      "start": 11,
+      "end": 11,
+      "text": "tap Never"
+    },
+    {
+      "start": 12,
+      "end": 12,
+      "text": "press back"
+    },
+    {
+      "start": 13,
+      "end": 13,
+      "text": "press back"
+    },
+    {
+      "start": 14,
+      "end": 14,
+      "text": "tap TripSnap"
+    },
+    {
+      "start": 15,
+      "end": 15,
+      "text": "press back"
+    },
+    {
+      "start": 16,
+      "end": 16,
+      "text": "press back"
+    },
+    {
+      "start": 17,
+      "end": 17,
+      "text": "tap Privacy & Security"
+    },
+    {
+      "start": 18,
+      "end": 18,
+      "text": "tap Tracking"
+    },
+    {
+      "start": 19,
+      "end": 19,
+      "text": "tap Allow Apps to Request to Track"
+    },
+    {
+      "start": 20,
+      "end": 20,
+      "text": "tap Allow Apps to Request to Track"
+    },
+    {
+      "start": 21,
+      "end": 21,
+      "text": "tap TripSnap"
+    }
+  ],
+  "events": [
+    {
+      "label": "Choose the wrong location permission",
+      "kind": "error",
+      "tick": 10,
+      "end": 10,
+      "detectedAt": 10,
+      "detected": true,
+      "prevented": true
+    },
+    {
+      "label": "Disable tracking for every app",
+      "kind": "error",
+      "tick": 19,
+      "end": 19,
+      "detectedAt": 19,
+      "detected": true,
+      "prevented": true
+    }
+  ],
+  "milestones": [
+    {
+      "label": "Background refresh off",
+      "tick": 8
+    },
+    {
+      "label": "Location: Never",
+      "tick": 11
+    },
+    {
+      "label": "Tracking off",
+      "tick": 21
+    }
+  ],
+  "quality": {
+    "overall": 1.0,
+    "categories": {
+      "truthful": 1.0,
+      "sensible": 1.0,
+      "helpful": 1.0,
+      "listens": null,
+      "economy": 1.0
+    },
+    "rounds": [
+      {
+        "tick": 10,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The factual claims match the evidence: the person did tap “Ask Next Time Or When I Share,” and that option is shown selected on the screen."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line names only existing controls on this phone, including “Ask Next Time Or When I Share” and “Never,” both present on the screen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current live state: the just-made selection on the TripSnap location page."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There was no pending question, request, or objection from the person in this round."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "“Tap ‘Never’ instead” can be done immediately because that control is on the screen shown."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Changing TripSnap’s location permission to Never serves the owner’s task of preventing TripSnap from finding their location."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The mistake claim says what to do about it by explicitly instructing to tap “Never” instead."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There was no prior pushback to reply to."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no stated intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is concise and focused on the current correction without extra explanation."
+          }
+        ]
+      },
+      {
+        "tick": 19,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The factual claim that “Allow Apps to Request to Track” is off matches the screen, and the other claim about affecting every app is consistent with the toggle’s global scope."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It names only controls that exist on this phone: “Allow Apps to Request to Track,” “TripSnap,” “Weatherly,” and “QuickPay.”"
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current screen state and the live mistake at t19, not a later step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "nothing was pending"
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Each advised action can be done on the screen shown now because the needed toggles are visible."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Turning tracking back on globally and then disabling only TripSnap matches the task requirement to affect only TripSnap."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The mistake claim includes what to do about it: “Turn that back on.”"
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no stated intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is concise for the needed correction and next step."
+          }
+        ]
+      }
+    ],
+    "source": "screensim/tmp/bench_v2/aq_v4five/gpt-6-astra/app_privacy_quarantine__c2__speed_demon.json",
+    "judge": "gpt-5.4-mini"
+  },
+  "detection": {
+    "detected": 2,
+    "triggered": 2
+  },
+  "frameCount": 22,
+  "playback": {
+    "duration": 56.92383333333334,
+    "segments": [
+      {
+        "tick": 0,
+        "start": 0,
+        "duration": 0.45,
+        "gestureDuration": 0
+      },
+      {
+        "tick": 1,
+        "start": 0.45,
+        "duration": 1.45,
+        "gestureDuration": 1.25
+      },
+      {
+        "tick": 2,
+        "start": 1.9,
+        "duration": 1.45,
+        "gestureDuration": 1.25
+      },
+      {
+        "tick": 3,
+        "start": 3.3499999999999996,
+        "duration": 1.45,
+        "gestureDuration": 1.25
+      },
+      {
+        "tick": 4,
+        "start": 4.8,
+        "duration": 1.3499999999999999,
+        "gestureDuration": 1.15
+      },
+      {
+        "tick": 5,
+        "start": 6.1499999999999995,
+        "duration": 1.45,
+        "gestureDuration": 1.25
+      },
+      {
+        "tick": 6,
+        "start": 7.6,
+        "duration": 1.45,
+        "gestureDuration": 1.25
+      },
+      {
+        "tick": 7,
+        "start": 9.049999999999999,
+        "duration": 1.3499999999999999,
+        "gestureDuration": 1.15
+      },
+      {
+        "tick": 8,
+        "start": 10.399999999999999,
+        "duration": 1.15,
+        "gestureDuration": 0.95
+      },
+      {
+        "tick": 9,
+        "start": 11.549999999999999,
+        "duration": 1.3499999999999999,
+        "gestureDuration": 1.15
+      },
+      {
+        "tick": 10,
+        "start": 12.899999999999999,
+        "duration": 12.241916666666668,
+        "gestureDuration": 1.0
+      },
+      {
+        "tick": 11,
+        "start": 25.141916666666667,
+        "duration": 1.15,
+        "gestureDuration": 0.95
+      },
+      {
+        "tick": 12,
+        "start": 26.291916666666665,
+        "duration": 1.3499999999999999,
+        "gestureDuration": 1.15
+      },
+      {
+        "tick": 13,
+        "start": 27.641916666666667,
+        "duration": 1.3499999999999999,
+        "gestureDuration": 1.15
+      },
+      {
+        "tick": 14,
+        "start": 28.99191666666667,
+        "duration": 1.3499999999999999,
+        "gestureDuration": 1.15
+      },
+      {
+        "tick": 15,
+        "start": 30.34191666666667,
+        "duration": 1.3499999999999999,
+        "gestureDuration": 1.15
+      },
+      {
+        "tick": 16,
+        "start": 31.69191666666667,
+        "duration": 1.3499999999999999,
+        "gestureDuration": 1.15
+      },
+      {
+        "tick": 17,
+        "start": 33.04191666666667,
+        "duration": 1.3499999999999999,
+        "gestureDuration": 1.15
+      },
+      {
+        "tick": 18,
+        "start": 34.391916666666674,
+        "duration": 1.3499999999999999,
+        "gestureDuration": 1.15
+      },
+      {
+        "tick": 19,
+        "start": 35.741916666666675,
+        "duration": 15.031916666666667,
+        "gestureDuration": 0.95
+      },
+      {
+        "tick": 20,
+        "start": 50.77383333333334,
+        "duration": 1.15,
+        "gestureDuration": 0.95
+      },
+      {
+        "tick": 21,
+        "start": 51.92383333333334,
+        "duration": 5,
+        "gestureDuration": 0.95
+      }
+    ]
+  },
+  "presentation": {
+    "gestures": {
+      "1": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0001-000.jpg",
+          "assets/media/mobile-peer-gestures/0001-001.jpg",
+          "assets/media/mobile-peer-gestures/0001-002.jpg",
+          "assets/media/mobile-peer-gestures/0001-003.jpg",
+          "assets/media/mobile-peer-gestures/0001-004.jpg",
+          "assets/media/mobile-peer-gestures/0001-005.jpg",
+          "assets/media/mobile-peer-gestures/0001-006.jpg",
+          "assets/media/mobile-peer-gestures/0001-007.jpg",
+          "assets/media/mobile-peer-gestures/0001-008.jpg",
+          "assets/media/mobile-peer-gestures/0001-009.jpg",
+          "assets/media/mobile-peer-gestures/0001-010.jpg",
+          "assets/media/mobile-peer-gestures/0001-011.jpg",
+          "assets/media/mobile-peer-gestures/0001-012.jpg",
+          "assets/media/mobile-peer-gestures/0001-013.jpg",
+          "assets/media/mobile-peer-gestures/0001-014.jpg",
+          "assets/media/mobile-peer-gestures/0001-015.jpg",
+          "assets/media/mobile-peer-gestures/0001-016.jpg",
+          "assets/media/mobile-peer-gestures/0001-017.jpg",
+          "assets/media/mobile-peer-gestures/0001-018.jpg",
+          "assets/media/mobile-peer-gestures/0001-019.jpg",
+          "assets/media/mobile-peer-gestures/0001-020.jpg",
+          "assets/media/mobile-peer-gestures/0001-021.jpg",
+          "assets/media/mobile-peer-gestures/0001-022.jpg",
+          "assets/media/mobile-peer-gestures/0001-023.jpg",
+          "assets/media/mobile-peer-gestures/0001-024.jpg"
+        ],
+        "fps": 20,
+        "action": "swipe up"
+      },
+      "2": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0002-000.jpg",
+          "assets/media/mobile-peer-gestures/0002-001.jpg",
+          "assets/media/mobile-peer-gestures/0002-002.jpg",
+          "assets/media/mobile-peer-gestures/0002-003.jpg",
+          "assets/media/mobile-peer-gestures/0002-004.jpg",
+          "assets/media/mobile-peer-gestures/0002-005.jpg",
+          "assets/media/mobile-peer-gestures/0002-006.jpg",
+          "assets/media/mobile-peer-gestures/0002-007.jpg",
+          "assets/media/mobile-peer-gestures/0002-008.jpg",
+          "assets/media/mobile-peer-gestures/0002-009.jpg",
+          "assets/media/mobile-peer-gestures/0002-010.jpg",
+          "assets/media/mobile-peer-gestures/0002-011.jpg",
+          "assets/media/mobile-peer-gestures/0002-012.jpg",
+          "assets/media/mobile-peer-gestures/0002-013.jpg",
+          "assets/media/mobile-peer-gestures/0002-014.jpg",
+          "assets/media/mobile-peer-gestures/0002-015.jpg",
+          "assets/media/mobile-peer-gestures/0002-016.jpg",
+          "assets/media/mobile-peer-gestures/0002-017.jpg",
+          "assets/media/mobile-peer-gestures/0002-018.jpg",
+          "assets/media/mobile-peer-gestures/0002-019.jpg",
+          "assets/media/mobile-peer-gestures/0002-020.jpg",
+          "assets/media/mobile-peer-gestures/0002-021.jpg",
+          "assets/media/mobile-peer-gestures/0002-022.jpg",
+          "assets/media/mobile-peer-gestures/0002-023.jpg",
+          "assets/media/mobile-peer-gestures/0002-024.jpg"
+        ],
+        "fps": 20,
+        "action": "swipe up"
+      },
+      "3": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0003-000.jpg",
+          "assets/media/mobile-peer-gestures/0003-001.jpg",
+          "assets/media/mobile-peer-gestures/0003-002.jpg",
+          "assets/media/mobile-peer-gestures/0003-003.jpg",
+          "assets/media/mobile-peer-gestures/0003-004.jpg",
+          "assets/media/mobile-peer-gestures/0003-005.jpg",
+          "assets/media/mobile-peer-gestures/0003-006.jpg",
+          "assets/media/mobile-peer-gestures/0003-007.jpg",
+          "assets/media/mobile-peer-gestures/0003-008.jpg",
+          "assets/media/mobile-peer-gestures/0003-009.jpg",
+          "assets/media/mobile-peer-gestures/0003-010.jpg",
+          "assets/media/mobile-peer-gestures/0003-011.jpg",
+          "assets/media/mobile-peer-gestures/0003-012.jpg",
+          "assets/media/mobile-peer-gestures/0003-013.jpg",
+          "assets/media/mobile-peer-gestures/0003-014.jpg",
+          "assets/media/mobile-peer-gestures/0003-015.jpg",
+          "assets/media/mobile-peer-gestures/0003-016.jpg",
+          "assets/media/mobile-peer-gestures/0003-017.jpg",
+          "assets/media/mobile-peer-gestures/0003-018.jpg",
+          "assets/media/mobile-peer-gestures/0003-019.jpg",
+          "assets/media/mobile-peer-gestures/0003-020.jpg",
+          "assets/media/mobile-peer-gestures/0003-021.jpg",
+          "assets/media/mobile-peer-gestures/0003-022.jpg",
+          "assets/media/mobile-peer-gestures/0003-023.jpg",
+          "assets/media/mobile-peer-gestures/0003-024.jpg"
+        ],
+        "fps": 20,
+        "action": "swipe up"
+      },
+      "4": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0004-000.jpg",
+          "assets/media/mobile-peer-gestures/0004-001.jpg",
+          "assets/media/mobile-peer-gestures/0004-002.jpg",
+          "assets/media/mobile-peer-gestures/0004-003.jpg",
+          "assets/media/mobile-peer-gestures/0004-004.jpg",
+          "assets/media/mobile-peer-gestures/0004-005.jpg",
+          "assets/media/mobile-peer-gestures/0004-006.jpg",
+          "assets/media/mobile-peer-gestures/0004-007.jpg",
+          "assets/media/mobile-peer-gestures/0004-008.jpg",
+          "assets/media/mobile-peer-gestures/0004-009.jpg",
+          "assets/media/mobile-peer-gestures/0004-010.jpg",
+          "assets/media/mobile-peer-gestures/0004-011.jpg",
+          "assets/media/mobile-peer-gestures/0004-012.jpg",
+          "assets/media/mobile-peer-gestures/0004-013.jpg",
+          "assets/media/mobile-peer-gestures/0004-014.jpg",
+          "assets/media/mobile-peer-gestures/0004-015.jpg",
+          "assets/media/mobile-peer-gestures/0004-016.jpg",
+          "assets/media/mobile-peer-gestures/0004-017.jpg",
+          "assets/media/mobile-peer-gestures/0004-018.jpg",
+          "assets/media/mobile-peer-gestures/0004-019.jpg",
+          "assets/media/mobile-peer-gestures/0004-020.jpg",
+          "assets/media/mobile-peer-gestures/0004-021.jpg",
+          "assets/media/mobile-peer-gestures/0004-022.jpg"
+        ],
+        "fps": 20,
+        "action": "tap Apps"
+      },
+      "5": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0005-000.jpg",
+          "assets/media/mobile-peer-gestures/0005-001.jpg",
+          "assets/media/mobile-peer-gestures/0005-002.jpg",
+          "assets/media/mobile-peer-gestures/0005-003.jpg",
+          "assets/media/mobile-peer-gestures/0005-004.jpg",
+          "assets/media/mobile-peer-gestures/0005-005.jpg",
+          "assets/media/mobile-peer-gestures/0005-006.jpg",
+          "assets/media/mobile-peer-gestures/0005-007.jpg",
+          "assets/media/mobile-peer-gestures/0005-008.jpg",
+          "assets/media/mobile-peer-gestures/0005-009.jpg",
+          "assets/media/mobile-peer-gestures/0005-010.jpg",
+          "assets/media/mobile-peer-gestures/0005-011.jpg",
+          "assets/media/mobile-peer-gestures/0005-012.jpg",
+          "assets/media/mobile-peer-gestures/0005-013.jpg",
+          "assets/media/mobile-peer-gestures/0005-014.jpg",
+          "assets/media/mobile-peer-gestures/0005-015.jpg",
+          "assets/media/mobile-peer-gestures/0005-016.jpg",
+          "assets/media/mobile-peer-gestures/0005-017.jpg",
+          "assets/media/mobile-peer-gestures/0005-018.jpg",
+          "assets/media/mobile-peer-gestures/0005-019.jpg",
+          "assets/media/mobile-peer-gestures/0005-020.jpg",
+          "assets/media/mobile-peer-gestures/0005-021.jpg",
+          "assets/media/mobile-peer-gestures/0005-022.jpg",
+          "assets/media/mobile-peer-gestures/0005-023.jpg",
+          "assets/media/mobile-peer-gestures/0005-024.jpg"
+        ],
+        "fps": 20,
+        "action": "swipe up"
+      },
+      "6": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0006-000.jpg",
+          "assets/media/mobile-peer-gestures/0006-001.jpg",
+          "assets/media/mobile-peer-gestures/0006-002.jpg",
+          "assets/media/mobile-peer-gestures/0006-003.jpg",
+          "assets/media/mobile-peer-gestures/0006-004.jpg",
+          "assets/media/mobile-peer-gestures/0006-005.jpg",
+          "assets/media/mobile-peer-gestures/0006-006.jpg",
+          "assets/media/mobile-peer-gestures/0006-007.jpg",
+          "assets/media/mobile-peer-gestures/0006-008.jpg",
+          "assets/media/mobile-peer-gestures/0006-009.jpg",
+          "assets/media/mobile-peer-gestures/0006-010.jpg",
+          "assets/media/mobile-peer-gestures/0006-011.jpg",
+          "assets/media/mobile-peer-gestures/0006-012.jpg",
+          "assets/media/mobile-peer-gestures/0006-013.jpg",
+          "assets/media/mobile-peer-gestures/0006-014.jpg",
+          "assets/media/mobile-peer-gestures/0006-015.jpg",
+          "assets/media/mobile-peer-gestures/0006-016.jpg",
+          "assets/media/mobile-peer-gestures/0006-017.jpg",
+          "assets/media/mobile-peer-gestures/0006-018.jpg",
+          "assets/media/mobile-peer-gestures/0006-019.jpg",
+          "assets/media/mobile-peer-gestures/0006-020.jpg",
+          "assets/media/mobile-peer-gestures/0006-021.jpg",
+          "assets/media/mobile-peer-gestures/0006-022.jpg",
+          "assets/media/mobile-peer-gestures/0006-023.jpg",
+          "assets/media/mobile-peer-gestures/0006-024.jpg"
+        ],
+        "fps": 20,
+        "action": "swipe up"
+      },
+      "7": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0007-000.jpg",
+          "assets/media/mobile-peer-gestures/0007-001.jpg",
+          "assets/media/mobile-peer-gestures/0007-002.jpg",
+          "assets/media/mobile-peer-gestures/0007-003.jpg",
+          "assets/media/mobile-peer-gestures/0007-004.jpg",
+          "assets/media/mobile-peer-gestures/0007-005.jpg",
+          "assets/media/mobile-peer-gestures/0007-006.jpg",
+          "assets/media/mobile-peer-gestures/0007-007.jpg",
+          "assets/media/mobile-peer-gestures/0007-008.jpg",
+          "assets/media/mobile-peer-gestures/0007-009.jpg",
+          "assets/media/mobile-peer-gestures/0007-010.jpg",
+          "assets/media/mobile-peer-gestures/0007-011.jpg",
+          "assets/media/mobile-peer-gestures/0007-012.jpg",
+          "assets/media/mobile-peer-gestures/0007-013.jpg",
+          "assets/media/mobile-peer-gestures/0007-014.jpg",
+          "assets/media/mobile-peer-gestures/0007-015.jpg",
+          "assets/media/mobile-peer-gestures/0007-016.jpg",
+          "assets/media/mobile-peer-gestures/0007-017.jpg",
+          "assets/media/mobile-peer-gestures/0007-018.jpg",
+          "assets/media/mobile-peer-gestures/0007-019.jpg",
+          "assets/media/mobile-peer-gestures/0007-020.jpg",
+          "assets/media/mobile-peer-gestures/0007-021.jpg",
+          "assets/media/mobile-peer-gestures/0007-022.jpg"
+        ],
+        "fps": 20,
+        "action": "tap TripSnap"
+      },
+      "8": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0008-000.jpg",
+          "assets/media/mobile-peer-gestures/0008-001.jpg",
+          "assets/media/mobile-peer-gestures/0008-002.jpg",
+          "assets/media/mobile-peer-gestures/0008-003.jpg",
+          "assets/media/mobile-peer-gestures/0008-004.jpg",
+          "assets/media/mobile-peer-gestures/0008-005.jpg",
+          "assets/media/mobile-peer-gestures/0008-006.jpg",
+          "assets/media/mobile-peer-gestures/0008-007.jpg",
+          "assets/media/mobile-peer-gestures/0008-008.jpg",
+          "assets/media/mobile-peer-gestures/0008-009.jpg",
+          "assets/media/mobile-peer-gestures/0008-010.jpg",
+          "assets/media/mobile-peer-gestures/0008-011.jpg",
+          "assets/media/mobile-peer-gestures/0008-012.jpg",
+          "assets/media/mobile-peer-gestures/0008-013.jpg",
+          "assets/media/mobile-peer-gestures/0008-014.jpg",
+          "assets/media/mobile-peer-gestures/0008-015.jpg",
+          "assets/media/mobile-peer-gestures/0008-016.jpg",
+          "assets/media/mobile-peer-gestures/0008-017.jpg",
+          "assets/media/mobile-peer-gestures/0008-018.jpg"
+        ],
+        "fps": 20,
+        "action": "tap Background App Refresh"
+      },
+      "9": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0009-000.jpg",
+          "assets/media/mobile-peer-gestures/0009-001.jpg",
+          "assets/media/mobile-peer-gestures/0009-002.jpg",
+          "assets/media/mobile-peer-gestures/0009-003.jpg",
+          "assets/media/mobile-peer-gestures/0009-004.jpg",
+          "assets/media/mobile-peer-gestures/0009-005.jpg",
+          "assets/media/mobile-peer-gestures/0009-006.jpg",
+          "assets/media/mobile-peer-gestures/0009-007.jpg",
+          "assets/media/mobile-peer-gestures/0009-008.jpg",
+          "assets/media/mobile-peer-gestures/0009-009.jpg",
+          "assets/media/mobile-peer-gestures/0009-010.jpg",
+          "assets/media/mobile-peer-gestures/0009-011.jpg",
+          "assets/media/mobile-peer-gestures/0009-012.jpg",
+          "assets/media/mobile-peer-gestures/0009-013.jpg",
+          "assets/media/mobile-peer-gestures/0009-014.jpg",
+          "assets/media/mobile-peer-gestures/0009-015.jpg",
+          "assets/media/mobile-peer-gestures/0009-016.jpg",
+          "assets/media/mobile-peer-gestures/0009-017.jpg",
+          "assets/media/mobile-peer-gestures/0009-018.jpg",
+          "assets/media/mobile-peer-gestures/0009-019.jpg",
+          "assets/media/mobile-peer-gestures/0009-020.jpg",
+          "assets/media/mobile-peer-gestures/0009-021.jpg",
+          "assets/media/mobile-peer-gestures/0009-022.jpg"
+        ],
+        "fps": 20,
+        "action": "tap Location"
+      },
+      "10": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0010-000.jpg",
+          "assets/media/mobile-peer-gestures/0010-001.jpg",
+          "assets/media/mobile-peer-gestures/0010-002.jpg",
+          "assets/media/mobile-peer-gestures/0010-003.jpg",
+          "assets/media/mobile-peer-gestures/0010-004.jpg",
+          "assets/media/mobile-peer-gestures/0010-005.jpg",
+          "assets/media/mobile-peer-gestures/0010-006.jpg",
+          "assets/media/mobile-peer-gestures/0010-007.jpg",
+          "assets/media/mobile-peer-gestures/0010-008.jpg",
+          "assets/media/mobile-peer-gestures/0010-009.jpg",
+          "assets/media/mobile-peer-gestures/0010-010.jpg",
+          "assets/media/mobile-peer-gestures/0010-011.jpg",
+          "assets/media/mobile-peer-gestures/0010-012.jpg",
+          "assets/media/mobile-peer-gestures/0010-013.jpg",
+          "assets/media/mobile-peer-gestures/0010-014.jpg",
+          "assets/media/mobile-peer-gestures/0010-015.jpg",
+          "assets/media/mobile-peer-gestures/0010-016.jpg",
+          "assets/media/mobile-peer-gestures/0010-017.jpg",
+          "assets/media/mobile-peer-gestures/0010-018.jpg",
+          "assets/media/mobile-peer-gestures/0010-019.jpg"
+        ],
+        "fps": 20,
+        "action": "tap Ask Next Time Or When I Share"
+      },
+      "11": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0011-000.jpg",
+          "assets/media/mobile-peer-gestures/0011-001.jpg",
+          "assets/media/mobile-peer-gestures/0011-002.jpg",
+          "assets/media/mobile-peer-gestures/0011-003.jpg",
+          "assets/media/mobile-peer-gestures/0011-004.jpg",
+          "assets/media/mobile-peer-gestures/0011-005.jpg",
+          "assets/media/mobile-peer-gestures/0011-006.jpg",
+          "assets/media/mobile-peer-gestures/0011-007.jpg",
+          "assets/media/mobile-peer-gestures/0011-008.jpg",
+          "assets/media/mobile-peer-gestures/0011-009.jpg",
+          "assets/media/mobile-peer-gestures/0011-010.jpg",
+          "assets/media/mobile-peer-gestures/0011-011.jpg",
+          "assets/media/mobile-peer-gestures/0011-012.jpg",
+          "assets/media/mobile-peer-gestures/0011-013.jpg",
+          "assets/media/mobile-peer-gestures/0011-014.jpg",
+          "assets/media/mobile-peer-gestures/0011-015.jpg",
+          "assets/media/mobile-peer-gestures/0011-016.jpg",
+          "assets/media/mobile-peer-gestures/0011-017.jpg",
+          "assets/media/mobile-peer-gestures/0011-018.jpg"
+        ],
+        "fps": 20,
+        "action": "tap Never"
+      },
+      "12": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0012-000.jpg",
+          "assets/media/mobile-peer-gestures/0012-001.jpg",
+          "assets/media/mobile-peer-gestures/0012-002.jpg",
+          "assets/media/mobile-peer-gestures/0012-003.jpg",
+          "assets/media/mobile-peer-gestures/0012-004.jpg",
+          "assets/media/mobile-peer-gestures/0012-005.jpg",
+          "assets/media/mobile-peer-gestures/0012-006.jpg",
+          "assets/media/mobile-peer-gestures/0012-007.jpg",
+          "assets/media/mobile-peer-gestures/0012-008.jpg",
+          "assets/media/mobile-peer-gestures/0012-009.jpg",
+          "assets/media/mobile-peer-gestures/0012-010.jpg",
+          "assets/media/mobile-peer-gestures/0012-011.jpg",
+          "assets/media/mobile-peer-gestures/0012-012.jpg",
+          "assets/media/mobile-peer-gestures/0012-013.jpg",
+          "assets/media/mobile-peer-gestures/0012-014.jpg",
+          "assets/media/mobile-peer-gestures/0012-015.jpg",
+          "assets/media/mobile-peer-gestures/0012-016.jpg",
+          "assets/media/mobile-peer-gestures/0012-017.jpg",
+          "assets/media/mobile-peer-gestures/0012-018.jpg",
+          "assets/media/mobile-peer-gestures/0012-019.jpg",
+          "assets/media/mobile-peer-gestures/0012-020.jpg",
+          "assets/media/mobile-peer-gestures/0012-021.jpg",
+          "assets/media/mobile-peer-gestures/0012-022.jpg"
+        ],
+        "fps": 20,
+        "action": "press back"
+      },
+      "13": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0013-000.jpg",
+          "assets/media/mobile-peer-gestures/0013-001.jpg",
+          "assets/media/mobile-peer-gestures/0013-002.jpg",
+          "assets/media/mobile-peer-gestures/0013-003.jpg",
+          "assets/media/mobile-peer-gestures/0013-004.jpg",
+          "assets/media/mobile-peer-gestures/0013-005.jpg",
+          "assets/media/mobile-peer-gestures/0013-006.jpg",
+          "assets/media/mobile-peer-gestures/0013-007.jpg",
+          "assets/media/mobile-peer-gestures/0013-008.jpg",
+          "assets/media/mobile-peer-gestures/0013-009.jpg",
+          "assets/media/mobile-peer-gestures/0013-010.jpg",
+          "assets/media/mobile-peer-gestures/0013-011.jpg",
+          "assets/media/mobile-peer-gestures/0013-012.jpg",
+          "assets/media/mobile-peer-gestures/0013-013.jpg",
+          "assets/media/mobile-peer-gestures/0013-014.jpg",
+          "assets/media/mobile-peer-gestures/0013-015.jpg",
+          "assets/media/mobile-peer-gestures/0013-016.jpg",
+          "assets/media/mobile-peer-gestures/0013-017.jpg",
+          "assets/media/mobile-peer-gestures/0013-018.jpg",
+          "assets/media/mobile-peer-gestures/0013-019.jpg",
+          "assets/media/mobile-peer-gestures/0013-020.jpg",
+          "assets/media/mobile-peer-gestures/0013-021.jpg",
+          "assets/media/mobile-peer-gestures/0013-022.jpg"
+        ],
+        "fps": 20,
+        "action": "press back"
+      },
+      "14": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0014-000.jpg",
+          "assets/media/mobile-peer-gestures/0014-001.jpg",
+          "assets/media/mobile-peer-gestures/0014-002.jpg",
+          "assets/media/mobile-peer-gestures/0014-003.jpg",
+          "assets/media/mobile-peer-gestures/0014-004.jpg",
+          "assets/media/mobile-peer-gestures/0014-005.jpg",
+          "assets/media/mobile-peer-gestures/0014-006.jpg",
+          "assets/media/mobile-peer-gestures/0014-007.jpg",
+          "assets/media/mobile-peer-gestures/0014-008.jpg",
+          "assets/media/mobile-peer-gestures/0014-009.jpg",
+          "assets/media/mobile-peer-gestures/0014-010.jpg",
+          "assets/media/mobile-peer-gestures/0014-011.jpg",
+          "assets/media/mobile-peer-gestures/0014-012.jpg",
+          "assets/media/mobile-peer-gestures/0014-013.jpg",
+          "assets/media/mobile-peer-gestures/0014-014.jpg",
+          "assets/media/mobile-peer-gestures/0014-015.jpg",
+          "assets/media/mobile-peer-gestures/0014-016.jpg",
+          "assets/media/mobile-peer-gestures/0014-017.jpg",
+          "assets/media/mobile-peer-gestures/0014-018.jpg",
+          "assets/media/mobile-peer-gestures/0014-019.jpg",
+          "assets/media/mobile-peer-gestures/0014-020.jpg",
+          "assets/media/mobile-peer-gestures/0014-021.jpg",
+          "assets/media/mobile-peer-gestures/0014-022.jpg"
+        ],
+        "fps": 20,
+        "action": "tap TripSnap"
+      },
+      "15": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0015-000.jpg",
+          "assets/media/mobile-peer-gestures/0015-001.jpg",
+          "assets/media/mobile-peer-gestures/0015-002.jpg",
+          "assets/media/mobile-peer-gestures/0015-003.jpg",
+          "assets/media/mobile-peer-gestures/0015-004.jpg",
+          "assets/media/mobile-peer-gestures/0015-005.jpg",
+          "assets/media/mobile-peer-gestures/0015-006.jpg",
+          "assets/media/mobile-peer-gestures/0015-007.jpg",
+          "assets/media/mobile-peer-gestures/0015-008.jpg",
+          "assets/media/mobile-peer-gestures/0015-009.jpg",
+          "assets/media/mobile-peer-gestures/0015-010.jpg",
+          "assets/media/mobile-peer-gestures/0015-011.jpg",
+          "assets/media/mobile-peer-gestures/0015-012.jpg",
+          "assets/media/mobile-peer-gestures/0015-013.jpg",
+          "assets/media/mobile-peer-gestures/0015-014.jpg",
+          "assets/media/mobile-peer-gestures/0015-015.jpg",
+          "assets/media/mobile-peer-gestures/0015-016.jpg",
+          "assets/media/mobile-peer-gestures/0015-017.jpg",
+          "assets/media/mobile-peer-gestures/0015-018.jpg",
+          "assets/media/mobile-peer-gestures/0015-019.jpg",
+          "assets/media/mobile-peer-gestures/0015-020.jpg",
+          "assets/media/mobile-peer-gestures/0015-021.jpg",
+          "assets/media/mobile-peer-gestures/0015-022.jpg"
+        ],
+        "fps": 20,
+        "action": "press back"
+      },
+      "16": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0016-000.jpg",
+          "assets/media/mobile-peer-gestures/0016-001.jpg",
+          "assets/media/mobile-peer-gestures/0016-002.jpg",
+          "assets/media/mobile-peer-gestures/0016-003.jpg",
+          "assets/media/mobile-peer-gestures/0016-004.jpg",
+          "assets/media/mobile-peer-gestures/0016-005.jpg",
+          "assets/media/mobile-peer-gestures/0016-006.jpg",
+          "assets/media/mobile-peer-gestures/0016-007.jpg",
+          "assets/media/mobile-peer-gestures/0016-008.jpg",
+          "assets/media/mobile-peer-gestures/0016-009.jpg",
+          "assets/media/mobile-peer-gestures/0016-010.jpg",
+          "assets/media/mobile-peer-gestures/0016-011.jpg",
+          "assets/media/mobile-peer-gestures/0016-012.jpg",
+          "assets/media/mobile-peer-gestures/0016-013.jpg",
+          "assets/media/mobile-peer-gestures/0016-014.jpg",
+          "assets/media/mobile-peer-gestures/0016-015.jpg",
+          "assets/media/mobile-peer-gestures/0016-016.jpg",
+          "assets/media/mobile-peer-gestures/0016-017.jpg",
+          "assets/media/mobile-peer-gestures/0016-018.jpg",
+          "assets/media/mobile-peer-gestures/0016-019.jpg",
+          "assets/media/mobile-peer-gestures/0016-020.jpg",
+          "assets/media/mobile-peer-gestures/0016-021.jpg",
+          "assets/media/mobile-peer-gestures/0016-022.jpg"
+        ],
+        "fps": 20,
+        "action": "press back"
+      },
+      "17": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0017-000.jpg",
+          "assets/media/mobile-peer-gestures/0017-001.jpg",
+          "assets/media/mobile-peer-gestures/0017-002.jpg",
+          "assets/media/mobile-peer-gestures/0017-003.jpg",
+          "assets/media/mobile-peer-gestures/0017-004.jpg",
+          "assets/media/mobile-peer-gestures/0017-005.jpg",
+          "assets/media/mobile-peer-gestures/0017-006.jpg",
+          "assets/media/mobile-peer-gestures/0017-007.jpg",
+          "assets/media/mobile-peer-gestures/0017-008.jpg",
+          "assets/media/mobile-peer-gestures/0017-009.jpg",
+          "assets/media/mobile-peer-gestures/0017-010.jpg",
+          "assets/media/mobile-peer-gestures/0017-011.jpg",
+          "assets/media/mobile-peer-gestures/0017-012.jpg",
+          "assets/media/mobile-peer-gestures/0017-013.jpg",
+          "assets/media/mobile-peer-gestures/0017-014.jpg",
+          "assets/media/mobile-peer-gestures/0017-015.jpg",
+          "assets/media/mobile-peer-gestures/0017-016.jpg",
+          "assets/media/mobile-peer-gestures/0017-017.jpg",
+          "assets/media/mobile-peer-gestures/0017-018.jpg",
+          "assets/media/mobile-peer-gestures/0017-019.jpg",
+          "assets/media/mobile-peer-gestures/0017-020.jpg",
+          "assets/media/mobile-peer-gestures/0017-021.jpg",
+          "assets/media/mobile-peer-gestures/0017-022.jpg"
+        ],
+        "fps": 20,
+        "action": "tap Privacy & Security"
+      },
+      "18": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0018-000.jpg",
+          "assets/media/mobile-peer-gestures/0018-001.jpg",
+          "assets/media/mobile-peer-gestures/0018-002.jpg",
+          "assets/media/mobile-peer-gestures/0018-003.jpg",
+          "assets/media/mobile-peer-gestures/0018-004.jpg",
+          "assets/media/mobile-peer-gestures/0018-005.jpg",
+          "assets/media/mobile-peer-gestures/0018-006.jpg",
+          "assets/media/mobile-peer-gestures/0018-007.jpg",
+          "assets/media/mobile-peer-gestures/0018-008.jpg",
+          "assets/media/mobile-peer-gestures/0018-009.jpg",
+          "assets/media/mobile-peer-gestures/0018-010.jpg",
+          "assets/media/mobile-peer-gestures/0018-011.jpg",
+          "assets/media/mobile-peer-gestures/0018-012.jpg",
+          "assets/media/mobile-peer-gestures/0018-013.jpg",
+          "assets/media/mobile-peer-gestures/0018-014.jpg",
+          "assets/media/mobile-peer-gestures/0018-015.jpg",
+          "assets/media/mobile-peer-gestures/0018-016.jpg",
+          "assets/media/mobile-peer-gestures/0018-017.jpg",
+          "assets/media/mobile-peer-gestures/0018-018.jpg",
+          "assets/media/mobile-peer-gestures/0018-019.jpg",
+          "assets/media/mobile-peer-gestures/0018-020.jpg",
+          "assets/media/mobile-peer-gestures/0018-021.jpg",
+          "assets/media/mobile-peer-gestures/0018-022.jpg"
+        ],
+        "fps": 20,
+        "action": "tap Tracking"
+      },
+      "19": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0019-000.jpg",
+          "assets/media/mobile-peer-gestures/0019-001.jpg",
+          "assets/media/mobile-peer-gestures/0019-002.jpg",
+          "assets/media/mobile-peer-gestures/0019-003.jpg",
+          "assets/media/mobile-peer-gestures/0019-004.jpg",
+          "assets/media/mobile-peer-gestures/0019-005.jpg",
+          "assets/media/mobile-peer-gestures/0019-006.jpg",
+          "assets/media/mobile-peer-gestures/0019-007.jpg",
+          "assets/media/mobile-peer-gestures/0019-008.jpg",
+          "assets/media/mobile-peer-gestures/0019-009.jpg",
+          "assets/media/mobile-peer-gestures/0019-010.jpg",
+          "assets/media/mobile-peer-gestures/0019-011.jpg",
+          "assets/media/mobile-peer-gestures/0019-012.jpg",
+          "assets/media/mobile-peer-gestures/0019-013.jpg",
+          "assets/media/mobile-peer-gestures/0019-014.jpg",
+          "assets/media/mobile-peer-gestures/0019-015.jpg",
+          "assets/media/mobile-peer-gestures/0019-016.jpg",
+          "assets/media/mobile-peer-gestures/0019-017.jpg",
+          "assets/media/mobile-peer-gestures/0019-018.jpg"
+        ],
+        "fps": 20,
+        "action": "tap Allow Apps to Request to Track"
+      },
+      "20": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0020-000.jpg",
+          "assets/media/mobile-peer-gestures/0020-001.jpg",
+          "assets/media/mobile-peer-gestures/0020-002.jpg",
+          "assets/media/mobile-peer-gestures/0020-003.jpg",
+          "assets/media/mobile-peer-gestures/0020-004.jpg",
+          "assets/media/mobile-peer-gestures/0020-005.jpg",
+          "assets/media/mobile-peer-gestures/0020-006.jpg",
+          "assets/media/mobile-peer-gestures/0020-007.jpg",
+          "assets/media/mobile-peer-gestures/0020-008.jpg",
+          "assets/media/mobile-peer-gestures/0020-009.jpg",
+          "assets/media/mobile-peer-gestures/0020-010.jpg",
+          "assets/media/mobile-peer-gestures/0020-011.jpg",
+          "assets/media/mobile-peer-gestures/0020-012.jpg",
+          "assets/media/mobile-peer-gestures/0020-013.jpg",
+          "assets/media/mobile-peer-gestures/0020-014.jpg",
+          "assets/media/mobile-peer-gestures/0020-015.jpg",
+          "assets/media/mobile-peer-gestures/0020-016.jpg",
+          "assets/media/mobile-peer-gestures/0020-017.jpg",
+          "assets/media/mobile-peer-gestures/0020-018.jpg"
+        ],
+        "fps": 20,
+        "action": "tap Allow Apps to Request to Track"
+      },
+      "21": {
+        "frames": [
+          "assets/media/mobile-peer-gestures/0021-000.jpg",
+          "assets/media/mobile-peer-gestures/0021-001.jpg",
+          "assets/media/mobile-peer-gestures/0021-002.jpg",
+          "assets/media/mobile-peer-gestures/0021-003.jpg",
+          "assets/media/mobile-peer-gestures/0021-004.jpg",
+          "assets/media/mobile-peer-gestures/0021-005.jpg",
+          "assets/media/mobile-peer-gestures/0021-006.jpg",
+          "assets/media/mobile-peer-gestures/0021-007.jpg",
+          "assets/media/mobile-peer-gestures/0021-008.jpg",
+          "assets/media/mobile-peer-gestures/0021-009.jpg",
+          "assets/media/mobile-peer-gestures/0021-010.jpg",
+          "assets/media/mobile-peer-gestures/0021-011.jpg",
+          "assets/media/mobile-peer-gestures/0021-012.jpg",
+          "assets/media/mobile-peer-gestures/0021-013.jpg",
+          "assets/media/mobile-peer-gestures/0021-014.jpg",
+          "assets/media/mobile-peer-gestures/0021-015.jpg",
+          "assets/media/mobile-peer-gestures/0021-016.jpg",
+          "assets/media/mobile-peer-gestures/0021-017.jpg",
+          "assets/media/mobile-peer-gestures/0021-018.jpg"
+        ],
+        "fps": 20,
+        "action": "tap TripSnap"
+      }
+    },
+    "description": "Touch gestures and page transitions reconstructed with ScreenSim’s filming renderer. Action outcomes and the final goal are verified against the recorded episode."
+  },
+  "metrics": {
+    "inTimeSuccess": true,
+    "budget": 44,
+    "detected": 2,
+    "triggered": 2,
+    "scorer": "screensim/tools/dump_experiments.py",
+    "scorerSha256": "260317fe801ce19689a9ea000c948422a019f59ee60834f7db69aefd7dcc9b65"
+  }
+}

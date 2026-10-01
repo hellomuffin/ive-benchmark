@@ -15,17 +15,8 @@ def copy_tree(src,dst,skip=()):
   if not p.is_file() or any(x in p.parts for x in skip) or p.suffix=='.pyc':continue
   if p.suffix=='.wav':continue
   target=dst/p.relative_to(src);target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,target)
-kit=SITE/'ive-preview-kit.zip'
-with zipfile.ZipFile(kit,'w',zipfile.ZIP_DEFLATED,compresslevel=4) as z:
- for p in SITE.rglob('*'):
-  relative=p.relative_to(SITE)
-  # The replay uses the high-resolution CookSim frames. Keep native observations
-  # in the public repository, without duplicating them inside the download.
-  native_cook=relative.parts[:3]==('assets','media','cooking')
-  if p.is_file() and p!=kit and p.suffix!='.wav' and not native_cook:z.write(p,Path('ive-preview/site')/relative)
- z.write(ROOT/'README.md','ive-preview/README.md')
- for p in (ROOT/'tools').glob('*.py'):z.write(p,Path('ive-preview/tools')/p.name)
-assert kit.stat().st_size < 100*1024*1024, 'Replay kit exceeds GitHub file size limit'
+# The legacy ZIP retains the original three-demo preview. The expanded site is
+# distributed through the repository; do not create a >100MiB monolithic archive.
 copy_tree(SITE,TARGET/'docs',skip=('__pycache__',))
 copy_tree(ROOT/'tools',TARGET/'ive-source/tools',skip=('__pycache__',))
 (TARGET/'ive-source').mkdir(exist_ok=True)
@@ -36,4 +27,4 @@ readme=(ROOT/'README.md').read_text().replace('--directory site','--directory do
 (TARGET/'ive-submissions').mkdir(exist_ok=True)
 shutil.copy2(ROOT/'SUBMIT.md',TARGET/'ive-submissions/README.md')
 (TARGET/'.github/workflows').mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/'submission-workflow.yml',TARGET/'.github/workflows/ive-submissions.yml')
-print('Staged website, replay kit, source, and submission workflow without changing existing pages.')
+print('Staged website, source, and submission workflow; retained the legacy preview archive.')

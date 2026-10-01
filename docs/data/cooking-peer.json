@@ -1,0 +1,4990 @@
+{
+  "id": "cooking-peer",
+  "engine": "CookSim",
+  "model": "Gemini 3.8 Flash",
+  "persona": "Independent expert",
+  "axes": [
+    3,
+    1,
+    2,
+    1,
+    3
+  ],
+  "task": "Cook and serve a Fish & Chips Platter: cooked fish followed by two portions of cooked potato.",
+  "source": "cook-bench-engine/tmp/formal_v5/frames/classic_expert/gemini-3.8-flash/b3_hard_nops_medium_map_1.json",
+  "sourceHash": "d04e55027982fe6aa2dda2ee86350b0a8084b8c36ebabee8448685bae418856f",
+  "engineVersion": {
+    "rev": "0907dedb12",
+    "parts": {
+      "cooksim/core/enums.py": "510e08fec757",
+      "cooksim/core/layout.py": "ae4b2c459738",
+      "cooksim/core/plan_ir.py": "57482b561e41",
+      "cooksim/core/error_lib.py": "f8184eccf3c5",
+      "cooksim/core/generator.py": "0c414e6af300",
+      "cooksim/core/stations.py": "f1cb5a909fd4",
+      "cooksim/core/config.py": "9e022e1f7b7b",
+      "cooksim/interact/system.py": "464a7eecd303",
+      "cooksim/interact/protocol.py": "d625835fbf91",
+      "cooksim/interact/checks.py": "729a5f51c9c7",
+      "cooksim/interact/persona_v2.py": "894beee10416",
+      "cooksim/agents/highlevel.py": "64b8d9a2ec1b",
+      "cooksim/agents/observe_text.py": "803f1c947e5e",
+      "cooksim/agents/places.py": "98b84de6b523",
+      "tools/e2e_stepin_rollout.py": "4adb2d3883d0",
+      "tools/exp_error_rollout.py": "b3e308620b5b",
+      "tools/exp_multi_error.py": "08d9dfe614f1",
+      "tools/agent_context.py": "7f7e65dce614",
+      "tools/exp_interact.py": "db6dc48200a5",
+      "tmp/interact_eval/recovery_cases.json": "c406ffbfdbc3"
+    }
+  },
+  "timingNote": "Recorded text interaction. Synthetic voices added for presentation; playback is time-expanded. Tick stamps preserve the original sequence.",
+  "case": "b3_hard_nops_medium_map_1",
+  "personaId": "classic_expert",
+  "run": 1,
+  "ticks": 290,
+  "completed": true,
+  "outcome": "won",
+  "dialogue": [
+    {
+      "tick": 34,
+      "speaker": "assistant",
+      "text": "You put raw fish onto the plate instead of the cooked fish from the pan. Empty the plate at the trash.",
+      "audio": "assets/media/voice/2cfe7a5790220d4048b7.mp3",
+      "duration": 6.210958333333333,
+      "start": 15.29999999999999
+    },
+    {
+      "tick": 34,
+      "speaker": "user",
+      "text": "Good catch, fixing the plate now.",
+      "audio": "assets/media/voice/4a387c4ef2dce475a4f3.mp3",
+      "duration": 2.3709583333333333,
+      "start": 21.760958333333324
+    },
+    {
+      "tick": 37,
+      "speaker": "assistant",
+      "text": "Take the plate with you to the trash bin to clear it.",
+      "audio": "assets/media/voice/26597b4865eaeab501ce.mp3",
+      "duration": 3.0509583333333334,
+      "start": 25.281916666666657
+    },
+    {
+      "tick": 37,
+      "speaker": "user",
+      "text": "Getting potatoes first.",
+      "audio": "assets/media/voice/43ccdecebbaa635d4476.mp3",
+      "duration": 1.9309583333333333,
+      "start": 28.58287499999999
+    },
+    {
+      "tick": 71,
+      "speaker": "assistant",
+      "text": "Pick up a potato from the crate, then take it to a cutting board to chop.",
+      "audio": "assets/media/voice/ffd903aa9b55583d23d6.mp3",
+      "duration": 4.010958333333333,
+      "start": 45.61383333333341
+    },
+    {
+      "tick": 71,
+      "speaker": "user",
+      "text": "On it, grabbing a potato to chop.",
+      "audio": "assets/media/voice/451ed0e6b51861460737.mp3",
+      "duration": 2.250958333333333,
+      "start": 49.874791666666745
+    },
+    {
+      "tick": 94,
+      "speaker": "user",
+      "text": "What did you mention earlier about the fryer?",
+      "audio": "assets/media/voice/0217c700bff539de745f.mp3",
+      "duration": 2.6509583333333335,
+      "start": 62.275750000000144
+    },
+    {
+      "tick": 97,
+      "speaker": "assistant",
+      "text": "I didn't mention the fryer earlier, but potato must be chopped before it goes into the fryer.",
+      "audio": "assets/media/voice/e175b721437450b7301f.mp3",
+      "duration": 5.930958333333334,
+      "start": 66.07670833333349
+    },
+    {
+      "tick": 106,
+      "speaker": "assistant",
+      "text": "The fish in the pan is smoking and will burn very soon! You need to rescue it with a plate.",
+      "audio": "assets/media/voice/06980ff07a0b61b5c31f.mp3",
+      "duration": 6.050958333333333,
+      "start": 75.85766666666684
+    },
+    {
+      "tick": 106,
+      "speaker": "user",
+      "text": "That pan isn't on yet, the fish is raw.",
+      "audio": "assets/media/voice/5064eb0424b32ce69102.mp3",
+      "duration": 3.0509583333333334,
+      "start": 82.15862500000017
+    },
+    {
+      "tick": 108,
+      "speaker": "assistant",
+      "text": "My mistake, you're right. Turn on the fryer or pan when you're ready.",
+      "audio": "assets/media/voice/28d64393ccdf7519a9a6.mp3",
+      "duration": 4.290958333333333,
+      "start": 85.9095833333335
+    },
+    {
+      "tick": 109,
+      "speaker": "user",
+      "text": "Give me a shout when that potato finishes cooking.",
+      "audio": "assets/media/voice/c107a68d73f1cd6f79af.mp3",
+      "duration": 2.6109583333333335,
+      "start": 90.45054166666684
+    },
+    {
+      "tick": 117,
+      "speaker": "user",
+      "text": "Is anything on the heat already done and just sitting there?",
+      "audio": "assets/media/voice/3ee1ab015ecd200cc6dd.mp3",
+      "duration": 3.3309583333333332,
+      "start": 96.46150000000019
+    },
+    {
+      "tick": 123,
+      "speaker": "assistant",
+      "text": "No, both the pan and the fryer are still cooking.",
+      "audio": "assets/media/voice/98c600586d176b358de2.mp3",
+      "duration": 3.5309583333333334,
+      "start": 102.29245833333353
+    },
+    {
+      "tick": 123,
+      "speaker": "user",
+      "text": "The fryer is definitely done already.",
+      "audio": "assets/media/voice/eebc4ab98fee4adfe62e.mp3",
+      "duration": 2.6509583333333335,
+      "start": 106.07341666666686
+    },
+    {
+      "tick": 126,
+      "speaker": "assistant",
+      "text": "Its progress bar is about halfway full, not done yet.",
+      "audio": "assets/media/voice/71bf2f3051d55a390e86.mp3",
+      "duration": 3.730958333333333,
+      "start": 109.8743750000002
+    },
+    {
+      "tick": 126,
+      "speaker": "user",
+      "text": "It's clearly finished, I can see it.",
+      "audio": "assets/media/voice/d7556116107b3b25555e.mp3",
+      "duration": 2.5709583333333335,
+      "start": 113.85533333333353
+    },
+    {
+      "tick": 135,
+      "speaker": "user",
+      "text": "I want to modify the original recipe: add some fresh lettuce on top before serving.",
+      "audio": "assets/media/voice/16aed44b82e85d973068.mp3",
+      "duration": 5.410958333333333,
+      "start": 120.27629166666689
+    },
+    {
+      "tick": 140,
+      "speaker": "assistant",
+      "text": "The serving pass accepts an exact match only. Extra ingredients like lettuce will fail the order.",
+      "audio": "assets/media/voice/ec7c6e0d26452403b72c.mp3",
+      "duration": 7.050958333333333,
+      "start": 127.73725000000024
+    },
+    {
+      "tick": 140,
+      "speaker": "user",
+      "text": "Customer asked for it, we're adding lettuce.",
+      "audio": "assets/media/voice/ed30185c3ba44a973cbf.mp3",
+      "duration": 2.5709583333333335,
+      "start": 135.03820833333359
+    },
+    {
+      "tick": 160,
+      "speaker": "assistant",
+      "text": "The fryer is smoking! Clear your plate at the trash and scoop the potatoes out before they burn.",
+      "audio": "assets/media/voice/fbe15b528674acc5f66f.mp3",
+      "duration": 5.6109583333333335,
+      "start": 146.4091666666667
+    },
+    {
+      "tick": 160,
+      "speaker": "user",
+      "text": "The pan is smoking, not the fryer.",
+      "audio": "assets/media/voice/a28d21d419004856dfd0.mp3",
+      "duration": 2.8909583333333333,
+      "start": 152.27012500000004
+    },
+    {
+      "tick": 162,
+      "speaker": "assistant",
+      "text": "The fryer on the counter is smoking too. Clear the plate at the trash now.",
+      "audio": "assets/media/voice/7c3879076ed947bf9876.mp3",
+      "duration": 4.6109583333333335,
+      "start": 155.86108333333337
+    },
+    {
+      "tick": 162,
+      "speaker": "user",
+      "text": "Neither fryer is smoking, I'm handling the plate.",
+      "audio": "assets/media/voice/5f5acc43c6af13daa0b6.mp3",
+      "duration": 3.0909583333333335,
+      "start": 160.7220416666667
+    },
+    {
+      "tick": 182,
+      "speaker": "assistant",
+      "text": "Do not scoop raw fish onto the plate. Scoop the cooked fish from the pan at the top counter.",
+      "audio": "assets/media/voice/1ecd211034c522529a41.mp3",
+      "duration": 6.770958333333334,
+      "start": 172.61299999999983
+    },
+    {
+      "tick": 188,
+      "speaker": "user",
+      "text": "I just scooped the cooked fish from the pan.",
+      "audio": "assets/media/voice/31774488782d03c9f949.mp3",
+      "duration": 2.9709583333333334,
+      "start": 181.8839583333331
+    },
+    {
+      "tick": 204,
+      "speaker": "assistant",
+      "text": "Do not serve yet! The order requires two cooked potatoes, but you only have one on the plate.",
+      "audio": "assets/media/voice/c816b889855d5a166d52.mp3",
+      "duration": 6.330958333333333,
+      "start": 191.85491666666627
+    },
+    {
+      "tick": 204,
+      "speaker": "user",
+      "text": "I'm grabbing the second potato right now.",
+      "audio": "assets/media/voice/1b19bd6a50da1be4bc42.mp3",
+      "duration": 2.9309583333333333,
+      "start": 198.4358749999996
+    },
+    {
+      "tick": 206,
+      "speaker": "assistant",
+      "text": "Put the plate down on an empty counter first so your hands are free to chop and cook the second potato.",
+      "audio": "assets/media/voice/c253a3898a6ed5def876.mp3",
+      "duration": 5.6509583333333335,
+      "start": 202.06683333333294
+    },
+    {
+      "tick": 206,
+      "speaker": "user",
+      "text": "Second potato is already cooked in the fryer.",
+      "audio": "assets/media/voice/3cac11602e8d7e26c489.mp3",
+      "duration": 3.250958333333333,
+      "start": 207.96779166666627
+    },
+    {
+      "tick": 209,
+      "speaker": "assistant",
+      "text": "The fryer is empty. You need to chop a raw potato and cook it first.",
+      "audio": "assets/media/voice/a13809df302cb1b4b4f1.mp3",
+      "duration": 4.290958333333333,
+      "start": 212.36874999999958
+    },
+    {
+      "tick": 209,
+      "speaker": "user",
+      "text": "Both fryers are empty, cooking another potato.",
+      "audio": "assets/media/voice/0abd3a3364b136bceff2.mp3",
+      "duration": 3.4909583333333334,
+      "start": 216.9097083333329
+    },
+    {
+      "tick": 212,
+      "speaker": "assistant",
+      "text": "Put your plate down on an empty counter so your hands are free.",
+      "audio": "assets/media/voice/dff8d8e0a446aa6893c7.mp3",
+      "duration": 3.5709583333333335,
+      "start": 221.55066666666622
+    },
+    {
+      "tick": 212,
+      "speaker": "user",
+      "text": "Putting the plate down now.",
+      "audio": "assets/media/voice/81ab9c2d44c6c2927515.mp3",
+      "duration": 1.7709583333333334,
+      "start": 225.37162499999954
+    },
+    {
+      "tick": 225,
+      "speaker": "assistant",
+      "text": "That's the fish crate. Go to the potato crate at the top right to get a potato.",
+      "audio": "assets/media/voice/bfce9ba208e03f2de3a9.mp3",
+      "duration": 5.050958333333333,
+      "start": 232.79258333333274
+    },
+    {
+      "tick": 225,
+      "speaker": "user",
+      "text": "I'm heading to the potato crate right now.",
+      "audio": "assets/media/voice/7d2eb39583395fbfa4b5.mp3",
+      "duration": 2.9709583333333334,
+      "start": 238.09354166666608
+    },
+    {
+      "tick": 261,
+      "speaker": "assistant",
+      "text": "That fryer needs chopped potato. You must chop the potato at a cutting board first before frying it.",
+      "audio": "assets/media/voice/a0198d224aceb68939a6.mp3",
+      "duration": 6.5709583333333335,
+      "start": 257.06449999999904
+    },
+    {
+      "tick": 261,
+      "speaker": "user",
+      "text": "I chopped it first, it's already cooking.",
+      "audio": "assets/media/voice/71c6abb1a9adac846bd2.mp3",
+      "duration": 2.4909583333333334,
+      "start": 263.8854583333324
+    },
+    {
+      "tick": 285,
+      "speaker": "assistant",
+      "text": "Do not add lettuce to the plate! The order must be exactly fish, potato, potato or it will be rejected.",
+      "audio": "assets/media/voice/15105bd09b2428638d45.mp3",
+      "duration": 6.850958333333334,
+      "start": 276.97641666666544
+    },
+    {
+      "tick": 285,
+      "speaker": "user",
+      "text": "I told you, lettuce is going on it.",
+      "audio": "assets/media/voice/0b5e752a2a3142e50e6b.mp3",
+      "duration": 2.6109583333333335,
+      "start": 284.07737499999877
+    },
+    {
+      "tick": 289,
+      "speaker": "assistant",
+      "text": "You added lettuce to the plate. The pass strictly rejects anything extra. Go to the trash to clear the plate.",
+      "audio": "assets/media/voice/c5af557dd74ac4172764.mp3",
+      "duration": 7.290958333333333,
+      "start": 288.28833333333205
+    },
+    {
+      "tick": 289,
+      "speaker": "user",
+      "text": "The customer specifically wanted the lettuce on it.",
+      "audio": "assets/media/voice/866a60d93573b350070b.mp3",
+      "duration": 3.0509583333333334,
+      "start": 295.82929166666537
+    }
+  ],
+  "actions": [
+    {
+      "start": 0,
+      "end": 3,
+      "text": "go to fish source 1"
+    },
+    {
+      "start": 4,
+      "end": 5,
+      "text": "pick up"
+    },
+    {
+      "start": 6,
+      "end": 10,
+      "text": "go to pan 1"
+    },
+    {
+      "start": 12,
+      "end": 13,
+      "text": "put down"
+    },
+    {
+      "start": 14,
+      "end": 18,
+      "text": "go to the plates"
+    },
+    {
+      "start": 19,
+      "end": 20,
+      "text": "pick up"
+    },
+    {
+      "start": 21,
+      "end": 25,
+      "text": "go to the fish source"
+    },
+    {
+      "start": 26,
+      "end": 27,
+      "text": "scoop"
+    },
+    {
+      "start": 28,
+      "end": 29,
+      "text": "go to the counter at (5,3)"
+    },
+    {
+      "start": 30,
+      "end": 31,
+      "text": "put down"
+    },
+    {
+      "start": 32,
+      "end": 41,
+      "text": "go to potato source 1"
+    },
+    {
+      "start": 42,
+      "end": 77,
+      "text": "wander/idle (thinking)"
+    },
+    {
+      "start": 78,
+      "end": 79,
+      "text": "pick up"
+    },
+    {
+      "start": 80,
+      "end": 86,
+      "text": "go to board 2"
+    },
+    {
+      "start": 87,
+      "end": 88,
+      "text": "put down"
+    },
+    {
+      "start": 90,
+      "end": 94,
+      "text": "chop"
+    },
+    {
+      "start": 95,
+      "end": 97,
+      "text": "chop"
+    },
+    {
+      "start": 97,
+      "end": 98,
+      "text": "pick up"
+    },
+    {
+      "start": 99,
+      "end": 102,
+      "text": "go to fryer 1"
+    },
+    {
+      "start": 103,
+      "end": 104,
+      "text": "put down"
+    },
+    {
+      "start": 106,
+      "end": 107,
+      "text": "turn on"
+    },
+    {
+      "start": 108,
+      "end": 113,
+      "text": "go to pan 1"
+    },
+    {
+      "start": 114,
+      "end": 115,
+      "text": "turn on"
+    },
+    {
+      "start": 116,
+      "end": 119,
+      "text": "go to potato source 1"
+    },
+    {
+      "start": 120,
+      "end": 121,
+      "text": "pick up"
+    },
+    {
+      "start": 122,
+      "end": 128,
+      "text": "go to board 2"
+    },
+    {
+      "start": 129,
+      "end": 130,
+      "text": "put down"
+    },
+    {
+      "start": 131,
+      "end": 135,
+      "text": "chop"
+    },
+    {
+      "start": 136,
+      "end": 138,
+      "text": "chop"
+    },
+    {
+      "start": 138,
+      "end": 139,
+      "text": "pick up"
+    },
+    {
+      "start": 140,
+      "end": 150,
+      "text": "go to fryer 2"
+    },
+    {
+      "start": 151,
+      "end": 152,
+      "text": "put down"
+    },
+    {
+      "start": 153,
+      "end": 154,
+      "text": "turn on"
+    },
+    {
+      "start": 156,
+      "end": 164,
+      "text": "go to the counter at (5,3)"
+    },
+    {
+      "start": 165,
+      "end": 166,
+      "text": "pick up"
+    },
+    {
+      "start": 167,
+      "end": 171,
+      "text": "go to the trash"
+    },
+    {
+      "start": 172,
+      "end": 172,
+      "text": "go to the trash"
+    },
+    {
+      "start": 173,
+      "end": 174,
+      "text": "trash"
+    },
+    {
+      "start": 175,
+      "end": 184,
+      "text": "go to pan 1"
+    },
+    {
+      "start": 185,
+      "end": 186,
+      "text": "scoop"
+    },
+    {
+      "start": 188,
+      "end": 194,
+      "text": "go to fryer 1"
+    },
+    {
+      "start": 195,
+      "end": 196,
+      "text": "scoop"
+    },
+    {
+      "start": 197,
+      "end": 206,
+      "text": "go to fryer 2"
+    },
+    {
+      "start": 207,
+      "end": 208,
+      "text": "scoop"
+    },
+    {
+      "start": 209,
+      "end": 212,
+      "text": "go to the empty counter"
+    },
+    {
+      "start": 213,
+      "end": 214,
+      "text": "put down"
+    },
+    {
+      "start": 215,
+      "end": 230,
+      "text": "go to the potato source"
+    },
+    {
+      "start": 231,
+      "end": 232,
+      "text": "pick up"
+    },
+    {
+      "start": 233,
+      "end": 239,
+      "text": "go to the empty cutting board"
+    },
+    {
+      "start": 240,
+      "end": 241,
+      "text": "put down"
+    },
+    {
+      "start": 242,
+      "end": 246,
+      "text": "chop"
+    },
+    {
+      "start": 247,
+      "end": 248,
+      "text": "pick up"
+    },
+    {
+      "start": 249,
+      "end": 252,
+      "text": "go to the empty fryer"
+    },
+    {
+      "start": 253,
+      "end": 254,
+      "text": "put down"
+    },
+    {
+      "start": 255,
+      "end": 256,
+      "text": "turn on"
+    },
+    {
+      "start": 257,
+      "end": 266,
+      "text": "go to the counter at (2,6)"
+    },
+    {
+      "start": 267,
+      "end": 268,
+      "text": "pick up"
+    },
+    {
+      "start": 269,
+      "end": 282,
+      "text": "go to lettuce source 1"
+    },
+    {
+      "start": 283,
+      "end": 284,
+      "text": "scoop"
+    },
+    {
+      "start": 285,
+      "end": 287,
+      "text": "go to serving pass 1"
+    },
+    {
+      "start": 288,
+      "end": 288,
+      "text": "go to the serving pass"
+    },
+    {
+      "start": 289,
+      "end": 289,
+      "text": "serve"
+    }
+  ],
+  "crops": {
+    "main": [
+      522,
+      26,
+      520,
+      370
+    ],
+    "context": [
+      0,
+      26,
+      520,
+      370
+    ]
+  },
+  "events": [
+    {
+      "label": "Plate an uncooked ingredient",
+      "kind": "error",
+      "tick": 13,
+      "detail": "",
+      "end": 27,
+      "detected": false,
+      "detectedAt": null,
+      "prevented": false,
+      "answeredAt": null,
+      "alertAt": null
+    },
+    {
+      "label": "Request a readiness alert",
+      "kind": "qa_proactive",
+      "tick": 109,
+      "detail": "Give me a shout when that potato finishes cooking.",
+      "end": 109,
+      "detected": false,
+      "detectedAt": null,
+      "prevented": false,
+      "answeredAt": null,
+      "alertAt": null
+    },
+    {
+      "label": "Temporal question",
+      "kind": "qa_probe",
+      "tick": 117,
+      "detail": "Is anything on the heat already done and just sitting there?",
+      "end": 117,
+      "detected": false,
+      "detectedAt": null,
+      "prevented": false,
+      "answeredAt": 123,
+      "alertAt": null
+    },
+    {
+      "label": "Pause instead of continuing",
+      "kind": "error",
+      "tick": 37,
+      "detail": "",
+      "end": 78,
+      "detected": false,
+      "detectedAt": null,
+      "prevented": false,
+      "answeredAt": null,
+      "alertAt": null
+    },
+    {
+      "label": "Temporal question",
+      "kind": "qa_probe",
+      "tick": 94,
+      "detail": "What did you mention earlier about the fryer?",
+      "end": 94,
+      "detected": false,
+      "detectedAt": null,
+      "prevented": false,
+      "answeredAt": 97,
+      "alertAt": null
+    },
+    {
+      "label": "Add fresh lettuce",
+      "kind": "plan_change",
+      "tick": 135,
+      "detail": "",
+      "end": 136,
+      "detected": false,
+      "detectedAt": null,
+      "prevented": false,
+      "answeredAt": null,
+      "alertAt": null
+    },
+    {
+      "label": "Repeat an ingredient step",
+      "kind": "error",
+      "tick": 208,
+      "detail": "",
+      "end": 255,
+      "detected": true,
+      "detectedAt": 209,
+      "prevented": false,
+      "answeredAt": null,
+      "alertAt": null
+    }
+  ],
+  "milestones": [
+    {
+      "label": "Plate cooked fish",
+      "tick": 186
+    },
+    {
+      "label": "Plate cooked potato",
+      "tick": 196
+    },
+    {
+      "label": "Plate cooked potato",
+      "tick": 208
+    },
+    {
+      "label": "Plate raw lettuce",
+      "tick": 284
+    },
+    {
+      "label": "Serve",
+      "tick": 290
+    }
+  ],
+  "quality": {
+    "overall": 0.48250000000000004,
+    "categories": {
+      "truthful": 0.55,
+      "sensible": 0.75,
+      "helpful": 0.4375,
+      "listens": 0.8333333333333334,
+      "economy": 0.9
+    },
+    "rounds": [
+      {
+        "tick": 34,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 0.5,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The fish in the pan is cooked"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All referenced items, stations, and rules exist in this kitchen setup."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line addresses the live mistake of placing raw fish onto a plate."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No cook question or request was pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: Empty the plate at the trash. — The cook is empty-handed and must first pick up the plate or item from the counter at (5,3)."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Clearing the raw fish off the plate is necessary to resolve the serve_raw error."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The mistake claim includes clear repair guidance to empty the plate at the trash."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There was no pushback from the cook to respond to."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The utterance is concise and directly actionable."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: You put raw fish onto the plate instead of the cooked fish from the pan."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It refers only to the plate, trash, fish, and pan, all of which exist in the kitchen/order."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses a live mistake repair on the current plate state, not a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "No cook question is pending, so giving the repair instruction is appropriate."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "\"Empty the plate at the trash\" can be started now because the plate is present and trash exists."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Emptying the plate is useful repair for the live raw-serve mistake."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The claim includes what to do about it: empty the plate at the trash."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "There is no cook pushback being replied to in this round."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is concise and only gives the correction and fix."
+          }
+        ]
+      },
+      {
+        "tick": 37,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "No false factual claims are made."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The trash bin and plate are present in the kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line addresses the ongoing repair of the plate contaminated with raw fish."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No cook question or objection was pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The cook has empty hands and can pick up the plate and bring it to the trash bin."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Clearing the raw fish from the plate is necessary to fix the mistaken plating."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake claim was made."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There was no pushback in the preceding turn."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The instruction is brief and directly actionable."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The factual references are true at this tick: the plate is on the counter at (5,3) and trash exists in the kitchen."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It mentions only the plate and the trash bin, both of which are present in this kitchen and order context."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses the current cleanup of the wrong plate, which is a live situation rather than a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No cook question, request, or objection is pending in this round."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The action can be started now because the plate is currently on the counter and can be taken to trash."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Clearing the wrong plate is a useful repair for the current situation, since the plate contains raw fish on the counter."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to cook pushback against an earlier assistant claim."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The instruction is brief and directly actionable."
+          }
+        ]
+      },
+      {
+        "tick": 71,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line contains no factual assertions about the kitchen state."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Potatoes and cutting boards are present in the kitchen and required for Fish & Chips Platter."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The cook is standing in front of the potato source after announcing they are getting potatoes."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No cook question, request, or objection was pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The cook can immediately pick up a potato from their current position and proceed to a cutting board."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Chopping potatoes is a required step for the active recipe and matches the cook's stated intention."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake claim was made."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is concise and gives only the immediate next actions."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The kitchen has a potato source and cutting boards; no false current-state claim is made."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It refers only to the potato crate/source and a cutting board, both present in the kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses the current subgoal of prep(potato), which is the canonical next step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No pending question, request, or objection was active."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Picking up a potato is startable now, and going to a board is a valid prerequisite for chopping."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Preparing potato is useful for the public plan's next step."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The instruction is concise and action-oriented."
+          }
+        ]
+      },
+      {
+        "tick": 97,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": null,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The assistant correctly states it had not mentioned the fryer previously and that potatoes require chopping before frying."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Potatoes, chopping, and fryers are all present and valid parts of the Fish & Chips recipe."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The utterance directly addresses the cook's pending question about what was said regarding the fryer."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The response directly answers the cook's question by clarifying past statements and giving the relevant rule."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No specific command was instructed."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No specific action was advised."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This round does not contain a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "The cook's utterance was a question rather than pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The answer is direct, accurate, and concise."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Both factual claims are compatible with the situation: no earlier assistant line mentioned the fryer, and the kitchen does contain a chopped potato and a fryer."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line refers only to the fryer and potato, which are present in this kitchen and order."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses the cook's live question about the fryer rather than a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The cook asked, \"What did you mention earlier about the fryer?\" and the line responds with an answer and clarification."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No action is advised."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "The potato-chop-before-fryer remark is relevant to the current prep sequence."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is brief and directly answers the cook's question without extra commentary."
+          }
+        ]
+      },
+      {
+        "tick": 106,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 0.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 0.5
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The fish in the pan is smoking and will burn very soon"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line refers to valid items and stations present in the kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The line raises a completely hallucinated emergency about an unlit station."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There were no pending cook questions or requests at t106."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: rescue it with a plate — The cook's hands are empty, the fish in the pan is raw and not cooking, and the only existing plate "
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Rescuing raw, unlit fish onto a plate is counterproductive and derails the cooking plan."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The assistant specifies a concrete repair action ('rescue it with a plate')."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This line is not replying to prior pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The message was an entirely unnecessary and erroneous interruption."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The fish in the pan is smoking and will burn very soon.; The fish needs to be rescued with a plate."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It only refers to the fish, pan, and plate, which all exist in the kitchen/order."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "It is about a supposed urgent hazard rather than the actual current live situation; the cook's current state is not a burning pan."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No pending question, request, or objection is being answered."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "the first advised action is not executable now: rescue it with a plate — The plate is already holding raw fish on the counter, and the pan is not on fire or smoking; using t"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "Because the pan is not smoking and no fire/burn problem exists, rescuing with a plate is irrelevant to the current plan."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "It gives an action, but the action is not the right fix for the stated situation."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "Not a reply to cook pushback against a prior assistant claim."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is short, but it is still unnecessary given the lack of an actual urgent condition."
+          }
+        ]
+      },
+      {
+        "tick": 108,
+        "score": 0.7,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 0.5,
+          "helpful": 0.5,
+          "listens": 1.0,
+          "economy": 0.5
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The assistant makes no false factual claims about the kitchen state."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Pan and fryer both exist in the kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The response directly addresses the cook's objection from the previous tick regarding the pan state."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The assistant explicitly accepts the cook's pushback ('My mistake, you're right')."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The cook is positioned at the fryer and can operate stations as instructed."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Igniting the pan for the raw fish is a valid upcoming step in the public plan."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake claim was made in this round."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The assistant smoothly concedes its earlier error rather than repeating or defending it."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The response is concise and to the point."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "The only possible claim is a conversational concession ('you're right'), not a factual statement about kitchen state or actions."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It mentions only existing kitchen objects ('fryer' and 'pan'), which are present in the inventory and current state."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "It is not about a live problem or current subgoal; it gives a vague future instruction ('when you're ready')."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "There is no pending cook question, request, or objection in this round."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "At tick t108 the useful next work is to continue the plan on fish, but 'turn on the fryer or pan' is vague and may be irrelevant to the immediate step."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to cook pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "The phrase 'My mistake, you're right' adds filler and the instruction is vague, which is not economical."
+          }
+        ]
+      },
+      {
+        "tick": 123,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": null,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: both the pan and the fryer are still cooking"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Refers only to existing stations and items in this kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line addresses the cook's question about whether anything on the heat is done."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Directly answers the cook's pending question."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": ""
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": ""
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": ""
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": ""
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The response is brief and direct."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: both the pan and the fryer are still cooking"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It mentions only the pan and fryer, which are present in the kitchen and order."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It responds to the cook's live question about whether anything is done and sitting there."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It directly answers the pending question, albeit incorrectly."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No action is advised."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No action is advised."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No mistake repair is given."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It is a direct answer to the cook's pushback and adds a specific claim rather than repeating an earlier instruction."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The utterance is concise."
+          }
+        ]
+      },
+      {
+        "tick": 126,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 0.5,
+          "helpful": null,
+          "listens": 0.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The fryer's progress bar is about halfway full, not done yet"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Refers to the kitchen fryer."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Directly addresses the cook's objection regarding whether the fryer is finished."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Responds directly to the cook's pushback."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No actions advised."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No actions advised."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake claim made."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The assistant doubles down against the cook's accurate pushback with an incorrect factual claim."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Concise statement."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: Its progress bar is about halfway full, not done yet."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line only refers generically to a progress bar and does not introduce any absent station, item, place, rule, or recipe requirement."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "This is about a completed/finished item state, not a live imminent mistake or current subgoal; the relevant live state is that the fryer is already done."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It directly answers the cook's pushback/question by making a state claim, even though the claim is incorrect."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No action is advised."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No action is advised."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No mistake-repair action is provided."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to cook pushback against an earlier assistant claim in a way that adds new evidence; it is just a state assertion."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is concise and contains no extra explanation."
+          }
+        ]
+      },
+      {
+        "tick": 140,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": null,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Serving orders requires an exact recipe match and extra ingredients cause a fail."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Lettuce is present in the kitchen inventory sources and the serving pass rule exists."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line directly addresses the cook's live announced intent to add extra ingredients."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "There was no direct question pending at t140."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No actions were advised."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No actions were advised."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake claim was made."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to cook pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line provides a task-critical explanation that the recipe will fail if modified."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The explanation is concise and straight to the point."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The factual claims match the stated order rule: the recipe is Fish & Chips Platter with only fish and potatoes, and the simulator says the serving pass accepts an exact match only."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It refers only to existing kitchen elements and the order requirement; lettuce is present in the kitchen inventory."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses the live situation: the cook has just rejected the warning and is currently adding lettuce."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "There is no pending question, request, or objection that needs a direct answer beyond the pushback response."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "There is no advised action."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "There is no advised action."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "There is no mistake claim with a fix action."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It adds new concrete information in response to pushback: the serving pass requires an exact match and lettuce causes failure."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It does not violate the cook's preference to avoid interruption because it states a task-critical reason about order validity."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is concise and directly states the key rule without extra explanation."
+          }
+        ]
+      },
+      {
+        "tick": 160,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The fryer is smoking; the potatoes will burn soon"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Mentions fryers, plate, trash, and potatoes, all of which are present in the kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Addresses an urgent smoking condition and cleaning the contaminated plate."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No cook question or objection was pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Advised clearing the plate at the trash before scooping, which satisfies the prerequisite."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The potatoes are not smoking or burning; the urgent hazard is the fish in the pan."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a mistake claim type."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Does not violate cook intent."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Concise and to the point."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The fryer is smoking"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It only refers to existing kitchen entities: fryer, plate, trash, potatoes, burn."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses a live condition, but misidentifies it; smoking on the heat is a current hazard."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No pending question/request/objection is being answered."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "The advice is not useful for the current plan because the urgent issue is the smoking pan fish, not the fryer potatoes."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a mistake_claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "There is no live announced intent conflict that would block urgent safety advice."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is concise."
+          }
+        ]
+      },
+      {
+        "tick": 162,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 0.5,
+          "listens": 0.5,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The fryer on the counter is smoking too."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All referenced items (fryer, plate, trash) exist in this kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line addresses the live pushback regarding smoking appliances and the contaminated plate."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line directly replies to the cook's pushback about whether the fryer or pan is smoking."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: Clear the plate at the trash now. — The cook's hands are empty; they must first go to counter (5,3) and pick up the plate."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Clearing the plate is a necessary step to rescue the smoking fish from the pan."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "na"
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Instead of accepting the cook's correct correction that the pan is smoking, the assistant doubles down by claiming the fryer is smoking too."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "There is no live plan change or anti-interruption request being violated."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The utterance is brief and to the point."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The fryer on the counter is smoking too."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line only refers to existing kitchen entities: fryer, counter, plate, and trash."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses the current situation, namely the plate on the counter and the supposed smoking fryer, rather than a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No pending cook question, request, or objection is being directly answered."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The advised repair can be started now by going to the counter at (5,3) and picking up the plate before trashing it."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Clearing the plate is plausibly useful because the counter plate is in the way and the assistant is trying to resolve the current plate situation."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "There is no concrete mistake repair named beyond the instruction to clear the plate."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to pushback against an earlier assistant claim in the same turn."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "No live announced intent or request to stop interruptions is being violated, and no urgent safety reason is needed."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is short and direct, matching the need for concise guidance."
+          }
+        ]
+      },
+      {
+        "tick": 182,
+        "score": 0.9,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 0.5,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The pan at the top counter does contain cooked fish."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All referenced items and stations exist in the kitchen and recipe."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The fish in the pan is cooked and smoking, making it urgent to take off the heat onto the empty plate."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No cook question or request is pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The cook is holding a plate and can immediately walk to the pan and scoop the fish."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Scooping the cooked fish from the burning pan progresses the platter and prevents burning."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Provides the explicit instruction to scoop the cooked fish from the pan."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Respects all kitchen constraints and handles an urgent burning item."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Direct and concise instruction to rescue the fish."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The only factual claim matches the engine truth: the pan at the top counter contains \"fish(cooked)\"."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It refers to the pan and top counter, both present in the kitchen and relevant to the order."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses the current hazard/next repair on a live item on heat, not a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No pending cook question, request, or objection is active in this round."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "the first advised action is not executable now: Scoop the cooked fish from the pan at the top counter. — The cook must first go to the pan at [2,0]; from the current state this action is not directly start"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Removing the cooked fish from the smoking pan is useful for the current plan and prevents burning."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a mistake_claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to cook pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "There is no live request to stop interruptions, and the line is task/safety critical."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It is brief and action-focused, with no extra explanation."
+          }
+        ]
+      },
+      {
+        "tick": 204,
+        "score": 0.9,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": 0.5,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The plate indeed has one cooked potato and one cooked fish, and the recipe requires two cooked potatoes."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "References the valid recipe requirements and current plate contents."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Addresses the current state of the plate assembly."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No cook question was pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The negative command to not serve is immediately followable."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Preventing premature serving of an incomplete order is generally useful, even though the cook was in the middle of assembly."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Explicitly instructs the cook to stop/not serve yet."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The cook requested minimal interruptions (interruption=3), but the assistant interrupted unprompted with a false alarm mistake flag."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Concise and to the point."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The factual claims match the state: the order is Fish & Chips Platter with two potatoes, and the plate in hand shows only one potato."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It mentions only the plate and potatoes, which are present in this kitchen and order."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses the current serving situation, not a distant step: the plate is being held now."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "No pending question is being answered, but the line directly warns not to serve yet because the plate is incomplete."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No executable action is advised."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Warning not to serve is useful because the dish is still missing the second potato."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "There is no live valid intent or stop-request that this line violates."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The warning is concise and to the point."
+          }
+        ]
+      },
+      {
+        "tick": 206,
+        "score": 0.3,
+        "categories": {
+          "truthful": 0.5,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": 1.0,
+          "economy": 0.5
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: You need to chop and cook a second potato."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Mentions existing kitchen elements and recipe items."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The advice addresses completing the second potato requirement."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No question or request was pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: Put the plate down on an empty counter — The cook is currently moving towards fryer 2 and not facing an empty counter."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Advising the cook to put down the plate to chop a new potato is counterproductive when the required cooked potato is ready in the fryer."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "No conflicting announced intent or interruption objection."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The message is concise, though factually incorrect."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The only factual claim matches the engine state: the fryer at [0,5] contains \"potato(cooked)\"."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It refers only to a plate, counter, potato, chopping, and cooking, all present in this kitchen/order."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses the current situation of the cook holding a plate rather than a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "No pending question is active, so this item is not triggered."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Putting the plate down can be started now on an empty counter."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "The advice to \"chop and cook the second potato\" is unnecessary and counterproductive because the second potato is already cooked in the fryer."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "There is no live announced intent or request to stop interruptions blocking this suggestion."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "It adds an unnecessary explanation about chopping and cooking the second potato instead of simply directing the next useful action."
+          }
+        ]
+      },
+      {
+        "tick": 209,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 0.0,
+          "helpful": 0.0,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: You need to chop a raw potato and cook it first"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All referenced stations and ingredients exist in this kitchen and recipe."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The assistant advises preparing an extra potato even though the platter is already fully assembled on the plate."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the cook's objection about the fryer holding a cooked potato by pointing out that the fryer is empty."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: chop a raw potato and cook it — The cook is holding a plate containing the finished meal (fish and two potatoes)."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Preparing another potato is counterproductive because the order (1 fish, 2 potatoes) is already assembled on the plate."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "The utterance does not classify as a mistake_claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It explains why the cook cannot get a potato from the fryer by noting the fryer is empty."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "There is no conflicting announced intent or interruption constraint violated."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The utterance is concise, though substantively incorrect."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: You need to chop a raw potato and cook it first."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "It refers to \"a raw potato,\" which is not present or identified in the current kitchen state."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "The instruction is about a nonexistent/improper subgoal rather than the current live task; the current situation is the cook holding a plate with the plated order."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It directly answers the cook's pushback by asserting a reason, though the reason is wrong."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "the first advised action is not executable now: chop a raw potato — No raw potato is shown in the current state; the plate already contains cooked fish and two cooked p"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "Chopping and cooking a raw potato is not useful to the current plan, since the order already shows cooked items and the engine's canonical next step is prep(fish)."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "No concrete repair is given for an actual mistake; it only gives a vague instruction to chop and cook something."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It responds to pushback by adding a different claim about a raw potato, rather than simply repeating the earlier statement."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "There was no live request to stop interruptions and no urgent safety issue requiring interruption."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is concise and direct."
+          }
+        ]
+      },
+      {
+        "tick": 212,
+        "score": 0.9,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 0.5,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line contains no factual assertions about kitchen state that are false."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All referenced objects (plate, empty counter) exist in this kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The advice addresses the cook's stated plan to cook another potato, which requires free hands."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No cook question or explicit objection was pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The cook is currently holding the plate and can put it down on any adjacent empty counter space."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Freeing hands is a necessary prerequisite for picking up and prepping raw ingredients."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake claim was made."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Respects the cook's announced workflow."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The instruction is concise and direct."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The only concrete kitchen fact is \"an empty counter,\" which matches the situation: the cook moved to \"the empty counter\" and put the plate down there."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It refers only to a plate and an empty counter, both present in this kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses the cook's current subgoal at t212 while holding a plate, not a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No pending question, request, or objection is being answered."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Putting the plate down is startable now because the cook is holding it and there is an empty counter."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "The order is already assembled on the plate and the canonical next step is not this; the line is only loosely useful, not clearly advancing the current plan."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No pushback is being replied to."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "There is no live announced intent or no-interruption constraint being violated, and the line is task-related."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is concise and directly actionable."
+          }
+        ]
+      },
+      {
+        "tick": 225,
+        "score": 0.35,
+        "categories": {
+          "truthful": 0.5,
+          "sensible": 0.5,
+          "helpful": 0.5,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: That's the fish crate."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Fish crate and potato crate are both valid stations/sources in this kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The line instructs the cook to fetch and prep another potato even though the plate at [2,6] is already fully assembled with one cooked fish and two cooked potatoes."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There were no pending questions, requests, or objections from the cook."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The cook has empty hands and can navigate directly to the potato source."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The plate already contains all required ingredients (1 cooked fish and 2 cooked potatoes), so fetching another potato is counterproductive."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake was claimed."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to cook pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "No conflicting announced intent or interruption constraint was violated."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The phrasing is concise."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Both factual claims match the visible kitchen: there is a fish source and a potato source at the right/top-right."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It refers only to the fish crate and potato crate, both present in the kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line addresses the cook's current subgoal of fetching the next potato in the live prep plan."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No pending question, request, or objection is being answered."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Going to the potato source and picking up a potato are startable now with empty hands."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Fetching the potato is useful for the current plan, which includes prep(potato)."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It does not interfere with any live announced intent and is task-relevant."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The instruction is brief and directly actionable."
+          }
+        ]
+      },
+      {
+        "tick": 261,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 0.0,
+          "helpful": 0.0,
+          "listens": 1.0,
+          "economy": 0.5
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: That fryer needs chopped potato / the potato put in the fryer was not chopped"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Mentions fryers, cutting boards, and potatoes which all exist in this kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The assistant hallucinates a mistake that did not occur, as the cook properly chopped the potato before frying it."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No cook question or request was pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: chop the potato at a cutting board first before frying it — The cook's hands are empty and the potato in the fryer was already chopped at t246 and is currently "
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Advising to chop a potato that is already chopped and cooking is unhelpful and counterproductive."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Gave a concrete action (chop at cutting board), albeit based on a false premise."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to cook pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "No quiet request or valid announced intent was violated."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Provides unnecessary and incorrect instructions."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: That fryer needs chopped potato.; You must chop the potato at a cutting board first before frying it."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It only refers to a fryer, potato, and cutting board, all of which exist in the kitchen and order."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "It comments on a completed/ongoing step rather than the current needed subgoal; the potato is already cooking."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "There is no pending cook question, request, or objection to answer."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "the first advised action is not executable now: chop the potato at a cutting board first before frying it — The potato is already chopped and is already in the fryer cooking, so this advice is not needed now."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "It is not useful for the current plan; the needed work is the fish prep step, not another potato chop."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "It states a mistake but does not provide a useful fix for the actual state beyond the incorrect instruction itself."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to pushback against an earlier assistant claim in the current round."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "There is a live announced intent to continue cooking, and the line interrupts with a non-critical correction that is not needed."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is concise, though incorrect."
+          }
+        ]
+      },
+      {
+        "tick": 285,
+        "score": 0.6,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 0.5,
+          "helpful": 0.0,
+          "listens": 0.5,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The claim that the order requires exactly fish and two potatoes without extra ingredients is true."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All mentioned items (lettuce, fish, potato) and rules match the simulation."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line addresses the cook's action at tick 284 of scooping lettuce onto the platter."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "There were no pending cook questions or requests at tick 285."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The cook can stop adding lettuce immediately."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Warning against an incorrect ingredient prevents serving an invalid order."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Because the lettuce was already placed on the plate at tick 284, stopping alone does not fix the ruined plate; the assistant should have instructed the cook to trash and rebuild."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to immediate pushback in this round."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The assistant provides a task-critical reason ('or it will be rejected') overriding the cook's intent to add lettuce."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Concise and direct warning without unnecessary filler."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The only concrete factual claim is that the order requires fish, potato, potato, which matches the recipe/order shown."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It refers to the plate and the exact order contents, all present in this kitchen/order."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "This is about a future plating choice, not the current action already underway; the cook is holding a plate with lettuce already on it."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "There is no pending question or objection to answer; the cook's intent was a live plan change to add lettuce."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "No executable repair is given, and adding or removing lettuce is not stated as a startable simulator command."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "Avoiding lettuce is not useful to the current plan because the plate already contains lettuce and the cook is intentionally proceeding with it as a plan change."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "A mistake claim without a corrective action or stop instruction is incomplete under the rubric."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to prior pushback against the same claim."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": false,
+            "reason": "The cook has a live announced intent to add lettuce, and this line interrupts it without a current safety- or task-critical reason."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is concise and directly states the key warning."
+          }
+        ]
+      },
+      {
+        "tick": 289,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The plate contains raw lettuce and the engine requires an exact match for the order to be accepted."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Lettuce, plate, serving pass, and trash bin all exist in this environment."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Directly addresses the cook's action of adding lettuce and moving to the serving pass."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Directly rejects the cook's pushback about adding lettuce by explaining pass rejection rules."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The cook is holding the plate and can immediately navigate to the trash bin to clear it."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Clearing the foreign ingredient is necessary to prevent serving a rejected order."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Tells the cook specifically to clear the plate at the trash."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Provides the concrete reason (pass rejection) and concrete fix rather than just repeating the earlier command."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Intervenes on an invalid plan change that would fail the task."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Concise and actionable."
+          },
+          {
+            "id": "T1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The visible plate contains lettuce, and the engine verdict says the foreign-addition error is a true observation."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line mentions the plate, lettuce, the pass, and the trash, all of which exist in this kitchen and order context."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "It addresses a live problem on the current plate: extra lettuce that was just added."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "No pending question/request/objection is being answered; this is a repair instruction."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Going to the trash is executable now because the cook has the plate in hand and the trash is present."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "Removing the extra lettuce is directly useful because the order must be exact and the engine flags the foreign ingredient."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The mistake claim includes the fix: clear the plate by going to the trash."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 1,
+            "pass": null,
+            "reason": "This is not a reply to pushback against an earlier assistant claim in the strict sense; it is a new repair based on the current plate state."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "There is no live request to stop interruptions, and this is task-critical because the plate currently has an extra ingredient."
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 1,
+            "pass": true,
+            "reason": "The line is concise and action-oriented, matching the cook's preference for minimal interruption."
+          }
+        ]
+      }
+    ],
+    "source": "cook-bench-engine/tmp/formal_v5/sq_v4/frames/classic_expert/gemini-3.8-flash/b3_hard_nops_medium_map_1.json",
+    "judge": [
+      "gemini",
+      "gpt"
+    ]
+  },
+  "detection": {
+    "detected": 1,
+    "triggered": 3
+  },
+  "presentation": {
+    "frameRoot": "assets/media/cooking-peer-hd",
+    "frameCount": 291,
+    "crops": {
+      "main": [
+        962,
+        26,
+        960,
+        720
+      ],
+      "context": [
+        0,
+        26,
+        960,
+        720
+      ]
+    },
+    "description": "CookSim views re-rendered at 960 × 720 per view from the recorded world states. Evaluation observations are unchanged.",
+    "stateSha256": "9bdce8b58f2b1d35c7ff3612cd88ce15e1b0ce45d6fb57117dc59bef4579e4be"
+  },
+  "frameCount": 290,
+  "playback": {
+    "duration": 303.1302499999987,
+    "segments": [
+      {
+        "tick": 0,
+        "start": 0,
+        "duration": 0.45
+      },
+      {
+        "tick": 1,
+        "start": 0.45,
+        "duration": 0.45
+      },
+      {
+        "tick": 2,
+        "start": 0.9,
+        "duration": 0.45
+      },
+      {
+        "tick": 3,
+        "start": 1.35,
+        "duration": 0.45
+      },
+      {
+        "tick": 4,
+        "start": 1.8,
+        "duration": 0.45
+      },
+      {
+        "tick": 5,
+        "start": 2.25,
+        "duration": 0.45
+      },
+      {
+        "tick": 6,
+        "start": 2.7,
+        "duration": 0.45
+      },
+      {
+        "tick": 7,
+        "start": 3.1500000000000004,
+        "duration": 0.45
+      },
+      {
+        "tick": 8,
+        "start": 3.6000000000000005,
+        "duration": 0.45
+      },
+      {
+        "tick": 9,
+        "start": 4.050000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 10,
+        "start": 4.500000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 11,
+        "start": 4.950000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 12,
+        "start": 5.400000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 13,
+        "start": 5.850000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 14,
+        "start": 6.300000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 15,
+        "start": 6.750000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 16,
+        "start": 7.200000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 17,
+        "start": 7.650000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 18,
+        "start": 8.100000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 19,
+        "start": 8.55,
+        "duration": 0.45
+      },
+      {
+        "tick": 20,
+        "start": 9.0,
+        "duration": 0.45
+      },
+      {
+        "tick": 21,
+        "start": 9.45,
+        "duration": 0.45
+      },
+      {
+        "tick": 22,
+        "start": 9.899999999999999,
+        "duration": 0.45
+      },
+      {
+        "tick": 23,
+        "start": 10.349999999999998,
+        "duration": 0.45
+      },
+      {
+        "tick": 24,
+        "start": 10.799999999999997,
+        "duration": 0.45
+      },
+      {
+        "tick": 25,
+        "start": 11.249999999999996,
+        "duration": 0.45
+      },
+      {
+        "tick": 26,
+        "start": 11.699999999999996,
+        "duration": 0.45
+      },
+      {
+        "tick": 27,
+        "start": 12.149999999999995,
+        "duration": 0.45
+      },
+      {
+        "tick": 28,
+        "start": 12.599999999999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 29,
+        "start": 13.049999999999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 30,
+        "start": 13.499999999999993,
+        "duration": 0.45
+      },
+      {
+        "tick": 31,
+        "start": 13.949999999999992,
+        "duration": 0.45
+      },
+      {
+        "tick": 32,
+        "start": 14.399999999999991,
+        "duration": 0.45
+      },
+      {
+        "tick": 33,
+        "start": 14.84999999999999,
+        "duration": 0.45
+      },
+      {
+        "tick": 34,
+        "start": 15.29999999999999,
+        "duration": 9.081916666666668
+      },
+      {
+        "tick": 35,
+        "start": 24.38191666666666,
+        "duration": 0.45
+      },
+      {
+        "tick": 36,
+        "start": 24.831916666666658,
+        "duration": 0.45
+      },
+      {
+        "tick": 37,
+        "start": 25.281916666666657,
+        "duration": 5.481916666666667
+      },
+      {
+        "tick": 38,
+        "start": 30.763833333333324,
+        "duration": 0.45
+      },
+      {
+        "tick": 39,
+        "start": 31.213833333333323,
+        "duration": 0.45
+      },
+      {
+        "tick": 40,
+        "start": 31.663833333333322,
+        "duration": 0.45
+      },
+      {
+        "tick": 41,
+        "start": 32.113833333333325,
+        "duration": 0.45
+      },
+      {
+        "tick": 42,
+        "start": 32.56383333333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 43,
+        "start": 33.01383333333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 44,
+        "start": 33.46383333333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 45,
+        "start": 33.913833333333336,
+        "duration": 0.45
+      },
+      {
+        "tick": 46,
+        "start": 34.36383333333334,
+        "duration": 0.45
+      },
+      {
+        "tick": 47,
+        "start": 34.81383333333334,
+        "duration": 0.45
+      },
+      {
+        "tick": 48,
+        "start": 35.263833333333345,
+        "duration": 0.45
+      },
+      {
+        "tick": 49,
+        "start": 35.71383333333335,
+        "duration": 0.45
+      },
+      {
+        "tick": 50,
+        "start": 36.16383333333335,
+        "duration": 0.45
+      },
+      {
+        "tick": 51,
+        "start": 36.61383333333335,
+        "duration": 0.45
+      },
+      {
+        "tick": 52,
+        "start": 37.063833333333356,
+        "duration": 0.45
+      },
+      {
+        "tick": 53,
+        "start": 37.51383333333336,
+        "duration": 0.45
+      },
+      {
+        "tick": 54,
+        "start": 37.96383333333336,
+        "duration": 0.45
+      },
+      {
+        "tick": 55,
+        "start": 38.413833333333365,
+        "duration": 0.45
+      },
+      {
+        "tick": 56,
+        "start": 38.86383333333337,
+        "duration": 0.45
+      },
+      {
+        "tick": 57,
+        "start": 39.31383333333337,
+        "duration": 0.45
+      },
+      {
+        "tick": 58,
+        "start": 39.76383333333337,
+        "duration": 0.45
+      },
+      {
+        "tick": 59,
+        "start": 40.213833333333376,
+        "duration": 0.45
+      },
+      {
+        "tick": 60,
+        "start": 40.66383333333338,
+        "duration": 0.45
+      },
+      {
+        "tick": 61,
+        "start": 41.11383333333338,
+        "duration": 0.45
+      },
+      {
+        "tick": 62,
+        "start": 41.563833333333385,
+        "duration": 0.45
+      },
+      {
+        "tick": 63,
+        "start": 42.01383333333339,
+        "duration": 0.45
+      },
+      {
+        "tick": 64,
+        "start": 42.46383333333339,
+        "duration": 0.45
+      },
+      {
+        "tick": 65,
+        "start": 42.91383333333339,
+        "duration": 0.45
+      },
+      {
+        "tick": 66,
+        "start": 43.363833333333396,
+        "duration": 0.45
+      },
+      {
+        "tick": 67,
+        "start": 43.8138333333334,
+        "duration": 0.45
+      },
+      {
+        "tick": 68,
+        "start": 44.2638333333334,
+        "duration": 0.45
+      },
+      {
+        "tick": 69,
+        "start": 44.713833333333405,
+        "duration": 0.45
+      },
+      {
+        "tick": 70,
+        "start": 45.16383333333341,
+        "duration": 0.45
+      },
+      {
+        "tick": 71,
+        "start": 45.61383333333341,
+        "duration": 6.7619166666666715
+      },
+      {
+        "tick": 72,
+        "start": 52.37575000000008,
+        "duration": 0.45
+      },
+      {
+        "tick": 73,
+        "start": 52.825750000000085,
+        "duration": 0.45
+      },
+      {
+        "tick": 74,
+        "start": 53.27575000000009,
+        "duration": 0.45
+      },
+      {
+        "tick": 75,
+        "start": 53.72575000000009,
+        "duration": 0.45
+      },
+      {
+        "tick": 76,
+        "start": 54.17575000000009,
+        "duration": 0.45
+      },
+      {
+        "tick": 77,
+        "start": 54.625750000000096,
+        "duration": 0.45
+      },
+      {
+        "tick": 78,
+        "start": 55.0757500000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 79,
+        "start": 55.5257500000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 80,
+        "start": 55.975750000000104,
+        "duration": 0.45
+      },
+      {
+        "tick": 81,
+        "start": 56.42575000000011,
+        "duration": 0.45
+      },
+      {
+        "tick": 82,
+        "start": 56.87575000000011,
+        "duration": 0.45
+      },
+      {
+        "tick": 83,
+        "start": 57.32575000000011,
+        "duration": 0.45
+      },
+      {
+        "tick": 84,
+        "start": 57.775750000000116,
+        "duration": 0.45
+      },
+      {
+        "tick": 85,
+        "start": 58.22575000000012,
+        "duration": 0.45
+      },
+      {
+        "tick": 86,
+        "start": 58.67575000000012,
+        "duration": 0.45
+      },
+      {
+        "tick": 87,
+        "start": 59.125750000000124,
+        "duration": 0.45
+      },
+      {
+        "tick": 88,
+        "start": 59.57575000000013,
+        "duration": 0.45
+      },
+      {
+        "tick": 89,
+        "start": 60.02575000000013,
+        "duration": 0.45
+      },
+      {
+        "tick": 90,
+        "start": 60.47575000000013,
+        "duration": 0.45
+      },
+      {
+        "tick": 91,
+        "start": 60.925750000000136,
+        "duration": 0.45
+      },
+      {
+        "tick": 92,
+        "start": 61.37575000000014,
+        "duration": 0.45
+      },
+      {
+        "tick": 93,
+        "start": 61.82575000000014,
+        "duration": 0.45
+      },
+      {
+        "tick": 94,
+        "start": 62.275750000000144,
+        "duration": 2.9009583333333353
+      },
+      {
+        "tick": 95,
+        "start": 65.17670833333348,
+        "duration": 0.45
+      },
+      {
+        "tick": 96,
+        "start": 65.62670833333348,
+        "duration": 0.45
+      },
+      {
+        "tick": 97,
+        "start": 66.07670833333349,
+        "duration": 6.180958333333336
+      },
+      {
+        "tick": 98,
+        "start": 72.25766666666682,
+        "duration": 0.45
+      },
+      {
+        "tick": 99,
+        "start": 72.70766666666682,
+        "duration": 0.45
+      },
+      {
+        "tick": 100,
+        "start": 73.15766666666683,
+        "duration": 0.45
+      },
+      {
+        "tick": 101,
+        "start": 73.60766666666683,
+        "duration": 0.45
+      },
+      {
+        "tick": 102,
+        "start": 74.05766666666683,
+        "duration": 0.45
+      },
+      {
+        "tick": 103,
+        "start": 74.50766666666684,
+        "duration": 0.45
+      },
+      {
+        "tick": 104,
+        "start": 74.95766666666684,
+        "duration": 0.45
+      },
+      {
+        "tick": 105,
+        "start": 75.40766666666684,
+        "duration": 0.45
+      },
+      {
+        "tick": 106,
+        "start": 75.85766666666684,
+        "duration": 9.601916666666654
+      },
+      {
+        "tick": 107,
+        "start": 85.4595833333335,
+        "duration": 0.45
+      },
+      {
+        "tick": 108,
+        "start": 85.9095833333335,
+        "duration": 4.540958333333336
+      },
+      {
+        "tick": 109,
+        "start": 90.45054166666684,
+        "duration": 2.860958333333329
+      },
+      {
+        "tick": 110,
+        "start": 93.31150000000017,
+        "duration": 0.45
+      },
+      {
+        "tick": 111,
+        "start": 93.76150000000017,
+        "duration": 0.45
+      },
+      {
+        "tick": 112,
+        "start": 94.21150000000017,
+        "duration": 0.45
+      },
+      {
+        "tick": 113,
+        "start": 94.66150000000017,
+        "duration": 0.45
+      },
+      {
+        "tick": 114,
+        "start": 95.11150000000018,
+        "duration": 0.45
+      },
+      {
+        "tick": 115,
+        "start": 95.56150000000018,
+        "duration": 0.45
+      },
+      {
+        "tick": 116,
+        "start": 96.01150000000018,
+        "duration": 0.45
+      },
+      {
+        "tick": 117,
+        "start": 96.46150000000019,
+        "duration": 3.580958333333328
+      },
+      {
+        "tick": 118,
+        "start": 100.04245833333351,
+        "duration": 0.45
+      },
+      {
+        "tick": 119,
+        "start": 100.49245833333352,
+        "duration": 0.45
+      },
+      {
+        "tick": 120,
+        "start": 100.94245833333352,
+        "duration": 0.45
+      },
+      {
+        "tick": 121,
+        "start": 101.39245833333352,
+        "duration": 0.45
+      },
+      {
+        "tick": 122,
+        "start": 101.84245833333352,
+        "duration": 0.45
+      },
+      {
+        "tick": 123,
+        "start": 102.29245833333353,
+        "duration": 6.681916666666666
+      },
+      {
+        "tick": 124,
+        "start": 108.9743750000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 125,
+        "start": 109.4243750000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 126,
+        "start": 109.8743750000002,
+        "duration": 6.801916666666671
+      },
+      {
+        "tick": 127,
+        "start": 116.67629166666687,
+        "duration": 0.45
+      },
+      {
+        "tick": 128,
+        "start": 117.12629166666687,
+        "duration": 0.45
+      },
+      {
+        "tick": 129,
+        "start": 117.57629166666688,
+        "duration": 0.45
+      },
+      {
+        "tick": 130,
+        "start": 118.02629166666688,
+        "duration": 0.45
+      },
+      {
+        "tick": 131,
+        "start": 118.47629166666688,
+        "duration": 0.45
+      },
+      {
+        "tick": 132,
+        "start": 118.92629166666688,
+        "duration": 0.45
+      },
+      {
+        "tick": 133,
+        "start": 119.37629166666689,
+        "duration": 0.45
+      },
+      {
+        "tick": 134,
+        "start": 119.82629166666689,
+        "duration": 0.45
+      },
+      {
+        "tick": 135,
+        "start": 120.27629166666689,
+        "duration": 5.66095833333334
+      },
+      {
+        "tick": 136,
+        "start": 125.93725000000023,
+        "duration": 0.45
+      },
+      {
+        "tick": 137,
+        "start": 126.38725000000024,
+        "duration": 0.45
+      },
+      {
+        "tick": 138,
+        "start": 126.83725000000024,
+        "duration": 0.45
+      },
+      {
+        "tick": 139,
+        "start": 127.28725000000024,
+        "duration": 0.45
+      },
+      {
+        "tick": 140,
+        "start": 127.73725000000024,
+        "duration": 10.121916666666664
+      },
+      {
+        "tick": 141,
+        "start": 137.8591666666669,
+        "duration": 0.45
+      },
+      {
+        "tick": 142,
+        "start": 138.3091666666669,
+        "duration": 0.45
+      },
+      {
+        "tick": 143,
+        "start": 138.75916666666689,
+        "duration": 0.45
+      },
+      {
+        "tick": 144,
+        "start": 139.20916666666687,
+        "duration": 0.45
+      },
+      {
+        "tick": 145,
+        "start": 139.65916666666686,
+        "duration": 0.45
+      },
+      {
+        "tick": 146,
+        "start": 140.10916666666685,
+        "duration": 0.45
+      },
+      {
+        "tick": 147,
+        "start": 140.55916666666684,
+        "duration": 0.45
+      },
+      {
+        "tick": 148,
+        "start": 141.00916666666683,
+        "duration": 0.45
+      },
+      {
+        "tick": 149,
+        "start": 141.45916666666682,
+        "duration": 0.45
+      },
+      {
+        "tick": 150,
+        "start": 141.9091666666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 151,
+        "start": 142.3591666666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 152,
+        "start": 142.80916666666678,
+        "duration": 0.45
+      },
+      {
+        "tick": 153,
+        "start": 143.25916666666677,
+        "duration": 0.45
+      },
+      {
+        "tick": 154,
+        "start": 143.70916666666676,
+        "duration": 0.45
+      },
+      {
+        "tick": 155,
+        "start": 144.15916666666675,
+        "duration": 0.45
+      },
+      {
+        "tick": 156,
+        "start": 144.60916666666674,
+        "duration": 0.45
+      },
+      {
+        "tick": 157,
+        "start": 145.05916666666673,
+        "duration": 0.45
+      },
+      {
+        "tick": 158,
+        "start": 145.50916666666672,
+        "duration": 0.45
+      },
+      {
+        "tick": 159,
+        "start": 145.9591666666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 160,
+        "start": 146.4091666666667,
+        "duration": 9.001916666666688
+      },
+      {
+        "tick": 161,
+        "start": 155.41108333333338,
+        "duration": 0.45
+      },
+      {
+        "tick": 162,
+        "start": 155.86108333333337,
+        "duration": 8.201916666666676
+      },
+      {
+        "tick": 163,
+        "start": 164.06300000000005,
+        "duration": 0.45
+      },
+      {
+        "tick": 164,
+        "start": 164.51300000000003,
+        "duration": 0.45
+      },
+      {
+        "tick": 165,
+        "start": 164.96300000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 166,
+        "start": 165.413,
+        "duration": 0.45
+      },
+      {
+        "tick": 167,
+        "start": 165.863,
+        "duration": 0.45
+      },
+      {
+        "tick": 168,
+        "start": 166.313,
+        "duration": 0.45
+      },
+      {
+        "tick": 169,
+        "start": 166.76299999999998,
+        "duration": 0.45
+      },
+      {
+        "tick": 170,
+        "start": 167.21299999999997,
+        "duration": 0.45
+      },
+      {
+        "tick": 171,
+        "start": 167.66299999999995,
+        "duration": 0.45
+      },
+      {
+        "tick": 172,
+        "start": 168.11299999999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 173,
+        "start": 168.56299999999993,
+        "duration": 0.45
+      },
+      {
+        "tick": 174,
+        "start": 169.01299999999992,
+        "duration": 0.45
+      },
+      {
+        "tick": 175,
+        "start": 169.4629999999999,
+        "duration": 0.45
+      },
+      {
+        "tick": 176,
+        "start": 169.9129999999999,
+        "duration": 0.45
+      },
+      {
+        "tick": 177,
+        "start": 170.3629999999999,
+        "duration": 0.45
+      },
+      {
+        "tick": 178,
+        "start": 170.81299999999987,
+        "duration": 0.45
+      },
+      {
+        "tick": 179,
+        "start": 171.26299999999986,
+        "duration": 0.45
+      },
+      {
+        "tick": 180,
+        "start": 171.71299999999985,
+        "duration": 0.45
+      },
+      {
+        "tick": 181,
+        "start": 172.16299999999984,
+        "duration": 0.45
+      },
+      {
+        "tick": 182,
+        "start": 172.61299999999983,
+        "duration": 7.02095833333334
+      },
+      {
+        "tick": 183,
+        "start": 179.63395833333317,
+        "duration": 0.45
+      },
+      {
+        "tick": 184,
+        "start": 180.08395833333316,
+        "duration": 0.45
+      },
+      {
+        "tick": 185,
+        "start": 180.53395833333315,
+        "duration": 0.45
+      },
+      {
+        "tick": 186,
+        "start": 180.98395833333313,
+        "duration": 0.45
+      },
+      {
+        "tick": 187,
+        "start": 181.43395833333312,
+        "duration": 0.45
+      },
+      {
+        "tick": 188,
+        "start": 181.8839583333331,
+        "duration": 3.2209583333333285
+      },
+      {
+        "tick": 189,
+        "start": 185.10491666666644,
+        "duration": 0.45
+      },
+      {
+        "tick": 190,
+        "start": 185.55491666666643,
+        "duration": 0.45
+      },
+      {
+        "tick": 191,
+        "start": 186.00491666666642,
+        "duration": 0.45
+      },
+      {
+        "tick": 192,
+        "start": 186.4549166666664,
+        "duration": 0.45
+      },
+      {
+        "tick": 193,
+        "start": 186.9049166666664,
+        "duration": 0.45
+      },
+      {
+        "tick": 194,
+        "start": 187.35491666666638,
+        "duration": 0.45
+      },
+      {
+        "tick": 195,
+        "start": 187.80491666666637,
+        "duration": 0.45
+      },
+      {
+        "tick": 196,
+        "start": 188.25491666666636,
+        "duration": 0.45
+      },
+      {
+        "tick": 197,
+        "start": 188.70491666666635,
+        "duration": 0.45
+      },
+      {
+        "tick": 198,
+        "start": 189.15491666666634,
+        "duration": 0.45
+      },
+      {
+        "tick": 199,
+        "start": 189.60491666666633,
+        "duration": 0.45
+      },
+      {
+        "tick": 200,
+        "start": 190.05491666666632,
+        "duration": 0.45
+      },
+      {
+        "tick": 201,
+        "start": 190.5049166666663,
+        "duration": 0.45
+      },
+      {
+        "tick": 202,
+        "start": 190.9549166666663,
+        "duration": 0.45
+      },
+      {
+        "tick": 203,
+        "start": 191.40491666666628,
+        "duration": 0.45
+      },
+      {
+        "tick": 204,
+        "start": 191.85491666666627,
+        "duration": 9.761916666666679
+      },
+      {
+        "tick": 205,
+        "start": 201.61683333333295,
+        "duration": 0.45
+      },
+      {
+        "tick": 206,
+        "start": 202.06683333333294,
+        "duration": 9.401916666666665
+      },
+      {
+        "tick": 207,
+        "start": 211.4687499999996,
+        "duration": 0.45
+      },
+      {
+        "tick": 208,
+        "start": 211.9187499999996,
+        "duration": 0.45
+      },
+      {
+        "tick": 209,
+        "start": 212.36874999999958,
+        "duration": 8.28191666666666
+      },
+      {
+        "tick": 210,
+        "start": 220.65066666666624,
+        "duration": 0.45
+      },
+      {
+        "tick": 211,
+        "start": 221.10066666666623,
+        "duration": 0.45
+      },
+      {
+        "tick": 212,
+        "start": 221.55066666666622,
+        "duration": 5.841916666666663
+      },
+      {
+        "tick": 213,
+        "start": 227.39258333333288,
+        "duration": 0.45
+      },
+      {
+        "tick": 214,
+        "start": 227.84258333333287,
+        "duration": 0.45
+      },
+      {
+        "tick": 215,
+        "start": 228.29258333333286,
+        "duration": 0.45
+      },
+      {
+        "tick": 216,
+        "start": 228.74258333333285,
+        "duration": 0.45
+      },
+      {
+        "tick": 217,
+        "start": 229.19258333333283,
+        "duration": 0.45
+      },
+      {
+        "tick": 218,
+        "start": 229.64258333333282,
+        "duration": 0.45
+      },
+      {
+        "tick": 219,
+        "start": 230.0925833333328,
+        "duration": 0.45
+      },
+      {
+        "tick": 220,
+        "start": 230.5425833333328,
+        "duration": 0.45
+      },
+      {
+        "tick": 221,
+        "start": 230.9925833333328,
+        "duration": 0.45
+      },
+      {
+        "tick": 222,
+        "start": 231.44258333333278,
+        "duration": 0.45
+      },
+      {
+        "tick": 223,
+        "start": 231.89258333333277,
+        "duration": 0.45
+      },
+      {
+        "tick": 224,
+        "start": 232.34258333333275,
+        "duration": 0.45
+      },
+      {
+        "tick": 225,
+        "start": 232.79258333333274,
+        "duration": 8.52191666666667
+      },
+      {
+        "tick": 226,
+        "start": 241.3144999999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 227,
+        "start": 241.7644999999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 228,
+        "start": 242.2144999999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 229,
+        "start": 242.66449999999938,
+        "duration": 0.45
+      },
+      {
+        "tick": 230,
+        "start": 243.11449999999937,
+        "duration": 0.45
+      },
+      {
+        "tick": 231,
+        "start": 243.56449999999936,
+        "duration": 0.45
+      },
+      {
+        "tick": 232,
+        "start": 244.01449999999934,
+        "duration": 0.45
+      },
+      {
+        "tick": 233,
+        "start": 244.46449999999933,
+        "duration": 0.45
+      },
+      {
+        "tick": 234,
+        "start": 244.91449999999932,
+        "duration": 0.45
+      },
+      {
+        "tick": 235,
+        "start": 245.3644999999993,
+        "duration": 0.45
+      },
+      {
+        "tick": 236,
+        "start": 245.8144999999993,
+        "duration": 0.45
+      },
+      {
+        "tick": 237,
+        "start": 246.2644999999993,
+        "duration": 0.45
+      },
+      {
+        "tick": 238,
+        "start": 246.71449999999928,
+        "duration": 0.45
+      },
+      {
+        "tick": 239,
+        "start": 247.16449999999926,
+        "duration": 0.45
+      },
+      {
+        "tick": 240,
+        "start": 247.61449999999925,
+        "duration": 0.45
+      },
+      {
+        "tick": 241,
+        "start": 248.06449999999924,
+        "duration": 0.45
+      },
+      {
+        "tick": 242,
+        "start": 248.51449999999923,
+        "duration": 0.45
+      },
+      {
+        "tick": 243,
+        "start": 248.96449999999922,
+        "duration": 0.45
+      },
+      {
+        "tick": 244,
+        "start": 249.4144999999992,
+        "duration": 0.45
+      },
+      {
+        "tick": 245,
+        "start": 249.8644999999992,
+        "duration": 0.45
+      },
+      {
+        "tick": 246,
+        "start": 250.31449999999919,
+        "duration": 0.45
+      },
+      {
+        "tick": 247,
+        "start": 250.76449999999917,
+        "duration": 0.45
+      },
+      {
+        "tick": 248,
+        "start": 251.21449999999916,
+        "duration": 0.45
+      },
+      {
+        "tick": 249,
+        "start": 251.66449999999915,
+        "duration": 0.45
+      },
+      {
+        "tick": 250,
+        "start": 252.11449999999914,
+        "duration": 0.45
+      },
+      {
+        "tick": 251,
+        "start": 252.56449999999913,
+        "duration": 0.45
+      },
+      {
+        "tick": 252,
+        "start": 253.01449999999912,
+        "duration": 0.45
+      },
+      {
+        "tick": 253,
+        "start": 253.4644999999991,
+        "duration": 0.45
+      },
+      {
+        "tick": 254,
+        "start": 253.9144999999991,
+        "duration": 0.45
+      },
+      {
+        "tick": 255,
+        "start": 254.36449999999908,
+        "duration": 0.45
+      },
+      {
+        "tick": 256,
+        "start": 254.81449999999907,
+        "duration": 0.45
+      },
+      {
+        "tick": 257,
+        "start": 255.26449999999906,
+        "duration": 0.45
+      },
+      {
+        "tick": 258,
+        "start": 255.71449999999905,
+        "duration": 0.45
+      },
+      {
+        "tick": 259,
+        "start": 256.16449999999907,
+        "duration": 0.45
+      },
+      {
+        "tick": 260,
+        "start": 256.61449999999905,
+        "duration": 0.45
+      },
+      {
+        "tick": 261,
+        "start": 257.06449999999904,
+        "duration": 9.561916666666662
+      },
+      {
+        "tick": 262,
+        "start": 266.6264166666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 263,
+        "start": 267.0764166666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 264,
+        "start": 267.5264166666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 265,
+        "start": 267.97641666666567,
+        "duration": 0.45
+      },
+      {
+        "tick": 266,
+        "start": 268.42641666666566,
+        "duration": 0.45
+      },
+      {
+        "tick": 267,
+        "start": 268.87641666666565,
+        "duration": 0.45
+      },
+      {
+        "tick": 268,
+        "start": 269.32641666666564,
+        "duration": 0.45
+      },
+      {
+        "tick": 269,
+        "start": 269.7764166666656,
+        "duration": 0.45
+      },
+      {
+        "tick": 270,
+        "start": 270.2264166666656,
+        "duration": 0.45
+      },
+      {
+        "tick": 271,
+        "start": 270.6764166666656,
+        "duration": 0.45
+      },
+      {
+        "tick": 272,
+        "start": 271.1264166666656,
+        "duration": 0.45
+      },
+      {
+        "tick": 273,
+        "start": 271.5764166666656,
+        "duration": 0.45
+      },
+      {
+        "tick": 274,
+        "start": 272.02641666666557,
+        "duration": 0.45
+      },
+      {
+        "tick": 275,
+        "start": 272.47641666666556,
+        "duration": 0.45
+      },
+      {
+        "tick": 276,
+        "start": 272.92641666666555,
+        "duration": 0.45
+      },
+      {
+        "tick": 277,
+        "start": 273.37641666666553,
+        "duration": 0.45
+      },
+      {
+        "tick": 278,
+        "start": 273.8264166666655,
+        "duration": 0.45
+      },
+      {
+        "tick": 279,
+        "start": 274.2764166666655,
+        "duration": 0.45
+      },
+      {
+        "tick": 280,
+        "start": 274.7264166666655,
+        "duration": 0.45
+      },
+      {
+        "tick": 281,
+        "start": 275.1764166666655,
+        "duration": 0.45
+      },
+      {
+        "tick": 282,
+        "start": 275.6264166666655,
+        "duration": 0.45
+      },
+      {
+        "tick": 283,
+        "start": 276.07641666666547,
+        "duration": 0.45
+      },
+      {
+        "tick": 284,
+        "start": 276.52641666666545,
+        "duration": 0.45
+      },
+      {
+        "tick": 285,
+        "start": 276.97641666666544,
+        "duration": 9.961916666666639
+      },
+      {
+        "tick": 286,
+        "start": 286.9383333333321,
+        "duration": 0.45
+      },
+      {
+        "tick": 287,
+        "start": 287.38833333333207,
+        "duration": 0.45
+      },
+      {
+        "tick": 288,
+        "start": 287.83833333333206,
+        "duration": 0.45
+      },
+      {
+        "tick": 289,
+        "start": 288.28833333333205,
+        "duration": 10.841916666666634
+      },
+      {
+        "tick": 290,
+        "start": 299.1302499999987,
+        "duration": 4
+      }
+    ]
+  },
+  "metrics": {
+    "inTimeSuccess": true,
+    "budget": 408,
+    "detected": 2,
+    "triggered": 3,
+    "scorer": "cook-bench-engine/tools/eval_v2_sweep.py",
+    "scorerSha256": "bfbd550c93c930f25bdd5ab58b1dd4fb6c16f5cfc6bacbffd75e15b744ce2466"
+  }
+}

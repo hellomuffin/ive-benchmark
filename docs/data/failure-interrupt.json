@@ -1,0 +1,222 @@
+{
+  "id": "failure-interrupt",
+  "engine": "CookSim",
+  "model": "GPT-Realtime 2.1",
+  "persona": "Independent expert",
+  "axes": [
+    3,
+    1,
+    2,
+    1,
+    3
+  ],
+  "task": "Prepare a Loaded Burrito: tortilla, rice, steak, tomato, and lettuce.",
+  "source": "cook-bench-engine/tmp/sample_r6_compare/frames/classic_expert/gpt-realtime-2.1__before_fix/b3_master_nops_hard_map_2.json",
+  "sourceHash": "7b96e218882d3455d142bab12dce35e27460cb69b5cc54475a5652f6f30e97c2",
+  "engineVersion": {
+    "rev": "f27afc95aa",
+    "parts": {
+      "cooksim/core/enums.py": "510e08fec757",
+      "cooksim/core/layout.py": "ae4b2c459738",
+      "cooksim/core/plan_ir.py": "be41285b8d53",
+      "cooksim/core/error_lib.py": "ad7a18fafa51",
+      "cooksim/core/generator.py": "0c414e6af300",
+      "cooksim/core/stations.py": "f1cb5a909fd4",
+      "cooksim/core/config.py": "dd4043ba2fad",
+      "cooksim/interact/system.py": "5a7087ba8cf8",
+      "cooksim/interact/protocol.py": "d625835fbf91",
+      "cooksim/interact/checks.py": "729a5f51c9c7",
+      "cooksim/interact/persona_v2.py": "894beee10416",
+      "cooksim/agents/highlevel.py": "64b8d9a2ec1b",
+      "cooksim/agents/observe_text.py": "803f1c947e5e",
+      "cooksim/agents/places.py": "98b84de6b523",
+      "tools/e2e_stepin_rollout.py": "78f500485097",
+      "tools/exp_error_rollout.py": "3d606ce4cee8",
+      "tools/exp_multi_error.py": "73dcacfeb2df",
+      "tools/agent_context.py": "7f7e65dce614",
+      "tools/exp_interact.py": "47f35293fcf8",
+      "tmp/interact_eval/recovery_cases.json": "c406ffbfdbc3"
+    }
+  },
+  "media": "assets/media/failure-interrupt.mp4",
+  "poster": "assets/media/failure-interrupt.jpg",
+  "timingNote": "Recorded text interaction. Synthetic voices added for presentation; playback is time-expanded. Tick stamps preserve the original sequence.",
+  "clip": {
+    "start": 0,
+    "end": 16
+  },
+  "ticks": 170,
+  "dialogue": [
+    {
+      "tick": 5,
+      "speaker": "assistant",
+      "text": "Quick reminder: this order is strict. Prep what needs prep (rice cooked, steak cooked, tomato and lettuce chopped), then with a clean plate add items in the exact order: tortilla, rice, steak, tomato, lettuce, and serve only when complete.",
+      "audio": "assets/media/voice/1ebdf5b314420861d4f4.mp3",
+      "duration": 16.810958333333332,
+      "start": 2.25
+    },
+    {
+      "tick": 5,
+      "speaker": "user",
+      "text": "Got it, I know the drill.",
+      "audio": "assets/media/voice/c6b9d7a05d6f7688e457.mp3",
+      "duration": 1.8109583333333332,
+      "start": 19.310958333333332
+    },
+    {
+      "tick": 9,
+      "speaker": "assistant",
+      "text": "If that’s rice in your hands, head to the pot, put it in, then with empty hands turn the pot on. Keep an eye on it once it finishes so it doesn’t sit too long.",
+      "audio": "assets/media/voice/35e5467a11c071e91d14.mp3",
+      "duration": 9.970958333333334,
+      "start": 22.72191666666666
+    },
+    {
+      "tick": 13,
+      "speaker": "assistant",
+      "text": "You’re still holding the rice. Go to the pot station (one of the pots on the side counters), put the rice in, then make sure your hands are empty and turn the pot on. Don’t start assembling anything until the rice is cooked.",
+      "audio": "assets/media/voice/455c0c8485797afe4ae0.mp3",
+      "duration": 12.890958333333334,
+      "start": 34.292875
+    }
+  ],
+  "actions": [
+    {
+      "start": 0,
+      "end": 0,
+      "text": "go to rice source 2"
+    },
+    {
+      "start": 1,
+      "end": 2,
+      "text": "pick up"
+    },
+    {
+      "start": 3,
+      "end": 18,
+      "text": "go to pot 1"
+    }
+  ],
+  "events": [],
+  "milestones": [],
+  "quality": {
+    "overall": null,
+    "categories": {},
+    "rounds": []
+  },
+  "crops": {
+    "main": [
+      962,
+      51,
+      960,
+      720
+    ],
+    "context": [
+      0,
+      51,
+      960,
+      720
+    ]
+  },
+  "annotations": [
+    {
+      "start": 3,
+      "end": 16,
+      "text": "User is already walking to the pot · action completes at tick 18"
+    }
+  ],
+  "frameCount": 17,
+  "presentation": {
+    "description": "Original recorded observations. The displayed excerpt preserves the original actions and dialogue."
+  },
+  "playback": {
+    "duration": 52.333833333333345,
+    "segments": [
+      {
+        "tick": 0,
+        "start": 0,
+        "duration": 0.45
+      },
+      {
+        "tick": 1,
+        "start": 0.45,
+        "duration": 0.45
+      },
+      {
+        "tick": 2,
+        "start": 0.9,
+        "duration": 0.45
+      },
+      {
+        "tick": 3,
+        "start": 1.35,
+        "duration": 0.45
+      },
+      {
+        "tick": 4,
+        "start": 1.8,
+        "duration": 0.45
+      },
+      {
+        "tick": 5,
+        "start": 2.25,
+        "duration": 19.121916666666664
+      },
+      {
+        "tick": 6,
+        "start": 21.371916666666664,
+        "duration": 0.45
+      },
+      {
+        "tick": 7,
+        "start": 21.821916666666663,
+        "duration": 0.45
+      },
+      {
+        "tick": 8,
+        "start": 22.271916666666662,
+        "duration": 0.45
+      },
+      {
+        "tick": 9,
+        "start": 22.72191666666666,
+        "duration": 10.220958333333332
+      },
+      {
+        "tick": 10,
+        "start": 32.942874999999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 11,
+        "start": 33.392875,
+        "duration": 0.45
+      },
+      {
+        "tick": 12,
+        "start": 33.842875,
+        "duration": 0.45
+      },
+      {
+        "tick": 13,
+        "start": 34.292875,
+        "duration": 13.140958333333337
+      },
+      {
+        "tick": 14,
+        "start": 47.43383333333334,
+        "duration": 0.45
+      },
+      {
+        "tick": 15,
+        "start": 47.88383333333334,
+        "duration": 0.45
+      },
+      {
+        "tick": 16,
+        "start": 48.333833333333345,
+        "duration": 4
+      }
+    ]
+  }
+}
