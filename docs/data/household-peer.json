@@ -466,8 +466,8 @@
       "kind": "error",
       "tick": 107,
       "end": 117,
-      "detected": false,
-      "detectedAt": null
+      "detected": true,
+      "detectedAt": 106
     }
   ],
   "quality": {
@@ -1683,6 +1683,7 @@
   "metrics": {
     "inTimeSuccess": true,
     "budget": 156.0,
+    "referenceTicks": 58.0,
     "detected": 1,
     "triggered": 2,
     "scorer": "vh-streaming-engine/tools/assist_metrics.py",

@@ -2700,6 +2700,7 @@
   "metrics": {
     "inTimeSuccess": true,
     "budget": 542,
+    "referenceTicks": 237,
     "detected": 2,
     "triggered": 2,
     "scorer": "cook-bench-engine/tools/eval_v2_sweep.py",

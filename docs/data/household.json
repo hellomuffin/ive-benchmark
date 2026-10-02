@@ -432,8 +432,8 @@
       "tick": 45,
       "end": 57,
       "commit": 57,
-      "detectedAt": null,
-      "detected": false,
+      "detectedAt": 14,
+      "detected": true,
       "prevented": false
     },
     {
@@ -1789,6 +1789,7 @@
   "metrics": {
     "inTimeSuccess": true,
     "budget": 156.0,
+    "referenceTicks": 58.0,
     "detected": 2,
     "triggered": 2,
     "scorer": "vh-streaming-engine/tools/assist_metrics.py",

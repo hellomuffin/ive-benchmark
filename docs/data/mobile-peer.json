@@ -1102,6 +1102,7 @@
   "metrics": {
     "inTimeSuccess": true,
     "budget": 44,
+    "referenceTicks": 18,
     "detected": 2,
     "triggered": 2,
     "scorer": "screensim/tools/dump_experiments.py",

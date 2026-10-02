@@ -7,7 +7,7 @@ async function data(id) {
   if (!cache.has(id)) cache.set(id, fetch(`data/${id}.json`,{cache:'no-cache'}).then(r => {if(!r.ok)throw Error(`Episode unavailable: ${id}`);return r.json();}));
   return cache.get(id);
 }
-function axes(e,cls) {return `<div class="${cls}">${e.axes.map((n,i)=>`<span>${axisNames[i]} <b>${axisLevels[i][n-1]}</b></span>`).join('')}</div>`;}
+function axes(e,cls) {return `<div class="${cls}">${e.axes.map((n,i)=>`<div class="persona-axis"><span>${axisNames[i]} <b>${axisLevels[i][n-1]}</b></span><div class="persona-levels" role="img" aria-label="${axisNames[i]}: ${axisLevels[i][n-1]}, level ${n} of 3">${[1,2,3].map(level=>`<i class="${level===n?'selected':''}"></i>`).join('')}</div></div>`).join('')}</div>`;}
 function completed(e) {return e.completed ?? (e.outcome === 'Task completed' || e.outcome === 'won');}
 
 class Replay {
@@ -18,8 +18,9 @@ class Replay {
     this.phone=e.engine==='ScreenSim';
     const quality=e.quality?.overall;
     const metrics=e.metrics;
+    const outcomeLabel=metrics?.inTimeSuccess?'Success':({burned:'Burned food',fire:'Fire',wrong_serve:'Wrong serving',timeout:'Timeout',stuck:'Stalled',goal_not_satisfied:'Goal unmet'}[e.outcome]??'Over budget');
     const results=persona?`<div><label>Task outcome</label><strong class="${completed(e)?'completed':'incomplete'}">${completed(e)?'Completed':'Incomplete'}</strong></div><div><label>Simulation ticks</label><strong>${e.ticks}</strong></div>`:
-      `<div><label>In-time success</label><strong class="${metrics?.inTimeSuccess?'completed':metrics?'incomplete':''}">${metrics?(metrics.inTimeSuccess?'Yes':'No'):'—'}</strong><small>${e.ticks} / ${metrics?.budget??'—'} ticks</small></div><div><label>Error detection</label><strong>${metrics?.triggered?`${(100*metrics.detected/metrics.triggered).toFixed(1)}%`:'—'}</strong><small>${metrics?.detected??'—'} / ${metrics?.triggered??'—'} triggered errors</small></div><div><label>Interaction quality</label><strong class="quality-score">${quality==null?'—':(quality*100).toFixed(1)}<span style="font-size:14px;font-weight:400"> / 100</span></strong><div class="score-track"><i style="width:${(quality??0)*100}%"></i></div></div>`;
+      `<div><label>Task outcome</label><strong class="${metrics?.inTimeSuccess?'completed':metrics?'incomplete':''}">${metrics?outcomeLabel:'—'}</strong><small title="Completion budget: ${metrics?.budget??'—'} ticks">${e.ticks} ticks · ref. ${metrics?.referenceTicks??'—'}</small></div><div><label>Error detection</label><strong>${metrics?.triggered?`${(100*metrics.detected/metrics.triggered).toFixed(1)}%`:'—'}</strong><small>${metrics?.detected??'—'} / ${metrics?.triggered??'—'} triggered errors</small></div><div><label>Interaction quality</label><strong class="quality-score">${quality==null?'—':(quality*100).toFixed(1)}<span style="font-size:14px;font-weight:400"> / 100</span></strong><div class="score-track"><i style="width:${(quality??0)*100}%"></i></div></div>`;
     container.className=`recorded-replay${this.phone?' phone':''}`;
     container.innerHTML=`<div class="replay-title"><h3>${esc(persona?e.persona:e.model)}</h3><p>${esc(persona?e.model:failure?`${e.engine} · ticks ${e.clip.start}–${e.clip.end}`:e.persona)}</p></div>
       ${persona?axes(e,'persona-dials'):''}
@@ -65,8 +66,9 @@ class Replay {
     const gesture=p.gestures?.[String(t)];
     if(gesture){const i=Math.max(0,Math.min(gesture.frames.length-1,Math.floor((this.elapsed-this.segment.start)*gesture.fps)));path=gesture.frames[i];}
     else path=`${p.frameRoot??`assets/media/${e.id}`}/${String(Math.min(t,(p.frameCount??e.frameCount)-1)).padStart(4,'0')}.jpg`;
+    if(t>=e.ticks && e.finalObservation)path=e.finalObservation.path;
     const img=this.image(path);if(!img?.complete || !img.naturalWidth)return;
-    const crops=p.crops??e.crops;
+    const crops=t>=e.ticks && e.finalObservation?e.finalObservation.crops:(p.crops??e.crops);
     this.canvases.forEach((canvas,i)=>{
       const ctx=canvas.getContext('2d');ctx.fillStyle='#f3f5f8';ctx.fillRect(0,0,canvas.width,canvas.height);
       const [sx,sy,sw,sh]=this.phone?[0,0,img.naturalWidth,img.naturalHeight]:crops[i===0?'main':'context'];
@@ -126,11 +128,32 @@ async function showPair(manifest,id){
   const host=document.querySelector('#matched-comparison');
   host.innerHTML=`<div class="comparison-context"><span class="eyebrow">Same episode settings · different assistants</span><h3>${esc(episodes[0].task)}</h3>${axes(episodes[0],'shared-persona')}</div><div class="replay-grid"></div><div class="paired-rubrics"><h4>Interaction quality by dimension</h4><div class="paired-rubric-grid">${['Factual grounding','Situational relevance','Actionable guidance','User intent uptake','Guidance conciseness'].map((name,i)=>{const key=['truthful','sensible','helpful','listens','economy'][i];return `<div><h5>${name}</h5>${episodes.map((e,j)=>{const raw=e.quality.categories[key],v=(raw??0)*100,label=raw==null?'N/A':v.toFixed(1);return `<div class="paired-bar model-${j}" title="${esc(e.model)}: ${raw==null?'Not applicable':label}"><i style="width:${v}%"></i><span>${label}</span></div>`;}).join('')}</div>`;}).join('')}</div><p>Top: ${esc(episodes[0].model)} · Bottom: ${esc(episodes[1].model)} · N/A: no applicable rubric items.</p></div><p class="comparison-note">Scores describe these recorded episodes, not benchmark averages. Playback preserves simulation ticks; synthetic speech expands presentation time. Play either trajectory to hear its conversation.</p>`;
   currentPair=episodes.map(e=>{const node=document.createElement('article');host.querySelector('.replay-grid').append(node);return new Replay(node,e);});
+  // Keep the live comparison in one viewport; detailed evidence remains available
+  // in an explicit dialog rather than extending each trajectory vertically.
+  const evidence=document.createElement('dialog');evidence.className='comparison-evidence';
+  evidence.innerHTML='<button class="close-evidence" aria-label="Close evaluation details">×</button><h3>Episode details and scores</h3>';
+  evidence.append(host.querySelector('.paired-rubrics'));
+  const evidenceColumns=document.createElement('div');evidenceColumns.className='replay-grid';
+  for(const p of currentPair){
+    const col=document.createElement('div');const heading=document.createElement('h4');heading.textContent=p.e.model;col.append(heading,p.$('.replay-rubric'),p.$('.replay-links'));evidenceColumns.append(col);
+    // Retain judge access after moving its presentation outside the player card.
+    const query=p.$;p.$=s=>s==='.replay-rubric'?col.querySelector(s):query(s);
+    col.querySelector('details').open=true;
+  }
+  evidence.append(evidenceColumns);host.append(evidence);
+  host.querySelector(':scope > .comparison-note').textContent='Selected episode scores · Ref.: error-free reference ticks · Recorded dialogue with synthetic speech.';
+  evidence.querySelector('.close-evidence').onclick=()=>evidence.close();
+  evidence.addEventListener('click',event=>{if(event.target===evidence)evidence.close();});
   const jumps=document.createElement('div');jumps.className='comparison-jumps';
   for(const [label,getTick] of [['Start',()=>0],['First scheduled error',e=>e.events.find(x=>x.kind==='error')?.tick??0],['Final state',e=>e.ticks]]){
     const button=document.createElement('button');button.textContent=label;button.onclick=()=>currentPair.forEach(p=>p.seek(getTick(p.e)));jumps.append(button);
   }
   host.querySelector('.comparison-context').append(jumps);
+  const inspect=document.createElement('button');inspect.textContent='Episode details & scores';inspect.onclick=()=>{
+    evidence.querySelectorAll('.detail-live-state').forEach(n=>n.remove());
+    currentPair.forEach((p,i)=>{const state=p.$('.replay-state').cloneNode(true);state.classList.add('detail-live-state');evidenceColumns.children[i].querySelector('h4').after(state);});
+    evidence.showModal();
+  };jumps.append(inspect);
 }
 
 async function init(){

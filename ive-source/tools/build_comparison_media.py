@@ -60,7 +60,8 @@ def main(keys):
   e['playback']={'duration':elapsed,'segments':segments}
   # A concurrent HD render may have attached its presentation metadata.
   latest=json.loads((SITE/f'data/{e["id"]}.json').read_text())
-  if latest.get('presentation'):e['presentation']=latest['presentation']
+  for field in ['presentation','metrics']:
+   if latest.get(field):e[field]=latest[field]
   dump(SITE/f'data/{e["id"]}.json',e)
  print('Comparison media ready',flush=True)
 

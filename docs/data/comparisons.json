@@ -4,8 +4,8 @@
       "id": "cooking",
       "engine": "CookSim",
       "episodes": [
-        "cooking",
-        "cooking-peer"
+        "cooking-fire",
+        "cooking-wrong"
       ],
       "setting": "Same kitchen, recipe, persona, and state-triggered event schedule."
     },
@@ -13,17 +13,17 @@
       "id": "household",
       "engine": "VHSim",
       "episodes": [
-        "household",
-        "household-peer"
+        "household-timeout",
+        "household-stalled"
       ],
-      "setting": "Same apartment, task, persona, and scheduled pause and placement error."
+      "setting": "Same apartment, guest-preparation task, balanced persona, and scheduled omission and pause."
     },
     {
       "id": "mobile",
       "engine": "ScreenSim",
       "episodes": [
-        "mobile",
-        "mobile-peer"
+        "mobile-success",
+        "mobile-failure"
       ],
       "setting": "Same phone configuration, task, persona, and two scheduled setting errors."
     }

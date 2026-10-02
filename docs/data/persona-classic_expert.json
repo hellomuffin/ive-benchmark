@@ -1,1 +1,2934 @@
-{"id": "persona-classic_expert", "engine": "CookSim", "model": "GPT-6 Astra", "persona": "Independent expert", "axes": [3, 1, 2, 1, 3], "task": "Prepare a Loaded Burrito: tortilla, cooked rice, cooked steak, chopped tomato, and chopped lettuce, plated in this order.", "source": "cook-bench-engine/tmp/formal_v5/frames/classic_expert/gpt-6-astra/b3_master_nops_hard_map_5.json", "sourceHash": "a1660755f764dd837070d328a7a28096e8ca992225b3ac95065ed71fcf7f44a5", "engineVersion": {"rev": "0907dedb12", "parts": {"cooksim/core/enums.py": "510e08fec757", "cooksim/core/layout.py": "ae4b2c459738", "cooksim/core/plan_ir.py": "57482b561e41", "cooksim/core/error_lib.py": "f8184eccf3c5", "cooksim/core/generator.py": "0c414e6af300", "cooksim/core/stations.py": "f1cb5a909fd4", "cooksim/core/config.py": "9e022e1f7b7b", "cooksim/interact/system.py": "464a7eecd303", "cooksim/interact/protocol.py": "d625835fbf91", "cooksim/interact/checks.py": "729a5f51c9c7", "cooksim/interact/persona_v2.py": "894beee10416", "cooksim/agents/highlevel.py": "64b8d9a2ec1b", "cooksim/agents/observe_text.py": "803f1c947e5e", "cooksim/agents/places.py": "98b84de6b523", "tools/e2e_stepin_rollout.py": "4adb2d3883d0", "tools/exp_error_rollout.py": "b3e308620b5b", "tools/exp_multi_error.py": "08d9dfe614f1", "tools/agent_context.py": "7f7e65dce614", "tools/exp_interact.py": "db6dc48200a5", "tmp/interact_eval/recovery_cases.json": "c406ffbfdbc3"}}, "timingNote": "Recorded text interaction. Synthetic voices added for presentation; playback is time-expanded. Tick stamps preserve the original sequence.", "case": "b3_master_nops_hard_map_5", "personaId": "classic_expert", "run": 1, "ticks": 331, "completed": true, "outcome": "won", "dialogue": [{"tick": 23, "speaker": "user", "text": "Give me a shout the moment the rice is done, would you?", "audio": "assets/media/voice/5e83c9ec687aee5738ce.mp3", "duration": 2.770958333333333, "start": 10.349999999999998}, {"tick": 40, "speaker": "assistant", "text": "I'll watch the rice and let you know when it's done.", "audio": "assets/media/voice/e4c2224d7a48ec619f58.mp3", "duration": 2.4509583333333333, "start": 20.57095833333332}, {"tick": 49, "speaker": "user", "text": "How many cutting boards are free right now?", "audio": "assets/media/voice/f1576db058da6287c073.mp3", "duration": 2.250958333333333, "start": 26.871916666666646}, {"tick": 59, "speaker": "assistant", "text": "The rice is done in the upper pot beside the cutting board. Remember to scoop tortilla onto your plate before the rice.", "audio": "assets/media/voice/835e88edd2510a400d82.mp3", "duration": 7.250958333333333, "start": 33.42287499999998}, {"tick": 60, "speaker": "user", "text": "Got it, finishing the steak first.", "audio": "assets/media/voice/9fb5c57ef30d2654b58d.mp3", "duration": 2.4109583333333333, "start": 40.92383333333332}, {"tick": 68, "speaker": "assistant", "text": "All three cutting boards are free now.", "audio": "assets/media/voice/3e71abca1bb82074a89e.mp3", "duration": 2.0509583333333334, "start": 46.73479166666667}, {"tick": 111, "speaker": "assistant", "text": "The rice is smoking—scoop it from the upper pot beside the cutting board now, then scoop the cooked steak.", "audio": "assets/media/voice/de46dd89313691502162.mp3", "duration": 7.050958333333333, "start": 67.93575000000013}, {"tick": 111, "speaker": "user", "text": "Already got the rice, on it.", "audio": "assets/media/voice/425a380dda6af41280d5.mp3", "duration": 2.0109583333333334, "start": 75.23670833333345}, {"tick": 134, "speaker": "assistant", "text": "The steak pan is smoking now—scoop the cooked steak onto your plate next.", "audio": "assets/media/voice/2f69e2ec15d8df67db20.mp3", "duration": 5.050958333333333, "start": 87.39766666666685}, {"tick": 134, "speaker": "user", "text": "Already plated the steak.", "audio": "assets/media/voice/04c3cc634ce375a3c29c.mp3", "duration": 1.8909583333333333, "start": 92.69862500000018}, {"tick": 142, "speaker": "assistant", "text": "You're right—I can see the steak on the plate. Sorry for the late warning.", "audio": "assets/media/voice/dfa623774d0eed951cdb.mp3", "duration": 4.090958333333333, "start": 97.98958333333353}, {"tick": 162, "speaker": "assistant", "text": "You've paused without starting the vegetables. Put the plate down on an empty counter, then chop the tomato and lettuce. Add tomato first, then lettuce before serving.", "audio": "assets/media/voice/53774558b8041b434724.mp3", "duration": 10.450958333333332, "start": 110.88054166666691}, {"tick": 171, "speaker": "user", "text": "What's right after the tortilla on the plate, and is it done?", "audio": "assets/media/voice/85868f42c7402405dcfa.mp3", "duration": 3.5309583333333334, "start": 125.18150000000027}, {"tick": 189, "speaker": "assistant", "text": "Cooked rice goes right after the tortilla. It's done and already on your plate, with the cooked steak after it.", "audio": "assets/media/voice/5b051edbdba3c17deaea.mp3", "duration": 7.290958333333333, "start": 136.61245833333342}, {"tick": 300, "speaker": "assistant", "text": "You've picked up another raw lettuce, but the chopped lettuce is already ready on the left of the two lower cutting boards. Trash the raw lettuce, retrieve your plate from the left-wall counter below the pot, then scoop the chopped lettuce and serve.", "audio": "assets/media/voice/fa32171d2856b0bc04d3.mp3", "duration": 12.490958333333333, "start": 193.6534166666655}, {"tick": 300, "speaker": "user", "text": "Right, already chopped lettuce down there.", "audio": "assets/media/voice/7b7ae6340fe15a360a47.mp3", "duration": 2.3709583333333333, "start": 206.39437499999883}], "actions": [{"start": 0, "end": 0, "text": "go to rice source 2"}, {"start": 1, "end": 2, "text": "pick up"}, {"start": 3, "end": 18, "text": "go to pot 1"}, {"start": 20, "end": 21, "text": "put down"}, {"start": 22, "end": 23, "text": "turn on"}, {"start": 24, "end": 34, "text": "go to steak source 2"}, {"start": 35, "end": 36, "text": "pick up"}, {"start": 37, "end": 42, "text": "go to board 1"}, {"start": 43, "end": 44, "text": "put down"}, {"start": 45, "end": 49, "text": "chop"}, {"start": 50, "end": 53, "text": "chop"}, {"start": 54, "end": 55, "text": "pick up"}, {"start": 56, "end": 68, "text": "go to pan 1"}, {"start": 69, "end": 70, "text": "put down"}, {"start": 71, "end": 72, "text": "turn on"}, {"start": 74, "end": 80, "text": "go to plate stack 1"}, {"start": 81, "end": 82, "text": "pick up"}, {"start": 83, "end": 95, "text": "go to tortilla source 1"}, {"start": 96, "end": 97, "text": "scoop"}, {"start": 98, "end": 105, "text": "go to pot 1"}, {"start": 106, "end": 107, "text": "scoop"}, {"start": 108, "end": 122, "text": "go to pan 1"}, {"start": 123, "end": 124, "text": "scoop"}, {"start": 125, "end": 160, "text": "wander/idle (thinking)"}, {"start": 161, "end": 163, "text": "go to the counter at (5,8)"}, {"start": 164, "end": 165, "text": "put down"}, {"start": 166, "end": 171, "text": "go to tomato source 1"}, {"start": 172, "end": 173, "text": "pick up"}, {"start": 174, "end": 186, "text": "go to board 1"}, {"start": 187, "end": 188, "text": "put down"}, {"start": 189, "end": 193, "text": "chop"}, {"start": 194, "end": 197, "text": "chop"}, {"start": 198, "end": 208, "text": "go to lettuce source 2"}, {"start": 209, "end": 210, "text": "pick up"}, {"start": 211, "end": 224, "text": "go to board 2"}, {"start": 226, "end": 227, "text": "put down"}, {"start": 228, "end": 232, "text": "chop"}, {"start": 233, "end": 236, "text": "chop"}, {"start": 236, "end": 247, "text": "go to the counter at (5,8)"}, {"start": 248, "end": 249, "text": "pick up"}, {"start": 250, "end": 260, "text": "go to board 1"}, {"start": 262, "end": 263, "text": "scoop"}, {"start": 264, "end": 267, "text": "go to the empty counter"}, {"start": 268, "end": 269, "text": "put down"}, {"start": 270, "end": 283, "text": "go to the lettuce source"}, {"start": 284, "end": 285, "text": "pick up"}, {"start": 286, "end": 296, "text": "go to the empty cutting board"}, {"start": 297, "end": 298, "text": "put down"}, {"start": 299, "end": 303, "text": "chop"}, {"start": 304, "end": 309, "text": "go to the counter at (0,5)"}, {"start": 310, "end": 311, "text": "pick up"}, {"start": 312, "end": 315, "text": "go to board 2"}, {"start": 316, "end": 317, "text": "scoop"}, {"start": 318, "end": 328, "text": "go to serving pass 1"}, {"start": 329, "end": 329, "text": "go to the serving pass"}, {"start": 330, "end": 330, "text": "serve"}], "crops": {"main": [522, 26, 520, 370], "context": [0, 26, 520, 370]}, "events": [{"label": "Request a readiness alert", "kind": "qa_proactive", "tick": 23, "detail": "Give me a shout the moment the rice is done, would you?", "end": 23, "detected": false, "detectedAt": null, "prevented": false, "answeredAt": null, "alertAt": 59}, {"label": "Temporal question", "kind": "qa_probe", "tick": 49, "detail": "How many cutting boards are free right now?", "end": 49, "detected": false, "detectedAt": null, "prevented": false, "answeredAt": 68, "alertAt": null}, {"label": "Pause instead of continuing", "kind": "error", "tick": 124, "detail": "", "end": 161, "detected": false, "detectedAt": null, "prevented": false, "answeredAt": null, "alertAt": null}, {"label": "Temporal question", "kind": "qa_probe", "tick": 171, "detail": "What's right after the tortilla on the plate, and is it done?", "end": 171, "detected": false, "detectedAt": null, "prevented": false, "answeredAt": 189, "alertAt": null}, {"label": "Repeat an ingredient step", "kind": "error", "tick": 263, "detail": "", "end": 300, "detected": true, "detectedAt": 300, "prevented": true, "answeredAt": null, "alertAt": null}], "milestones": [{"label": "Plate raw tortilla", "tick": 97}, {"label": "Plate cooked rice", "tick": 107}, {"label": "Plate cooked steak", "tick": 124}, {"label": "Plate chopped tomato", "tick": 263}, {"label": "Plate chopped lettuce", "tick": 317}, {"label": "Serve", "tick": 331}], "quality": {"overall": 0.712962962962963, "categories": {"truthful": 0.7777777777777778, "sensible": 0.6666666666666666, "helpful": 0.25, "listens": 1.0, "economy": 0.8888888888888888}, "rounds": [{"tick": 40, "score": 1.0, "categories": {"truthful": 1.0, "sensible": 1.0, "helpful": null, "listens": null, "economy": 1.0}, "evidence": [{"id": "T1", "judgeIndex": 0, "pass": true, "reason": "No factual claims about the kitchen state were made."}, {"id": "T2", "judgeIndex": 0, "pass": true, "reason": "The line references rice, which is part of the recipe and currently cooking in the kitchen."}, {"id": "S1", "judgeIndex": 0, "pass": true, "reason": "The line addresses the cook's standing request regarding the rice currently cooking on the stove."}, {"id": "S2", "judgeIndex": 0, "pass": true, "reason": "The line explicitly accepts the cook's standing request to notify them when the rice finishes."}, {"id": "H1", "judgeIndex": 0, "pass": null, "reason": "No actions were advised."}, {"id": "H2", "judgeIndex": 0, "pass": null, "reason": "No actions were advised."}, {"id": "H3", "judgeIndex": 0, "pass": null, "reason": "Not a mistake claim."}, {"id": "L1", "judgeIndex": 0, "pass": null, "reason": "Not a reply to pushback."}, {"id": "L2", "judgeIndex": 0, "pass": null, "reason": "no live intent or stop request"}, {"id": "E1", "judgeIndex": 0, "pass": true, "reason": "The response is concise and directly accepts the cook's request."}]}, {"tick": 59, "score": 0.6666666666666666, "categories": {"truthful": 1.0, "sensible": 0.0, "helpful": null, "listens": null, "economy": 1.0}, "evidence": [{"id": "T1", "judgeIndex": 0, "pass": true, "reason": "The rice is indeed cooked in the pot at [2, 2]."}, {"id": "T2", "judgeIndex": 0, "pass": true, "reason": "All referenced items and stations exist in the kitchen and recipe."}, {"id": "S1", "judgeIndex": 0, "pass": true, "reason": "Alerting the cook that the rice is done directly addresses the standing request from t23."}, {"id": "S2", "judgeIndex": 0, "pass": false, "reason": "The assistant ignored the pending question from t49: 'How many cutting boards are free right now?'."}, {"id": "H1", "judgeIndex": 0, "pass": null, "reason": "the first advised action is not executable now: scoop tortilla onto your plate before the rice — The cook is currently holding chopped steak and has not fetched a plate yet."}, {"id": "H2", "judgeIndex": 0, "pass": null, "reason": "Fulfilling the standing request about the rice is directly useful to prevent burning."}, {"id": "H3", "judgeIndex": 0, "pass": null, "reason": "No mistake was claimed."}, {"id": "L1", "judgeIndex": 0, "pass": null, "reason": "There was no pushback to reply to."}, {"id": "L2", "judgeIndex": 0, "pass": null, "reason": "no live intent or stop request"}, {"id": "E1", "judgeIndex": 0, "pass": true, "reason": "The utterance is brief and directly communicates the state of the rice."}]}, {"tick": 68, "score": 1.0, "categories": {"truthful": 1.0, "sensible": 1.0, "helpful": null, "listens": null, "economy": 1.0}, "evidence": [{"id": "T1", "judgeIndex": 0, "pass": true, "reason": "All three cutting boards are indeed empty at t68."}, {"id": "T2", "judgeIndex": 0, "pass": true, "reason": "The line refers strictly to valid stations present in the kitchen."}, {"id": "S1", "judgeIndex": 0, "pass": true, "reason": "The line comments on station availability relevant to upcoming preparation steps."}, {"id": "S2", "judgeIndex": 0, "pass": null, "reason": "na"}, {"id": "H1", "judgeIndex": 0, "pass": null, "reason": "na"}, {"id": "H2", "judgeIndex": 0, "pass": null, "reason": "na"}, {"id": "H3", "judgeIndex": 0, "pass": null, "reason": "na"}, {"id": "L1", "judgeIndex": 0, "pass": null, "reason": "na"}, {"id": "L2", "judgeIndex": 0, "pass": null, "reason": "no live intent or stop request"}, {"id": "E1", "judgeIndex": 0, "pass": true, "reason": "The line is concise."}]}, {"tick": 111, "score": 0.0, "categories": {"truthful": 0.0, "sensible": 0.0, "helpful": 0.0, "listens": null, "economy": 1.0}, "evidence": [{"id": "T1", "judgeIndex": 0, "pass": false, "reason": "a claim was judged false against the engine state: The rice is smoking in the upper pot beside the cutting board"}, {"id": "T2", "judgeIndex": 0, "pass": true, "reason": "All mentioned items (rice, upper pot, cutting board, steak) exist in this kitchen."}, {"id": "S1", "judgeIndex": 0, "pass": false, "reason": "The assistant advises scooping rice, which is an already completed step currently held on the cook's plate."}, {"id": "S2", "judgeIndex": 0, "pass": null, "reason": "No cook question, request, or objection was pending."}, {"id": "H1", "judgeIndex": 0, "pass": false, "reason": "the first advised action is not executable now: scoop it from the upper pot beside the cutting board now — The pot at [2, 2] is already empty because the cook scooped the rice at tick 107."}, {"id": "H2", "judgeIndex": 0, "pass": false, "reason": "Advising to scoop rice from an empty pot when it is already on the plate is counterproductive."}, {"id": "H3", "judgeIndex": 0, "pass": null, "reason": "No mistake claim was made."}, {"id": "L1", "judgeIndex": 0, "pass": null, "reason": "Not a reply to cook pushback."}, {"id": "L2", "judgeIndex": 0, "pass": null, "reason": "no live intent or stop request"}, {"id": "E1", "judgeIndex": 0, "pass": true, "reason": "The sentence is relatively concise despite being factually mistaken."}]}, {"tick": 134, "score": 0.0, "categories": {"truthful": 0.0, "sensible": 0.0, "helpful": 0.0, "listens": null, "economy": 0.0}, "evidence": [{"id": "T1", "judgeIndex": 0, "pass": false, "reason": "a claim was judged false against the engine state: The steak pan is smoking now; cooked steak needs to be scooped onto the plate"}, {"id": "T2", "judgeIndex": 0, "pass": true, "reason": "Mentions existing kitchen elements (steak pan, plate, steak)."}, {"id": "S1", "judgeIndex": 0, "pass": false, "reason": "Instructs the cook to perform a step that was already completed at t124."}, {"id": "S2", "judgeIndex": 0, "pass": null, "reason": "No cook question, request, or objection was pending."}, {"id": "H1", "judgeIndex": 0, "pass": false, "reason": "the first advised action is not executable now: scoop the cooked steak onto your plate next — The steak is already on the plate and the pan at [6, 6] is completely empty."}, {"id": "H2", "judgeIndex": 0, "pass": false, "reason": "Scooping steak is obsolete and redundant with the already completed step."}, {"id": "H3", "judgeIndex": 0, "pass": null, "reason": "No mistake claim was made."}, {"id": "L1", "judgeIndex": 0, "pass": null, "reason": "Not replying to pushback."}, {"id": "L2", "judgeIndex": 0, "pass": null, "reason": "no live intent or stop request"}, {"id": "E1", "judgeIndex": 0, "pass": false, "reason": "Interrupts with a completely false and unhelpful alert and instruction."}]}, {"tick": 142, "score": 1.0, "categories": {"truthful": 1.0, "sensible": 1.0, "helpful": null, "listens": 1.0, "economy": 1.0}, "evidence": [{"id": "T1", "judgeIndex": 0, "pass": true, "reason": "The steak is indeed on the cook's plate."}, {"id": "T2", "judgeIndex": 0, "pass": true, "reason": "Mentions only existing items."}, {"id": "S1", "judgeIndex": 0, "pass": true, "reason": "Directly addresses the cook's previous rejection at t134."}, {"id": "S2", "judgeIndex": 0, "pass": true, "reason": "Directly accepts the cook's pushback."}, {"id": "H1", "judgeIndex": 0, "pass": null, "reason": "No actions advised."}, {"id": "H2", "judgeIndex": 0, "pass": null, "reason": "No actions advised."}, {"id": "H3", "judgeIndex": 0, "pass": null, "reason": "Not a mistake claim."}, {"id": "L1", "judgeIndex": 0, "pass": true, "reason": "Promptly corrects itself and confirms seeing the steak on the plate."}, {"id": "L2", "judgeIndex": 0, "pass": null, "reason": "no live intent or stop request"}, {"id": "E1", "judgeIndex": 0, "pass": true, "reason": "Concise acknowledgement without unnecessary filler."}]}, {"tick": 162, "score": 1.0, "categories": {"truthful": 1.0, "sensible": 1.0, "helpful": 1.0, "listens": null, "economy": 1.0}, "evidence": [{"id": "T1", "judgeIndex": 0, "pass": true, "reason": "The cook had paused/idled at t160 without starting the vegetables."}, {"id": "T2", "judgeIndex": 0, "pass": true, "reason": "All referenced items (plate, counter, tomato, lettuce) and actions belong to the order and kitchen."}, {"id": "S1", "judgeIndex": 0, "pass": true, "reason": "Addresses the cook's idle state and directs them to the remaining prep and assembly steps."}, {"id": "S2", "judgeIndex": 0, "pass": null, "reason": "No pending question or request from the cook."}, {"id": "H1", "judgeIndex": 0, "pass": true, "reason": "Includes the necessary prerequisite of putting down the plate before fetching and chopping the vegetables."}, {"id": "H2", "judgeIndex": 0, "pass": true, "reason": "Directs the cook to the correct remaining uncompleted steps of the burrito recipe."}, {"id": "H3", "judgeIndex": 0, "pass": true, "reason": "Accompanies the mistake observation with clear instructions on what steps to take next."}, {"id": "L1", "judgeIndex": 0, "pass": null, "reason": "Not a reply to pushback."}, {"id": "L2", "judgeIndex": 0, "pass": null, "reason": "no live intent or stop request"}, {"id": "E1", "judgeIndex": 0, "pass": true, "reason": "Concise and covers the remaining roadmap without unnecessary filler."}]}, {"tick": 189, "score": 1.0, "categories": {"truthful": 1.0, "sensible": 1.0, "helpful": null, "listens": null, "economy": 1.0}, "evidence": [{"id": "T1", "judgeIndex": 0, "pass": true, "reason": "All claims regarding the assembly sequence and the plate contents (tortilla, cooked rice, cooked steak) are true."}, {"id": "T2", "judgeIndex": 0, "pass": true, "reason": "The line references only items and steps from the Loaded Burrito recipe."}, {"id": "S1", "judgeIndex": 0, "pass": true, "reason": "The line directly addresses the cook's pending question about what comes after the tortilla and whether it is done."}, {"id": "S2", "judgeIndex": 0, "pass": true, "reason": "The assistant directly answers both parts of the cook's question accurately."}, {"id": "H1", "judgeIndex": 0, "pass": null, "reason": "No discrete action was advised; this was an informational answer."}, {"id": "H2", "judgeIndex": 0, "pass": null, "reason": "No discrete action was advised."}, {"id": "H3", "judgeIndex": 0, "pass": null, "reason": "No mistake claim was made."}, {"id": "L1", "judgeIndex": 0, "pass": null, "reason": "Not a reply to pushback."}, {"id": "L2", "judgeIndex": 0, "pass": null, "reason": "no live intent or stop request"}, {"id": "E1", "judgeIndex": 0, "pass": true, "reason": "The response is concise and directly answers the cook's query."}]}, {"tick": 300, "score": 0.75, "categories": {"truthful": 1.0, "sensible": 1.0, "helpful": 0.0, "listens": null, "economy": 1.0}, "evidence": [{"id": "T1", "judgeIndex": 0, "pass": true, "reason": "All claims regarding the duplicate raw lettuce, the chopped lettuce on the left lower cutting board at (2,6), and the plate on the left wall counter at (0,5) are completely accurate."}, {"id": "T2", "judgeIndex": 0, "pass": true, "reason": "All mentioned stations, items, and locations exist and belong to this recipe."}, {"id": "S1", "judgeIndex": 0, "pass": true, "reason": "The utterance directly addresses the live repeat_step mistake where the cook prepared to chop lettuce again despite already having chopped lettuce."}, {"id": "S2", "judgeIndex": 0, "pass": null, "reason": "There was no pending question or objection from the cook."}, {"id": "H1", "judgeIndex": 0, "pass": false, "reason": "the first advised action is not executable now: Trash the raw lettuce — The cook's hands are empty and the raw lettuce is currently on the cutting board at (2,4), so it wou"}, {"id": "H2", "judgeIndex": 0, "pass": true, "reason": "The advice successfully prevented the cook from wasting time re-chopping lettuce and redirected them to assemble and finish the order."}, {"id": "H3", "judgeIndex": 0, "pass": true, "reason": "The assistant provides a clear resolution to bypass/trash the duplicate and plate the existing chopped lettuce."}, {"id": "L1", "judgeIndex": 0, "pass": null, "reason": "There was no prior pushback to reply to."}, {"id": "L2", "judgeIndex": 0, "pass": null, "reason": "no live intent or stop request"}, {"id": "E1", "judgeIndex": 0, "pass": true, "reason": "The guidance is clear, direct, and concisely lays out the remaining steps to finish the burrito."}]}], "source": "cook-bench-engine/tmp/formal_v5/sq_v4/frames/classic_expert/gpt-6-astra/b3_master_nops_hard_map_5.json", "judge": ["gemini"]}, "detection": {"detected": 1, "triggered": 2}, "frameCount": 331, "playback": {"duration": 226.51533333333182, "segments": [{"tick": 0, "start": 0, "duration": 0.45}, {"tick": 1, "start": 0.45, "duration": 0.45}, {"tick": 2, "start": 0.9, "duration": 0.45}, {"tick": 3, "start": 1.35, "duration": 0.45}, {"tick": 4, "start": 1.8, "duration": 0.45}, {"tick": 5, "start": 2.25, "duration": 0.45}, {"tick": 6, "start": 2.7, "duration": 0.45}, {"tick": 7, "start": 3.1500000000000004, "duration": 0.45}, {"tick": 8, "start": 3.6000000000000005, "duration": 0.45}, {"tick": 9, "start": 4.050000000000001, "duration": 0.45}, {"tick": 10, "start": 4.500000000000001, "duration": 0.45}, {"tick": 11, "start": 4.950000000000001, "duration": 0.45}, {"tick": 12, "start": 5.400000000000001, "duration": 0.45}, {"tick": 13, "start": 5.850000000000001, "duration": 0.45}, {"tick": 14, "start": 6.300000000000002, "duration": 0.45}, {"tick": 15, "start": 6.750000000000002, "duration": 0.45}, {"tick": 16, "start": 7.200000000000002, "duration": 0.45}, {"tick": 17, "start": 7.650000000000002, "duration": 0.45}, {"tick": 18, "start": 8.100000000000001, "duration": 0.45}, {"tick": 19, "start": 8.55, "duration": 0.45}, {"tick": 20, "start": 9.0, "duration": 0.45}, {"tick": 21, "start": 9.45, "duration": 0.45}, {"tick": 22, "start": 9.899999999999999, "duration": 0.45}, {"tick": 23, "start": 10.349999999999998, "duration": 3.0209583333333327}, {"tick": 24, "start": 13.37095833333333, "duration": 0.45}, {"tick": 25, "start": 13.82095833333333, "duration": 0.45}, {"tick": 26, "start": 14.27095833333333, "duration": 0.45}, {"tick": 27, "start": 14.720958333333328, "duration": 0.45}, {"tick": 28, "start": 15.170958333333328, "duration": 0.45}, {"tick": 29, "start": 15.620958333333327, "duration": 0.45}, {"tick": 30, "start": 16.070958333333326, "duration": 0.45}, {"tick": 31, "start": 16.520958333333326, "duration": 0.45}, {"tick": 32, "start": 16.970958333333325, "duration": 0.45}, {"tick": 33, "start": 17.420958333333324, "duration": 0.45}, {"tick": 34, "start": 17.870958333333324, "duration": 0.45}, {"tick": 35, "start": 18.320958333333323, "duration": 0.45}, {"tick": 36, "start": 18.770958333333322, "duration": 0.45}, {"tick": 37, "start": 19.22095833333332, "duration": 0.45}, {"tick": 38, "start": 19.67095833333332, "duration": 0.45}, {"tick": 39, "start": 20.12095833333332, "duration": 0.45}, {"tick": 40, "start": 20.57095833333332, "duration": 2.7009583333333325}, {"tick": 41, "start": 23.27191666666665, "duration": 0.45}, {"tick": 42, "start": 23.72191666666665, "duration": 0.45}, {"tick": 43, "start": 24.17191666666665, "duration": 0.45}, {"tick": 44, "start": 24.62191666666665, "duration": 0.45}, {"tick": 45, "start": 25.07191666666665, "duration": 0.45}, {"tick": 46, "start": 25.521916666666648, "duration": 0.45}, {"tick": 47, "start": 25.971916666666647, "duration": 0.45}, {"tick": 48, "start": 26.421916666666647, "duration": 0.45}, {"tick": 49, "start": 26.871916666666646, "duration": 2.500958333333333}, {"tick": 50, "start": 29.37287499999998, "duration": 0.45}, {"tick": 51, "start": 29.82287499999998, "duration": 0.45}, {"tick": 52, "start": 30.272874999999978, "duration": 0.45}, {"tick": 53, "start": 30.722874999999977, "duration": 0.45}, {"tick": 54, "start": 31.172874999999976, "duration": 0.45}, {"tick": 55, "start": 31.622874999999976, "duration": 0.45}, {"tick": 56, "start": 32.072874999999975, "duration": 0.45}, {"tick": 57, "start": 32.52287499999998, "duration": 0.45}, {"tick": 58, "start": 32.97287499999998, "duration": 0.45}, {"tick": 59, "start": 33.42287499999998, "duration": 7.500958333333337}, {"tick": 60, "start": 40.92383333333332, "duration": 2.6609583333333333}, {"tick": 61, "start": 43.58479166666665, "duration": 0.45}, {"tick": 62, "start": 44.034791666666656, "duration": 0.45}, {"tick": 63, "start": 44.48479166666666, "duration": 0.45}, {"tick": 64, "start": 44.93479166666666, "duration": 0.45}, {"tick": 65, "start": 45.384791666666665, "duration": 0.45}, {"tick": 66, "start": 45.83479166666667, "duration": 0.45}, {"tick": 67, "start": 46.28479166666667, "duration": 0.45}, {"tick": 68, "start": 46.73479166666667, "duration": 2.300958333333334}, {"tick": 69, "start": 49.03575000000001, "duration": 0.45}, {"tick": 70, "start": 49.48575000000001, "duration": 0.45}, {"tick": 71, "start": 49.93575000000001, "duration": 0.45}, {"tick": 72, "start": 50.385750000000016, "duration": 0.45}, {"tick": 73, "start": 50.83575000000002, "duration": 0.45}, {"tick": 74, "start": 51.28575000000002, "duration": 0.45}, {"tick": 75, "start": 51.735750000000024, "duration": 0.45}, {"tick": 76, "start": 52.18575000000003, "duration": 0.45}, {"tick": 77, "start": 52.63575000000003, "duration": 0.45}, {"tick": 78, "start": 53.08575000000003, "duration": 0.45}, {"tick": 79, "start": 53.535750000000036, "duration": 0.45}, {"tick": 80, "start": 53.98575000000004, "duration": 0.45}, {"tick": 81, "start": 54.43575000000004, "duration": 0.45}, {"tick": 82, "start": 54.885750000000044, "duration": 0.45}, {"tick": 83, "start": 55.33575000000005, "duration": 0.45}, {"tick": 84, "start": 55.78575000000005, "duration": 0.45}, {"tick": 85, "start": 56.23575000000005, "duration": 0.45}, {"tick": 86, "start": 56.685750000000056, "duration": 0.45}, {"tick": 87, "start": 57.13575000000006, "duration": 0.45}, {"tick": 88, "start": 57.58575000000006, "duration": 0.45}, {"tick": 89, "start": 58.035750000000064, "duration": 0.45}, {"tick": 90, "start": 58.48575000000007, "duration": 0.45}, {"tick": 91, "start": 58.93575000000007, "duration": 0.45}, {"tick": 92, "start": 59.38575000000007, "duration": 0.45}, {"tick": 93, "start": 59.835750000000075, "duration": 0.45}, {"tick": 94, "start": 60.28575000000008, "duration": 0.45}, {"tick": 95, "start": 60.73575000000008, "duration": 0.45}, {"tick": 96, "start": 61.185750000000084, "duration": 0.45}, {"tick": 97, "start": 61.63575000000009, "duration": 0.45}, {"tick": 98, "start": 62.08575000000009, "duration": 0.45}, {"tick": 99, "start": 62.53575000000009, "duration": 0.45}, {"tick": 100, "start": 62.985750000000095, "duration": 0.45}, {"tick": 101, "start": 63.4357500000001, "duration": 0.45}, {"tick": 102, "start": 63.8857500000001, "duration": 0.45}, {"tick": 103, "start": 64.3357500000001, "duration": 0.45}, {"tick": 104, "start": 64.7857500000001, "duration": 0.45}, {"tick": 105, "start": 65.23575000000011, "duration": 0.45}, {"tick": 106, "start": 65.68575000000011, "duration": 0.45}, {"tick": 107, "start": 66.13575000000012, "duration": 0.45}, {"tick": 108, "start": 66.58575000000012, "duration": 0.45}, {"tick": 109, "start": 67.03575000000012, "duration": 0.45}, {"tick": 110, "start": 67.48575000000012, "duration": 0.45}, {"tick": 111, "start": 67.93575000000013, "duration": 9.561916666666662}, {"tick": 112, "start": 77.49766666666679, "duration": 0.45}, {"tick": 113, "start": 77.94766666666679, "duration": 0.45}, {"tick": 114, "start": 78.3976666666668, "duration": 0.45}, {"tick": 115, "start": 78.8476666666668, "duration": 0.45}, {"tick": 116, "start": 79.2976666666668, "duration": 0.45}, {"tick": 117, "start": 79.7476666666668, "duration": 0.45}, {"tick": 118, "start": 80.1976666666668, "duration": 0.45}, {"tick": 119, "start": 80.64766666666681, "duration": 0.45}, {"tick": 120, "start": 81.09766666666681, "duration": 0.45}, {"tick": 121, "start": 81.54766666666681, "duration": 0.45}, {"tick": 122, "start": 81.99766666666682, "duration": 0.45}, {"tick": 123, "start": 82.44766666666682, "duration": 0.45}, {"tick": 124, "start": 82.89766666666682, "duration": 0.45}, {"tick": 125, "start": 83.34766666666683, "duration": 0.45}, {"tick": 126, "start": 83.79766666666683, "duration": 0.45}, {"tick": 127, "start": 84.24766666666683, "duration": 0.45}, {"tick": 128, "start": 84.69766666666683, "duration": 0.45}, {"tick": 129, "start": 85.14766666666684, "duration": 0.45}, {"tick": 130, "start": 85.59766666666684, "duration": 0.45}, {"tick": 131, "start": 86.04766666666684, "duration": 0.45}, {"tick": 132, "start": 86.49766666666685, "duration": 0.45}, {"tick": 133, "start": 86.94766666666685, "duration": 0.45}, {"tick": 134, "start": 87.39766666666685, "duration": 7.441916666666657}, {"tick": 135, "start": 94.83958333333351, "duration": 0.45}, {"tick": 136, "start": 95.28958333333351, "duration": 0.45}, {"tick": 137, "start": 95.73958333333351, "duration": 0.45}, {"tick": 138, "start": 96.18958333333352, "duration": 0.45}, {"tick": 139, "start": 96.63958333333352, "duration": 0.45}, {"tick": 140, "start": 97.08958333333352, "duration": 0.45}, {"tick": 141, "start": 97.53958333333352, "duration": 0.45}, {"tick": 142, "start": 97.98958333333353, "duration": 4.340958333333333}, {"tick": 143, "start": 102.33054166666686, "duration": 0.45}, {"tick": 144, "start": 102.78054166666686, "duration": 0.45}, {"tick": 145, "start": 103.23054166666687, "duration": 0.45}, {"tick": 146, "start": 103.68054166666687, "duration": 0.45}, {"tick": 147, "start": 104.13054166666687, "duration": 0.45}, {"tick": 148, "start": 104.58054166666687, "duration": 0.45}, {"tick": 149, "start": 105.03054166666688, "duration": 0.45}, {"tick": 150, "start": 105.48054166666688, "duration": 0.45}, {"tick": 151, "start": 105.93054166666688, "duration": 0.45}, {"tick": 152, "start": 106.38054166666689, "duration": 0.45}, {"tick": 153, "start": 106.83054166666689, "duration": 0.45}, {"tick": 154, "start": 107.28054166666689, "duration": 0.45}, {"tick": 155, "start": 107.7305416666669, "duration": 0.45}, {"tick": 156, "start": 108.1805416666669, "duration": 0.45}, {"tick": 157, "start": 108.6305416666669, "duration": 0.45}, {"tick": 158, "start": 109.0805416666669, "duration": 0.45}, {"tick": 159, "start": 109.5305416666669, "duration": 0.45}, {"tick": 160, "start": 109.98054166666691, "duration": 0.45}, {"tick": 161, "start": 110.43054166666691, "duration": 0.45}, {"tick": 162, "start": 110.88054166666691, "duration": 10.700958333333332}, {"tick": 163, "start": 121.58150000000025, "duration": 0.45}, {"tick": 164, "start": 122.03150000000025, "duration": 0.45}, {"tick": 165, "start": 122.48150000000025, "duration": 0.45}, {"tick": 166, "start": 122.93150000000026, "duration": 0.45}, {"tick": 167, "start": 123.38150000000026, "duration": 0.45}, {"tick": 168, "start": 123.83150000000026, "duration": 0.45}, {"tick": 169, "start": 124.28150000000026, "duration": 0.45}, {"tick": 170, "start": 124.73150000000027, "duration": 0.45}, {"tick": 171, "start": 125.18150000000027, "duration": 3.780958333333345}, {"tick": 172, "start": 128.96245833333361, "duration": 0.45}, {"tick": 173, "start": 129.4124583333336, "duration": 0.45}, {"tick": 174, "start": 129.8624583333336, "duration": 0.45}, {"tick": 175, "start": 130.31245833333358, "duration": 0.45}, {"tick": 176, "start": 130.76245833333357, "duration": 0.45}, {"tick": 177, "start": 131.21245833333356, "duration": 0.45}, {"tick": 178, "start": 131.66245833333355, "duration": 0.45}, {"tick": 179, "start": 132.11245833333354, "duration": 0.45}, {"tick": 180, "start": 132.56245833333352, "duration": 0.45}, {"tick": 181, "start": 133.0124583333335, "duration": 0.45}, {"tick": 182, "start": 133.4624583333335, "duration": 0.45}, {"tick": 183, "start": 133.9124583333335, "duration": 0.45}, {"tick": 184, "start": 134.36245833333348, "duration": 0.45}, {"tick": 185, "start": 134.81245833333347, "duration": 0.45}, {"tick": 186, "start": 135.26245833333346, "duration": 0.45}, {"tick": 187, "start": 135.71245833333344, "duration": 0.45}, {"tick": 188, "start": 136.16245833333343, "duration": 0.45}, {"tick": 189, "start": 136.61245833333342, "duration": 7.540958333333322}, {"tick": 190, "start": 144.15341666666674, "duration": 0.45}, {"tick": 191, "start": 144.60341666666673, "duration": 0.45}, {"tick": 192, "start": 145.05341666666672, "duration": 0.45}, {"tick": 193, "start": 145.5034166666667, "duration": 0.45}, {"tick": 194, "start": 145.9534166666667, "duration": 0.45}, {"tick": 195, "start": 146.4034166666667, "duration": 0.45}, {"tick": 196, "start": 146.85341666666667, "duration": 0.45}, {"tick": 197, "start": 147.30341666666666, "duration": 0.45}, {"tick": 198, "start": 147.75341666666665, "duration": 0.45}, {"tick": 199, "start": 148.20341666666664, "duration": 0.45}, {"tick": 200, "start": 148.65341666666663, "duration": 0.45}, {"tick": 201, "start": 149.10341666666662, "duration": 0.45}, {"tick": 202, "start": 149.5534166666666, "duration": 0.45}, {"tick": 203, "start": 150.0034166666666, "duration": 0.45}, {"tick": 204, "start": 150.45341666666658, "duration": 0.45}, {"tick": 205, "start": 150.90341666666657, "duration": 0.45}, {"tick": 206, "start": 151.35341666666656, "duration": 0.45}, {"tick": 207, "start": 151.80341666666655, "duration": 0.45}, {"tick": 208, "start": 152.25341666666654, "duration": 0.45}, {"tick": 209, "start": 152.70341666666653, "duration": 0.45}, {"tick": 210, "start": 153.15341666666652, "duration": 0.45}, {"tick": 211, "start": 153.6034166666665, "duration": 0.45}, {"tick": 212, "start": 154.0534166666665, "duration": 0.45}, {"tick": 213, "start": 154.50341666666648, "duration": 0.45}, {"tick": 214, "start": 154.95341666666647, "duration": 0.45}, {"tick": 215, "start": 155.40341666666646, "duration": 0.45}, {"tick": 216, "start": 155.85341666666645, "duration": 0.45}, {"tick": 217, "start": 156.30341666666644, "duration": 0.45}, {"tick": 218, "start": 156.75341666666642, "duration": 0.45}, {"tick": 219, "start": 157.2034166666664, "duration": 0.45}, {"tick": 220, "start": 157.6534166666664, "duration": 0.45}, {"tick": 221, "start": 158.1034166666664, "duration": 0.45}, {"tick": 222, "start": 158.55341666666638, "duration": 0.45}, {"tick": 223, "start": 159.00341666666637, "duration": 0.45}, {"tick": 224, "start": 159.45341666666636, "duration": 0.45}, {"tick": 225, "start": 159.90341666666635, "duration": 0.45}, {"tick": 226, "start": 160.35341666666633, "duration": 0.45}, {"tick": 227, "start": 160.80341666666632, "duration": 0.45}, {"tick": 228, "start": 161.2534166666663, "duration": 0.45}, {"tick": 229, "start": 161.7034166666663, "duration": 0.45}, {"tick": 230, "start": 162.1534166666663, "duration": 0.45}, {"tick": 231, "start": 162.60341666666628, "duration": 0.45}, {"tick": 232, "start": 163.05341666666627, "duration": 0.45}, {"tick": 233, "start": 163.50341666666625, "duration": 0.45}, {"tick": 234, "start": 163.95341666666624, "duration": 0.45}, {"tick": 235, "start": 164.40341666666623, "duration": 0.45}, {"tick": 236, "start": 164.85341666666622, "duration": 0.45}, {"tick": 237, "start": 165.3034166666662, "duration": 0.45}, {"tick": 238, "start": 165.7534166666662, "duration": 0.45}, {"tick": 239, "start": 166.2034166666662, "duration": 0.45}, {"tick": 240, "start": 166.65341666666617, "duration": 0.45}, {"tick": 241, "start": 167.10341666666616, "duration": 0.45}, {"tick": 242, "start": 167.55341666666615, "duration": 0.45}, {"tick": 243, "start": 168.00341666666614, "duration": 0.45}, {"tick": 244, "start": 168.45341666666613, "duration": 0.45}, {"tick": 245, "start": 168.90341666666612, "duration": 0.45}, {"tick": 246, "start": 169.3534166666661, "duration": 0.45}, {"tick": 247, "start": 169.8034166666661, "duration": 0.45}, {"tick": 248, "start": 170.25341666666608, "duration": 0.45}, {"tick": 249, "start": 170.70341666666607, "duration": 0.45}, {"tick": 250, "start": 171.15341666666606, "duration": 0.45}, {"tick": 251, "start": 171.60341666666605, "duration": 0.45}, {"tick": 252, "start": 172.05341666666604, "duration": 0.45}, {"tick": 253, "start": 172.50341666666603, "duration": 0.45}, {"tick": 254, "start": 172.95341666666602, "duration": 0.45}, {"tick": 255, "start": 173.403416666666, "duration": 0.45}, {"tick": 256, "start": 173.853416666666, "duration": 0.45}, {"tick": 257, "start": 174.30341666666598, "duration": 0.45}, {"tick": 258, "start": 174.75341666666597, "duration": 0.45}, {"tick": 259, "start": 175.20341666666596, "duration": 0.45}, {"tick": 260, "start": 175.65341666666595, "duration": 0.45}, {"tick": 261, "start": 176.10341666666594, "duration": 0.45}, {"tick": 262, "start": 176.55341666666592, "duration": 0.45}, {"tick": 263, "start": 177.0034166666659, "duration": 0.45}, {"tick": 264, "start": 177.4534166666659, "duration": 0.45}, {"tick": 265, "start": 177.9034166666659, "duration": 0.45}, {"tick": 266, "start": 178.35341666666588, "duration": 0.45}, {"tick": 267, "start": 178.80341666666587, "duration": 0.45}, {"tick": 268, "start": 179.25341666666586, "duration": 0.45}, {"tick": 269, "start": 179.70341666666585, "duration": 0.45}, {"tick": 270, "start": 180.15341666666583, "duration": 0.45}, {"tick": 271, "start": 180.60341666666582, "duration": 0.45}, {"tick": 272, "start": 181.0534166666658, "duration": 0.45}, {"tick": 273, "start": 181.5034166666658, "duration": 0.45}, {"tick": 274, "start": 181.9534166666658, "duration": 0.45}, {"tick": 275, "start": 182.40341666666578, "duration": 0.45}, {"tick": 276, "start": 182.85341666666577, "duration": 0.45}, {"tick": 277, "start": 183.30341666666575, "duration": 0.45}, {"tick": 278, "start": 183.75341666666574, "duration": 0.45}, {"tick": 279, "start": 184.20341666666573, "duration": 0.45}, {"tick": 280, "start": 184.65341666666572, "duration": 0.45}, {"tick": 281, "start": 185.1034166666657, "duration": 0.45}, {"tick": 282, "start": 185.5534166666657, "duration": 0.45}, {"tick": 283, "start": 186.0034166666657, "duration": 0.45}, {"tick": 284, "start": 186.45341666666567, "duration": 0.45}, {"tick": 285, "start": 186.90341666666566, "duration": 0.45}, {"tick": 286, "start": 187.35341666666565, "duration": 0.45}, {"tick": 287, "start": 187.80341666666564, "duration": 0.45}, {"tick": 288, "start": 188.25341666666563, "duration": 0.45}, {"tick": 289, "start": 188.70341666666562, "duration": 0.45}, {"tick": 290, "start": 189.1534166666656, "duration": 0.45}, {"tick": 291, "start": 189.6034166666656, "duration": 0.45}, {"tick": 292, "start": 190.05341666666558, "duration": 0.45}, {"tick": 293, "start": 190.50341666666557, "duration": 0.45}, {"tick": 294, "start": 190.95341666666556, "duration": 0.45}, {"tick": 295, "start": 191.40341666666555, "duration": 0.45}, {"tick": 296, "start": 191.85341666666554, "duration": 0.45}, {"tick": 297, "start": 192.30341666666553, "duration": 0.45}, {"tick": 298, "start": 192.75341666666552, "duration": 0.45}, {"tick": 299, "start": 193.2034166666655, "duration": 0.45}, {"tick": 300, "start": 193.6534166666655, "duration": 15.361916666666673}, {"tick": 301, "start": 209.01533333333217, "duration": 0.45}, {"tick": 302, "start": 209.46533333333215, "duration": 0.45}, {"tick": 303, "start": 209.91533333333214, "duration": 0.45}, {"tick": 304, "start": 210.36533333333213, "duration": 0.45}, {"tick": 305, "start": 210.81533333333212, "duration": 0.45}, {"tick": 306, "start": 211.2653333333321, "duration": 0.45}, {"tick": 307, "start": 211.7153333333321, "duration": 0.45}, {"tick": 308, "start": 212.1653333333321, "duration": 0.45}, {"tick": 309, "start": 212.61533333333207, "duration": 0.45}, {"tick": 310, "start": 213.06533333333206, "duration": 0.45}, {"tick": 311, "start": 213.51533333333205, "duration": 0.45}, {"tick": 312, "start": 213.96533333333204, "duration": 0.45}, {"tick": 313, "start": 214.41533333333203, "duration": 0.45}, {"tick": 314, "start": 214.86533333333202, "duration": 0.45}, {"tick": 315, "start": 215.315333333332, "duration": 0.45}, {"tick": 316, "start": 215.765333333332, "duration": 0.45}, {"tick": 317, "start": 216.21533333333198, "duration": 0.45}, {"tick": 318, "start": 216.66533333333197, "duration": 0.45}, {"tick": 319, "start": 217.11533333333196, "duration": 0.45}, {"tick": 320, "start": 217.56533333333195, "duration": 0.45}, {"tick": 321, "start": 218.01533333333194, "duration": 0.45}, {"tick": 322, "start": 218.46533333333193, "duration": 0.45}, {"tick": 323, "start": 218.91533333333192, "duration": 0.45}, {"tick": 324, "start": 219.3653333333319, "duration": 0.45}, {"tick": 325, "start": 219.8153333333319, "duration": 0.45}, {"tick": 326, "start": 220.26533333333188, "duration": 0.45}, {"tick": 327, "start": 220.71533333333187, "duration": 0.45}, {"tick": 328, "start": 221.16533333333186, "duration": 0.45}, {"tick": 329, "start": 221.61533333333185, "duration": 0.45}, {"tick": 330, "start": 222.06533333333184, "duration": 0.45}, {"tick": 331, "start": 222.51533333333182, "duration": 4}]}, "metrics": {"inTimeSuccess": true, "budget": 542, "detected": 2, "triggered": 2, "scorer": "cook-bench-engine/tools/eval_v2_sweep.py", "scorerSha256": "bfbd550c93c930f25bdd5ab58b1dd4fb6c16f5cfc6bacbffd75e15b744ce2466"}, "presentation": {"frameRoot": "assets/media/persona-classic_expert-hd", "frameCount": 332, "crops": {"main": [962, 26, 960, 720], "context": [0, 26, 960, 720]}, "description": "CookSim views re-rendered at 960 × 720 per view from the recorded world states. Evaluation observations are unchanged.", "stateSha256": "6f3c7c0d4d9714b5acf353076c80fac3de966223529e81e0018f1dde9ff93b79"}}
+{
+  "id": "persona-classic_expert",
+  "engine": "CookSim",
+  "model": "GPT-6 Astra",
+  "persona": "Independent expert",
+  "axes": [
+    3,
+    1,
+    2,
+    1,
+    3
+  ],
+  "task": "Prepare a Loaded Burrito: tortilla, cooked rice, cooked steak, chopped tomato, and chopped lettuce, plated in this order.",
+  "source": "cook-bench-engine/tmp/formal_v5/frames/classic_expert/gpt-6-astra/b3_master_nops_hard_map_5.json",
+  "sourceHash": "a1660755f764dd837070d328a7a28096e8ca992225b3ac95065ed71fcf7f44a5",
+  "engineVersion": {
+    "rev": "0907dedb12",
+    "parts": {
+      "cooksim/core/enums.py": "510e08fec757",
+      "cooksim/core/layout.py": "ae4b2c459738",
+      "cooksim/core/plan_ir.py": "57482b561e41",
+      "cooksim/core/error_lib.py": "f8184eccf3c5",
+      "cooksim/core/generator.py": "0c414e6af300",
+      "cooksim/core/stations.py": "f1cb5a909fd4",
+      "cooksim/core/config.py": "9e022e1f7b7b",
+      "cooksim/interact/system.py": "464a7eecd303",
+      "cooksim/interact/protocol.py": "d625835fbf91",
+      "cooksim/interact/checks.py": "729a5f51c9c7",
+      "cooksim/interact/persona_v2.py": "894beee10416",
+      "cooksim/agents/highlevel.py": "64b8d9a2ec1b",
+      "cooksim/agents/observe_text.py": "803f1c947e5e",
+      "cooksim/agents/places.py": "98b84de6b523",
+      "tools/e2e_stepin_rollout.py": "4adb2d3883d0",
+      "tools/exp_error_rollout.py": "b3e308620b5b",
+      "tools/exp_multi_error.py": "08d9dfe614f1",
+      "tools/agent_context.py": "7f7e65dce614",
+      "tools/exp_interact.py": "db6dc48200a5",
+      "tmp/interact_eval/recovery_cases.json": "c406ffbfdbc3"
+    }
+  },
+  "timingNote": "Recorded text interaction. Synthetic voices added for presentation; playback is time-expanded. Tick stamps preserve the original sequence.",
+  "case": "b3_master_nops_hard_map_5",
+  "personaId": "classic_expert",
+  "run": 1,
+  "ticks": 331,
+  "completed": true,
+  "outcome": "won",
+  "dialogue": [
+    {
+      "tick": 23,
+      "speaker": "user",
+      "text": "Give me a shout the moment the rice is done, would you?",
+      "audio": "assets/media/voice/5e83c9ec687aee5738ce.mp3",
+      "duration": 2.770958333333333,
+      "start": 10.349999999999998
+    },
+    {
+      "tick": 40,
+      "speaker": "assistant",
+      "text": "I'll watch the rice and let you know when it's done.",
+      "audio": "assets/media/voice/e4c2224d7a48ec619f58.mp3",
+      "duration": 2.4509583333333333,
+      "start": 20.57095833333332
+    },
+    {
+      "tick": 49,
+      "speaker": "user",
+      "text": "How many cutting boards are free right now?",
+      "audio": "assets/media/voice/f1576db058da6287c073.mp3",
+      "duration": 2.250958333333333,
+      "start": 26.871916666666646
+    },
+    {
+      "tick": 59,
+      "speaker": "assistant",
+      "text": "The rice is done in the upper pot beside the cutting board. Remember to scoop tortilla onto your plate before the rice.",
+      "audio": "assets/media/voice/835e88edd2510a400d82.mp3",
+      "duration": 7.250958333333333,
+      "start": 33.42287499999998
+    },
+    {
+      "tick": 60,
+      "speaker": "user",
+      "text": "Got it, finishing the steak first.",
+      "audio": "assets/media/voice/9fb5c57ef30d2654b58d.mp3",
+      "duration": 2.4109583333333333,
+      "start": 40.92383333333332
+    },
+    {
+      "tick": 68,
+      "speaker": "assistant",
+      "text": "All three cutting boards are free now.",
+      "audio": "assets/media/voice/3e71abca1bb82074a89e.mp3",
+      "duration": 2.0509583333333334,
+      "start": 46.73479166666667
+    },
+    {
+      "tick": 111,
+      "speaker": "assistant",
+      "text": "The rice is smoking—scoop it from the upper pot beside the cutting board now, then scoop the cooked steak.",
+      "audio": "assets/media/voice/de46dd89313691502162.mp3",
+      "duration": 7.050958333333333,
+      "start": 67.93575000000013
+    },
+    {
+      "tick": 111,
+      "speaker": "user",
+      "text": "Already got the rice, on it.",
+      "audio": "assets/media/voice/425a380dda6af41280d5.mp3",
+      "duration": 2.0109583333333334,
+      "start": 75.23670833333345
+    },
+    {
+      "tick": 134,
+      "speaker": "assistant",
+      "text": "The steak pan is smoking now—scoop the cooked steak onto your plate next.",
+      "audio": "assets/media/voice/2f69e2ec15d8df67db20.mp3",
+      "duration": 5.050958333333333,
+      "start": 87.39766666666685
+    },
+    {
+      "tick": 134,
+      "speaker": "user",
+      "text": "Already plated the steak.",
+      "audio": "assets/media/voice/04c3cc634ce375a3c29c.mp3",
+      "duration": 1.8909583333333333,
+      "start": 92.69862500000018
+    },
+    {
+      "tick": 142,
+      "speaker": "assistant",
+      "text": "You're right—I can see the steak on the plate. Sorry for the late warning.",
+      "audio": "assets/media/voice/dfa623774d0eed951cdb.mp3",
+      "duration": 4.090958333333333,
+      "start": 97.98958333333353
+    },
+    {
+      "tick": 162,
+      "speaker": "assistant",
+      "text": "You've paused without starting the vegetables. Put the plate down on an empty counter, then chop the tomato and lettuce. Add tomato first, then lettuce before serving.",
+      "audio": "assets/media/voice/53774558b8041b434724.mp3",
+      "duration": 10.450958333333332,
+      "start": 110.88054166666691
+    },
+    {
+      "tick": 171,
+      "speaker": "user",
+      "text": "What's right after the tortilla on the plate, and is it done?",
+      "audio": "assets/media/voice/85868f42c7402405dcfa.mp3",
+      "duration": 3.5309583333333334,
+      "start": 125.18150000000027
+    },
+    {
+      "tick": 189,
+      "speaker": "assistant",
+      "text": "Cooked rice goes right after the tortilla. It's done and already on your plate, with the cooked steak after it.",
+      "audio": "assets/media/voice/5b051edbdba3c17deaea.mp3",
+      "duration": 7.290958333333333,
+      "start": 136.61245833333342
+    },
+    {
+      "tick": 300,
+      "speaker": "assistant",
+      "text": "You've picked up another raw lettuce, but the chopped lettuce is already ready on the left of the two lower cutting boards. Trash the raw lettuce, retrieve your plate from the left-wall counter below the pot, then scoop the chopped lettuce and serve.",
+      "audio": "assets/media/voice/fa32171d2856b0bc04d3.mp3",
+      "duration": 12.490958333333333,
+      "start": 193.6534166666655
+    },
+    {
+      "tick": 300,
+      "speaker": "user",
+      "text": "Right, already chopped lettuce down there.",
+      "audio": "assets/media/voice/7b7ae6340fe15a360a47.mp3",
+      "duration": 2.3709583333333333,
+      "start": 206.39437499999883
+    }
+  ],
+  "actions": [
+    {
+      "start": 0,
+      "end": 0,
+      "text": "go to rice source 2"
+    },
+    {
+      "start": 1,
+      "end": 2,
+      "text": "pick up"
+    },
+    {
+      "start": 3,
+      "end": 18,
+      "text": "go to pot 1"
+    },
+    {
+      "start": 20,
+      "end": 21,
+      "text": "put down"
+    },
+    {
+      "start": 22,
+      "end": 23,
+      "text": "turn on"
+    },
+    {
+      "start": 24,
+      "end": 34,
+      "text": "go to steak source 2"
+    },
+    {
+      "start": 35,
+      "end": 36,
+      "text": "pick up"
+    },
+    {
+      "start": 37,
+      "end": 42,
+      "text": "go to board 1"
+    },
+    {
+      "start": 43,
+      "end": 44,
+      "text": "put down"
+    },
+    {
+      "start": 45,
+      "end": 49,
+      "text": "chop"
+    },
+    {
+      "start": 50,
+      "end": 53,
+      "text": "chop"
+    },
+    {
+      "start": 54,
+      "end": 55,
+      "text": "pick up"
+    },
+    {
+      "start": 56,
+      "end": 68,
+      "text": "go to pan 1"
+    },
+    {
+      "start": 69,
+      "end": 70,
+      "text": "put down"
+    },
+    {
+      "start": 71,
+      "end": 72,
+      "text": "turn on"
+    },
+    {
+      "start": 74,
+      "end": 80,
+      "text": "go to plate stack 1"
+    },
+    {
+      "start": 81,
+      "end": 82,
+      "text": "pick up"
+    },
+    {
+      "start": 83,
+      "end": 95,
+      "text": "go to tortilla source 1"
+    },
+    {
+      "start": 96,
+      "end": 97,
+      "text": "scoop"
+    },
+    {
+      "start": 98,
+      "end": 105,
+      "text": "go to pot 1"
+    },
+    {
+      "start": 106,
+      "end": 107,
+      "text": "scoop"
+    },
+    {
+      "start": 108,
+      "end": 122,
+      "text": "go to pan 1"
+    },
+    {
+      "start": 123,
+      "end": 124,
+      "text": "scoop"
+    },
+    {
+      "start": 125,
+      "end": 160,
+      "text": "wander/idle (thinking)"
+    },
+    {
+      "start": 161,
+      "end": 163,
+      "text": "go to the counter at (5,8)"
+    },
+    {
+      "start": 164,
+      "end": 165,
+      "text": "put down"
+    },
+    {
+      "start": 166,
+      "end": 171,
+      "text": "go to tomato source 1"
+    },
+    {
+      "start": 172,
+      "end": 173,
+      "text": "pick up"
+    },
+    {
+      "start": 174,
+      "end": 186,
+      "text": "go to board 1"
+    },
+    {
+      "start": 187,
+      "end": 188,
+      "text": "put down"
+    },
+    {
+      "start": 189,
+      "end": 193,
+      "text": "chop"
+    },
+    {
+      "start": 194,
+      "end": 197,
+      "text": "chop"
+    },
+    {
+      "start": 198,
+      "end": 208,
+      "text": "go to lettuce source 2"
+    },
+    {
+      "start": 209,
+      "end": 210,
+      "text": "pick up"
+    },
+    {
+      "start": 211,
+      "end": 224,
+      "text": "go to board 2"
+    },
+    {
+      "start": 226,
+      "end": 227,
+      "text": "put down"
+    },
+    {
+      "start": 228,
+      "end": 232,
+      "text": "chop"
+    },
+    {
+      "start": 233,
+      "end": 236,
+      "text": "chop"
+    },
+    {
+      "start": 236,
+      "end": 247,
+      "text": "go to the counter at (5,8)"
+    },
+    {
+      "start": 248,
+      "end": 249,
+      "text": "pick up"
+    },
+    {
+      "start": 250,
+      "end": 260,
+      "text": "go to board 1"
+    },
+    {
+      "start": 262,
+      "end": 263,
+      "text": "scoop"
+    },
+    {
+      "start": 264,
+      "end": 267,
+      "text": "go to the empty counter"
+    },
+    {
+      "start": 268,
+      "end": 269,
+      "text": "put down"
+    },
+    {
+      "start": 270,
+      "end": 283,
+      "text": "go to the lettuce source"
+    },
+    {
+      "start": 284,
+      "end": 285,
+      "text": "pick up"
+    },
+    {
+      "start": 286,
+      "end": 296,
+      "text": "go to the empty cutting board"
+    },
+    {
+      "start": 297,
+      "end": 298,
+      "text": "put down"
+    },
+    {
+      "start": 299,
+      "end": 303,
+      "text": "chop"
+    },
+    {
+      "start": 304,
+      "end": 309,
+      "text": "go to the counter at (0,5)"
+    },
+    {
+      "start": 310,
+      "end": 311,
+      "text": "pick up"
+    },
+    {
+      "start": 312,
+      "end": 315,
+      "text": "go to board 2"
+    },
+    {
+      "start": 316,
+      "end": 317,
+      "text": "scoop"
+    },
+    {
+      "start": 318,
+      "end": 328,
+      "text": "go to serving pass 1"
+    },
+    {
+      "start": 329,
+      "end": 329,
+      "text": "go to the serving pass"
+    },
+    {
+      "start": 330,
+      "end": 330,
+      "text": "serve"
+    }
+  ],
+  "crops": {
+    "main": [
+      522,
+      26,
+      520,
+      370
+    ],
+    "context": [
+      0,
+      26,
+      520,
+      370
+    ]
+  },
+  "events": [
+    {
+      "label": "Request a readiness alert",
+      "kind": "qa_proactive",
+      "tick": 23,
+      "detail": "Give me a shout the moment the rice is done, would you?",
+      "end": 23,
+      "detected": false,
+      "detectedAt": null,
+      "prevented": false,
+      "answeredAt": null,
+      "alertAt": 59
+    },
+    {
+      "label": "Temporal question",
+      "kind": "qa_probe",
+      "tick": 49,
+      "detail": "How many cutting boards are free right now?",
+      "end": 49,
+      "detected": false,
+      "detectedAt": null,
+      "prevented": false,
+      "answeredAt": 68,
+      "alertAt": null
+    },
+    {
+      "label": "Pause instead of continuing",
+      "kind": "error",
+      "tick": 124,
+      "detail": "",
+      "end": 161,
+      "detected": false,
+      "detectedAt": null,
+      "prevented": false,
+      "answeredAt": null,
+      "alertAt": null
+    },
+    {
+      "label": "Temporal question",
+      "kind": "qa_probe",
+      "tick": 171,
+      "detail": "What's right after the tortilla on the plate, and is it done?",
+      "end": 171,
+      "detected": false,
+      "detectedAt": null,
+      "prevented": false,
+      "answeredAt": 189,
+      "alertAt": null
+    },
+    {
+      "label": "Repeat an ingredient step",
+      "kind": "error",
+      "tick": 263,
+      "detail": "",
+      "end": 300,
+      "detected": true,
+      "detectedAt": 300,
+      "prevented": true,
+      "answeredAt": null,
+      "alertAt": null
+    }
+  ],
+  "milestones": [
+    {
+      "label": "Plate raw tortilla",
+      "tick": 97
+    },
+    {
+      "label": "Plate cooked rice",
+      "tick": 107
+    },
+    {
+      "label": "Plate cooked steak",
+      "tick": 124
+    },
+    {
+      "label": "Plate chopped tomato",
+      "tick": 263
+    },
+    {
+      "label": "Plate chopped lettuce",
+      "tick": 317
+    },
+    {
+      "label": "Serve",
+      "tick": 331
+    }
+  ],
+  "quality": {
+    "overall": 0.712962962962963,
+    "categories": {
+      "truthful": 0.7777777777777778,
+      "sensible": 0.6666666666666666,
+      "helpful": 0.25,
+      "listens": 1.0,
+      "economy": 0.8888888888888888
+    },
+    "rounds": [
+      {
+        "tick": 40,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": null,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "No factual claims about the kitchen state were made."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line references rice, which is part of the recipe and currently cooking in the kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line addresses the cook's standing request regarding the rice currently cooking on the stove."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line explicitly accepts the cook's standing request to notify them when the rice finishes."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No actions were advised."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No actions were advised."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The response is concise and directly accepts the cook's request."
+          }
+        ]
+      },
+      {
+        "tick": 59,
+        "score": 0.6666666666666666,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 0.0,
+          "helpful": null,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The rice is indeed cooked in the pot at [2, 2]."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All referenced items and stations exist in the kitchen and recipe."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Alerting the cook that the rice is done directly addresses the standing request from t23."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The assistant ignored the pending question from t49: 'How many cutting boards are free right now?'."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the first advised action is not executable now: scoop tortilla onto your plate before the rice — The cook is currently holding chopped steak and has not fetched a plate yet."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Fulfilling the standing request about the rice is directly useful to prevent burning."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake was claimed."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There was no pushback to reply to."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The utterance is brief and directly communicates the state of the rice."
+          }
+        ]
+      },
+      {
+        "tick": 68,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": null,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All three cutting boards are indeed empty at t68."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line refers strictly to valid stations present in the kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line comments on station availability relevant to upcoming preparation steps."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "na"
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "na"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "na"
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "na"
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "na"
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is concise."
+          }
+        ]
+      },
+      {
+        "tick": 111,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 0.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The rice is smoking in the upper pot beside the cutting board"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All mentioned items (rice, upper pot, cutting board, steak) exist in this kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The assistant advises scooping rice, which is an already completed step currently held on the cook's plate."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No cook question, request, or objection was pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: scoop it from the upper pot beside the cutting board now — The pot at [2, 2] is already empty because the cook scooped the rice at tick 107."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Advising to scoop rice from an empty pot when it is already on the plate is counterproductive."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake claim was made."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to cook pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The sentence is relatively concise despite being factually mistaken."
+          }
+        ]
+      },
+      {
+        "tick": 134,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 0.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 0.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The steak pan is smoking now; cooked steak needs to be scooped onto the plate"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Mentions existing kitchen elements (steak pan, plate, steak)."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Instructs the cook to perform a step that was already completed at t124."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No cook question, request, or objection was pending."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: scoop the cooked steak onto your plate next — The steak is already on the plate and the pan at [6, 6] is completely empty."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Scooping steak is obsolete and redundant with the already completed step."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake claim was made."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not replying to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Interrupts with a completely false and unhelpful alert and instruction."
+          }
+        ]
+      },
+      {
+        "tick": 142,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": null,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The steak is indeed on the cook's plate."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Mentions only existing items."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Directly addresses the cook's previous rejection at t134."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Directly accepts the cook's pushback."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No actions advised."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No actions advised."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Promptly corrects itself and confirms seeing the steak on the plate."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Concise acknowledgement without unnecessary filler."
+          }
+        ]
+      },
+      {
+        "tick": 162,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The cook had paused/idled at t160 without starting the vegetables."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All referenced items (plate, counter, tomato, lettuce) and actions belong to the order and kitchen."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Addresses the cook's idle state and directs them to the remaining prep and assembly steps."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No pending question or request from the cook."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Includes the necessary prerequisite of putting down the plate before fetching and chopping the vegetables."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Directs the cook to the correct remaining uncompleted steps of the burrito recipe."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Accompanies the mistake observation with clear instructions on what steps to take next."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Concise and covers the remaining roadmap without unnecessary filler."
+          }
+        ]
+      },
+      {
+        "tick": 189,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": null,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All claims regarding the assembly sequence and the plate contents (tortilla, cooked rice, cooked steak) are true."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line references only items and steps from the Loaded Burrito recipe."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line directly addresses the cook's pending question about what comes after the tortilla and whether it is done."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The assistant directly answers both parts of the cook's question accurately."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No discrete action was advised; this was an informational answer."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No discrete action was advised."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake claim was made."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "Not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The response is concise and directly answers the cook's query."
+          }
+        ]
+      },
+      {
+        "tick": 300,
+        "score": 0.75,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All claims regarding the duplicate raw lettuce, the chopped lettuce on the left lower cutting board at (2,6), and the plate on the left wall counter at (0,5) are completely accurate."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All mentioned stations, items, and locations exist and belong to this recipe."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The utterance directly addresses the live repeat_step mistake where the cook prepared to chop lettuce again despite already having chopped lettuce."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There was no pending question or objection from the cook."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: Trash the raw lettuce — The cook's hands are empty and the raw lettuce is currently on the cutting board at (2,4), so it wou"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The advice successfully prevented the cook from wasting time re-chopping lettuce and redirected them to assemble and finish the order."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The assistant provides a clear resolution to bypass/trash the duplicate and plate the existing chopped lettuce."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There was no prior pushback to reply to."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "no live intent or stop request"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The guidance is clear, direct, and concisely lays out the remaining steps to finish the burrito."
+          }
+        ]
+      }
+    ],
+    "source": "cook-bench-engine/tmp/formal_v5/sq_v4/frames/classic_expert/gpt-6-astra/b3_master_nops_hard_map_5.json",
+    "judge": [
+      "gemini"
+    ]
+  },
+  "detection": {
+    "detected": 1,
+    "triggered": 2
+  },
+  "frameCount": 331,
+  "playback": {
+    "duration": 226.51533333333182,
+    "segments": [
+      {
+        "tick": 0,
+        "start": 0,
+        "duration": 0.45
+      },
+      {
+        "tick": 1,
+        "start": 0.45,
+        "duration": 0.45
+      },
+      {
+        "tick": 2,
+        "start": 0.9,
+        "duration": 0.45
+      },
+      {
+        "tick": 3,
+        "start": 1.35,
+        "duration": 0.45
+      },
+      {
+        "tick": 4,
+        "start": 1.8,
+        "duration": 0.45
+      },
+      {
+        "tick": 5,
+        "start": 2.25,
+        "duration": 0.45
+      },
+      {
+        "tick": 6,
+        "start": 2.7,
+        "duration": 0.45
+      },
+      {
+        "tick": 7,
+        "start": 3.1500000000000004,
+        "duration": 0.45
+      },
+      {
+        "tick": 8,
+        "start": 3.6000000000000005,
+        "duration": 0.45
+      },
+      {
+        "tick": 9,
+        "start": 4.050000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 10,
+        "start": 4.500000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 11,
+        "start": 4.950000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 12,
+        "start": 5.400000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 13,
+        "start": 5.850000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 14,
+        "start": 6.300000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 15,
+        "start": 6.750000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 16,
+        "start": 7.200000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 17,
+        "start": 7.650000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 18,
+        "start": 8.100000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 19,
+        "start": 8.55,
+        "duration": 0.45
+      },
+      {
+        "tick": 20,
+        "start": 9.0,
+        "duration": 0.45
+      },
+      {
+        "tick": 21,
+        "start": 9.45,
+        "duration": 0.45
+      },
+      {
+        "tick": 22,
+        "start": 9.899999999999999,
+        "duration": 0.45
+      },
+      {
+        "tick": 23,
+        "start": 10.349999999999998,
+        "duration": 3.0209583333333327
+      },
+      {
+        "tick": 24,
+        "start": 13.37095833333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 25,
+        "start": 13.82095833333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 26,
+        "start": 14.27095833333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 27,
+        "start": 14.720958333333328,
+        "duration": 0.45
+      },
+      {
+        "tick": 28,
+        "start": 15.170958333333328,
+        "duration": 0.45
+      },
+      {
+        "tick": 29,
+        "start": 15.620958333333327,
+        "duration": 0.45
+      },
+      {
+        "tick": 30,
+        "start": 16.070958333333326,
+        "duration": 0.45
+      },
+      {
+        "tick": 31,
+        "start": 16.520958333333326,
+        "duration": 0.45
+      },
+      {
+        "tick": 32,
+        "start": 16.970958333333325,
+        "duration": 0.45
+      },
+      {
+        "tick": 33,
+        "start": 17.420958333333324,
+        "duration": 0.45
+      },
+      {
+        "tick": 34,
+        "start": 17.870958333333324,
+        "duration": 0.45
+      },
+      {
+        "tick": 35,
+        "start": 18.320958333333323,
+        "duration": 0.45
+      },
+      {
+        "tick": 36,
+        "start": 18.770958333333322,
+        "duration": 0.45
+      },
+      {
+        "tick": 37,
+        "start": 19.22095833333332,
+        "duration": 0.45
+      },
+      {
+        "tick": 38,
+        "start": 19.67095833333332,
+        "duration": 0.45
+      },
+      {
+        "tick": 39,
+        "start": 20.12095833333332,
+        "duration": 0.45
+      },
+      {
+        "tick": 40,
+        "start": 20.57095833333332,
+        "duration": 2.7009583333333325
+      },
+      {
+        "tick": 41,
+        "start": 23.27191666666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 42,
+        "start": 23.72191666666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 43,
+        "start": 24.17191666666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 44,
+        "start": 24.62191666666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 45,
+        "start": 25.07191666666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 46,
+        "start": 25.521916666666648,
+        "duration": 0.45
+      },
+      {
+        "tick": 47,
+        "start": 25.971916666666647,
+        "duration": 0.45
+      },
+      {
+        "tick": 48,
+        "start": 26.421916666666647,
+        "duration": 0.45
+      },
+      {
+        "tick": 49,
+        "start": 26.871916666666646,
+        "duration": 2.500958333333333
+      },
+      {
+        "tick": 50,
+        "start": 29.37287499999998,
+        "duration": 0.45
+      },
+      {
+        "tick": 51,
+        "start": 29.82287499999998,
+        "duration": 0.45
+      },
+      {
+        "tick": 52,
+        "start": 30.272874999999978,
+        "duration": 0.45
+      },
+      {
+        "tick": 53,
+        "start": 30.722874999999977,
+        "duration": 0.45
+      },
+      {
+        "tick": 54,
+        "start": 31.172874999999976,
+        "duration": 0.45
+      },
+      {
+        "tick": 55,
+        "start": 31.622874999999976,
+        "duration": 0.45
+      },
+      {
+        "tick": 56,
+        "start": 32.072874999999975,
+        "duration": 0.45
+      },
+      {
+        "tick": 57,
+        "start": 32.52287499999998,
+        "duration": 0.45
+      },
+      {
+        "tick": 58,
+        "start": 32.97287499999998,
+        "duration": 0.45
+      },
+      {
+        "tick": 59,
+        "start": 33.42287499999998,
+        "duration": 7.500958333333337
+      },
+      {
+        "tick": 60,
+        "start": 40.92383333333332,
+        "duration": 2.6609583333333333
+      },
+      {
+        "tick": 61,
+        "start": 43.58479166666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 62,
+        "start": 44.034791666666656,
+        "duration": 0.45
+      },
+      {
+        "tick": 63,
+        "start": 44.48479166666666,
+        "duration": 0.45
+      },
+      {
+        "tick": 64,
+        "start": 44.93479166666666,
+        "duration": 0.45
+      },
+      {
+        "tick": 65,
+        "start": 45.384791666666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 66,
+        "start": 45.83479166666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 67,
+        "start": 46.28479166666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 68,
+        "start": 46.73479166666667,
+        "duration": 2.300958333333334
+      },
+      {
+        "tick": 69,
+        "start": 49.03575000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 70,
+        "start": 49.48575000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 71,
+        "start": 49.93575000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 72,
+        "start": 50.385750000000016,
+        "duration": 0.45
+      },
+      {
+        "tick": 73,
+        "start": 50.83575000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 74,
+        "start": 51.28575000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 75,
+        "start": 51.735750000000024,
+        "duration": 0.45
+      },
+      {
+        "tick": 76,
+        "start": 52.18575000000003,
+        "duration": 0.45
+      },
+      {
+        "tick": 77,
+        "start": 52.63575000000003,
+        "duration": 0.45
+      },
+      {
+        "tick": 78,
+        "start": 53.08575000000003,
+        "duration": 0.45
+      },
+      {
+        "tick": 79,
+        "start": 53.535750000000036,
+        "duration": 0.45
+      },
+      {
+        "tick": 80,
+        "start": 53.98575000000004,
+        "duration": 0.45
+      },
+      {
+        "tick": 81,
+        "start": 54.43575000000004,
+        "duration": 0.45
+      },
+      {
+        "tick": 82,
+        "start": 54.885750000000044,
+        "duration": 0.45
+      },
+      {
+        "tick": 83,
+        "start": 55.33575000000005,
+        "duration": 0.45
+      },
+      {
+        "tick": 84,
+        "start": 55.78575000000005,
+        "duration": 0.45
+      },
+      {
+        "tick": 85,
+        "start": 56.23575000000005,
+        "duration": 0.45
+      },
+      {
+        "tick": 86,
+        "start": 56.685750000000056,
+        "duration": 0.45
+      },
+      {
+        "tick": 87,
+        "start": 57.13575000000006,
+        "duration": 0.45
+      },
+      {
+        "tick": 88,
+        "start": 57.58575000000006,
+        "duration": 0.45
+      },
+      {
+        "tick": 89,
+        "start": 58.035750000000064,
+        "duration": 0.45
+      },
+      {
+        "tick": 90,
+        "start": 58.48575000000007,
+        "duration": 0.45
+      },
+      {
+        "tick": 91,
+        "start": 58.93575000000007,
+        "duration": 0.45
+      },
+      {
+        "tick": 92,
+        "start": 59.38575000000007,
+        "duration": 0.45
+      },
+      {
+        "tick": 93,
+        "start": 59.835750000000075,
+        "duration": 0.45
+      },
+      {
+        "tick": 94,
+        "start": 60.28575000000008,
+        "duration": 0.45
+      },
+      {
+        "tick": 95,
+        "start": 60.73575000000008,
+        "duration": 0.45
+      },
+      {
+        "tick": 96,
+        "start": 61.185750000000084,
+        "duration": 0.45
+      },
+      {
+        "tick": 97,
+        "start": 61.63575000000009,
+        "duration": 0.45
+      },
+      {
+        "tick": 98,
+        "start": 62.08575000000009,
+        "duration": 0.45
+      },
+      {
+        "tick": 99,
+        "start": 62.53575000000009,
+        "duration": 0.45
+      },
+      {
+        "tick": 100,
+        "start": 62.985750000000095,
+        "duration": 0.45
+      },
+      {
+        "tick": 101,
+        "start": 63.4357500000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 102,
+        "start": 63.8857500000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 103,
+        "start": 64.3357500000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 104,
+        "start": 64.7857500000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 105,
+        "start": 65.23575000000011,
+        "duration": 0.45
+      },
+      {
+        "tick": 106,
+        "start": 65.68575000000011,
+        "duration": 0.45
+      },
+      {
+        "tick": 107,
+        "start": 66.13575000000012,
+        "duration": 0.45
+      },
+      {
+        "tick": 108,
+        "start": 66.58575000000012,
+        "duration": 0.45
+      },
+      {
+        "tick": 109,
+        "start": 67.03575000000012,
+        "duration": 0.45
+      },
+      {
+        "tick": 110,
+        "start": 67.48575000000012,
+        "duration": 0.45
+      },
+      {
+        "tick": 111,
+        "start": 67.93575000000013,
+        "duration": 9.561916666666662
+      },
+      {
+        "tick": 112,
+        "start": 77.49766666666679,
+        "duration": 0.45
+      },
+      {
+        "tick": 113,
+        "start": 77.94766666666679,
+        "duration": 0.45
+      },
+      {
+        "tick": 114,
+        "start": 78.3976666666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 115,
+        "start": 78.8476666666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 116,
+        "start": 79.2976666666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 117,
+        "start": 79.7476666666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 118,
+        "start": 80.1976666666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 119,
+        "start": 80.64766666666681,
+        "duration": 0.45
+      },
+      {
+        "tick": 120,
+        "start": 81.09766666666681,
+        "duration": 0.45
+      },
+      {
+        "tick": 121,
+        "start": 81.54766666666681,
+        "duration": 0.45
+      },
+      {
+        "tick": 122,
+        "start": 81.99766666666682,
+        "duration": 0.45
+      },
+      {
+        "tick": 123,
+        "start": 82.44766666666682,
+        "duration": 0.45
+      },
+      {
+        "tick": 124,
+        "start": 82.89766666666682,
+        "duration": 0.45
+      },
+      {
+        "tick": 125,
+        "start": 83.34766666666683,
+        "duration": 0.45
+      },
+      {
+        "tick": 126,
+        "start": 83.79766666666683,
+        "duration": 0.45
+      },
+      {
+        "tick": 127,
+        "start": 84.24766666666683,
+        "duration": 0.45
+      },
+      {
+        "tick": 128,
+        "start": 84.69766666666683,
+        "duration": 0.45
+      },
+      {
+        "tick": 129,
+        "start": 85.14766666666684,
+        "duration": 0.45
+      },
+      {
+        "tick": 130,
+        "start": 85.59766666666684,
+        "duration": 0.45
+      },
+      {
+        "tick": 131,
+        "start": 86.04766666666684,
+        "duration": 0.45
+      },
+      {
+        "tick": 132,
+        "start": 86.49766666666685,
+        "duration": 0.45
+      },
+      {
+        "tick": 133,
+        "start": 86.94766666666685,
+        "duration": 0.45
+      },
+      {
+        "tick": 134,
+        "start": 87.39766666666685,
+        "duration": 7.441916666666657
+      },
+      {
+        "tick": 135,
+        "start": 94.83958333333351,
+        "duration": 0.45
+      },
+      {
+        "tick": 136,
+        "start": 95.28958333333351,
+        "duration": 0.45
+      },
+      {
+        "tick": 137,
+        "start": 95.73958333333351,
+        "duration": 0.45
+      },
+      {
+        "tick": 138,
+        "start": 96.18958333333352,
+        "duration": 0.45
+      },
+      {
+        "tick": 139,
+        "start": 96.63958333333352,
+        "duration": 0.45
+      },
+      {
+        "tick": 140,
+        "start": 97.08958333333352,
+        "duration": 0.45
+      },
+      {
+        "tick": 141,
+        "start": 97.53958333333352,
+        "duration": 0.45
+      },
+      {
+        "tick": 142,
+        "start": 97.98958333333353,
+        "duration": 4.340958333333333
+      },
+      {
+        "tick": 143,
+        "start": 102.33054166666686,
+        "duration": 0.45
+      },
+      {
+        "tick": 144,
+        "start": 102.78054166666686,
+        "duration": 0.45
+      },
+      {
+        "tick": 145,
+        "start": 103.23054166666687,
+        "duration": 0.45
+      },
+      {
+        "tick": 146,
+        "start": 103.68054166666687,
+        "duration": 0.45
+      },
+      {
+        "tick": 147,
+        "start": 104.13054166666687,
+        "duration": 0.45
+      },
+      {
+        "tick": 148,
+        "start": 104.58054166666687,
+        "duration": 0.45
+      },
+      {
+        "tick": 149,
+        "start": 105.03054166666688,
+        "duration": 0.45
+      },
+      {
+        "tick": 150,
+        "start": 105.48054166666688,
+        "duration": 0.45
+      },
+      {
+        "tick": 151,
+        "start": 105.93054166666688,
+        "duration": 0.45
+      },
+      {
+        "tick": 152,
+        "start": 106.38054166666689,
+        "duration": 0.45
+      },
+      {
+        "tick": 153,
+        "start": 106.83054166666689,
+        "duration": 0.45
+      },
+      {
+        "tick": 154,
+        "start": 107.28054166666689,
+        "duration": 0.45
+      },
+      {
+        "tick": 155,
+        "start": 107.7305416666669,
+        "duration": 0.45
+      },
+      {
+        "tick": 156,
+        "start": 108.1805416666669,
+        "duration": 0.45
+      },
+      {
+        "tick": 157,
+        "start": 108.6305416666669,
+        "duration": 0.45
+      },
+      {
+        "tick": 158,
+        "start": 109.0805416666669,
+        "duration": 0.45
+      },
+      {
+        "tick": 159,
+        "start": 109.5305416666669,
+        "duration": 0.45
+      },
+      {
+        "tick": 160,
+        "start": 109.98054166666691,
+        "duration": 0.45
+      },
+      {
+        "tick": 161,
+        "start": 110.43054166666691,
+        "duration": 0.45
+      },
+      {
+        "tick": 162,
+        "start": 110.88054166666691,
+        "duration": 10.700958333333332
+      },
+      {
+        "tick": 163,
+        "start": 121.58150000000025,
+        "duration": 0.45
+      },
+      {
+        "tick": 164,
+        "start": 122.03150000000025,
+        "duration": 0.45
+      },
+      {
+        "tick": 165,
+        "start": 122.48150000000025,
+        "duration": 0.45
+      },
+      {
+        "tick": 166,
+        "start": 122.93150000000026,
+        "duration": 0.45
+      },
+      {
+        "tick": 167,
+        "start": 123.38150000000026,
+        "duration": 0.45
+      },
+      {
+        "tick": 168,
+        "start": 123.83150000000026,
+        "duration": 0.45
+      },
+      {
+        "tick": 169,
+        "start": 124.28150000000026,
+        "duration": 0.45
+      },
+      {
+        "tick": 170,
+        "start": 124.73150000000027,
+        "duration": 0.45
+      },
+      {
+        "tick": 171,
+        "start": 125.18150000000027,
+        "duration": 3.780958333333345
+      },
+      {
+        "tick": 172,
+        "start": 128.96245833333361,
+        "duration": 0.45
+      },
+      {
+        "tick": 173,
+        "start": 129.4124583333336,
+        "duration": 0.45
+      },
+      {
+        "tick": 174,
+        "start": 129.8624583333336,
+        "duration": 0.45
+      },
+      {
+        "tick": 175,
+        "start": 130.31245833333358,
+        "duration": 0.45
+      },
+      {
+        "tick": 176,
+        "start": 130.76245833333357,
+        "duration": 0.45
+      },
+      {
+        "tick": 177,
+        "start": 131.21245833333356,
+        "duration": 0.45
+      },
+      {
+        "tick": 178,
+        "start": 131.66245833333355,
+        "duration": 0.45
+      },
+      {
+        "tick": 179,
+        "start": 132.11245833333354,
+        "duration": 0.45
+      },
+      {
+        "tick": 180,
+        "start": 132.56245833333352,
+        "duration": 0.45
+      },
+      {
+        "tick": 181,
+        "start": 133.0124583333335,
+        "duration": 0.45
+      },
+      {
+        "tick": 182,
+        "start": 133.4624583333335,
+        "duration": 0.45
+      },
+      {
+        "tick": 183,
+        "start": 133.9124583333335,
+        "duration": 0.45
+      },
+      {
+        "tick": 184,
+        "start": 134.36245833333348,
+        "duration": 0.45
+      },
+      {
+        "tick": 185,
+        "start": 134.81245833333347,
+        "duration": 0.45
+      },
+      {
+        "tick": 186,
+        "start": 135.26245833333346,
+        "duration": 0.45
+      },
+      {
+        "tick": 187,
+        "start": 135.71245833333344,
+        "duration": 0.45
+      },
+      {
+        "tick": 188,
+        "start": 136.16245833333343,
+        "duration": 0.45
+      },
+      {
+        "tick": 189,
+        "start": 136.61245833333342,
+        "duration": 7.540958333333322
+      },
+      {
+        "tick": 190,
+        "start": 144.15341666666674,
+        "duration": 0.45
+      },
+      {
+        "tick": 191,
+        "start": 144.60341666666673,
+        "duration": 0.45
+      },
+      {
+        "tick": 192,
+        "start": 145.05341666666672,
+        "duration": 0.45
+      },
+      {
+        "tick": 193,
+        "start": 145.5034166666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 194,
+        "start": 145.9534166666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 195,
+        "start": 146.4034166666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 196,
+        "start": 146.85341666666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 197,
+        "start": 147.30341666666666,
+        "duration": 0.45
+      },
+      {
+        "tick": 198,
+        "start": 147.75341666666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 199,
+        "start": 148.20341666666664,
+        "duration": 0.45
+      },
+      {
+        "tick": 200,
+        "start": 148.65341666666663,
+        "duration": 0.45
+      },
+      {
+        "tick": 201,
+        "start": 149.10341666666662,
+        "duration": 0.45
+      },
+      {
+        "tick": 202,
+        "start": 149.5534166666666,
+        "duration": 0.45
+      },
+      {
+        "tick": 203,
+        "start": 150.0034166666666,
+        "duration": 0.45
+      },
+      {
+        "tick": 204,
+        "start": 150.45341666666658,
+        "duration": 0.45
+      },
+      {
+        "tick": 205,
+        "start": 150.90341666666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 206,
+        "start": 151.35341666666656,
+        "duration": 0.45
+      },
+      {
+        "tick": 207,
+        "start": 151.80341666666655,
+        "duration": 0.45
+      },
+      {
+        "tick": 208,
+        "start": 152.25341666666654,
+        "duration": 0.45
+      },
+      {
+        "tick": 209,
+        "start": 152.70341666666653,
+        "duration": 0.45
+      },
+      {
+        "tick": 210,
+        "start": 153.15341666666652,
+        "duration": 0.45
+      },
+      {
+        "tick": 211,
+        "start": 153.6034166666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 212,
+        "start": 154.0534166666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 213,
+        "start": 154.50341666666648,
+        "duration": 0.45
+      },
+      {
+        "tick": 214,
+        "start": 154.95341666666647,
+        "duration": 0.45
+      },
+      {
+        "tick": 215,
+        "start": 155.40341666666646,
+        "duration": 0.45
+      },
+      {
+        "tick": 216,
+        "start": 155.85341666666645,
+        "duration": 0.45
+      },
+      {
+        "tick": 217,
+        "start": 156.30341666666644,
+        "duration": 0.45
+      },
+      {
+        "tick": 218,
+        "start": 156.75341666666642,
+        "duration": 0.45
+      },
+      {
+        "tick": 219,
+        "start": 157.2034166666664,
+        "duration": 0.45
+      },
+      {
+        "tick": 220,
+        "start": 157.6534166666664,
+        "duration": 0.45
+      },
+      {
+        "tick": 221,
+        "start": 158.1034166666664,
+        "duration": 0.45
+      },
+      {
+        "tick": 222,
+        "start": 158.55341666666638,
+        "duration": 0.45
+      },
+      {
+        "tick": 223,
+        "start": 159.00341666666637,
+        "duration": 0.45
+      },
+      {
+        "tick": 224,
+        "start": 159.45341666666636,
+        "duration": 0.45
+      },
+      {
+        "tick": 225,
+        "start": 159.90341666666635,
+        "duration": 0.45
+      },
+      {
+        "tick": 226,
+        "start": 160.35341666666633,
+        "duration": 0.45
+      },
+      {
+        "tick": 227,
+        "start": 160.80341666666632,
+        "duration": 0.45
+      },
+      {
+        "tick": 228,
+        "start": 161.2534166666663,
+        "duration": 0.45
+      },
+      {
+        "tick": 229,
+        "start": 161.7034166666663,
+        "duration": 0.45
+      },
+      {
+        "tick": 230,
+        "start": 162.1534166666663,
+        "duration": 0.45
+      },
+      {
+        "tick": 231,
+        "start": 162.60341666666628,
+        "duration": 0.45
+      },
+      {
+        "tick": 232,
+        "start": 163.05341666666627,
+        "duration": 0.45
+      },
+      {
+        "tick": 233,
+        "start": 163.50341666666625,
+        "duration": 0.45
+      },
+      {
+        "tick": 234,
+        "start": 163.95341666666624,
+        "duration": 0.45
+      },
+      {
+        "tick": 235,
+        "start": 164.40341666666623,
+        "duration": 0.45
+      },
+      {
+        "tick": 236,
+        "start": 164.85341666666622,
+        "duration": 0.45
+      },
+      {
+        "tick": 237,
+        "start": 165.3034166666662,
+        "duration": 0.45
+      },
+      {
+        "tick": 238,
+        "start": 165.7534166666662,
+        "duration": 0.45
+      },
+      {
+        "tick": 239,
+        "start": 166.2034166666662,
+        "duration": 0.45
+      },
+      {
+        "tick": 240,
+        "start": 166.65341666666617,
+        "duration": 0.45
+      },
+      {
+        "tick": 241,
+        "start": 167.10341666666616,
+        "duration": 0.45
+      },
+      {
+        "tick": 242,
+        "start": 167.55341666666615,
+        "duration": 0.45
+      },
+      {
+        "tick": 243,
+        "start": 168.00341666666614,
+        "duration": 0.45
+      },
+      {
+        "tick": 244,
+        "start": 168.45341666666613,
+        "duration": 0.45
+      },
+      {
+        "tick": 245,
+        "start": 168.90341666666612,
+        "duration": 0.45
+      },
+      {
+        "tick": 246,
+        "start": 169.3534166666661,
+        "duration": 0.45
+      },
+      {
+        "tick": 247,
+        "start": 169.8034166666661,
+        "duration": 0.45
+      },
+      {
+        "tick": 248,
+        "start": 170.25341666666608,
+        "duration": 0.45
+      },
+      {
+        "tick": 249,
+        "start": 170.70341666666607,
+        "duration": 0.45
+      },
+      {
+        "tick": 250,
+        "start": 171.15341666666606,
+        "duration": 0.45
+      },
+      {
+        "tick": 251,
+        "start": 171.60341666666605,
+        "duration": 0.45
+      },
+      {
+        "tick": 252,
+        "start": 172.05341666666604,
+        "duration": 0.45
+      },
+      {
+        "tick": 253,
+        "start": 172.50341666666603,
+        "duration": 0.45
+      },
+      {
+        "tick": 254,
+        "start": 172.95341666666602,
+        "duration": 0.45
+      },
+      {
+        "tick": 255,
+        "start": 173.403416666666,
+        "duration": 0.45
+      },
+      {
+        "tick": 256,
+        "start": 173.853416666666,
+        "duration": 0.45
+      },
+      {
+        "tick": 257,
+        "start": 174.30341666666598,
+        "duration": 0.45
+      },
+      {
+        "tick": 258,
+        "start": 174.75341666666597,
+        "duration": 0.45
+      },
+      {
+        "tick": 259,
+        "start": 175.20341666666596,
+        "duration": 0.45
+      },
+      {
+        "tick": 260,
+        "start": 175.65341666666595,
+        "duration": 0.45
+      },
+      {
+        "tick": 261,
+        "start": 176.10341666666594,
+        "duration": 0.45
+      },
+      {
+        "tick": 262,
+        "start": 176.55341666666592,
+        "duration": 0.45
+      },
+      {
+        "tick": 263,
+        "start": 177.0034166666659,
+        "duration": 0.45
+      },
+      {
+        "tick": 264,
+        "start": 177.4534166666659,
+        "duration": 0.45
+      },
+      {
+        "tick": 265,
+        "start": 177.9034166666659,
+        "duration": 0.45
+      },
+      {
+        "tick": 266,
+        "start": 178.35341666666588,
+        "duration": 0.45
+      },
+      {
+        "tick": 267,
+        "start": 178.80341666666587,
+        "duration": 0.45
+      },
+      {
+        "tick": 268,
+        "start": 179.25341666666586,
+        "duration": 0.45
+      },
+      {
+        "tick": 269,
+        "start": 179.70341666666585,
+        "duration": 0.45
+      },
+      {
+        "tick": 270,
+        "start": 180.15341666666583,
+        "duration": 0.45
+      },
+      {
+        "tick": 271,
+        "start": 180.60341666666582,
+        "duration": 0.45
+      },
+      {
+        "tick": 272,
+        "start": 181.0534166666658,
+        "duration": 0.45
+      },
+      {
+        "tick": 273,
+        "start": 181.5034166666658,
+        "duration": 0.45
+      },
+      {
+        "tick": 274,
+        "start": 181.9534166666658,
+        "duration": 0.45
+      },
+      {
+        "tick": 275,
+        "start": 182.40341666666578,
+        "duration": 0.45
+      },
+      {
+        "tick": 276,
+        "start": 182.85341666666577,
+        "duration": 0.45
+      },
+      {
+        "tick": 277,
+        "start": 183.30341666666575,
+        "duration": 0.45
+      },
+      {
+        "tick": 278,
+        "start": 183.75341666666574,
+        "duration": 0.45
+      },
+      {
+        "tick": 279,
+        "start": 184.20341666666573,
+        "duration": 0.45
+      },
+      {
+        "tick": 280,
+        "start": 184.65341666666572,
+        "duration": 0.45
+      },
+      {
+        "tick": 281,
+        "start": 185.1034166666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 282,
+        "start": 185.5534166666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 283,
+        "start": 186.0034166666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 284,
+        "start": 186.45341666666567,
+        "duration": 0.45
+      },
+      {
+        "tick": 285,
+        "start": 186.90341666666566,
+        "duration": 0.45
+      },
+      {
+        "tick": 286,
+        "start": 187.35341666666565,
+        "duration": 0.45
+      },
+      {
+        "tick": 287,
+        "start": 187.80341666666564,
+        "duration": 0.45
+      },
+      {
+        "tick": 288,
+        "start": 188.25341666666563,
+        "duration": 0.45
+      },
+      {
+        "tick": 289,
+        "start": 188.70341666666562,
+        "duration": 0.45
+      },
+      {
+        "tick": 290,
+        "start": 189.1534166666656,
+        "duration": 0.45
+      },
+      {
+        "tick": 291,
+        "start": 189.6034166666656,
+        "duration": 0.45
+      },
+      {
+        "tick": 292,
+        "start": 190.05341666666558,
+        "duration": 0.45
+      },
+      {
+        "tick": 293,
+        "start": 190.50341666666557,
+        "duration": 0.45
+      },
+      {
+        "tick": 294,
+        "start": 190.95341666666556,
+        "duration": 0.45
+      },
+      {
+        "tick": 295,
+        "start": 191.40341666666555,
+        "duration": 0.45
+      },
+      {
+        "tick": 296,
+        "start": 191.85341666666554,
+        "duration": 0.45
+      },
+      {
+        "tick": 297,
+        "start": 192.30341666666553,
+        "duration": 0.45
+      },
+      {
+        "tick": 298,
+        "start": 192.75341666666552,
+        "duration": 0.45
+      },
+      {
+        "tick": 299,
+        "start": 193.2034166666655,
+        "duration": 0.45
+      },
+      {
+        "tick": 300,
+        "start": 193.6534166666655,
+        "duration": 15.361916666666673
+      },
+      {
+        "tick": 301,
+        "start": 209.01533333333217,
+        "duration": 0.45
+      },
+      {
+        "tick": 302,
+        "start": 209.46533333333215,
+        "duration": 0.45
+      },
+      {
+        "tick": 303,
+        "start": 209.91533333333214,
+        "duration": 0.45
+      },
+      {
+        "tick": 304,
+        "start": 210.36533333333213,
+        "duration": 0.45
+      },
+      {
+        "tick": 305,
+        "start": 210.81533333333212,
+        "duration": 0.45
+      },
+      {
+        "tick": 306,
+        "start": 211.2653333333321,
+        "duration": 0.45
+      },
+      {
+        "tick": 307,
+        "start": 211.7153333333321,
+        "duration": 0.45
+      },
+      {
+        "tick": 308,
+        "start": 212.1653333333321,
+        "duration": 0.45
+      },
+      {
+        "tick": 309,
+        "start": 212.61533333333207,
+        "duration": 0.45
+      },
+      {
+        "tick": 310,
+        "start": 213.06533333333206,
+        "duration": 0.45
+      },
+      {
+        "tick": 311,
+        "start": 213.51533333333205,
+        "duration": 0.45
+      },
+      {
+        "tick": 312,
+        "start": 213.96533333333204,
+        "duration": 0.45
+      },
+      {
+        "tick": 313,
+        "start": 214.41533333333203,
+        "duration": 0.45
+      },
+      {
+        "tick": 314,
+        "start": 214.86533333333202,
+        "duration": 0.45
+      },
+      {
+        "tick": 315,
+        "start": 215.315333333332,
+        "duration": 0.45
+      },
+      {
+        "tick": 316,
+        "start": 215.765333333332,
+        "duration": 0.45
+      },
+      {
+        "tick": 317,
+        "start": 216.21533333333198,
+        "duration": 0.45
+      },
+      {
+        "tick": 318,
+        "start": 216.66533333333197,
+        "duration": 0.45
+      },
+      {
+        "tick": 319,
+        "start": 217.11533333333196,
+        "duration": 0.45
+      },
+      {
+        "tick": 320,
+        "start": 217.56533333333195,
+        "duration": 0.45
+      },
+      {
+        "tick": 321,
+        "start": 218.01533333333194,
+        "duration": 0.45
+      },
+      {
+        "tick": 322,
+        "start": 218.46533333333193,
+        "duration": 0.45
+      },
+      {
+        "tick": 323,
+        "start": 218.91533333333192,
+        "duration": 0.45
+      },
+      {
+        "tick": 324,
+        "start": 219.3653333333319,
+        "duration": 0.45
+      },
+      {
+        "tick": 325,
+        "start": 219.8153333333319,
+        "duration": 0.45
+      },
+      {
+        "tick": 326,
+        "start": 220.26533333333188,
+        "duration": 0.45
+      },
+      {
+        "tick": 327,
+        "start": 220.71533333333187,
+        "duration": 0.45
+      },
+      {
+        "tick": 328,
+        "start": 221.16533333333186,
+        "duration": 0.45
+      },
+      {
+        "tick": 329,
+        "start": 221.61533333333185,
+        "duration": 0.45
+      },
+      {
+        "tick": 330,
+        "start": 222.06533333333184,
+        "duration": 0.45
+      },
+      {
+        "tick": 331,
+        "start": 222.51533333333182,
+        "duration": 4
+      }
+    ]
+  },
+  "metrics": {
+    "inTimeSuccess": true,
+    "budget": 542,
+    "referenceTicks": 237,
+    "detected": 2,
+    "triggered": 2,
+    "scorer": "cook-bench-engine/tools/eval_v2_sweep.py",
+    "scorerSha256": "bfbd550c93c930f25bdd5ab58b1dd4fb6c16f5cfc6bacbffd75e15b744ce2466"
+  },
+  "presentation": {
+    "frameRoot": "assets/media/persona-classic_expert-hd",
+    "frameCount": 332,
+    "crops": {
+      "main": [
+        962,
+        26,
+        960,
+        720
+      ],
+      "context": [
+        0,
+        26,
+        960,
+        720
+      ]
+    },
+    "description": "CookSim views re-rendered at 960 × 720 per view from the recorded world states. Evaluation observations are unchanged.",
+    "stateSha256": "6f3c7c0d4d9714b5acf353076c80fac3de966223529e81e0018f1dde9ff93b79"
+  }
+}

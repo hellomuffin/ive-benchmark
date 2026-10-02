@@ -1,0 +1,4639 @@
+{
+  "id": "household-stalled",
+  "engine": "VHSim",
+  "model": "Gemini 3.1 Pro",
+  "persona": "Balanced user",
+  "axes": [
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "task": "Prepare for a guest: load the plate and mug into the dishwasher, return the pillow to the bed, and switch off the TV.",
+  "source": "vh-streaming-engine/tmp/bench_v1/gemini-3.1-pro-preview/gemini-3.1-pro-preview__cx_guest_skip_stall__baseline.json",
+  "sourceHash": "86512ff5f9bbbee5631f39a4d7c8e24f1f4e6b39877b9332b108689fd884f108",
+  "engineVersion": "2026-09-20.f118",
+  "timingNote": "Recorded text interaction. Synthetic voices added for presentation; playback is time-expanded. Tick stamps preserve the original sequence.",
+  "case": "cx_guest_skip_stall",
+  "personaId": "baseline",
+  "run": 1,
+  "ticks": 268,
+  "completed": false,
+  "outcome": "stuck",
+  "dialogue": [
+    {
+      "tick": 24,
+      "speaker": "user",
+      "text": "Wrong room, let me turn around.",
+      "audio": "assets/media/voice/0c8fcad2a9f660966122.mp3",
+      "duration": 2.3709583333333333,
+      "start": 10.799999999999997
+    },
+    {
+      "tick": 26,
+      "speaker": "assistant",
+      "text": "You've wandered into the bathroom, but none of the items for your task are in here. Head to the living room for the plate, pillow, and TV, or back to the bedroom for the mug.",
+      "audio": "assets/media/voice/ab129b90258eef31d13d.mp3",
+      "duration": 9.650958333333334,
+      "start": 13.87095833333333
+    },
+    {
+      "tick": 26,
+      "speaker": "user",
+      "text": "Yeah, I know, heading there now.",
+      "audio": "assets/media/voice/8edcbda10c3c7173a6c5.mp3",
+      "duration": 2.1709583333333335,
+      "start": 23.771916666666662
+    },
+    {
+      "tick": 34,
+      "speaker": "assistant",
+      "text": "Sounds good. The kitchen is just outside the bathroom door, and from there you can reach the living room or bedroom.",
+      "audio": "assets/media/voice/699f85bfb4b0498ad9d4.mp3",
+      "duration": 6.410958333333333,
+      "start": 29.342874999999992
+    },
+    {
+      "tick": 38,
+      "speaker": "user",
+      "text": "Yep, turning around now.",
+      "audio": "assets/media/voice/449a913711dc6511b75c.mp3",
+      "duration": 1.8509583333333333,
+      "start": 37.353833333333334
+    },
+    {
+      "tick": 46,
+      "speaker": "assistant",
+      "text": "Turn left 3 times to face the door, then go through the visible door to get back to the kitchen.",
+      "audio": "assets/media/voice/a51b637f4b0408680d61.mp3",
+      "duration": 6.410958333333333,
+      "start": 42.604791666666685
+    },
+    {
+      "tick": 46,
+      "speaker": "user",
+      "text": "I'm already in the kitchen, heading to the living room.",
+      "audio": "assets/media/voice/060b855f3103e4c549d9.mp3",
+      "duration": 2.9709583333333334,
+      "start": 49.26575000000002
+    },
+    {
+      "tick": 54,
+      "speaker": "assistant",
+      "text": "Great, I see you're back in the kitchen. The living room is through the doorway to your right.",
+      "audio": "assets/media/voice/f46a4c84d224cab60511.mp3",
+      "duration": 5.050958333333333,
+      "start": 55.636708333333374
+    },
+    {
+      "tick": 54,
+      "speaker": "user",
+      "text": "Actually I'm in the bedroom, not the kitchen.",
+      "audio": "assets/media/voice/4d2a78788e67776b9fc0.mp3",
+      "duration": 3.0109583333333334,
+      "start": 60.93766666666671
+    },
+    {
+      "tick": 62,
+      "speaker": "assistant",
+      "text": "My apologies, you are absolutely right. Since you are in the bedroom and right in front of the desk, you can go ahead and pick up the mug from it.",
+      "audio": "assets/media/voice/876b926a35d2b229b619.mp3",
+      "duration": 8.490958333333333,
+      "start": 67.34862500000006
+    },
+    {
+      "tick": 62,
+      "speaker": "user",
+      "text": "I'd rather stick to my order and get the plate first.",
+      "audio": "assets/media/voice/7656501efca9a64fe0f6.mp3",
+      "duration": 3.0909583333333335,
+      "start": 76.0895833333334
+    },
+    {
+      "tick": 66,
+      "speaker": "user",
+      "text": "No, I'm in the kitchen.",
+      "audio": "assets/media/voice/0d09a859f7ea591c5040.mp3",
+      "duration": 1.6509583333333333,
+      "start": 80.78054166666674
+    },
+    {
+      "tick": 70,
+      "speaker": "user",
+      "text": "Oops, I'm in the bathroom. Turning around.",
+      "audio": "assets/media/voice/affb02c8243a3a6231d5.mp3",
+      "duration": 3.0909583333333335,
+      "start": 84.03150000000008
+    },
+    {
+      "tick": 70,
+      "speaker": "assistant",
+      "text": "Understood, we can definitely get the plate first. You are currently in the kitchen; the living room is through the doorway to your left. The plate is on the coffee table in there.",
+      "audio": "assets/media/voice/c9a3978dd292581dacca.mp3",
+      "duration": 9.970958333333334,
+      "start": 87.37245833333341
+    },
+    {
+      "tick": 70,
+      "speaker": "user",
+      "text": "Nope, still in the bathroom right now.",
+      "audio": "assets/media/voice/f3a44d8214eccd89cd9b.mp3",
+      "duration": 2.210958333333333,
+      "start": 97.59341666666674
+    },
+    {
+      "tick": 78,
+      "speaker": "assistant",
+      "text": "You are completely right, my mistake. You are in the bathroom facing the sink. Turn around to face the door behind you, then go through it to get back to the kitchen.",
+      "audio": "assets/media/voice/dc0e0f029eed8c98c8a5.mp3",
+      "duration": 9.170958333333333,
+      "start": 103.2043750000001
+    },
+    {
+      "tick": 78,
+      "speaker": "user",
+      "text": "Yep, heading out now.",
+      "audio": "assets/media/voice/d951d8c138e6efac30eb.mp3",
+      "duration": 1.6109583333333333,
+      "start": 112.62533333333343
+    },
+    {
+      "tick": 86,
+      "speaker": "user",
+      "text": "I'm actually in the kitchen right now.",
+      "audio": "assets/media/voice/4ad0fb54df0db46773a7.mp3",
+      "duration": 2.210958333333333,
+      "start": 117.63629166666678
+    },
+    {
+      "tick": 86,
+      "speaker": "assistant",
+      "text": "Great, you're back in the kitchen. Turn left and head through the doorway across the room to get to the living room, where the plate is on the coffee table.",
+      "audio": "assets/media/voice/ccc989f11a73397a19ee.mp3",
+      "duration": 8.810958333333334,
+      "start": 120.09725000000012
+    },
+    {
+      "tick": 86,
+      "speaker": "user",
+      "text": "On my way there now.",
+      "audio": "assets/media/voice/3a6a404b1f9a61cff7ad.mp3",
+      "duration": 1.4109583333333333,
+      "start": 129.15820833333345
+    },
+    {
+      "tick": 98,
+      "speaker": "assistant",
+      "text": "You are in the kitchen, but you are facing the wall. Turn left to face the doorway to the living room, then go through it.",
+      "audio": "assets/media/voice/6e2845573d2d52f4a748.mp3",
+      "duration": 8.050958333333334,
+      "start": 135.76916666666665
+    },
+    {
+      "tick": 98,
+      "speaker": "user",
+      "text": "I'm still in the bedroom.",
+      "audio": "assets/media/voice/561791fc28c950cbaa0f.mp3",
+      "duration": 1.7309583333333334,
+      "start": 144.070125
+    },
+    {
+      "tick": 108,
+      "speaker": "assistant",
+      "text": "You are absolutely right, I apologize for the confusion. You are in the bedroom facing the bed. Since you are here, you can turn around to face the desk behind you and pick up the mug.",
+      "audio": "assets/media/voice/bb987fdf7560d98940a8.mp3",
+      "duration": 10.650958333333334,
+      "start": 150.1010833333332
+    },
+    {
+      "tick": 108,
+      "speaker": "user",
+      "text": "I'm sticking to my plan, getting the plate first.",
+      "audio": "assets/media/voice/3dff9d69e28e8f2ab17c.mp3",
+      "duration": 3.210958333333333,
+      "start": 161.00204166666654
+    },
+    {
+      "tick": 116,
+      "speaker": "assistant",
+      "text": "Alright, we can definitely get the plate first. Turn left to face the doorway, go through it into the kitchen, and then head straight across into the living room.",
+      "audio": "assets/media/voice/dc21eb12d5330db905ec.mp3",
+      "duration": 8.010958333333333,
+      "start": 167.6129999999998
+    },
+    {
+      "tick": 122,
+      "speaker": "user",
+      "text": "Already in the kitchen. Heading to the living room.",
+      "audio": "assets/media/voice/eda7f5114bdb49702337.mp3",
+      "duration": 3.250958333333333,
+      "start": 178.12395833333306
+    },
+    {
+      "tick": 124,
+      "speaker": "assistant",
+      "text": "You've stopped moving. To get the plate, turn left to face the doorway, go through it into the kitchen, and then head straight across into the living room.",
+      "audio": "assets/media/voice/74d8d3b0b6c0f13360f7.mp3",
+      "duration": 9.490958333333333,
+      "start": 182.07491666666638
+    },
+    {
+      "tick": 124,
+      "speaker": "user",
+      "text": "I'm in the kitchen, walking to the living room now.",
+      "audio": "assets/media/voice/aba3a0588c2ae359632e.mp3",
+      "duration": 2.9709583333333334,
+      "start": 191.81587499999972
+    },
+    {
+      "tick": 134,
+      "speaker": "assistant",
+      "text": "You are in the kitchen facing the dining table. Turn left to face the doorway to the living room, then go through it.",
+      "audio": "assets/media/voice/5bc187dd89da07e7f8e8.mp3",
+      "duration": 7.170958333333333,
+      "start": 199.08683333333295
+    },
+    {
+      "tick": 134,
+      "speaker": "user",
+      "text": "I'm already in the living room.",
+      "audio": "assets/media/voice/9f4e3e5dee10a65ef6a2.mp3",
+      "duration": 2.0509583333333334,
+      "start": 206.5077916666663
+    },
+    {
+      "tick": 144,
+      "speaker": "assistant",
+      "text": "You are absolutely right, my apologies. You are in the living room facing the TV. Turn right to face the coffee table, then go to it and pick up the plate.",
+      "audio": "assets/media/voice/cf711e6805cecdced8d7.mp3",
+      "duration": 9.370958333333334,
+      "start": 212.85874999999953
+    },
+    {
+      "tick": 144,
+      "speaker": "user",
+      "text": "Already got it in my hand.",
+      "audio": "assets/media/voice/e6d6ceeaf933a8385eff.mp3",
+      "duration": 1.7309583333333334,
+      "start": 222.47970833333287
+    },
+    {
+      "tick": 154,
+      "speaker": "assistant",
+      "text": "Great. Now turn around to face the doorway behind you, go through it into the kitchen, and head to the dishwasher to open it.",
+      "audio": "assets/media/voice/6527d69001d515ffe37c.mp3",
+      "duration": 7.850958333333334,
+      "start": 228.51066666666608
+    },
+    {
+      "tick": 168,
+      "speaker": "user",
+      "text": "I'm already in the kitchen.",
+      "audio": "assets/media/voice/64c1e3af8869b0c6d3fb.mp3",
+      "duration": 1.5309583333333334,
+      "start": 242.46162499999926
+    },
+    {
+      "tick": 168,
+      "speaker": "assistant",
+      "text": "It looks like that command was refused because the doorway isn't in your view yet. Turn right to face the doorway to the kitchen, then go through it.",
+      "audio": "assets/media/voice/9069418330eb52151d29.mp3",
+      "duration": 7.970958333333333,
+      "start": 244.2425833333326
+    },
+    {
+      "tick": 168,
+      "speaker": "user",
+      "text": "I'm already in the kitchen. Just turning around.",
+      "audio": "assets/media/voice/545e0eb487fb8db032b8.mp3",
+      "duration": 3.0109583333333334,
+      "start": 252.46354166666592
+    },
+    {
+      "tick": 172,
+      "speaker": "user",
+      "text": "Still in the kitchen, just turning around.",
+      "audio": "assets/media/voice/d499f8493db00ab6507c.mp3",
+      "duration": 3.1309583333333335,
+      "start": 257.0744999999992
+    },
+    {
+      "tick": 178,
+      "speaker": "assistant",
+      "text": "Got it. Keep turning right until you see the dishwasher on the counter, then go to it and open it.",
+      "audio": "assets/media/voice/637adb8a1a397277f635.mp3",
+      "duration": 5.930958333333334,
+      "start": 262.7054583333325
+    },
+    {
+      "tick": 178,
+      "speaker": "user",
+      "text": "Doing that right now.",
+      "audio": "assets/media/voice/5bd7235f7c4f347144f1.mp3",
+      "duration": 1.7709583333333334,
+      "start": 268.8864166666658
+    },
+    {
+      "tick": 186,
+      "speaker": "assistant",
+      "text": "Perfect, the dishwasher is now in view on the right side of the counter. Go ahead and go to it, then open it.",
+      "audio": "assets/media/voice/1eccae390ed21b14242c.mp3",
+      "duration": 6.170958333333333,
+      "start": 274.05737499999907
+    },
+    {
+      "tick": 186,
+      "speaker": "user",
+      "text": "Already open, putting it in.",
+      "audio": "assets/media/voice/2d8c0c1d22c0964d09f0.mp3",
+      "duration": 1.8509583333333333,
+      "start": 280.4783333333324
+    },
+    {
+      "tick": 196,
+      "speaker": "assistant",
+      "text": "Great. Once the plate is in, you can head to the bedroom to get the mug from the desk.",
+      "audio": "assets/media/voice/2c48b51a21bf2d75c76c.mp3",
+      "duration": 4.690958333333334,
+      "start": 286.6292916666656
+    },
+    {
+      "tick": 196,
+      "speaker": "user",
+      "text": "Nah, I'm getting the pillow first.",
+      "audio": "assets/media/voice/fbe7d0fb3eb79c1b33e1.mp3",
+      "duration": 2.0909583333333335,
+      "start": 291.57024999999896
+    },
+    {
+      "tick": 206,
+      "speaker": "assistant",
+      "text": "Alright, we can get the pillow next. Turn left to face the doorway to the living room, then go through it to find the sofa.",
+      "audio": "assets/media/voice/676c644ea25df053fb55.mp3",
+      "duration": 7.770958333333334,
+      "start": 297.9612083333322
+    },
+    {
+      "tick": 206,
+      "speaker": "user",
+      "text": "I'm already here.",
+      "audio": "assets/media/voice/6ad7edbc2eb755de4049.mp3",
+      "duration": 1.3709583333333333,
+      "start": 305.98216666666553
+    },
+    {
+      "tick": 214,
+      "speaker": "assistant",
+      "text": "Great, you are right in front of the sofa. Go ahead and pick up the pillow.",
+      "audio": "assets/media/voice/6afa827ab48326f3c9f1.mp3",
+      "duration": 4.530958333333333,
+      "start": 310.75312499999876
+    },
+    {
+      "tick": 214,
+      "speaker": "user",
+      "text": "Already got it.",
+      "audio": "assets/media/voice/74b891ea2fcc0356101a.mp3",
+      "duration": 1.1309583333333333,
+      "start": 315.5340833333321
+    },
+    {
+      "tick": 225,
+      "speaker": "assistant",
+      "text": "Alright, now turn around, head through the kitchen to the bedroom, and put the pillow on the bed.",
+      "audio": "assets/media/voice/43d49f2757737771dfb1.mp3",
+      "duration": 5.6109583333333335,
+      "start": 321.41504166666533
+    },
+    {
+      "tick": 225,
+      "speaker": "user",
+      "text": "I'm getting the mug first.",
+      "audio": "assets/media/voice/6fcc9e3621a7dd5f9912.mp3",
+      "duration": 2.210958333333333,
+      "start": 327.27599999999865
+    },
+    {
+      "tick": 235,
+      "speaker": "assistant",
+      "text": "Alright, we can get the mug first. Go through the visible door into the kitchen, then head straight across into the bedroom to find the mug on the desk.",
+      "audio": "assets/media/voice/96bb8fffd1f9fa88d0db.mp3",
+      "duration": 9.370958333333334,
+      "start": 333.7869583333319
+    },
+    {
+      "tick": 235,
+      "speaker": "user",
+      "text": "Yep, heading there now.",
+      "audio": "assets/media/voice/0e2b752190c8725055a4.mp3",
+      "duration": 1.8509583333333333,
+      "start": 343.4079166666652
+    },
+    {
+      "tick": 245,
+      "speaker": "assistant",
+      "text": "You seem to have stopped facing the wall in the living room. Turn around to face the doorway to the kitchen, then go through it to head to the bedroom.",
+      "audio": "assets/media/voice/f4c07611c70842d7289d.mp3",
+      "duration": 8.290958333333334,
+      "start": 349.5588749999984
+    },
+    {
+      "tick": 245,
+      "speaker": "user",
+      "text": "Yeah, turning around now.",
+      "audio": "assets/media/voice/25cf3ff043397c582ad9.mp3",
+      "duration": 1.7709583333333334,
+      "start": 358.09983333333173
+    },
+    {
+      "tick": 255,
+      "speaker": "assistant",
+      "text": "Great, the doorway is in view now. Go through the visible door into the kitchen, then head straight across into the bedroom to find the mug on the desk.",
+      "audio": "assets/media/voice/42c34ad87c07118d3a9e.mp3",
+      "duration": 8.930958333333333,
+      "start": 364.17079166666497
+    },
+    {
+      "tick": 255,
+      "speaker": "user",
+      "text": "Not in view yet, still turning.",
+      "audio": "assets/media/voice/d974b1f599e0ba71a673.mp3",
+      "duration": 3.0109583333333334,
+      "start": 373.3517499999983
+    },
+    {
+      "tick": 261,
+      "speaker": "user",
+      "text": "Still turning, almost there.",
+      "audio": "assets/media/voice/4a73debd6449f5bb0480.mp3",
+      "duration": 2.730958333333333,
+      "start": 378.86270833333157
+    },
+    {
+      "tick": 263,
+      "speaker": "assistant",
+      "text": "Got it. Keep turning right until you see the doorway to the kitchen, then go through it and head straight across into the bedroom to find the mug on the desk.",
+      "audio": "assets/media/voice/c94f56e3f02724b0ca04.mp3",
+      "duration": 8.730958333333334,
+      "start": 382.2936666666649
+    },
+    {
+      "tick": 263,
+      "speaker": "user",
+      "text": "I see it now, heading through.",
+      "audio": "assets/media/voice/da31794177f24142da15.mp3",
+      "duration": 2.6109583333333335,
+      "start": 391.2746249999982
+    }
+  ],
+  "actions": [
+    {
+      "start": 2,
+      "end": 3,
+      "text": "turn right"
+    },
+    {
+      "start": 3,
+      "end": 12,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 12,
+      "end": 13,
+      "text": "turn right"
+    },
+    {
+      "start": 13,
+      "end": 21,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 21,
+      "end": 21,
+      "text": "walk to the coffeetable"
+    },
+    {
+      "start": 22,
+      "end": 22,
+      "text": "walk to the plate"
+    },
+    {
+      "start": 23,
+      "end": 23,
+      "text": "grab the plate"
+    },
+    {
+      "start": 25,
+      "end": 26,
+      "text": "turn right"
+    },
+    {
+      "start": 26,
+      "end": 27,
+      "text": "turn right"
+    },
+    {
+      "start": 27,
+      "end": 28,
+      "text": "turn right"
+    },
+    {
+      "start": 28,
+      "end": 29,
+      "text": "turn right"
+    },
+    {
+      "start": 29,
+      "end": 30,
+      "text": "turn right"
+    },
+    {
+      "start": 30,
+      "end": 31,
+      "text": "turn right"
+    },
+    {
+      "start": 31,
+      "end": 31,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 32,
+      "end": 33,
+      "text": "turn left"
+    },
+    {
+      "start": 33,
+      "end": 33,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 34,
+      "end": 35,
+      "text": "turn left"
+    },
+    {
+      "start": 35,
+      "end": 36,
+      "text": "turn left"
+    },
+    {
+      "start": 36,
+      "end": 36,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 39,
+      "end": 40,
+      "text": "turn left"
+    },
+    {
+      "start": 40,
+      "end": 41,
+      "text": "turn left"
+    },
+    {
+      "start": 41,
+      "end": 42,
+      "text": "turn left"
+    },
+    {
+      "start": 42,
+      "end": 47,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 47,
+      "end": 48,
+      "text": "turn right"
+    },
+    {
+      "start": 48,
+      "end": 49,
+      "text": "turn right"
+    },
+    {
+      "start": 49,
+      "end": 50,
+      "text": "turn right"
+    },
+    {
+      "start": 50,
+      "end": 54,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 55,
+      "end": 56,
+      "text": "turn left"
+    },
+    {
+      "start": 56,
+      "end": 57,
+      "text": "turn left"
+    },
+    {
+      "start": 57,
+      "end": 57,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 58,
+      "end": 59,
+      "text": "turn right"
+    },
+    {
+      "start": 59,
+      "end": 60,
+      "text": "turn right"
+    },
+    {
+      "start": 60,
+      "end": 61,
+      "text": "turn right"
+    },
+    {
+      "start": 63,
+      "end": 69,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 69,
+      "end": 76,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 76,
+      "end": 77,
+      "text": "turn left"
+    },
+    {
+      "start": 77,
+      "end": 78,
+      "text": "turn left"
+    },
+    {
+      "start": 78,
+      "end": 79,
+      "text": "turn right"
+    },
+    {
+      "start": 79,
+      "end": 84,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 84,
+      "end": 85,
+      "text": "turn left"
+    },
+    {
+      "start": 85,
+      "end": 85,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 86,
+      "end": 87,
+      "text": "turn right"
+    },
+    {
+      "start": 87,
+      "end": 88,
+      "text": "turn right"
+    },
+    {
+      "start": 88,
+      "end": 89,
+      "text": "turn right"
+    },
+    {
+      "start": 89,
+      "end": 90,
+      "text": "turn right"
+    },
+    {
+      "start": 90,
+      "end": 95,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 95,
+      "end": 96,
+      "text": "turn left"
+    },
+    {
+      "start": 96,
+      "end": 97,
+      "text": "turn left"
+    },
+    {
+      "start": 97,
+      "end": 98,
+      "text": "turn left"
+    },
+    {
+      "start": 98,
+      "end": 99,
+      "text": "turn left"
+    },
+    {
+      "start": 99,
+      "end": 100,
+      "text": "turn left"
+    },
+    {
+      "start": 100,
+      "end": 101,
+      "text": "turn left"
+    },
+    {
+      "start": 101,
+      "end": 101,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 102,
+      "end": 103,
+      "text": "turn right"
+    },
+    {
+      "start": 103,
+      "end": 104,
+      "text": "turn right"
+    },
+    {
+      "start": 104,
+      "end": 105,
+      "text": "turn right"
+    },
+    {
+      "start": 107,
+      "end": 108,
+      "text": "turn left"
+    },
+    {
+      "start": 108,
+      "end": 109,
+      "text": "turn right"
+    },
+    {
+      "start": 109,
+      "end": 110,
+      "text": "turn right"
+    },
+    {
+      "start": 110,
+      "end": 110,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 113,
+      "end": 114,
+      "text": "turn right"
+    },
+    {
+      "start": 114,
+      "end": 115,
+      "text": "turn left"
+    },
+    {
+      "start": 117,
+      "end": 118,
+      "text": "turn right"
+    },
+    {
+      "start": 118,
+      "end": 119,
+      "text": "turn right"
+    },
+    {
+      "start": 119,
+      "end": 120,
+      "text": "turn right"
+    },
+    {
+      "start": 120,
+      "end": 126,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 126,
+      "end": 127,
+      "text": "turn left"
+    },
+    {
+      "start": 127,
+      "end": 134,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 134,
+      "end": 135,
+      "text": "turn left"
+    },
+    {
+      "start": 135,
+      "end": 136,
+      "text": "turn left"
+    },
+    {
+      "start": 136,
+      "end": 137,
+      "text": "turn left"
+    },
+    {
+      "start": 137,
+      "end": 140,
+      "text": "walk to the coffeetable"
+    },
+    {
+      "start": 140,
+      "end": 140,
+      "text": "walk to the plate"
+    },
+    {
+      "start": 141,
+      "end": 144,
+      "text": "grab the plate"
+    },
+    {
+      "start": 144,
+      "end": 145,
+      "text": "turn left"
+    },
+    {
+      "start": 145,
+      "end": 146,
+      "text": "turn left"
+    },
+    {
+      "start": 146,
+      "end": 147,
+      "text": "turn left"
+    },
+    {
+      "start": 147,
+      "end": 147,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 148,
+      "end": 149,
+      "text": "turn right"
+    },
+    {
+      "start": 149,
+      "end": 150,
+      "text": "turn right"
+    },
+    {
+      "start": 150,
+      "end": 151,
+      "text": "turn right"
+    },
+    {
+      "start": 151,
+      "end": 151,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 152,
+      "end": 152,
+      "text": "walk to the dishwasher"
+    },
+    {
+      "start": 153,
+      "end": 153,
+      "text": "open the dishwasher"
+    },
+    {
+      "start": 155,
+      "end": 156,
+      "text": "turn right"
+    },
+    {
+      "start": 156,
+      "end": 157,
+      "text": "turn right"
+    },
+    {
+      "start": 157,
+      "end": 158,
+      "text": "turn right"
+    },
+    {
+      "start": 158,
+      "end": 159,
+      "text": "turn right"
+    },
+    {
+      "start": 159,
+      "end": 165,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 165,
+      "end": 166,
+      "text": "turn left"
+    },
+    {
+      "start": 166,
+      "end": 167,
+      "text": "turn left"
+    },
+    {
+      "start": 167,
+      "end": 167,
+      "text": "walk to the dishwasher"
+    },
+    {
+      "start": 168,
+      "end": 168,
+      "text": "open the dishwasher"
+    },
+    {
+      "start": 168,
+      "end": 169,
+      "text": "turn right"
+    },
+    {
+      "start": 169,
+      "end": 170,
+      "text": "turn right"
+    },
+    {
+      "start": 170,
+      "end": 170,
+      "text": "walk to the dishwasher"
+    },
+    {
+      "start": 171,
+      "end": 171,
+      "text": "open the dishwasher"
+    },
+    {
+      "start": 173,
+      "end": 174,
+      "text": "turn right"
+    },
+    {
+      "start": 174,
+      "end": 175,
+      "text": "turn right"
+    },
+    {
+      "start": 175,
+      "end": 176,
+      "text": "turn right"
+    },
+    {
+      "start": 176,
+      "end": 177,
+      "text": "turn right"
+    },
+    {
+      "start": 177,
+      "end": 177,
+      "text": "walk to the dishwasher"
+    },
+    {
+      "start": 178,
+      "end": 178,
+      "text": "open the dishwasher"
+    },
+    {
+      "start": 178,
+      "end": 179,
+      "text": "turn right"
+    },
+    {
+      "start": 179,
+      "end": 180,
+      "text": "turn right"
+    },
+    {
+      "start": 180,
+      "end": 181,
+      "text": "turn right"
+    },
+    {
+      "start": 181,
+      "end": 184,
+      "text": "walk to the dishwasher"
+    },
+    {
+      "start": 184,
+      "end": 187,
+      "text": "open the dishwasher"
+    },
+    {
+      "start": 187,
+      "end": 190,
+      "text": "put the plate in the dishwasher"
+    },
+    {
+      "start": 190,
+      "end": 194,
+      "text": "walk to the dishwasher"
+    },
+    {
+      "start": 194,
+      "end": 194,
+      "text": "put the mug in the dishwasher"
+    },
+    {
+      "start": 195,
+      "end": 198,
+      "text": "close the dishwasher"
+    },
+    {
+      "start": 198,
+      "end": 205,
+      "text": "walk to the pillow"
+    },
+    {
+      "start": 205,
+      "end": 208,
+      "text": "grab the pillow"
+    },
+    {
+      "start": 208,
+      "end": 215,
+      "text": "stand still"
+    },
+    {
+      "start": 215,
+      "end": 215,
+      "text": "walk to the mug"
+    },
+    {
+      "start": 216,
+      "end": 216,
+      "text": "grab the mug"
+    },
+    {
+      "start": 216,
+      "end": 216,
+      "text": "walk to the dishwasher"
+    },
+    {
+      "start": 217,
+      "end": 217,
+      "text": "open the dishwasher"
+    },
+    {
+      "start": 217,
+      "end": 217,
+      "text": "put the mug in the dishwasher"
+    },
+    {
+      "start": 217,
+      "end": 217,
+      "text": "walk to the bed"
+    },
+    {
+      "start": 218,
+      "end": 218,
+      "text": "put the pillow on the bed"
+    },
+    {
+      "start": 218,
+      "end": 218,
+      "text": "walk to the tv"
+    },
+    {
+      "start": 219,
+      "end": 219,
+      "text": "switch off the tv"
+    },
+    {
+      "start": 219,
+      "end": 220,
+      "text": "turn right"
+    },
+    {
+      "start": 220,
+      "end": 221,
+      "text": "turn right"
+    },
+    {
+      "start": 221,
+      "end": 222,
+      "text": "turn right"
+    },
+    {
+      "start": 224,
+      "end": 225,
+      "text": "turn right"
+    },
+    {
+      "start": 225,
+      "end": 226,
+      "text": "turn right"
+    },
+    {
+      "start": 226,
+      "end": 227,
+      "text": "turn right"
+    },
+    {
+      "start": 229,
+      "end": 230,
+      "text": "turn right"
+    },
+    {
+      "start": 230,
+      "end": 231,
+      "text": "turn right"
+    },
+    {
+      "start": 231,
+      "end": 232,
+      "text": "turn right"
+    },
+    {
+      "start": 232,
+      "end": 233,
+      "text": "turn right"
+    },
+    {
+      "start": 233,
+      "end": 234,
+      "text": "turn right"
+    },
+    {
+      "start": 234,
+      "end": 235,
+      "text": "turn right"
+    },
+    {
+      "start": 235,
+      "end": 236,
+      "text": "turn right"
+    },
+    {
+      "start": 236,
+      "end": 237,
+      "text": "turn right"
+    },
+    {
+      "start": 237,
+      "end": 237,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 238,
+      "end": 238,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 239,
+      "end": 239,
+      "text": "walk to the mug"
+    },
+    {
+      "start": 240,
+      "end": 240,
+      "text": "grab the mug"
+    },
+    {
+      "start": 242,
+      "end": 243,
+      "text": "turn right"
+    },
+    {
+      "start": 243,
+      "end": 244,
+      "text": "turn right"
+    },
+    {
+      "start": 244,
+      "end": 245,
+      "text": "turn right"
+    },
+    {
+      "start": 245,
+      "end": 246,
+      "text": "turn right"
+    },
+    {
+      "start": 246,
+      "end": 247,
+      "text": "turn right"
+    },
+    {
+      "start": 247,
+      "end": 248,
+      "text": "turn right"
+    },
+    {
+      "start": 248,
+      "end": 249,
+      "text": "turn right"
+    },
+    {
+      "start": 249,
+      "end": 250,
+      "text": "turn right"
+    },
+    {
+      "start": 250,
+      "end": 251,
+      "text": "turn right"
+    },
+    {
+      "start": 251,
+      "end": 251,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 254,
+      "end": 255,
+      "text": "turn right"
+    },
+    {
+      "start": 255,
+      "end": 256,
+      "text": "turn right"
+    },
+    {
+      "start": 256,
+      "end": 257,
+      "text": "turn right"
+    },
+    {
+      "start": 257,
+      "end": 258,
+      "text": "turn right"
+    },
+    {
+      "start": 258,
+      "end": 259,
+      "text": "turn right"
+    },
+    {
+      "start": 259,
+      "end": 260,
+      "text": "turn right"
+    },
+    {
+      "start": 260,
+      "end": 260,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 261,
+      "end": 262,
+      "text": "turn right"
+    },
+    {
+      "start": 262,
+      "end": 263,
+      "text": "turn right"
+    },
+    {
+      "start": 263,
+      "end": 264,
+      "text": "turn right"
+    },
+    {
+      "start": 264,
+      "end": 265,
+      "text": "turn right"
+    },
+    {
+      "start": 265,
+      "end": 265,
+      "text": "go through the visible door"
+    },
+    {
+      "start": 266,
+      "end": 267,
+      "text": "go straight"
+    }
+  ],
+  "crops": {
+    "main": [
+      0,
+      24,
+      640,
+      456
+    ],
+    "context": [
+      640,
+      24,
+      480,
+      456
+    ]
+  },
+  "milestones": [
+    {
+      "label": "Plate in dishwasher",
+      "tick": 190
+    },
+    {
+      "label": "Mug in dishwasher",
+      "tick": 269
+    },
+    {
+      "label": "Pillow on bed",
+      "tick": 269
+    },
+    {
+      "label": "TV off",
+      "tick": 269
+    }
+  ],
+  "events": [
+    {
+      "label": "Skip a task step",
+      "kind": "error",
+      "tick": 190,
+      "end": 205,
+      "detected": true,
+      "detectedAt": 26
+    },
+    {
+      "label": "Pause task execution",
+      "kind": "error",
+      "tick": 208,
+      "end": 220,
+      "detected": true,
+      "detectedAt": 124
+    }
+  ],
+  "quality": {
+    "overall": 0.31153846153846154,
+    "categories": {
+      "truthful": 0.38461538461538464,
+      "sensible": 0.8461538461538461,
+      "helpful": 0.28,
+      "listens": 0.75,
+      "economy": 0.9615384615384616
+    },
+    "rounds": [
+      {
+        "tick": 26,
+        "score": 0.75,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The stated facts fit the evidence: the person is in the bathroom at t26, and the household objects are elsewhere or known from the task."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only rooms and objects that exist in the task: bathroom, living room, bedroom, plate, pillow, TV, mug."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current navigation situation after the person wandered into the bathroom, not a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There was no pending question, request, or objection to answer."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the person tried it and the engine refused: 'go through the visible door' — no door or open passage in view — turn to find one"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Redirecting away from the bathroom toward the living room or bedroom helps continue the chore."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The mistake claim includes a correction plan: head to the living room or back to the bedroom."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is concise and directly relevant, without extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 34,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": null,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: The kitchen is just outside the bathroom door"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only house rooms that exist in the task: bathroom, kitchen, living room, and bedroom."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It comments on the current navigation situation from the bathroom rather than a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There was no pending question, request, or objection in this round."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No advised action was given."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No advised action was given."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No mistake claim with a fix was given."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is brief and directly about immediate navigation context."
+          }
+        ]
+      },
+      {
+        "tick": 46,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: you can go through the visible door to get back to the kitchen"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only the kitchen and visible door, both present in this house context."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current situation, namely where the person is and what to do next."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is no pending question or objection that needs a direct answer; the person only states a plan change."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Going through a door to get back to the kitchen is irrelevant to finishing the chore from a kitchen starting point."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback on an earlier assistant claim."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is brief and task-focused, with no extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 54,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": 0.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: you're back in the kitchen"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only existing task/house elements: kitchen, living room, doorway."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current situation and a live location correction, not a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It responds to the objection by asserting a location-based correction rather than ignoring it."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the person tried it and the engine refused: 'go through the visible door' — no door or open passage in view — turn to find one — attempt 4: doorways are the pink squares on the map; read which way the nearest one lies from you and turn towa"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Going through 'the doorway to your right' is not established as useful here because it rests on the false kitchen premise."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "The line includes a concrete action ('The living room is through the doorway to your right'), which functions as the proposed fix."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "It repeats the earlier mistaken kitchen framing instead of adding new evidence or a corrected reason."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is brief and task-focused, with no extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 62,
+        "score": 0.8,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The only concrete state claim, \"you are in the bedroom,\" matches the engine truth at t62."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions the bedroom, desk, and mug, all of which exist in this house/task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current situation and an immediate next step, not a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It responds to the person's objection by acknowledging it and giving a new instruction."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: pick up the mug from the desk — The person is not holding anything and the mug is in the bedroom on the desk, but the engine state o"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Picking up the mug now is not useful for the person's stated plan to get the plate first, and it may be premature relative to the current chosen order."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It adds a new concrete claim and instruction by switching from the earlier kitchen correction to the bedroom/desk/mug situation."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is concise and directly relevant, with no extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 70,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: you are currently in the kitchen"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It only mentions the kitchen, living room, doorway, and plate, all of which are in this task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current situation and immediate routing, not a distant future step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It responds to the pushback by affirming the plate-first plan and giving a route."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: go to the living room via the doorway to your left — The person is in the bathroom and the only current direction in the room state is not enough to esta"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Telling them the living room is left from the kitchen is not useful if the location claim is wrong and the person is in the bathroom."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It adds concrete routing information instead of merely repeating the earlier plate-first preference."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is fairly concise for a directional correction."
+          }
+        ]
+      },
+      {
+        "tick": 78,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "\"You are in the bathroom facing the sink\" matches the engine state at t78, and \"door behind you\" is consistent with being in the bathroom."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only the bathroom, sink, door, and kitchen, all of which exist in this house/task context."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the immediate situation from t78, telling the person how to leave the bathroom right now."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "There is no pending question or objection in this round to answer; the person simply accepted the instruction."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Both advised actions are startable now from the bathroom, and the next-round evidence shows the door move executed successfully."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Leaving the bathroom and returning to the kitchen is useful for continuing the chore, since the task items are elsewhere."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim; it is an acknowledgement plus instruction."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback on an earlier claim or instruction in this round."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is concise and action-oriented, with no extra narration beyond what is needed now."
+          }
+        ]
+      },
+      {
+        "tick": 86,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: you're back in the kitchen"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It only mentions the kitchen, living room, doorway, plate, and coffee table, all of which belong to this task/house."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current navigation situation, telling the person where to go next from the kitchen."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is no pending question or objection in this round that needs direct handling."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Going to the living room only reaches the plate; it does not itself advance the chore toward the dishwasher, pillow, or TV."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is brief and action-focused, with no unnecessary narration."
+          }
+        ]
+      },
+      {
+        "tick": 98,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: You are in the kitchen; you are facing the wall"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only the kitchen and the living room doorway, both valid house/task entities."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the immediate situation with an instruction about what to do next."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is no pending question or objection being directly answered in this round."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: Turn left to face the doorway to the living room — The person is still in the bedroom, so this instruction is based on the wrong room."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Even if executed, the instruction is aimed at the wrong room and does not repair the current situation."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback on an earlier claim in a way that adds new evidence or a correction."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is brief and action-focused."
+          }
+        ]
+      },
+      {
+        "tick": 108,
+        "score": 0.8,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The factual claim matches the evidence that the person is in the bedroom, and the line does not contradict the state."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only the bedroom, bed, desk, and mug, all of which are in this house/task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current situation: the person is present in the bedroom now and is being told what to do there."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It responds to the pushback by apologizing and redirecting to a new step rather than ignoring the objection."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: turn around to face the desk behind you and pick up the mug — Facing the desk is not established by the state, and the mug is on the desk in the bedroom but the l"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Getting the mug is one of the task items and is useful for finishing the chore."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "The line includes the fix: “turn around to face the desk behind you and pick up the mug.”"
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It adds new concrete guidance by switching from the earlier disputed location to “You are in the bedroom facing the bed.”"
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is concise and focused on the immediate correction without extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 116,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The only factual claim is \"we can definitely get the plate first,\" which does not conflict with the situation and matches the person's stated plan to get the plate first."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line mentions only the plate, kitchen, living room, and doorway, all of which belong to the task/house."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current plan in progress: \"get the plate first\" and immediate movement out of the bedroom."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It responds to the person's plan choice by affirming it: \"we can definitely get the plate first.\""
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Getting the plate first is useful for finishing the chore, since the plate is on the coffee table and must go into the dishwasher."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim or a corrective reply with new evidence."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is fairly concise and avoids narration or unnecessary future steps."
+          }
+        ]
+      },
+      {
+        "tick": 124,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: You've stopped moving."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It refers only to the doorway, kitchen, living room, plate, and current movement, all of which are in this house/task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current situation: the person says \"I'm in the kitchen, walking to the living room now,\" so the guidance concerns what to do next now."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It responds to the person's pushback by giving a brief corrective instruction rather than ignoring it."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The advised actions are startable from the kitchen: the person can turn, then go through the visible door, and the next evidence shows this worked."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Going through the doorway toward the living room is useful for reaching the plate on the coffee table and continuing the chore."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It adds new concrete guidance tied to the current location instead of merely repeating prior advice."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is concise and only states what is needed now."
+          }
+        ]
+      },
+      {
+        "tick": 134,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 0.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: You are in the kitchen facing the dining table."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only kitchen, dining table, doorway, and living room, all of which are present in this house/task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "It addresses a finished/incorrect location state rather than the current situation; the person is already in the living room and the line misidentifies that."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is no pending question or objection answered here beyond giving instructions."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The advice is not useful for finishing the chore at this moment because it sends the person toward the living room they are already in."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback on an earlier assistant claim."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is short and direct, with no extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 144,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The claim \"You are in the living room facing the TV\" is true, but the advised action \"pick up the plate\" is not true to the current state because the person is already holding the plate: \"Already got it in my hand.\""
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It only refers to the living room, TV, coffee table, and plate, all of which are part of the house/task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current situation at t144: the person is in the living room and just said \"Already got it in my hand.\""
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It directly responds to the pending objection by proposing a next step instead of ignoring it."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Asking to pick up the plate is counterproductive because the task object already needs to be put in the dishwasher, not picked up again."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim and gives no repair for a mistake; it only instructs a move and a redundant pickup."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It adds new content by identifying a different orientation relative to the TV and giving a concrete next move instead of merely repeating the prior instruction."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is fairly concise and focused on the immediate next move."
+          }
+        ]
+      },
+      {
+        "tick": 154,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: you are in the kitchen; the dishwasher is reachable now from here"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only the kitchen, doorway, and dishwasher, which all belong to this house/task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It concerns the immediate next move from the current situation, not a distant step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There was no pending question, request, or objection in this round to answer."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Going toward the kitchen and dishwasher is relevant to the chore, even though the line is premature."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is fairly concise and action-focused, with no extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 168,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 0.0,
+          "helpful": 0.0,
+          "listens": 0.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The line says \"the doorway isn't in your view yet,\" but the state only shows the person is in the kitchen facing after recent turns; whether that doorway is in view is not established."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only the doorway and kitchen, which are in the house and task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "It is reacting to a completed refusal/past approach mistake and gives a door-finding step, not the immediate current situation from where the person already is in the kitchen."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It directly responds to the pushback \"I'm already in the kitchen. Just turning around\" by trying to steer the person, even though the reply is based on a mistaken premise."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Going through the kitchen doorway is not useful here; the person already has the plate and is in the kitchen, so the next useful step is toward the dishwasher, not re-entering the kitchen."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction/reply, not a mistake claim with a corrective action."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "It does not add new evidence or a correction; it just repeats the earlier doorway direction and intensifies it with \"go through it\"."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is brief and task-focused, without extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 178,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: Keep turning right until you see the dishwasher on the counter; the dishwasher is on the counter"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line mentions only the dishwasher, right turns, and opening, all of which belong to the house/task context."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current navigation toward the dishwasher, which is an imminent step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "No pending question, request, or objection is being answered in this round."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Turning to face the dishwasher and then walking to it is useful for finishing the dishwasher part of the chore."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is concise and action-focused, without extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 186,
+        "score": 0.75,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The only observable claim is that the dishwasher is in view on the right side of the counter, which is not contradicted by the situation and is compatible with the kitchen state."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It refers only to the dishwasher, counter, and the current kitchen context, all present in this house/task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the immediate situation at t186, namely continuing the dishwashing step that is already underway."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is no pending question, request, or objection in this round to answer."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Opening the dishwasher is not useful here because it is already open; the only useful part is going to it, not reopening it."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is concise and only gives the immediate next step, without extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 196,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 0.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: Once the plate is in, you can head to the bedroom to get the mug from the desk."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It only mentions the bedroom, mug, desk, plate, and kitchen-related task context, all of which are part of this house/task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The line is about a distant next step after the plate, not the current situation, and the person has already shifted to getting the pillow first."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is no pending question or objection being directly answered here beyond a plan change."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: head to the bedroom to get the mug from the desk — The person is in the kitchen and has just said they are getting the pillow first; the assistant is p"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Going to the bedroom for the mug is relevant eventually, but not for the immediate issue after the person announced \"I'm getting the pillow first.\""
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback in the rubric sense; it is a new plan comment/instruction."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is concise and contains only the proposed next step, without extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 206,
+        "score": 0.5,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 0.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The factual claims match the situation: the person is in the living room and the sofa is in the living room."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only the living room, doorway, and sofa, all of which are part of this house/task."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current moment: the person is already in the living room and has just changed plan toward the pillow."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is no pending question or objection being directly answered beyond the plan change, so this does not apply."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "The advised movement toward the sofa is irrelevant to the current task progress and does not repair a mistake."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback on an earlier assistant claim; it is a fresh instruction."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "It adds unnecessary future-oriented narration about the sofa instead of the needed immediate action."
+          }
+        ]
+      },
+      {
+        "tick": 214,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: you are right in front of the sofa; the person has not already picked up the pillow"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only house elements from this task: the sofa and the pillow."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current situation, but it is a currently impossible instruction rather than a distant step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is no pending question or objection being answered in this round."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the first advised action is not executable now: go ahead and pick up the pillow — The person is already holding the pillow at t214, so there is nothing to grab now."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Grabbing the pillow is not useful here because the pillow is already in hand; the actual next useful steps are elsewhere."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is short and direct, without extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 225,
+        "score": 0.75,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The factual part that \"the pillow\" is the object to be placed is consistent with the task and current hold state."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only house/task entities that exist here: kitchen, bedroom, pillow, bed."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current situation and the next immediate navigation needed, not a distant finished step."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is a pending objection at t225, but the line does not directly answer or defer it; it continues with instruction."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "With the mug still being pursued and the person already in the living room, pushing the pillow to the bedroom is not the most useful immediate step for finishing the chore."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply that adds new evidence to a prior pushback; it mostly reiterates a route and task step."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The line is fairly concise and action-oriented, without extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 235,
+        "score": 0.75,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 0.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The factual claims match the state: the mug task remains pending and the bedroom desk is the mug location, while the person has not yet reached it."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It mentions only house/task elements that exist here: kitchen, bedroom, mug, desk, and a visible door."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current plan right after the person accepted it: 'Yep, heading there now.'"
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is no direct pending objection in this round to answer."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the person tried it and the engine refused: 'go through the visible door' — no door or open passage in view — turn to find one"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "Sending the person to the kitchen first is unnecessary here because they are already in the livingroom and need a valid route to the bedroom, not a detour."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is fairly concise and gives only the next action without extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 245,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: You seem to have stopped facing the wall in the living room."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It only refers to the living room, the kitchen doorway, and the bedroom, all of which are part of the task house."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the current situation: the person is in the living room and needs to resume moving toward the bedroom."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The person had been stalling/turning, and the line responds with a current navigation instruction rather than ignoring the situation."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "'Turn around' is startable now, and 'go through it' is a valid next step if the doorway is in view."
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Reorienting toward the kitchen doorway helps continue the remaining chore toward the bedroom item."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is an instruction/answer, not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "The line is not replying to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is concise and only gives the immediate navigation needed now."
+          }
+        ]
+      },
+      {
+        "tick": 255,
+        "score": 0.0,
+        "categories": {
+          "truthful": 0.0,
+          "sensible": 0.0,
+          "helpful": 0.0,
+          "listens": 1.0,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "a claim was judged false against the engine state: the doorway is in view now"
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It only mentions the doorway, kitchen, bedroom, and mug on the desk, all of which are part of the task and house."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "It gives a future route step ('Go through the visible door... then head straight across into the bedroom') while the person is still turning and the door is not yet visible."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It responds to the objection 'Not in view yet, still turning' by attempting to direct the next step, even though the timing is off."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": false,
+            "reason": "the person tried it and the engine refused: 'go through the visible door' — no door or open passage in view — turn to find one — attempt 4: doorways are the pink squares on the map; read which way the nearest one lies from you and turn towa"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Going to the bedroom for the mug is still useful for finishing the chore."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim; it is an instruction."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It adds a different detail from the pushback by mentioning the bedroom and mug, rather than merely repeating the earlier doorway instruction."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is fairly concise and directly actionable, with no extra narration."
+          }
+        ]
+      },
+      {
+        "tick": 263,
+        "score": 1.0,
+        "categories": {
+          "truthful": 1.0,
+          "sensible": 1.0,
+          "helpful": 1.0,
+          "listens": null,
+          "economy": 1.0
+        },
+        "evidence": [
+          {
+            "id": "T1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "The only state claims are that there is a doorway to the kitchen and that the mug is on the desk, both consistent with the episode context and prior state."
+          },
+          {
+            "id": "T2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "All referenced locations and objects exist in this task: kitchen, bedroom, doorway, mug, and desk."
+          },
+          {
+            "id": "S1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It addresses the live current situation of turning toward the kitchen doorway while carrying out the mug retrieval."
+          },
+          {
+            "id": "S2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "There is no pending question or objection being answered in this round."
+          },
+          {
+            "id": "H1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "the first advised action is executable now (later steps are sequenced behind it)"
+          },
+          {
+            "id": "H2",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "Turning toward the kitchen doorway is useful for reaching the mug in the bedroom and continuing the chore."
+          },
+          {
+            "id": "H3",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a mistake claim."
+          },
+          {
+            "id": "L1",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "This is not a reply to pushback."
+          },
+          {
+            "id": "L2",
+            "judgeIndex": 0,
+            "pass": null,
+            "reason": "the person has not asked for less interruption"
+          },
+          {
+            "id": "E1",
+            "judgeIndex": 0,
+            "pass": true,
+            "reason": "It is concise and action-focused, with no extra narration."
+          }
+        ]
+      }
+    ],
+    "source": "vh-streaming-engine/tmp/bench_v1/sq_v4/gemini-3.1-pro-preview/gemini-3.1-pro-preview__cx_guest_skip_stall__baseline.json",
+    "judge": "gpt-5.4-mini"
+  },
+  "metrics": {
+    "inTimeSuccess": false,
+    "budget": 236.0,
+    "referenceTicks": 98.0,
+    "detected": 2,
+    "triggered": 2,
+    "scorer": "vh-streaming-engine/tools/assist_metrics.py",
+    "scorerSha256": "03435aae73844580c3a8edeb97930d361d0f530b4eb6e9b99dbda693c7975678"
+  },
+  "frameCount": 268,
+  "playback": {
+    "duration": 399.93558333333146,
+    "segments": [
+      {
+        "tick": 0,
+        "start": 0,
+        "duration": 0.45
+      },
+      {
+        "tick": 1,
+        "start": 0.45,
+        "duration": 0.45
+      },
+      {
+        "tick": 2,
+        "start": 0.9,
+        "duration": 0.45
+      },
+      {
+        "tick": 3,
+        "start": 1.35,
+        "duration": 0.45
+      },
+      {
+        "tick": 4,
+        "start": 1.8,
+        "duration": 0.45
+      },
+      {
+        "tick": 5,
+        "start": 2.25,
+        "duration": 0.45
+      },
+      {
+        "tick": 6,
+        "start": 2.7,
+        "duration": 0.45
+      },
+      {
+        "tick": 7,
+        "start": 3.1500000000000004,
+        "duration": 0.45
+      },
+      {
+        "tick": 8,
+        "start": 3.6000000000000005,
+        "duration": 0.45
+      },
+      {
+        "tick": 9,
+        "start": 4.050000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 10,
+        "start": 4.500000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 11,
+        "start": 4.950000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 12,
+        "start": 5.400000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 13,
+        "start": 5.850000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 14,
+        "start": 6.300000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 15,
+        "start": 6.750000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 16,
+        "start": 7.200000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 17,
+        "start": 7.650000000000002,
+        "duration": 0.45
+      },
+      {
+        "tick": 18,
+        "start": 8.100000000000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 19,
+        "start": 8.55,
+        "duration": 0.45
+      },
+      {
+        "tick": 20,
+        "start": 9.0,
+        "duration": 0.45
+      },
+      {
+        "tick": 21,
+        "start": 9.45,
+        "duration": 0.45
+      },
+      {
+        "tick": 22,
+        "start": 9.899999999999999,
+        "duration": 0.45
+      },
+      {
+        "tick": 23,
+        "start": 10.349999999999998,
+        "duration": 0.45
+      },
+      {
+        "tick": 24,
+        "start": 10.799999999999997,
+        "duration": 2.620958333333334
+      },
+      {
+        "tick": 25,
+        "start": 13.420958333333331,
+        "duration": 0.45
+      },
+      {
+        "tick": 26,
+        "start": 13.87095833333333,
+        "duration": 12.321916666666667
+      },
+      {
+        "tick": 27,
+        "start": 26.192874999999997,
+        "duration": 0.45
+      },
+      {
+        "tick": 28,
+        "start": 26.642874999999997,
+        "duration": 0.45
+      },
+      {
+        "tick": 29,
+        "start": 27.092874999999996,
+        "duration": 0.45
+      },
+      {
+        "tick": 30,
+        "start": 27.542874999999995,
+        "duration": 0.45
+      },
+      {
+        "tick": 31,
+        "start": 27.992874999999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 32,
+        "start": 28.442874999999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 33,
+        "start": 28.892874999999993,
+        "duration": 0.45
+      },
+      {
+        "tick": 34,
+        "start": 29.342874999999992,
+        "duration": 6.660958333333333
+      },
+      {
+        "tick": 35,
+        "start": 36.003833333333326,
+        "duration": 0.45
+      },
+      {
+        "tick": 36,
+        "start": 36.45383333333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 37,
+        "start": 36.90383333333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 38,
+        "start": 37.353833333333334,
+        "duration": 2.100958333333331
+      },
+      {
+        "tick": 39,
+        "start": 39.454791666666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 40,
+        "start": 39.90479166666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 41,
+        "start": 40.35479166666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 42,
+        "start": 40.804791666666674,
+        "duration": 0.45
+      },
+      {
+        "tick": 43,
+        "start": 41.25479166666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 44,
+        "start": 41.70479166666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 45,
+        "start": 42.15479166666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 46,
+        "start": 42.604791666666685,
+        "duration": 9.881916666666669
+      },
+      {
+        "tick": 47,
+        "start": 52.486708333333354,
+        "duration": 0.45
+      },
+      {
+        "tick": 48,
+        "start": 52.93670833333336,
+        "duration": 0.45
+      },
+      {
+        "tick": 49,
+        "start": 53.38670833333336,
+        "duration": 0.45
+      },
+      {
+        "tick": 50,
+        "start": 53.83670833333336,
+        "duration": 0.45
+      },
+      {
+        "tick": 51,
+        "start": 54.286708333333365,
+        "duration": 0.45
+      },
+      {
+        "tick": 52,
+        "start": 54.73670833333337,
+        "duration": 0.45
+      },
+      {
+        "tick": 53,
+        "start": 55.18670833333337,
+        "duration": 0.45
+      },
+      {
+        "tick": 54,
+        "start": 55.636708333333374,
+        "duration": 8.561916666666662
+      },
+      {
+        "tick": 55,
+        "start": 64.19862500000004,
+        "duration": 0.45
+      },
+      {
+        "tick": 56,
+        "start": 64.64862500000004,
+        "duration": 0.45
+      },
+      {
+        "tick": 57,
+        "start": 65.09862500000004,
+        "duration": 0.45
+      },
+      {
+        "tick": 58,
+        "start": 65.54862500000004,
+        "duration": 0.45
+      },
+      {
+        "tick": 59,
+        "start": 65.99862500000005,
+        "duration": 0.45
+      },
+      {
+        "tick": 60,
+        "start": 66.44862500000005,
+        "duration": 0.45
+      },
+      {
+        "tick": 61,
+        "start": 66.89862500000005,
+        "duration": 0.45
+      },
+      {
+        "tick": 62,
+        "start": 67.34862500000006,
+        "duration": 12.081916666666672
+      },
+      {
+        "tick": 63,
+        "start": 79.43054166666673,
+        "duration": 0.45
+      },
+      {
+        "tick": 64,
+        "start": 79.88054166666673,
+        "duration": 0.45
+      },
+      {
+        "tick": 65,
+        "start": 80.33054166666673,
+        "duration": 0.45
+      },
+      {
+        "tick": 66,
+        "start": 80.78054166666674,
+        "duration": 1.9009583333333353
+      },
+      {
+        "tick": 67,
+        "start": 82.68150000000007,
+        "duration": 0.45
+      },
+      {
+        "tick": 68,
+        "start": 83.13150000000007,
+        "duration": 0.45
+      },
+      {
+        "tick": 69,
+        "start": 83.58150000000008,
+        "duration": 0.45
+      },
+      {
+        "tick": 70,
+        "start": 84.03150000000008,
+        "duration": 16.022875
+      },
+      {
+        "tick": 71,
+        "start": 100.05437500000008,
+        "duration": 0.45
+      },
+      {
+        "tick": 72,
+        "start": 100.50437500000008,
+        "duration": 0.45
+      },
+      {
+        "tick": 73,
+        "start": 100.95437500000008,
+        "duration": 0.45
+      },
+      {
+        "tick": 74,
+        "start": 101.40437500000009,
+        "duration": 0.45
+      },
+      {
+        "tick": 75,
+        "start": 101.85437500000009,
+        "duration": 0.45
+      },
+      {
+        "tick": 76,
+        "start": 102.30437500000009,
+        "duration": 0.45
+      },
+      {
+        "tick": 77,
+        "start": 102.7543750000001,
+        "duration": 0.45
+      },
+      {
+        "tick": 78,
+        "start": 103.2043750000001,
+        "duration": 11.28191666666666
+      },
+      {
+        "tick": 79,
+        "start": 114.48629166666676,
+        "duration": 0.45
+      },
+      {
+        "tick": 80,
+        "start": 114.93629166666676,
+        "duration": 0.45
+      },
+      {
+        "tick": 81,
+        "start": 115.38629166666676,
+        "duration": 0.45
+      },
+      {
+        "tick": 82,
+        "start": 115.83629166666677,
+        "duration": 0.45
+      },
+      {
+        "tick": 83,
+        "start": 116.28629166666677,
+        "duration": 0.45
+      },
+      {
+        "tick": 84,
+        "start": 116.73629166666677,
+        "duration": 0.45
+      },
+      {
+        "tick": 85,
+        "start": 117.18629166666678,
+        "duration": 0.45
+      },
+      {
+        "tick": 86,
+        "start": 117.63629166666678,
+        "duration": 13.182874999999996
+      },
+      {
+        "tick": 87,
+        "start": 130.81916666666677,
+        "duration": 0.45
+      },
+      {
+        "tick": 88,
+        "start": 131.26916666666676,
+        "duration": 0.45
+      },
+      {
+        "tick": 89,
+        "start": 131.71916666666675,
+        "duration": 0.45
+      },
+      {
+        "tick": 90,
+        "start": 132.16916666666674,
+        "duration": 0.45
+      },
+      {
+        "tick": 91,
+        "start": 132.61916666666673,
+        "duration": 0.45
+      },
+      {
+        "tick": 92,
+        "start": 133.06916666666672,
+        "duration": 0.45
+      },
+      {
+        "tick": 93,
+        "start": 133.5191666666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 94,
+        "start": 133.9691666666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 95,
+        "start": 134.41916666666668,
+        "duration": 0.45
+      },
+      {
+        "tick": 96,
+        "start": 134.86916666666667,
+        "duration": 0.45
+      },
+      {
+        "tick": 97,
+        "start": 135.31916666666666,
+        "duration": 0.45
+      },
+      {
+        "tick": 98,
+        "start": 135.76916666666665,
+        "duration": 10.28191666666666
+      },
+      {
+        "tick": 99,
+        "start": 146.0510833333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 100,
+        "start": 146.5010833333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 101,
+        "start": 146.9510833333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 102,
+        "start": 147.40108333333328,
+        "duration": 0.45
+      },
+      {
+        "tick": 103,
+        "start": 147.85108333333326,
+        "duration": 0.45
+      },
+      {
+        "tick": 104,
+        "start": 148.30108333333325,
+        "duration": 0.45
+      },
+      {
+        "tick": 105,
+        "start": 148.75108333333324,
+        "duration": 0.45
+      },
+      {
+        "tick": 106,
+        "start": 149.20108333333323,
+        "duration": 0.45
+      },
+      {
+        "tick": 107,
+        "start": 149.65108333333322,
+        "duration": 0.45
+      },
+      {
+        "tick": 108,
+        "start": 150.1010833333332,
+        "duration": 14.361916666666673
+      },
+      {
+        "tick": 109,
+        "start": 164.46299999999988,
+        "duration": 0.45
+      },
+      {
+        "tick": 110,
+        "start": 164.91299999999987,
+        "duration": 0.45
+      },
+      {
+        "tick": 111,
+        "start": 165.36299999999986,
+        "duration": 0.45
+      },
+      {
+        "tick": 112,
+        "start": 165.81299999999985,
+        "duration": 0.45
+      },
+      {
+        "tick": 113,
+        "start": 166.26299999999983,
+        "duration": 0.45
+      },
+      {
+        "tick": 114,
+        "start": 166.71299999999982,
+        "duration": 0.45
+      },
+      {
+        "tick": 115,
+        "start": 167.1629999999998,
+        "duration": 0.45
+      },
+      {
+        "tick": 116,
+        "start": 167.6129999999998,
+        "duration": 8.26095833333332
+      },
+      {
+        "tick": 117,
+        "start": 175.87395833333312,
+        "duration": 0.45
+      },
+      {
+        "tick": 118,
+        "start": 176.3239583333331,
+        "duration": 0.45
+      },
+      {
+        "tick": 119,
+        "start": 176.7739583333331,
+        "duration": 0.45
+      },
+      {
+        "tick": 120,
+        "start": 177.2239583333331,
+        "duration": 0.45
+      },
+      {
+        "tick": 121,
+        "start": 177.67395833333308,
+        "duration": 0.45
+      },
+      {
+        "tick": 122,
+        "start": 178.12395833333306,
+        "duration": 3.5009583333333296
+      },
+      {
+        "tick": 123,
+        "start": 181.6249166666664,
+        "duration": 0.45
+      },
+      {
+        "tick": 124,
+        "start": 182.07491666666638,
+        "duration": 12.961916666666667
+      },
+      {
+        "tick": 125,
+        "start": 195.03683333333305,
+        "duration": 0.45
+      },
+      {
+        "tick": 126,
+        "start": 195.48683333333304,
+        "duration": 0.45
+      },
+      {
+        "tick": 127,
+        "start": 195.93683333333303,
+        "duration": 0.45
+      },
+      {
+        "tick": 128,
+        "start": 196.38683333333302,
+        "duration": 0.45
+      },
+      {
+        "tick": 129,
+        "start": 196.836833333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 130,
+        "start": 197.286833333333,
+        "duration": 0.45
+      },
+      {
+        "tick": 131,
+        "start": 197.73683333333298,
+        "duration": 0.45
+      },
+      {
+        "tick": 132,
+        "start": 198.18683333333297,
+        "duration": 0.45
+      },
+      {
+        "tick": 133,
+        "start": 198.63683333333296,
+        "duration": 0.45
+      },
+      {
+        "tick": 134,
+        "start": 199.08683333333295,
+        "duration": 9.721916666666687
+      },
+      {
+        "tick": 135,
+        "start": 208.80874999999963,
+        "duration": 0.45
+      },
+      {
+        "tick": 136,
+        "start": 209.25874999999962,
+        "duration": 0.45
+      },
+      {
+        "tick": 137,
+        "start": 209.7087499999996,
+        "duration": 0.45
+      },
+      {
+        "tick": 138,
+        "start": 210.1587499999996,
+        "duration": 0.45
+      },
+      {
+        "tick": 139,
+        "start": 210.6087499999996,
+        "duration": 0.45
+      },
+      {
+        "tick": 140,
+        "start": 211.05874999999958,
+        "duration": 0.45
+      },
+      {
+        "tick": 141,
+        "start": 211.50874999999957,
+        "duration": 0.45
+      },
+      {
+        "tick": 142,
+        "start": 211.95874999999955,
+        "duration": 0.45
+      },
+      {
+        "tick": 143,
+        "start": 212.40874999999954,
+        "duration": 0.45
+      },
+      {
+        "tick": 144,
+        "start": 212.85874999999953,
+        "duration": 11.601916666666654
+      },
+      {
+        "tick": 145,
+        "start": 224.46066666666619,
+        "duration": 0.45
+      },
+      {
+        "tick": 146,
+        "start": 224.91066666666617,
+        "duration": 0.45
+      },
+      {
+        "tick": 147,
+        "start": 225.36066666666616,
+        "duration": 0.45
+      },
+      {
+        "tick": 148,
+        "start": 225.81066666666615,
+        "duration": 0.45
+      },
+      {
+        "tick": 149,
+        "start": 226.26066666666614,
+        "duration": 0.45
+      },
+      {
+        "tick": 150,
+        "start": 226.71066666666613,
+        "duration": 0.45
+      },
+      {
+        "tick": 151,
+        "start": 227.16066666666612,
+        "duration": 0.45
+      },
+      {
+        "tick": 152,
+        "start": 227.6106666666661,
+        "duration": 0.45
+      },
+      {
+        "tick": 153,
+        "start": 228.0606666666661,
+        "duration": 0.45
+      },
+      {
+        "tick": 154,
+        "start": 228.51066666666608,
+        "duration": 8.100958333333324
+      },
+      {
+        "tick": 155,
+        "start": 236.6116249999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 156,
+        "start": 237.0616249999994,
+        "duration": 0.45
+      },
+      {
+        "tick": 157,
+        "start": 237.51162499999938,
+        "duration": 0.45
+      },
+      {
+        "tick": 158,
+        "start": 237.96162499999937,
+        "duration": 0.45
+      },
+      {
+        "tick": 159,
+        "start": 238.41162499999936,
+        "duration": 0.45
+      },
+      {
+        "tick": 160,
+        "start": 238.86162499999935,
+        "duration": 0.45
+      },
+      {
+        "tick": 161,
+        "start": 239.31162499999934,
+        "duration": 0.45
+      },
+      {
+        "tick": 162,
+        "start": 239.76162499999933,
+        "duration": 0.45
+      },
+      {
+        "tick": 163,
+        "start": 240.21162499999932,
+        "duration": 0.45
+      },
+      {
+        "tick": 164,
+        "start": 240.6616249999993,
+        "duration": 0.45
+      },
+      {
+        "tick": 165,
+        "start": 241.1116249999993,
+        "duration": 0.45
+      },
+      {
+        "tick": 166,
+        "start": 241.56162499999928,
+        "duration": 0.45
+      },
+      {
+        "tick": 167,
+        "start": 242.01162499999927,
+        "duration": 0.45
+      },
+      {
+        "tick": 168,
+        "start": 242.46162499999926,
+        "duration": 13.26287499999998
+      },
+      {
+        "tick": 169,
+        "start": 255.72449999999924,
+        "duration": 0.45
+      },
+      {
+        "tick": 170,
+        "start": 256.1744999999992,
+        "duration": 0.45
+      },
+      {
+        "tick": 171,
+        "start": 256.6244999999992,
+        "duration": 0.45
+      },
+      {
+        "tick": 172,
+        "start": 257.0744999999992,
+        "duration": 3.3809583333333535
+      },
+      {
+        "tick": 173,
+        "start": 260.45545833333256,
+        "duration": 0.45
+      },
+      {
+        "tick": 174,
+        "start": 260.90545833333255,
+        "duration": 0.45
+      },
+      {
+        "tick": 175,
+        "start": 261.35545833333254,
+        "duration": 0.45
+      },
+      {
+        "tick": 176,
+        "start": 261.8054583333325,
+        "duration": 0.45
+      },
+      {
+        "tick": 177,
+        "start": 262.2554583333325,
+        "duration": 0.45
+      },
+      {
+        "tick": 178,
+        "start": 262.7054583333325,
+        "duration": 8.201916666666648
+      },
+      {
+        "tick": 179,
+        "start": 270.90737499999915,
+        "duration": 0.45
+      },
+      {
+        "tick": 180,
+        "start": 271.35737499999914,
+        "duration": 0.45
+      },
+      {
+        "tick": 181,
+        "start": 271.8073749999991,
+        "duration": 0.45
+      },
+      {
+        "tick": 182,
+        "start": 272.2573749999991,
+        "duration": 0.45
+      },
+      {
+        "tick": 183,
+        "start": 272.7073749999991,
+        "duration": 0.45
+      },
+      {
+        "tick": 184,
+        "start": 273.1573749999991,
+        "duration": 0.45
+      },
+      {
+        "tick": 185,
+        "start": 273.6073749999991,
+        "duration": 0.45
+      },
+      {
+        "tick": 186,
+        "start": 274.05737499999907,
+        "duration": 8.521916666666641
+      },
+      {
+        "tick": 187,
+        "start": 282.5792916666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 188,
+        "start": 283.0292916666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 189,
+        "start": 283.4792916666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 190,
+        "start": 283.9292916666657,
+        "duration": 0.45
+      },
+      {
+        "tick": 191,
+        "start": 284.37929166666567,
+        "duration": 0.45
+      },
+      {
+        "tick": 192,
+        "start": 284.82929166666565,
+        "duration": 0.45
+      },
+      {
+        "tick": 193,
+        "start": 285.27929166666564,
+        "duration": 0.45
+      },
+      {
+        "tick": 194,
+        "start": 285.72929166666563,
+        "duration": 0.45
+      },
+      {
+        "tick": 195,
+        "start": 286.1792916666656,
+        "duration": 0.45
+      },
+      {
+        "tick": 196,
+        "start": 286.6292916666656,
+        "duration": 7.281916666666689
+      },
+      {
+        "tick": 197,
+        "start": 293.9112083333323,
+        "duration": 0.45
+      },
+      {
+        "tick": 198,
+        "start": 294.3612083333323,
+        "duration": 0.45
+      },
+      {
+        "tick": 199,
+        "start": 294.8112083333323,
+        "duration": 0.45
+      },
+      {
+        "tick": 200,
+        "start": 295.26120833333226,
+        "duration": 0.45
+      },
+      {
+        "tick": 201,
+        "start": 295.71120833333225,
+        "duration": 0.45
+      },
+      {
+        "tick": 202,
+        "start": 296.16120833333224,
+        "duration": 0.45
+      },
+      {
+        "tick": 203,
+        "start": 296.61120833333223,
+        "duration": 0.45
+      },
+      {
+        "tick": 204,
+        "start": 297.0612083333322,
+        "duration": 0.45
+      },
+      {
+        "tick": 205,
+        "start": 297.5112083333322,
+        "duration": 0.45
+      },
+      {
+        "tick": 206,
+        "start": 297.9612083333322,
+        "duration": 9.641916666666646
+      },
+      {
+        "tick": 207,
+        "start": 307.60312499999884,
+        "duration": 0.45
+      },
+      {
+        "tick": 208,
+        "start": 308.05312499999883,
+        "duration": 0.45
+      },
+      {
+        "tick": 209,
+        "start": 308.5031249999988,
+        "duration": 0.45
+      },
+      {
+        "tick": 210,
+        "start": 308.9531249999988,
+        "duration": 0.45
+      },
+      {
+        "tick": 211,
+        "start": 309.4031249999988,
+        "duration": 0.45
+      },
+      {
+        "tick": 212,
+        "start": 309.8531249999988,
+        "duration": 0.45
+      },
+      {
+        "tick": 213,
+        "start": 310.3031249999988,
+        "duration": 0.45
+      },
+      {
+        "tick": 214,
+        "start": 310.75312499999876,
+        "duration": 6.161916666666684
+      },
+      {
+        "tick": 215,
+        "start": 316.91504166666545,
+        "duration": 0.45
+      },
+      {
+        "tick": 216,
+        "start": 317.36504166666543,
+        "duration": 0.45
+      },
+      {
+        "tick": 217,
+        "start": 317.8150416666654,
+        "duration": 0.45
+      },
+      {
+        "tick": 218,
+        "start": 318.2650416666654,
+        "duration": 0.45
+      },
+      {
+        "tick": 219,
+        "start": 318.7150416666654,
+        "duration": 0.45
+      },
+      {
+        "tick": 220,
+        "start": 319.1650416666654,
+        "duration": 0.45
+      },
+      {
+        "tick": 221,
+        "start": 319.6150416666654,
+        "duration": 0.45
+      },
+      {
+        "tick": 222,
+        "start": 320.06504166666537,
+        "duration": 0.45
+      },
+      {
+        "tick": 223,
+        "start": 320.51504166666535,
+        "duration": 0.45
+      },
+      {
+        "tick": 224,
+        "start": 320.96504166666534,
+        "duration": 0.45
+      },
+      {
+        "tick": 225,
+        "start": 321.41504166666533,
+        "duration": 8.321916666666652
+      },
+      {
+        "tick": 226,
+        "start": 329.736958333332,
+        "duration": 0.45
+      },
+      {
+        "tick": 227,
+        "start": 330.186958333332,
+        "duration": 0.45
+      },
+      {
+        "tick": 228,
+        "start": 330.63695833333196,
+        "duration": 0.45
+      },
+      {
+        "tick": 229,
+        "start": 331.08695833333195,
+        "duration": 0.45
+      },
+      {
+        "tick": 230,
+        "start": 331.53695833333194,
+        "duration": 0.45
+      },
+      {
+        "tick": 231,
+        "start": 331.9869583333319,
+        "duration": 0.45
+      },
+      {
+        "tick": 232,
+        "start": 332.4369583333319,
+        "duration": 0.45
+      },
+      {
+        "tick": 233,
+        "start": 332.8869583333319,
+        "duration": 0.45
+      },
+      {
+        "tick": 234,
+        "start": 333.3369583333319,
+        "duration": 0.45
+      },
+      {
+        "tick": 235,
+        "start": 333.7869583333319,
+        "duration": 11.72191666666663
+      },
+      {
+        "tick": 236,
+        "start": 345.5088749999985,
+        "duration": 0.45
+      },
+      {
+        "tick": 237,
+        "start": 345.9588749999985,
+        "duration": 0.45
+      },
+      {
+        "tick": 238,
+        "start": 346.4088749999985,
+        "duration": 0.45
+      },
+      {
+        "tick": 239,
+        "start": 346.8588749999985,
+        "duration": 0.45
+      },
+      {
+        "tick": 240,
+        "start": 347.30887499999847,
+        "duration": 0.45
+      },
+      {
+        "tick": 241,
+        "start": 347.75887499999845,
+        "duration": 0.45
+      },
+      {
+        "tick": 242,
+        "start": 348.20887499999844,
+        "duration": 0.45
+      },
+      {
+        "tick": 243,
+        "start": 348.65887499999843,
+        "duration": 0.45
+      },
+      {
+        "tick": 244,
+        "start": 349.1088749999984,
+        "duration": 0.45
+      },
+      {
+        "tick": 245,
+        "start": 349.5588749999984,
+        "duration": 10.561916666666662
+      },
+      {
+        "tick": 246,
+        "start": 360.12079166666507,
+        "duration": 0.45
+      },
+      {
+        "tick": 247,
+        "start": 360.57079166666506,
+        "duration": 0.45
+      },
+      {
+        "tick": 248,
+        "start": 361.02079166666505,
+        "duration": 0.45
+      },
+      {
+        "tick": 249,
+        "start": 361.47079166666504,
+        "duration": 0.45
+      },
+      {
+        "tick": 250,
+        "start": 361.920791666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 251,
+        "start": 362.370791666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 252,
+        "start": 362.820791666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 253,
+        "start": 363.270791666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 254,
+        "start": 363.720791666665,
+        "duration": 0.45
+      },
+      {
+        "tick": 255,
+        "start": 364.17079166666497,
+        "duration": 12.441916666666657
+      },
+      {
+        "tick": 256,
+        "start": 376.6127083333316,
+        "duration": 0.45
+      },
+      {
+        "tick": 257,
+        "start": 377.0627083333316,
+        "duration": 0.45
+      },
+      {
+        "tick": 258,
+        "start": 377.5127083333316,
+        "duration": 0.45
+      },
+      {
+        "tick": 259,
+        "start": 377.9627083333316,
+        "duration": 0.45
+      },
+      {
+        "tick": 260,
+        "start": 378.4127083333316,
+        "duration": 0.45
+      },
+      {
+        "tick": 261,
+        "start": 378.86270833333157,
+        "duration": 2.9809583333333194
+      },
+      {
+        "tick": 262,
+        "start": 381.8436666666649,
+        "duration": 0.45
+      },
+      {
+        "tick": 263,
+        "start": 382.2936666666649,
+        "duration": 11.841916666666634
+      },
+      {
+        "tick": 264,
+        "start": 394.1355833333315,
+        "duration": 0.45
+      },
+      {
+        "tick": 265,
+        "start": 394.5855833333315,
+        "duration": 0.45
+      },
+      {
+        "tick": 266,
+        "start": 395.0355833333315,
+        "duration": 0.45
+      },
+      {
+        "tick": 267,
+        "start": 395.4855833333315,
+        "duration": 0.45
+      },
+      {
+        "tick": 268,
+        "start": 395.93558333333146,
+        "duration": 4
+      }
+    ]
+  }
+}

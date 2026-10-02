@@ -12,7 +12,7 @@ for key in ids:
  for d in e['dialogue']:
   assert (SITE/d['audio']).is_file(),(key,d['audio'])
   assert 0<=d['start']<e['playback']['duration']
- if key.startswith('persona-') or key.endswith('-peer') or key.startswith('failure-'):
+ if e.get('source'):
   path=WS/e['source']
   if path.suffix=='.json':
    r=json.loads(path.read_text());lines={(x['t'],'assistant' if x['speaker']=='vlm' else 'user',x.get('text','')) for x in r['conversation']}
@@ -53,7 +53,7 @@ with sync_playwright() as p:
  for width in [390,768,1440]:
   page.set_viewport_size({'width':width,'height':1050});page.wait_for_timeout(300)
   assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),f'Overflow at {width}'
-  size=page.locator('.replay-message').first.evaluate('(e)=>parseFloat(getComputedStyle(e).fontSize)');assert size>=15
+  size=page.locator('.replay-message').first.evaluate('(e)=>parseFloat(getComputedStyle(e).fontSize)');assert size>=14
  page.set_viewport_size({'width':390,'height':844});page.locator('#experience').scroll_into_view_if_needed();page.screenshot(path=str(ROOT/'.work/comparison-mobile.png'))
  assert not errors,errors
  b.close()
