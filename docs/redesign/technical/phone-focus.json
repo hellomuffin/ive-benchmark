@@ -1,0 +1,116 @@
+[
+  {
+    "start": 0,
+    "end": 2.85,
+    "y": 470,
+    "action": "swipe up"
+  },
+  {
+    "start": 2.85,
+    "end": 4.7,
+    "y": 470,
+    "action": "swipe up"
+  },
+  {
+    "start": 4.7,
+    "end": 6.550000000000001,
+    "y": 470,
+    "action": "swipe up"
+  },
+  {
+    "start": 6.550000000000001,
+    "end": 8.3,
+    "y": 470,
+    "action": "tap Apps"
+  },
+  {
+    "start": 8.3,
+    "end": 10.15,
+    "y": 470,
+    "action": "swipe up"
+  },
+  {
+    "start": 10.15,
+    "end": 12.0,
+    "y": 470,
+    "action": "swipe up"
+  },
+  {
+    "start": 12.0,
+    "end": 13.75,
+    "y": 470,
+    "action": "tap TripSnap"
+  },
+  {
+    "start": 13.75,
+    "end": 15.5,
+    "y": 194,
+    "action": "tap Location"
+  },
+  {
+    "start": 15.5,
+    "end": 17.1,
+    "y": 178,
+    "action": "tap Ask Next Time Or When I Share"
+  },
+  {
+    "start": 17.1,
+    "end": 18.650000000000002,
+    "y": 130,
+    "action": "tap Never"
+  },
+  {
+    "start": 18.650000000000002,
+    "end": 20.400000000000002,
+    "y": 0,
+    "action": "press back"
+  },
+  {
+    "start": 20.400000000000002,
+    "end": 21.950000000000003,
+    "y": 386,
+    "action": "tap Background App Refresh"
+  },
+  {
+    "start": 21.950000000000003,
+    "end": 23.700000000000003,
+    "y": 0,
+    "action": "press back"
+  },
+  {
+    "start": 23.700000000000003,
+    "end": 25.450000000000003,
+    "y": 0,
+    "action": "press back"
+  },
+  {
+    "start": 25.450000000000003,
+    "end": 27.200000000000003,
+    "y": 470,
+    "action": "tap Privacy & Security"
+  },
+  {
+    "start": 27.200000000000003,
+    "end": 28.950000000000003,
+    "y": 193,
+    "action": "tap Tracking"
+  },
+  {
+    "start": 28.950000000000003,
+    "end": 30.500000000000004,
+    "y": 130,
+    "action": "tap Allow Apps to Request to Track"
+  },
+  {
+    "start": 30.500000000000004,
+    "end": 32.050000000000004,
+    "y": 130,
+    "action": "tap Allow Apps to Request to Track"
+  },
+  {
+    "start": 32.050000000000004,
+    "end": 36.6,
+    "y": 363,
+    "action": "tap TripSnap"
+  }
+]

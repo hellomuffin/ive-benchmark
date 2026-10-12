@@ -10,6 +10,7 @@
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="leaderboard/leaderboard.css">
+  <link rel="stylesheet" href="technical/technical.css">
 </head>
 <body>
   <a class="skip-link" href="#abstract">Skip to abstract</a>
@@ -20,6 +21,7 @@
         <a href="#abstract">Abstract</a>
         <a href="#evaluation">Demonstrations</a>
         <a href="#leaderboard-section">Leaderboard</a>
+        <a href="#environment-simulation">Framework</a>
       </div>
     </nav>
   </header>
@@ -46,10 +48,75 @@
       <h2 id="leaderboard-title">IVG-Bench Leaderboard</h2>
       <div id="leaderboard"></div>
     </section>
+    <section id="environment-simulation" class="technical-section" aria-labelledby="environment-title">
+      <h2 id="environment-title">Environment Simulation</h2>
+      <p class="section-intro">Executable everyday tasks, with visual observations and human-aligned actions.</p>
+      <div class="task-gallery" aria-label="Example task completion videos">
+        <div class="gallery-toolbar">
+          <div class="engine-tabs" role="group" aria-label="Choose an environment">
+            <button type="button" data-engine="cook" aria-pressed="true">CookSim<span>Cooking</span></button>
+            <button type="button" data-engine="vh" aria-pressed="false">VHSim<span>Household activities</span></button>
+            <button type="button" data-engine="screen" aria-pressed="false">ScreenSim<span>Mobile interfaces</span></button>
+          </div>
+        </div>
+        <div class="task-stage">
+          <div class="task-film"><video id="task-video" controls muted playsinline preload="none" aria-label="Task completion video"></video><div class="phone-focus"><span>Gesture detail</span><canvas id="phone-focus" width="492" height="470" aria-label="Synchronized close-up of the active phone gesture"></canvas></div></div>
+          <div class="task-information" aria-live="polite">
+            <span class="eyebrow">Example task</span>
+            <h3 id="task-name"></h3>
+            <p id="task-description"></p>
+            <ol id="task-goals"></ol>
+            <div class="task-navigation"><span id="task-counter"></span><div><button type="button" id="task-prev" aria-label="Previous task">←</button><button type="button" id="task-next" aria-label="Next task">→</button></div></div>
+          </div>
+        </div>
+        <div class="task-thumbnails" id="task-thumbnails" aria-label="Select a task"></div>
+      </div>
+
+      <div class="subsection-heading"><h3>Human-Aligned Action Space</h3><p>Actions expressed at the level people use to communicate.</p></div>
+      <div class="action-examples" id="action-examples"></div>
+      <div class="grounding-flow" aria-label="Action grounding and execution">
+        <div><span class="flow-number">1</span><p><strong>Ground references</strong><span>“The pan on your left” → an object identifier</span></p></div>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <div><span class="flow-number">2</span><p><strong>Execute actions</strong><span>Semantic action → low-level controls</span></p></div>
+      </div>
+    </section>
+
+    <section id="user-simulation" class="technical-section" aria-labelledby="user-simulation-title">
+      <h2 id="user-simulation-title">User Simulation</h2>
+      <p class="section-intro user-intro">A VLM agent plans and acts independently, responding to assistant guidance according to its persona. The harness introduces scheduled events during task execution.</p>
+      <div class="subsection-heading"><h3>Scheduled Out-of-Plan Events</h3><p>Events are triggered by conditions on task progress.</p></div>
+      <div class="event-examples" id="event-examples"></div>
+      <div class="event-schedule" aria-label="Example CookSim schedule: incorrect preparation during tomato preparation, a question about the held object after picking up a plate, and a question about assembly order after adding tomato.">
+        <span class="eyebrow">Example schedule · CookSim</span>
+        <div class="schedule-grid">
+          <div class="scheduled-event error"><span>Execution error</span><strong>Prepare the wrong ingredient</strong></div>
+          <div class="scheduled-event question"><span>Question</span><strong>“What am I holding?”</strong></div>
+          <div class="scheduled-event question"><span>Question</span><strong>“What’s on my plate, in order?”</strong></div>
+          <div class="schedule-step">Prepare tomato</div><div class="schedule-step">Pick up a plate</div><div class="schedule-step">Add tomato</div><div class="schedule-step">Add cheese</div><div class="schedule-step">Serve</div>
+        </div>
+        <span class="schedule-direction">Task progress →</span>
+      </div>
+      <div class="event-mechanism">
+        <div class="mechanism-label">Execution-error control</div>
+        <ol><li><strong>Trigger</strong><span>The task reaches a specified state.</span></li><li><strong>Enact</strong><span>The harness controls actions; the user adapts its dialogue.</span></li><li><strong>Release</strong><span>The user accepts corrective guidance or the event ends.</span></li></ol>
+      </div>
+
+      <div class="subsection-heading persona-heading"><h3>User Personas</h3><p>Four attributes shape how users perform tasks and respond to guidance.</p></div>
+      <div class="persona-explorer">
+        <div class="persona-controls" id="persona-controls" aria-label="Explore persona instructions"></div>
+        <div class="persona-instruction" aria-live="polite">
+          <span class="eyebrow">CookSim persona prompt · excerpt</span>
+          <h4 id="persona-instruction-title"></h4>
+          <blockquote id="persona-instruction-text"></blockquote>
+          <span class="persona-footnote">Select an attribute level to read its instruction.</span>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer><p>Visual style inspired by <a href="https://osworld-v2.xlang.ai/" target="_blank" rel="noopener noreferrer">OSWorld 2.0</a>.</p></footer>
   <script type="module" src="leaderboard/leaderboard.js"></script>
+  <script type="module" src="technical/technical.js"></script>
   <script>addEventListener('message',e=>{if(e.origin===location.origin&&e.source===document.getElementById('episode-demo').contentWindow&&e.data?.type==='ivg-demo-height'){document.getElementById('episode-demo').style.height=Math.min(1400,Math.max(500,e.data.height))+'px'}})</script>
 </body>
 </html>

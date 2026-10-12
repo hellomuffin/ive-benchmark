@@ -1,0 +1,27 @@
+{
+  "reference_deck": "https://docs.google.com/presentation/d/1eJN6FF95TLN6_h-VJoeOM7KnGlnWcs98fKaSeX1QyzM/edit",
+  "media": {
+    "task-cook": "cooksim-slides/videos/gt_cheeseburger_completion.mp4",
+    "task-aftermeal": "vh-bench-pages/new-tasks/video/aftermeal_hard.mp4",
+    "task-guest": "vh-bench-pages/new-tasks/video/guest_hard.mp4",
+    "task-bedroom": "vh-bench-pages/new-tasks/video/tidybedroom_hard.mp4",
+    "task-phone": "slides_review_oct08/screensim-task-completion.mp4",
+    "action-pan": "cooksim-slides/talk/act_goto_grounded.gif",
+    "action-rice": "slides_review_oct08/rice-retrieval.gif",
+    "action-fridge": "cooksim-slides/talk/vh_act_go_to_fridge_v2.gif",
+    "action-book": "cooksim-slides/talk/vh_act_put_book_on_coffeetable_v3.gif",
+    "event-extra": "cooksim-slides/talk/eg_add_foreign.gif",
+    "event-raw": "cooksim-slides/talk/eg_serve_raw.gif",
+    "event-unattended": "cooksim-slides/talk/eg_leave_unattended.gif",
+    "event-plan": "cooksim-slides/talk/dv_g3_planchange_aplus.gif",
+    "event-question": "cooksim-slides/talk/dv_g3_question_aplus.gif"
+  },
+  "persona_source": "cook-bench-engine/cooksim/interact/persona_v2.py",
+  "persona_axes": [
+    "skill",
+    "trust",
+    "speed",
+    "interruption"
+  ],
+  "note": "Completion videos and event/action demonstrations are distinct. CookSim task is a reference rollout at 3x; event demonstrations are scripted, not assistant benchmark outcomes. Four persona axes follow the current paper."
+}
