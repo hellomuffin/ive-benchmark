@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive Visual Gym: Evaluating visual assistants with simulated human users in interactive worlds.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#ffffff">
+  <title>Interactive Visual Gym</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#abstract">Skip to abstract</a>
+  <header class="site-header">
+    <nav aria-label="Page navigation">
+      <a class="wordmark" href="#top">Interactive Visual Gym</a>
+      <div class="nav-links">
+        <a href="#abstract">Abstract</a>
+        <a href="https://docs.google.com/presentation/d/1eJN6FF95TLN6_h-VJoeOM7KnGlnWcs98fKaSeX1QyzM/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Slides <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="publication-header" aria-labelledby="paper-title">
+      <h1 id="paper-title"><span class="title-name">Interactive Visual Gym:</span> <span class="title-description">Evaluating visual assistants with simulated human users in interactive worlds</span></h1>
+      <div class="publication-links">
+        <a class="resource-link" href="https://docs.google.com/presentation/d/1eJN6FF95TLN6_h-VJoeOM7KnGlnWcs98fKaSeX1QyzM/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="13" rx="1.5"/><path d="M12 16v5m-4 0h8M7 8h10M7 11h6"/></svg>
+          <span>Slides</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="abstract" class="abstract-section" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p class="abstract-copy">Visual assistants that support users during ongoing physical tasks require evaluation in closed loop, where assistant responses can change subsequent user behavior and task outcomes. Existing benchmarks largely rely on offline replay and therefore cannot capture these effects. We introduce <strong>Interactive Visual Gym</strong>, a framework for closed-loop evaluation and training of visual assistants through joint simulation of executable task environments and human users. We contribute three simulators that recreate everyday tasks and human-aligned action spaces across cooking, household manipulation, and mobile-interface domains, together with a persona-conditioned user simulation harness that collaborates with the assistant while incorporating controlled execution errors and other out-of-plan behaviors. We instantiate the framework as the <strong>IVG-Bench</strong> benchmark with 315 interaction episodes. Evaluating state-of-the-art VLMs as visual assistants reveals substantial limitations: the best-performing model, GPT6-Astra, completes only 44.2% of tasks within the time limit, exhibits significant weaknesses in factual grounding and actionable guidance, and is often too slow to prevent errors in time. We further show that the environments provide useful learning signals: in a proof-of-concept GRPO experiment, closed-loop training improves both task success and interaction behavior.</p>
+    </section>
+  </main>
+
+  <footer><p>Visual style inspired by <a href="https://osworld-v2.xlang.ai/" target="_blank" rel="noopener noreferrer">OSWorld 2.0</a>.</p></footer>
+</body>
+</html>

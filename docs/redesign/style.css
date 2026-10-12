@@ -1,0 +1,53 @@
+:root {
+  color-scheme: light;
+  --font-serif: "TeX Gyre Pagella", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --ink: #363636;
+  --body: #4a4a4a;
+  --link: #2879af;
+  --line: #e9e9e9;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 28px; background: #fff; }
+body { margin: 0; background: #fff; color: var(--body); font-family: var(--font-serif); -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 6px; }
+.skip-link { position: absolute; top: -100px; left: 20px; background: white; padding: 10px; z-index: 10; }
+.skip-link:focus { top: 10px; }
+.site-header { border-bottom: 1px solid var(--line); }
+nav { max-width: 1120px; min-height: 64px; margin: auto; padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.wordmark { color: var(--ink); font-size: 17px; font-weight: 600; }
+.nav-links { display: flex; align-items: center; gap: 26px; font-size: 16px; }
+.nav-links a { color: #5c5c5c; }
+.nav-links span { margin-left: 3px; font-size: 14px; }
+.publication-header { max-width: 1120px; margin: 0 auto; padding: 54px 36px 38px; text-align: center; }
+h1 { max-width: 980px; margin: 0 auto; color: var(--ink); font-size: clamp(32px, 4vw, 48px); font-weight: 600; line-height: 1.13; letter-spacing: -.026em; text-wrap: balance; }
+.title-name { display: block; margin-bottom: 8px; }
+.title-description { display: block; font-size: 40px; line-height: 1.16; }
+.publication-links { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 28px; }
+.resource-link { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #363636; border-radius: 24px; background: #363636; color: #fff; padding: 9px 20px; font-size: 17px; line-height: 1.2; transition: background .15s; }
+.resource-link:hover { background: #505050; text-decoration: none; }
+.resource-link svg { width: 18px; height: 18px; }
+.abstract-section { max-width: 1024px; padding: 18px 36px 58px; margin: 0 auto; }
+h2 { margin: 0 0 24px; color: var(--ink); text-align: center; font-size: 32px; line-height: 1.2; font-weight: 600; letter-spacing: -.01em; }
+.abstract-copy { margin: 0; font-size: 18px; line-height: 1.7; text-align: justify; text-wrap: pretty; }
+strong { font-weight: 700; }
+footer { max-width: 952px; border-top: 1px solid var(--line); margin: 0 auto; padding: 19px 0 32px; text-align: center; font-size: 13px; color: #858585; }
+footer p { margin: 0; }
+footer a { color: #737373; }
+@media (max-width: 680px) {
+  nav { min-height: 58px; padding: 12px 22px; gap: 12px; }
+  .wordmark { font-size: 15px; }
+  .nav-links { gap: 14px; font-size: 14px; }
+  .publication-header { padding: 46px 22px 34px; }
+  h1 { font-size: clamp(30px, 6.4vw, 39px); line-height: 1.18; }
+  .title-name { margin-bottom: 10px; }
+  .title-description { font-size: clamp(27px, 5.5vw, 34px); line-height: 1.2; }
+  .publication-links { margin-top: 24px; }
+  .abstract-section { padding: 16px 24px 42px; }
+  h2 { font-size: 28px; margin-bottom: 20px; }
+  .abstract-copy { font-size: 17px; line-height: 1.7; text-align: left; }
+  footer { margin: 0 24px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
