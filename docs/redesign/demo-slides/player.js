@@ -8,10 +8,10 @@ const iconPaths=[
  '<ellipse cx="16" cy="19" rx="14" ry="8" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="16" cy="19" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 6H22L25 13H7Z" fill="currentColor"/>',
  '<path d="M3 23H29M5 20C5 7 27 7 27 20ZM16 8V5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="4" r="2" fill="currentColor"/>'
 ];
-const labels=['Cook rice','Cook steak','Chop tomato','Chop lettuce','Assemble','Serve'];
-$('#milestones').innerHTML=labels.map((l,i)=>`<div class="milestone ${i===0?'active':''}"><div class="food"><svg viewBox="0 0 32 32" aria-hidden="true">${iconPaths[i]}</svg></div><span>${l}</span>${i===0?'<div class="step-fill"><i></i></div>':''}</div>`).join('');
+const labels=['Start rice','Rice cooked','Steak cooked','Tomato chopped','Lettuce chopped','Assemble','Serve'];
+const events=['<div class="event request"><span class="event-dot">?</span><span>Notify when<br>rice is ready</span></div>','<div class="event omission"><span class="event-dot">!</span><span>Skip tortilla</span></div>'];
+$('#milestones').innerHTML=labels.map((l,i)=>`<div class="milestone ${i===0?'done started-step':i===1?'active rice-step':''}"><div class="food"><svg viewBox="0 0 32 32" aria-hidden="true">${iconPaths[Math.max(0,i-1)]}</svg></div><span>${l}</span>${events[i]??''}</div>`).join('');
 document.querySelectorAll('[data-layout]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-layout]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('#composition').className=b.dataset.layout;history.replaceState(null,'','#'+b.dataset.layout);render()}));
-if(location.hash==='#cinema')document.querySelector('[data-layout="cinema"]').click();
 let started=false, lastTick=-1, previous={assistant:'',user:''}, currentCues={assistant:null,user:null};
 const playIcon='<svg viewBox="0 0 24 24"><path d="M8 4L20 12L8 20Z"/></svg>',pauseIcon='<svg viewBox="0 0 24 24"><path d="M6 4H10V20H6ZM14 4H18V20H14Z"/></svg>';
 async function toggle(){if(video.paused){if(video.ended)video.currentTime=0;try{await video.play();started=true;$('.film').classList.add('started')}catch(e){$('#play').setAttribute('aria-label','Retry playback')}}else video.pause()}
@@ -24,7 +24,7 @@ function speech(speaker,t){
  const d=EPISODE.dialogue.filter(d=>d.speaker===speaker&&d.start<=t).at(-1);
  const fallback=speaker==='user'?'Give me a shout the moment the rice is done, would you?':'';
  const text=d?.text??fallback,node=$('#'+speaker+'-line'),block=$('.'+speaker+'-speech');
- block.classList.toggle('empty',!text);
+ node.classList.toggle('empty',!text);
  const latest=EPISODE.dialogue.filter(d=>d.start<=t).at(-1);
  block.classList.toggle('past',!!latest&&latest.speaker!==speaker);
  if(previous[speaker]!==text){previous[speaker]=text;block.classList.remove('changed');node.replaceChildren();text.split(/\s+/).forEach((word,i)=>{const span=document.createElement('span');span.textContent=word+(i<text.split(/\s+/).length-1?' ':'');node.append(span)});void block.offsetWidth;block.classList.add('changed')}
@@ -34,8 +34,9 @@ function speech(speaker,t){
 function render(){
  if(video.readyState>=2){contexts[0].drawImage(video,0,34,640,480,0,0,640,480);contexts[1].drawImage(video,642,34,640,480,0,0,640,480)}
  const time=video.currentTime,t=time+19.8,tick=EPISODE.segments.filter(s=>s.start<=t+.001).at(-1)?.tick??33;
- if(tick!==lastTick){lastTick=tick;const progress=EPISODE.rice.find(x=>x.tick===tick)?.progress??.55;$('.milestone .food').style.setProperty('--cook',progress);$('.milestone').classList.toggle('done',tick>=42);$('.omission').classList.toggle('triggered',tick>=42);$('#rice-marker').classList.toggle('ready',tick>=42);$('.milestone').setAttribute('aria-label',tick>=42?'Rice cooked':'Rice cooking');$('.omission').setAttribute('aria-label',tick>=42?'Skip tortilla event triggered':'Skip tortilla event pending')}
+ if(tick!==lastTick){lastTick=tick;const progress=EPISODE.rice.find(x=>x.tick===tick)?.progress??.55;$('.rice-step .food').style.setProperty('--cook',progress);$('.rice-step').classList.toggle('done',tick>=42);$('.omission').classList.toggle('triggered',tick>=42);$('#rice-marker').classList.toggle('ready',tick>=42);$('.rice-step').setAttribute('aria-label',tick>=42?'Rice cooked':'Rice cooking');$('.omission').setAttribute('aria-label',tick>=42?'Skip tortilla event triggered when rice is cooked':'Skip tortilla event scheduled when rice is cooked')}
  speech('assistant',t);speech('user',t);$('#seek').value=time;$('#timestamp').textContent='0:'+String(Math.floor(time)).padStart(2,'0')+' / 0:16';
 }
 video.addEventListener('loadeddata',render);video.addEventListener('seeked',render);video.addEventListener('ended',render);
 function frame(){if(!video.paused)render();requestAnimationFrame(frame)}requestAnimationFrame(frame);render();
+if(location.hash==='#cinema')document.querySelector('[data-layout="cinema"]').click();

@@ -3,31 +3,21 @@
 <body>
 <nav class="review-nav"><a href="../">Interactive Visual Gym</a><div role="group" aria-label="Design options"><button data-layout="slide" aria-pressed="true">A</button><button data-layout="cinema" aria-pressed="false">B</button></div></nav>
 <main class="slide" id="composition">
-<header class="task-heading"><span>CookSim</span><h1>Prepare a loaded burrito</h1></header>
-<div class="people">
- <section class="assistant identity"><div class="avatar ai" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 2C26 16 32 22 46 24C32 26 26 32 24 46C22 32 16 26 2 24C16 22 22 16 24 2Z"/></svg></div><div><span class="label">Assistant</span><strong>Gemini 3.8 Flash</strong></div></section>
- <section class="persona"><div class="identity user"><div class="avatar human" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 46C8 33 13 29 24 29S40 33 40 46" fill="#80c3ef"/><ellipse cx="24" cy="20" rx="10" ry="12" fill="#d09a77"/><path d="M14 17Q11 4 23 5Q37 4 35 19L30 12Q21 16 14 17" fill="#163f68"/><path d="M17 40L24 33L31 40" stroke="white" stroke-width="3" fill="none"/></svg></div><div><span class="label">Simulated user</span><strong>Expert</strong></div></div><div class="persona-levels">
-  <div class="axis"><span>Skill</span><div class="levels" aria-label="High skill"><i></i><i></i><i class="on"></i></div><b>High</b></div>
-  <div class="axis"><span>Trust in AI</span><div class="levels" aria-label="Low trust"><i class="on"></i><i></i><i></i></div><b>Low</b></div>
-  <div class="axis"><span>Speed</span><div class="levels" aria-label="Balanced speed"><i></i><i class="on"></i><i></i></div><b>Balanced</b></div>
-  <div class="axis"><span>Interruptions</span><div class="levels" aria-label="Interrupt only when necessary"><i></i><i></i><i class="on"></i></div><b>Necessary only</b></div>
- </div></section>
-</div>
+<header class="task-heading"><span>CookSim</span><h1>Prepare a loaded burrito</h1><div class="recipe"><span>Plate in order</span><ol><li>Raw tortilla</li><li>Cooked rice</li><li>Cooked steak</li><li>Chopped tomato</li><li>Chopped lettuce</li></ol></div></header>
 <div class="presentation">
  <section class="film" aria-label="CookSim episode excerpt">
   <div class="views"><figure><canvas id="world" width="640" height="480"></canvas><figcaption>Top-down</figcaption><div id="rice-marker" class="rice-marker" aria-hidden="true"><span></span></div></figure><figure><canvas id="ego" width="640" height="480"></canvas><figcaption>Egocentric</figcaption></figure></div>
   <div class="progress-band">
-   <div class="task-track"><div class="band-label">Task progress</div><div class="milestones" id="milestones"></div></div>
-   <div class="events"><div class="band-label">Scheduled events</div><div class="event-track"><div class="event request"><span class="event-dot">?</span><span>Notify when<br>rice is ready</span></div><div class="event omission"><span class="event-dot">!</span><span>Skip<br>tortilla</span></div></div></div>
+   <div class="task-track"><div class="band-label">Task progress <span class="event-key"><i></i> Scheduled event</span></div><div class="milestones" id="milestones"></div></div>
   </div>
-  <div class="dialogue-stage"><div class="speech assistant-speech"><div class="speaker"><span class="speaker-icon">✦</span> Assistant <span class="speaking"><i></i><i></i><i></i></span></div><div class="utterance" id="assistant-line"></div></div><div class="speech user-speech"><div class="speaker"><span class="speaker-icon">●</span> User <span class="speaking"><i></i><i></i><i></i></span></div><div class="utterance" id="user-line"></div></div></div>
+  <div class="dialogue-stage"><div class="speech assistant-speech"><div class="speaker"><span class="speaker-icon">✦</span> Assistant <span class="speaking"><i></i><i></i><i></i></span></div><div class="speaker-detail">Gemini 3.8 Flash</div><div class="utterance" id="assistant-line"></div></div><div class="speech user-speech"><div class="speaker"><span class="speaker-icon">●</span> User <span class="speaking"><i></i><i></i><i></i></span></div><div class="speaker-detail">High skill · Low trust in AI<br>Interrupt only when necessary</div><div class="utterance" id="user-line"></div></div></div>
   <div class="playback"><button id="play" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 4L20 12L8 20Z"/></svg></button><input id="seek" type="range" min="0" max="16" step=".01" value="0" aria-label="Video position"><span id="timestamp">0:00 / 0:16</span><button id="mute" aria-label="Mute audio"><svg viewBox="0 0 24 24"><path d="M3 9H7L12 5V19L7 15H3Z"/><path d="M16 8Q20 12 16 16M19 4Q27 12 19 20" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button><button id="fullscreen" aria-label="Full screen"><svg viewBox="0 0 24 24"><path d="M3 9V3H9M15 3H21V9M21 15V21H15M9 21H3V15" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
   <button id="start" class="start" aria-label="Play episode excerpt"><svg viewBox="0 0 24 24"><path d="M8 4L20 12L8 20Z"/></svg></button>
  </section>
  <aside class="scores" aria-label="Full-episode evaluation">
   <div class="score failure"><div class="dial"><svg viewBox="0 0 100 100"><circle class="track" cx="50" cy="50" r="43"/><path class="cross" d="M40 40L60 60M60 40L40 60"/></svg><div class="number">0<span>/1</span></div></div><h2>Task completion</h2></div>
   <div class="score quality"><div class="dial"><svg viewBox="0 0 100 100"><circle class="track" cx="50" cy="50" r="43"/><circle class="arc" cx="50" cy="50" r="43" pathLength="100" style="--value:42.2"/></svg><div class="number">42.2<span>%</span></div></div><h2>Interaction quality</h2></div>
-  <div class="score qa"><div class="dial"><svg viewBox="0 0 100 100"><circle class="track" cx="50" cy="50" r="43"/><circle class="arc" cx="50" cy="50" r="43" pathLength="100" style="--value:100"/></svg><div class="number">100<span>%</span></div></div><h2>QA accuracy</h2></div>
+  <div class="score qa" title="3 of 4: three correct answers and one unsuccessful proactive request" aria-label="QA accuracy including proactive requests: 75 percent, 3 out of 4"><div class="dial"><svg viewBox="0 0 100 100"><circle class="track" cx="50" cy="50" r="43"/><circle class="arc" cx="50" cy="50" r="43" pathLength="100" style="--value:75"/></svg><div class="number">75<span>%</span></div></div><h2>QA accuracy</h2></div>
  </aside>
 </div>
 </main><video id="source" src="clip.mp4" preload="auto" playsinline></video><script src="episode.js"></script><script src="player.js"></script>
