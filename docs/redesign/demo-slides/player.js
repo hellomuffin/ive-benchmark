@@ -26,6 +26,7 @@ function speech(speaker,t){
  const text=d?.text??fallback,node=$('#'+speaker+'-line'),block=$('.'+speaker+'-speech');
  node.classList.toggle('empty',!text);
  const latest=EPISODE.dialogue.filter(d=>d.start<=t).at(-1);
+ block.hidden=(latest?.speaker??'user')!==speaker;
  block.classList.toggle('past',!!latest&&latest.speaker!==speaker);
  if(previous[speaker]!==text){previous[speaker]=text;block.classList.remove('changed');node.replaceChildren();text.split(/\s+/).forEach((word,i)=>{const span=document.createElement('span');span.textContent=word+(i<text.split(/\s+/).length-1?' ':'');node.append(span)});void block.offsetWidth;block.classList.add('changed')}
  [...node.children].forEach((word,i)=>word.classList.toggle('future',!!d&&t<d.start+(d.words[i]?.start??0)));
