@@ -8,8 +8,8 @@ const iconPaths=[
  '<ellipse cx="16" cy="19" rx="14" ry="8" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="16" cy="19" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 6H22L25 13H7Z" fill="currentColor"/>',
  '<path d="M3 23H29M5 20C5 7 27 7 27 20ZM16 8V5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="4" r="2" fill="currentColor"/>'
 ];
-const labels=['Start rice','Rice cooked','Steak cooked','Tomato chopped','Lettuce chopped','Assemble','Serve'];
-const events=['<div class="event request"><span class="event-dot">?</span><span>Notify when<br>rice is ready</span></div>','<div class="event omission"><span class="event-dot">!</span><span>Skip tortilla</span></div>'];
+const labels=['Start rice','Rice cooked','Cook steak','Chop tomato','Chop lettuce','Assemble','Serve'];
+const events=['<div class="event request" title="Request: notify when the rice is ready"><span class="event-dot">?</span><span>Rice-ready alert</span></div>','<div class="event omission"><span class="event-dot">!</span><span>Skip tortilla</span></div>'];
 $('#milestones').innerHTML=labels.map((l,i)=>`<div class="milestone ${i===0?'done started-step':i===1?'active rice-step':''}"><div class="food"><svg viewBox="0 0 32 32" aria-hidden="true">${iconPaths[Math.max(0,i-1)]}</svg></div><span>${l}</span>${events[i]??''}</div>`).join('');
 document.querySelectorAll('[data-layout]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-layout]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('#composition').className=b.dataset.layout;history.replaceState(null,'','#'+b.dataset.layout);render()}));
 let started=false, lastTick=-1, previous={assistant:'',user:''}, currentCues={assistant:null,user:null};

@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Demo · Interactive Visual Gym</title><link rel="stylesheet" href="design.css"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Demo · Interactive Visual Gym</title><link rel="stylesheet" href="design.css"><link rel="stylesheet" href="compact.css"></head>
 <body>
 <nav class="review-nav"><a href="../">Interactive Visual Gym</a><div role="group" aria-label="Design options"><button data-layout="slide" aria-pressed="true">A</button><button data-layout="cinema" aria-pressed="false">B</button></div></nav>
 <main class="slide" id="composition">
-<header class="task-heading"><span>CookSim</span><h1>Prepare a loaded burrito</h1><div class="recipe"><span>Plate in order</span><ol><li>Raw tortilla</li><li>Cooked rice</li><li>Cooked steak</li><li>Chopped tomato</li><li>Chopped lettuce</li></ol></div></header>
+<header class="task-heading"><h1>CookSim simulator</h1><p class="task-description">Prepare a burrito with tortilla, cooked rice, cooked steak, chopped tomato, and chopped lettuce, in that order.</p></header>
 <div class="presentation">
  <section class="film" aria-label="CookSim episode excerpt">
   <div class="views"><figure><canvas id="world" width="640" height="480"></canvas><figcaption>Top-down</figcaption><div id="rice-marker" class="rice-marker" aria-hidden="true"><span></span></div></figure><figure><canvas id="ego" width="640" height="480"></canvas><figcaption>Egocentric</figcaption></figure></div>
   <div class="progress-band">
    <div class="task-track"><div class="band-label">Task progress <span class="event-key"><i></i> Scheduled event</span></div><div class="milestones" id="milestones"></div></div>
   </div>
-  <div class="dialogue-stage"><div class="speech assistant-speech"><div class="speaker"><span class="speaker-icon">✦</span> Assistant <span class="speaking"><i></i><i></i><i></i></span></div><div class="speaker-detail">Gemini 3.8 Flash</div><div class="utterance" id="assistant-line"></div></div><div class="speech user-speech"><div class="speaker"><span class="speaker-icon">●</span> User <span class="speaking"><i></i><i></i><i></i></span></div><div class="speaker-detail">High skill · Low trust in AI<br>Interrupt only when necessary</div><div class="utterance" id="user-line"></div></div></div>
+  <div class="dialogue-stage"><div class="speech assistant-speech"><div class="speaker"><span class="speaker-icon">✦</span> Assistant <span class="speaker-detail">Gemini 3.8 Flash</span><span class="speaking"><i></i><i></i><i></i></span></div><div class="utterance" id="assistant-line"></div></div><div class="speech user-speech"><div class="speaker"><span class="speaker-icon">●</span> User <span class="speaker-detail">High skill · Low AI trust · Necessary interruptions only</span><span class="speaking"><i></i><i></i><i></i></span></div><div class="utterance" id="user-line"></div></div></div>
   <div class="playback"><button id="play" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 4L20 12L8 20Z"/></svg></button><input id="seek" type="range" min="0" max="16" step=".01" value="0" aria-label="Video position"><span id="timestamp">0:00 / 0:16</span><button id="mute" aria-label="Mute audio"><svg viewBox="0 0 24 24"><path d="M3 9H7L12 5V19L7 15H3Z"/><path d="M16 8Q20 12 16 16M19 4Q27 12 19 20" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button><button id="fullscreen" aria-label="Full screen"><svg viewBox="0 0 24 24"><path d="M3 9V3H9M15 3H21V9M21 15V21H15M9 21H3V15" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
   <button id="start" class="start" aria-label="Play episode excerpt"><svg viewBox="0 0 24 24"><path d="M8 4L20 12L8 20Z"/></svg></button>
  </section>

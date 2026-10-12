@@ -1,0 +1,35 @@
+/* Compact composition: keep observation dimensions, combine related labels. */
+.task-heading{margin:5px 0 15px}
+.task-title{display:flex;align-items:center;gap:14px}
+.task-title>span{font-size:11px;font-weight:600;letter-spacing:.03em;color:var(--blue);background:#edf6fd;border-radius:5px;padding:5px 8px;white-space:nowrap}
+.task-heading h1{font-size:24px;margin:0;line-height:1.2}
+.task-description{font-size:13px;font-weight:400;line-height:1.5;margin:7px 0 0;color:#536d85}
+.recipe{margin-top:8px;line-height:1.45}
+.progress-band,.cinema .progress-band{padding:9px 16px 10px}
+.task-track>.band-label{margin-bottom:9px;font-size:11px}
+.milestones{grid-template-columns:1.35fr 1.15fr repeat(4,1fr) .7fr;gap:8px}
+.milestones:before{left:2%;right:3%;top:15px}
+.milestone{display:grid;grid-template-columns:30px auto;align-items:center;justify-content:start;column-gap:6px;text-align:left}
+.milestone .food,.cinema .milestones .food{width:30px;height:30px;margin:0}
+.food svg{width:21px;height:21px}
+.milestone>span,.cinema .milestone>span{font-size:11px;line-height:1.2;margin:0;background:#edf6fd;padding:3px 2px;position:relative}
+.milestone .event,.cinema .milestone .event{grid-column:1/-1;margin:8px 0 0;padding:4px 7px;gap:5px;font-size:10px;white-space:nowrap;border-radius:5px;justify-content:flex-start;max-width:none}
+.milestone .event:before{left:15px;height:8px;top:-8px}
+.milestone .event-dot{width:16px;height:16px;font-size:10px}
+.milestone.done .food:after{width:12px;height:12px;font-size:8px;right:-4px;top:-3px}
+.dialogue-stage,.cinema .dialogue-stage{min-height:76px;padding:10px 17px;gap:17px;grid-template-columns:.86fr 1.14fr}
+.speech{padding-left:9px;border-left-width:2px}
+.speaker{font-size:10px;line-height:1.35;gap:5px;flex-wrap:wrap;margin-bottom:6px}
+.speaker-detail{display:inline;font-size:10px;font-weight:400;line-height:inherit;min-height:0;margin:0;padding-left:5px;border-left:1px solid #b7cedf}
+.speaking{margin-left:0}
+.utterance,.cinema .utterance{font-size:15px;line-height:1.35}
+.playback{height:32px}
+.cinema .presentation{gap:12px}
+.cinema .dial{width:61px;height:61px}
+.cinema .number{font-size:19px}
+.cinema .failure .number{font-size:15px;padding-top:26px}
+@media(max-width:1050px){.milestone>span,.cinema .milestone>span{font-size:10px}.milestones{gap:5px}.milestone{column-gap:4px}.milestone .event,.cinema .milestone .event{font-size:9px;padding:4px 5px}.utterance,.cinema .utterance{font-size:14px}}
+@media(max-width:780px){.task-heading h1{font-size:25px}.recipe{display:flex;gap:8px;font-size:11px}.recipe>span{margin:0}.milestones{min-width:660px}.task-track{overflow-x:auto;scrollbar-width:thin;scrollbar-color:#b6d1e5 transparent}.task-track>.band-label{position:sticky;left:0}.dialogue-stage,.cinema .dialogue-stage{grid-template-columns:1fr 1fr;min-height:86px}.speaker-detail{border-left:0;padding-left:0}.speaker{align-content:start;min-height:30px}.speaker-detail{font-size:10px}}
+@media(max-width:540px){.task-title{gap:8px;flex-wrap:wrap}.task-heading h1{font-size:23px}.task-title>span{font-size:9px;padding:4px 6px}.recipe{margin-top:7px;font-size:10px;gap:7px}.recipe>span{font-size:9px}.recipe li+li:before{margin:0 4px}.progress-band,.cinema .progress-band{padding:8px 11px}.milestones{min-width:620px}.milestone .food,.cinema .milestones .food{width:28px;height:28px}.milestone>span,.cinema .milestone>span{font-size:10px}.dialogue-stage,.cinema .dialogue-stage{padding:9px 11px;gap:12px;min-height:100px}.speaker{min-height:45px;margin-bottom:4px}.speaker-detail{font-size:9px}.utterance,.cinema .utterance{font-size:12px}.cinema .score h2{font-size:10px}.task-heading{margin-bottom:12px}}
+@media(max-width:780px){.task-heading h1{font-size:23px}.task-description{font-size:12px}}
+@media(max-width:540px){.task-heading h1{font-size:22px}.task-description{font-size:12px;line-height:1.45;margin-top:6px}}
