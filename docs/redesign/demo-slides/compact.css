@@ -33,3 +33,21 @@
 @media(max-width:540px){.task-title{gap:8px;flex-wrap:wrap}.task-heading h1{font-size:23px}.task-title>span{font-size:9px;padding:4px 6px}.recipe{margin-top:7px;font-size:10px;gap:7px}.recipe>span{font-size:9px}.recipe li+li:before{margin:0 4px}.progress-band,.cinema .progress-band{padding:8px 11px}.milestones{min-width:620px}.milestone .food,.cinema .milestones .food{width:28px;height:28px}.milestone>span,.cinema .milestone>span{font-size:10px}.dialogue-stage,.cinema .dialogue-stage{padding:9px 11px;gap:12px;min-height:100px}.speaker{min-height:45px;margin-bottom:4px}.speaker-detail{font-size:9px}.utterance,.cinema .utterance{font-size:12px}.cinema .score h2{font-size:10px}.task-heading{margin-bottom:12px}}
 @media(max-width:780px){.task-heading h1{font-size:23px}.task-description{font-size:12px}}
 @media(max-width:540px){.task-heading h1{font-size:22px}.task-description{font-size:12px;line-height:1.45;margin-top:6px}}
+.task-description strong{font-weight:600;color:var(--navy);margin-right:8px;white-space:nowrap}
+.video-stage{position:relative}
+.video-stage .dialogue-stage,.cinema .video-stage .dialogue-stage{position:absolute;z-index:2;left:0;right:0;bottom:0;background:transparent;min-height:0;padding:10px 12px;gap:14px;grid-template-columns:1fr 1fr;align-items:end;pointer-events:none}
+.video-stage .speech,.cinema .video-stage .speech{padding:8px 10px;border:1px solid #d3e8ff30;border-left:3px solid #80c6ff;border-radius:7px;background:#071b30d6;box-shadow:0 2px 12px #0002;backdrop-filter:blur(5px);color:white}
+.video-stage .user-speech,.cinema .video-stage .user-speech{border-left-color:#82d9c8}
+.video-stage .speaker,.cinema .video-stage .speaker{color:#9ed5ff;min-height:0;line-height:1.35;margin-bottom:5px;font-size:10px;gap:4px}
+.video-stage .user-speech .speaker,.cinema .video-stage .user-speech .speaker{color:#9be4d7}
+.video-stage .speaker-detail,.cinema .video-stage .speaker-detail{color:#d5e5ef;border-left-color:#aac8dd60;min-height:0;font-size:10px}
+.video-stage .utterance,.cinema .video-stage .utterance{color:#fff;font-size:15px;line-height:1.35;text-shadow:0 1px 2px #0004}
+.video-stage .utterance .future,.cinema .video-stage .utterance .future{color:#a5bacb}
+.video-stage .speech.past .utterance,.cinema .video-stage .speech.past .utterance{opacity:.8}
+.scores{position:relative;padding-top:24px;padding-bottom:6px}
+.scores-heading{position:absolute;top:0;left:0;right:0;margin:0;text-align:center;font-size:12px;font-weight:600;white-space:nowrap}
+.cinema .scores{padding-top:24px}.cinema .scores-heading{text-align:left}
+@media(max-width:780px){.scores{padding-top:25px}.scores-heading{text-align:left}.video-stage .dialogue-stage,.cinema .video-stage .dialogue-stage{padding:7px;gap:8px}.video-stage .utterance,.cinema .video-stage .utterance{font-size:12px}.video-stage .speaker-detail,.cinema .video-stage .speaker-detail{font-size:9px}}
+@media(max-width:540px){.video-stage .dialogue-stage,.cinema .video-stage .dialogue-stage{padding:4px;gap:5px}.video-stage .speech,.cinema .video-stage .speech{padding:5px 6px;border-left-width:2px;border-radius:4px}.video-stage .speaker,.cinema .video-stage .speaker{font-size:8px;margin-bottom:3px;gap:3px}.video-stage .speaker-detail,.cinema .video-stage .speaker-detail{font-size:8px}.video-stage .utterance,.cinema .video-stage .utterance{font-size:10px;line-height:1.25}.task-description strong{margin-right:5px}}
+.video-stage .speaker,.cinema .video-stage .speaker{position:relative;padding-right:13px}
+.video-stage .speaking{position:absolute;right:0;top:1px;margin:0}
