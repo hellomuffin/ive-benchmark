@@ -31,7 +31,7 @@ h1 { max-width: 980px; margin: 0 auto; color: var(--ink); font-size: clamp(32px,
 .resource-link svg { width: 18px; height: 18px; }
 .abstract-section { max-width: 1024px; padding: 18px 36px 58px; margin: 0 auto; }
 h2 { margin: 0 0 24px; color: var(--ink); text-align: center; font-size: 32px; line-height: 1.2; font-weight: 600; letter-spacing: -.01em; }
-.abstract-copy { margin: 0; font-size: 18px; line-height: 1.7; text-align: justify; text-wrap: pretty; }
+.abstract-copy { margin: 0; font-size: 17px; line-height: 1.58; text-align: justify; text-wrap: pretty; }
 strong { font-weight: 700; }
 footer { max-width: 952px; border-top: 1px solid var(--line); margin: 0 auto; padding: 19px 0 32px; text-align: center; font-size: 13px; color: #858585; }
 footer p { margin: 0; }
@@ -44,10 +44,10 @@ footer a { color: #737373; }
   h1 { font-size: clamp(30px, 6.4vw, 39px); line-height: 1.18; }
   .title-name { margin-bottom: 10px; }
   .title-description { font-size: clamp(27px, 5.5vw, 34px); line-height: 1.2; }
-  .publication-links { margin-top: 24px; }
+  .publication-links { margin-top: 24px; flex-wrap: wrap; gap: 8px; }
   .abstract-section { padding: 16px 24px 42px; }
   h2 { font-size: 28px; margin-bottom: 20px; }
-  .abstract-copy { font-size: 17px; line-height: 1.7; text-align: left; }
+  .abstract-copy { font-size: 16px; line-height: 1.6; text-align: left; }
   footer { margin: 0 24px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
