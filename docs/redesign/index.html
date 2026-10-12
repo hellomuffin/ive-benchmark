@@ -9,6 +9,7 @@
   <title>Interactive Visual Gym</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="leaderboard/leaderboard.css">
 </head>
 <body>
   <a class="skip-link" href="#abstract">Skip to abstract</a>
@@ -17,6 +18,8 @@
       <a class="wordmark" href="#top">Interactive Visual Gym</a>
       <div class="nav-links">
         <a href="#abstract">Abstract</a>
+        <a href="#evaluation">Demonstrations</a>
+        <a href="#leaderboard-section">Leaderboard</a>
       </div>
     </nav>
   </header>
@@ -35,8 +38,18 @@
       <h2 id="abstract-title">Abstract</h2>
       <p class="abstract-copy">Visual assistants that support users during ongoing physical tasks require evaluation in closed loop, where assistant responses can change subsequent user behavior and task outcomes. Existing benchmarks largely rely on offline replay and therefore cannot capture these effects. We introduce <strong>Interactive Visual Gym</strong>, a framework for closed-loop evaluation and training of visual assistants through joint simulation of executable task environments and human users. We contribute three simulators that recreate everyday tasks and human-aligned action spaces across cooking, household manipulation, and mobile-interface domains, together with a persona-conditioned user simulation harness that collaborates with the assistant while incorporating controlled execution errors and other out-of-plan behaviors. We instantiate the framework as the <strong>IVG-Bench</strong> benchmark with 315 interaction episodes. Evaluating state-of-the-art VLMs as visual assistants reveals substantial limitations: the best-performing model, GPT6-Astra, completes only 44.2% of tasks within the time limit, exhibits significant weaknesses in factual grounding and actionable guidance, and is often too slow to prevent errors in time. We further show that the environments provide useful learning signals: in a proof-of-concept GRPO experiment, closed-loop training improves both task success and interaction behavior.</p>
     </section>
+    <section id="evaluation" class="demo-section" aria-labelledby="evaluation-title">
+      <h2 id="evaluation-title">Closed-Loop Assistant Evaluation</h2>
+      <iframe id="episode-demo" src="demo-slides/?embed=1" title="Three recorded visual-assistant episodes" allow="fullscreen" loading="lazy"></iframe>
+    </section>
+    <section id="leaderboard-section" class="leaderboard-section" aria-labelledby="leaderboard-title">
+      <h2 id="leaderboard-title">IVG-Bench Leaderboard</h2>
+      <div id="leaderboard"></div>
+    </section>
   </main>
 
   <footer><p>Visual style inspired by <a href="https://osworld-v2.xlang.ai/" target="_blank" rel="noopener noreferrer">OSWorld 2.0</a>.</p></footer>
+  <script type="module" src="leaderboard/leaderboard.js"></script>
+  <script>addEventListener('message',e=>{if(e.origin===location.origin&&e.source===document.getElementById('episode-demo').contentWindow&&e.data?.type==='ivg-demo-height'){document.getElementById('episode-demo').style.height=Math.min(1400,Math.max(500,e.data.height))+'px'}})</script>
 </body>
 </html>
