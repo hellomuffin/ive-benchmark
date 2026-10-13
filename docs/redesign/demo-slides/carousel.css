@@ -82,3 +82,5 @@ main{padding:0 0 20px;overflow:hidden}.episode-carousel{max-width:1440px;margin:
  .left-preview{left:calc(175px - var(--preview-height,530px)*1.6)}.right-preview{right:calc(175px - var(--preview-height,530px)*1.6)}
 }
 @media(max-width:760px){.preview-task,.preview-dialogue{display:none}}
+@media(min-width:761px){.carousel-stage{min-height:0}.side-preview{top:calc(10px + var(--preview-height,530px)*.0682)}}
+@media(max-width:760px){.side-preview{top:125px}}

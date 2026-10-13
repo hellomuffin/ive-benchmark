@@ -88,8 +88,8 @@
 
     <section id="user-simulation" class="technical-section" aria-labelledby="user-simulation-title">
       <h3 id="user-simulation-title" class="technical-subtitle">User simulation</h3>
-      <p class="section-intro user-intro">A VLM agent plans and acts independently, responding to assistant guidance according to its persona. The harness introduces scheduled events during task execution.</p>
-      <div class="subsection-heading"><h3>Scheduled Out-of-Plan Events</h3><p>Events are triggered by conditions on task progress.</p></div>
+      <p class="technical-prose">We implement the simulated user as a VLM agent. We design a harness that enables it to plan and act independently in the environment while responding to assistant guidance. It also supports two unique features:</p>
+      <p class="technical-prose"><strong>Scheduled out-of-plan events.</strong> We introduce scheduled out-of-plan events in all three simulators that require the assistant to respond to execution errors, questions, and intentional plan changes. Examples are shown below.</p>
       <div class="event-examples" id="event-examples"></div>
       <div class="event-schedule" aria-label="Example CookSim schedule: incorrect preparation during tomato preparation, a question about the held object after picking up a plate, and a question about assembly order after adding tomato.">
         <span class="eyebrow">Example schedule · CookSim</span>
@@ -101,18 +101,40 @@
         </div>
         <span class="schedule-direction">Task progress →</span>
       </div>
-      <div class="event-mechanism">
-        <div class="mechanism-label">Execution-error control</div>
-        <ol><li><strong>Trigger</strong><span>The task reaches a specified state.</span></li><li><strong>Enact</strong><span>The harness controls actions; the user adapts its dialogue.</span></li><li><strong>Release</strong><span>The user accepts corrective guidance or the event ends.</span></li></ol>
-      </div>
+      <p class="technical-prose mechanism-prose">During normal execution, the simulated user controls its own actions and communication. To insert these behaviors, we need to inject the appropriate action sequence at the right moment while keeping the conversation consistent with the user’s behavior. We implement this as follows:</p>
+      <ol class="harness-steps">
+        <li>When an event is triggered, the harness temporarily takes control of the user’s action queue to enforce its execution.</li>
+        <li>The harness privately informs the user agent of the ongoing event, explains that it is intended to test the assistant, and instructs the user agent to adapt its conversation accordingly.</li>
+        <li>Once the assistant correctly identifies the mistake and convinces the user to change course, or the out-of-plan event finishes executing, the harness returns action control to the VLM agent.</li>
+      </ol>
 
-      <div class="subsection-heading persona-heading"><h3>User Personas</h3><p>Four attributes shape how users perform tasks and respond to guidance.</p></div>
+      <p class="technical-prose persona-heading"><strong>Persona-conditioned users.</strong> Real-world users differ in how they perform tasks and respond to assistance. We operationalize this diversity through four representative axes: skill level, trust in AI, execution speed, and interruption preference, each with three levels.</p>
       <div class="persona-explorer">
         <div class="persona-controls" id="persona-controls" aria-label="Explore persona instructions"></div>
         <div class="persona-instruction" aria-live="polite">
           <span class="eyebrow">CookSim persona prompt · excerpt</span>
           <h4 id="persona-instruction-title"></h4>
           <blockquote id="persona-instruction-text"></blockquote>
+        </div>
+      </div>
+      <p class="technical-prose persona-example-intro">The example below shows how users with two different personas behave differently.</p>
+      <div class="persona-comparison">
+        <header><strong>Prepare a burrito</strong><span>Assistant: GPT-6 Astra</span></header>
+        <div class="persona-trajectories">
+          <article class="persona-trajectory">
+            <h4>Guidance-seeking novice</h4>
+            <div class="persona-traits"><span>Low skill</span><span>High trust in AI</span><span>Cautious pace</span><span>Step-by-step guidance</span></div>
+            <div class="persona-turn user"><b>User <time>Tick 34</time></b><p>Tortilla is on. How do I prep the rice?</p></div>
+            <div class="persona-turn assistant"><b>Assistant <time>Tick 45</time></b><p>Put your tortilla plate down on an empty counter first. With empty hands, go to the rice crate and pick up one rice. Go to the pot by the left wall, put down the rice, then turn on with empty hands. Pick your plate back up and return to that pot; when its progress bar is full, scoop the cooked rice onto the plate. Rice needs no chopping.</p></div>
+            <div class="persona-turn user"><b>User <time>Tick 45</time></b><p>Parking the plate and getting the rice started.</p></div>
+          </article>
+          <article class="persona-trajectory">
+            <h4>Independent expert</h4>
+            <div class="persona-traits"><span>High skill</span><span>Low trust in AI</span><span>Balanced pace</span><span>Necessary interruptions only</span></div>
+            <div class="persona-turn assistant"><b>Assistant <time>Tick 134</time></b><p>The steak pan is smoking now—scoop the cooked steak onto your plate next.</p></div>
+            <div class="persona-turn user"><b>User <time>Tick 134</time></b><p>Already plated the steak.</p></div>
+            <div class="persona-turn assistant"><b>Assistant <time>Tick 142</time></b><p>You’re right—I can see the steak on the plate. Sorry for the late warning.</p></div>
+          </article>
         </div>
       </div>
     </section>

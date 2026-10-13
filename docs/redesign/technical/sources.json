@@ -20,6 +20,7 @@
     "event-question": "cooksim-slides/talk/dv_g3_question_aplus.gif"
   },
   "persona_source": "cook-bench-engine/cooksim/interact/persona_v2.py",
+  "persona_comparison": {"selection":"experiment/06_human_study/persona_examples/README.md", "novice":"cook-bench-engine/tmp/formal_v5/frames/classic_novice/gpt-6-astra/b3_master_nops_hard_map_5.json", "expert":"cook-bench-engine/tmp/formal_v5/frames/classic_expert/gpt-6-astra/b3_master_nops_hard_map_5.json", "excerpt_ticks":{"novice":[34,45],"expert":[134,142]}},
   "persona_axes": [
     "skill",
     "trust",
