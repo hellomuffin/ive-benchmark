@@ -24,10 +24,10 @@
 .persona-film video{display:block;width:100%;height:auto}
 .persona-view-labels{position:absolute;top:8px;left:8px;right:8px;display:grid;grid-template-columns:1fr 1fr;pointer-events:none;gap:8px}
 .persona-view-labels span{justify-self:start;background:#173e5ace;color:white;font-size:9px;padding:3px 7px;border-radius:12px}
-.persona-live-dialogue{background:#082f52;color:white;height:145px;padding:15px 18px}
+.persona-live-dialogue{background:#082f52;color:white;min-height:78px;padding:11px 16px}
 .persona-live-dialogue b{font-size:11px;color:#9ed5ff}.persona-live-dialogue.user b{color:#a5eadc}
-.persona-live-dialogue p{font-size:13px;line-height:1.6;margin:7px 0 0}
-@media(max-width:700px){.persona-video-pair{grid-template-columns:1fr}.persona-controls{grid-template-columns:1fr}.persona-live-dialogue{height:155px}}
+.persona-live-dialogue p{font-size:13px;line-height:1.5;margin:5px 0 0}
+@media(max-width:700px){.persona-video-pair{grid-template-columns:1fr}.persona-controls{grid-template-columns:1fr}}
 .persona-comparison{font-family:IVGInterface,system-ui,sans-serif;border:1px solid #d4e1eb;border-radius:13px;overflow:hidden}
 .persona-comparison>header{display:flex;justify-content:space-between;gap:12px;padding:18px 22px;background:#eff5fa;font-size:14px;color:#244c69}
 .persona-comparison>header span{font-size:13px}
