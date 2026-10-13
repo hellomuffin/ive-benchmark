@@ -19,6 +19,15 @@
 .technical-introduction p,.technical-prose{font-size:18px;line-height:1.65;color:#293b47;text-wrap:pretty}
 .technical-introduction p{margin:0}
 .technical-details .technical-section{margin:0 auto 50px}
+:root:not([data-style]) .technical-details>.technical-section{padding-top:24px;padding-bottom:24px;margin-bottom:28px;border-radius:14px;background:var(--section-tint);box-shadow:inset 0 0 0 1px var(--section-edge)}
+:root:not([data-style]) #environment-simulation{--section-tint:#eef5fb;--section-edge:#dbe8f2}
+:root:not([data-style]) .technical-details #user-simulation{--section-tint:#eef6f3;--section-edge:#dbe9e3;padding-top:24px}
+:root:not([data-style]) #recurring-problems{--section-tint:#f3f1f8;--section-edge:#e5dfef}
+:root:not([data-style]) #other-results{--section-tint:#faf4ec;--section-edge:#eee3d5}
+:root:not([data-style]) .technical-introduction p,:root:not([data-style]) .technical-prose,:root:not([data-style]) .harness-steps,:root:not([data-style]) .other-results p{line-height:1.48}
+:root:not([data-style]) .technical-prose{margin-bottom:20px}
+:root:not([data-style]) .harness-steps li{margin-top:8px;margin-bottom:8px}
+:root:not([data-style]) .other-results article:last-child{margin-bottom:0}
 .technical-subtitle{font-size:23px;line-height:1.3;font-weight:600;margin:0 0 18px;color:#173e5a;text-align:left}
 .technical-prose{margin:0 0 25px}.technical-prose strong{font-weight:600;color:#173e5a}
 .technical-prose.action-prose{margin-top:35px}
