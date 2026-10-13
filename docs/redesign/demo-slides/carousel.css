@@ -24,3 +24,11 @@ main{padding:0 0 20px;overflow:hidden}.episode-carousel{max-width:1440px;margin:
 .event-track:has(.event-pin:hover) .event-pin:not(:hover) .event-label,.event-track:has(.event-pin:focus-visible) .event-pin:not(:focus-visible) .event-label{visibility:hidden}
 .event-status{display:none}
 @media(max-width:760px){.event-label{font-size:10px}}
+.episode-carousel{position:relative}
+.episode-navigation{position:absolute;top:265px;left:0;right:0;margin:0;justify-content:space-between;padding:0 max(20px,calc((100% - 1140px)/2));pointer-events:none;z-index:5}
+.episode-navigation>button{pointer-events:auto;width:58px;height:76px;border-radius:16px;border:1px solid #cbdce9;background:#ffffffed;box-shadow:0 4px 16px #173b5a15;display:grid;place-items:center;transition:background .2s,transform .2s}
+.episode-navigation>button:hover{background:#e8f3fc;transform:scale(1.05)}
+.episode-navigation svg{width:36px;height:36px;fill:none;stroke:var(--navy);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+#episode-tabs,.page-direction{display:none}
+@media(max-width:1100px){.episode-navigation{padding:0 12px;top:235px}.episode-navigation>button{width:50px;height:68px}}
+@media(max-width:760px){.episode-navigation{padding:0 3px;top:235px}.episode-navigation>button{width:34px;height:58px;border-radius:10px}.episode-navigation svg{width:28px;height:28px}}
