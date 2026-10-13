@@ -1,6 +1,9 @@
 {
   "reference_deck": "https://docs.google.com/presentation/d/1eJN6FF95TLN6_h-VJoeOM7KnGlnWcs98fKaSeX1QyzM/edit",
   "media": {
+    "task-steak": "cook-bench-engine/tmp/gt3/expert_nops_medium_map.mp4 (verified WON in adjacent log; sped up 2x from 1.5x source)",
+    "task-readability": "ScreenSim parent_phone_readability reference plan; native film_hand gestures; goal verified, 11 ticks; exports/technical_sections/add_task_films.py",
+    "task-bedside": "ScreenSim standby_bedside reference plan; native film_hand gestures; goal verified, 7 ticks; exports/technical_sections/add_task_films.py",
     "task-cook": "cooksim-slides/videos/gt_cheeseburger_completion.mp4",
     "task-aftermeal": "vh-bench-pages/new-tasks/video/aftermeal_hard.mp4",
     "task-guest": "vh-bench-pages/new-tasks/video/guest_hard.mp4",

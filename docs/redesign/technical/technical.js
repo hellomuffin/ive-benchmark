@@ -1,11 +1,14 @@
 const media = new URL('./media/', import.meta.url);
 const asset = (name, ext = 'mp4') => new URL(`${name}.${ext}`, media).href;
 const tasks = [
+  {id:'task-steak', engine:'cook', name:'Prepare steak frites', short:'Steak frites', description:'Prepare and serve chopped, pan-cooked steak with two portions of chopped, deep-fried potatoes.', goals:['Chop and pan-cook the steak','Chop and fry two potatoes','Plate and serve'], note:'Reference completion · 3× speed'},
   {id:'task-cook', engine:'cook', name:'Prepare a cheeseburger', short:'Cheeseburger', description:'Prepare and serve a cheeseburger, assembling the ingredients in the required order.', goals:['Bun','Fried patty','Cheese'], note:'Reference completion · 3× speed'},
   {id:'task-aftermeal', engine:'vh', name:'Clear up after a meal', short:'After-meal cleanup', description:'Move the used dishes into the dishwasher and return the apple to the fridge.', goals:['Collect two plates and a mug','Load the dishwasher','Put away the apple; close both appliances'], note:'Task completion'},
   {id:'task-guest', engine:'vh', name:'Prepare for a guest', short:'Prepare for a guest', description:'Clear the living room: put away dishes, return the pillow, and turn off the TV.', goals:['Put the plate and mug in the dishwasher','Return the pillow to the bed','Switch off the TV'], note:'Task completion'},
   {id:'task-bedroom', engine:'vh', name:'Tidy the bedroom', short:'Tidy the bedroom', description:'Restore the bedroom and take the used mug to the kitchen.', goals:['Return the book to the desk','Turn off the lamp and close the cabinet','Take the mug to the kitchen table'], note:'Task completion'},
   {id:'task-phone', engine:'screen', name:'Restrict an app’s access', short:'App privacy', description:'Restrict TripSnap’s access without changing permissions for other apps.', goals:['Disable location access','Disable cross-app tracking','Disable background refresh'], note:'Task completion'},
+  {id:'task-readability', engine:'screen', name:'Make a phone easier to read', short:'Readability', description:'Make text larger and bolder, clarify buttons, increase contrast, and reduce motion.', goals:['Enlarge and bold the text','Enable button shapes and increase contrast','Reduce motion'], note:'Task completion'},
+  {id:'task-bedside', engine:'screen', name:'Set up a quiet bedside clock', short:'Bedside clock', description:'Keep StandBy and Night Mode on while disabling Always On, Motion to Wake, and notifications.', goals:['Keep StandBy and Night Mode on','Disable Motion to Wake and notifications','Disable Always On'], note:'Task completion'},
 ];
 const names = {cook:'CookSim',vh:'VHSim',screen:'ScreenSim'};
 let taskIndex=0;
@@ -29,6 +32,7 @@ for(const [i,task] of tasks.entries()){
 }
 function setTask(i){
   taskIndex=(i+tasks.length)%tasks.length;const t=tasks[taskIndex];video.pause();video.poster=asset(t.id,'jpg');video.src=asset(t.id);video.load();video.setAttribute('aria-label',`${names[t.engine]}: ${t.name} — ${t.note}`);
+  if(t.engine==='screen'){phoneFocus=[];fetch(new URL(t.id==='task-phone'?'./phone-focus.json':`./${t.id}-focus.json`,import.meta.url)).then(r=>r.json()).then(data=>{if(tasks[taskIndex].id===t.id){phoneFocus=data;drawFocus()}})}
   document.querySelector('.task-stage').dataset.engine=t.engine;
   document.querySelector('#task-name').textContent=t.name;
   document.querySelector('#task-description').textContent=t.description;
