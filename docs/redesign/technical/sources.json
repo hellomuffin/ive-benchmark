@@ -1,5 +1,6 @@
 {
   "reference_deck": "https://docs.google.com/presentation/d/1eJN6FF95TLN6_h-VJoeOM7KnGlnWcs98fKaSeX1QyzM/edit",
+  "results_slide_sources": {"delay":{"slide":11,"drive_video_id":"1mdIeHIg-7YxpWgZvwlGvnzwrQlaBQg9o","local":"slides_review_oct08/delay-drive-verified.mp4"},"excessive_guidance":{"slide":15,"drive_video_id":"17Mk38HA8-WHxkUybDclfKSdDCfcMFwMA","local":"slides_review_oct08/refilms/interrupt/final.mp4"},"drift":{"slide":15,"image_ids":["hbe5934fe4e5d457_1_150","hbe5934fe4e5d457_1_151"],"method":"Original slide image assets, unchanged"},"other_results":{"slide":16}},
   "media": {
     "task-steak": "cook-bench-engine/tmp/gt3/expert_nops_medium_map.mp4 (verified WON in adjacent log; sped up 2x from 1.5x source)",
     "task-readability": "ScreenSim parent_phone_readability reference plan; native film_hand gestures; goal verified, 11 ticks; exports/technical_sections/add_task_films.py",

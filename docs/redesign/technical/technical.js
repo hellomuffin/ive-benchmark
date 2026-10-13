@@ -91,3 +91,7 @@ fetch(new URL('./persona-clips.json',import.meta.url)).then(r=>r.json()).then(cl
 });
 document.addEventListener('visibilitychange',()=>{if(document.hidden)document.querySelectorAll('.technical-section video').forEach(v=>v.pause());});
 new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)e.target.pause();}),{threshold:0}).observe(video);
+document.querySelectorAll('.failure-example video').forEach(v=>{
+ v.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==v)other.pause()}));
+ new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)e.target.pause()}),{threshold:0}).observe(v);
+});

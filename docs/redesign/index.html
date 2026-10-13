@@ -117,6 +117,37 @@
       </div>
     </section>
     </section>
+    <section id="recurring-problems" class="results-story" aria-labelledby="problems-title">
+      <h2 id="problems-title">Recurring problems across assistant types exposed by our dynamic evaluation</h2>
+      <article class="failure-example">
+        <h3><span>(a)</span> Response delays can render guidance irrelevant or incorrect, frustrating users.</h3>
+        <video controls playsinline preload="none" poster="technical/media/failure-delay.jpg" src="technical/media/failure-delay.mp4" aria-label="Delayed guidance from Gemini 3.1 Pro in VHSim"></video>
+      </article>
+      <article class="failure-example">
+        <h3><span>(b)</span> Assistants often provide excessive guidance at inappropriate moments.</h3>
+        <video controls playsinline preload="none" poster="technical/media/failure-interrupt.jpg" src="technical/media/failure-interrupt.mp4" aria-label="Excessive guidance from GPT-Realtime 2.1 in CookSim"></video>
+      </article>
+      <article class="failure-example drift-example">
+        <h3><span>(c)</span> Interaction quality drifts during rollouts, especially for open-weight models.</h3>
+        <a href="technical/media/drift-qwen.png" target="_blank" rel="noopener"><img src="technical/media/drift-qwen.png" loading="lazy" alt="Qwen3.8-27B: factual grounding, situational relevance and actionable guidance across episode progress, as shown in the slides."></a>
+        <a href="technical/media/drift-glimmer.png" target="_blank" rel="noopener"><img src="technical/media/drift-glimmer.png" loading="lazy" alt="Muse Glimmer: factual grounding, situational relevance and actionable guidance across episode progress, as shown in the slides."></a>
+      </article>
+    </section>
+    <section id="other-results" class="results-story other-results" aria-labelledby="other-results-title">
+      <h2 id="other-results-title">Other results</h2>
+      <article>
+        <h3>Can our environments be used for RL?</h3>
+        <p>Yes! Training Qwen3.5-4B with GRPO in our environments, using a separate set of training tasks, improves task success and interaction quality.</p>
+      </article>
+      <article>
+        <h3>Does our simulated user behave like a real human?</h3>
+        <p>We examine this through a human study and find broadly similar behavior. The main difference is in communication: VLM-based users speak much more frequently and are more polite than human participants.</p>
+      </article>
+      <article>
+        <h3>Is benchmark performance sensitive to the model controlling the simulated user?</h3>
+        <p>Performance remains relatively stable when switching between GPT and Gemini models. It varies substantially with the open-weight models we tested, which often struggle to follow the instructions required to serve as simulated users.</p>
+      </article>
+    </section>
   </main>
 
   <script type="module" src="leaderboard/leaderboard.js"></script>

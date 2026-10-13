@@ -1,5 +1,17 @@
 @font-face{font-family:IVGInterface;src:url('../demo-slides/regular.woff2') format('woff2');font-weight:400;font-display:swap}
 .technical-details{margin:72px auto 85px}
+.results-story{max-width:1100px;margin:75px auto;padding:0 32px}
+.results-story>h2{text-align:center;margin:0 auto 36px;max-width:950px;text-wrap:balance}
+.failure-example{margin:0 0 40px}
+.failure-example h3{font-size:20px;font-weight:600;line-height:1.5;margin:0 0 18px;color:#173e5a}
+.failure-example h3>span{color:#65839a;margin-right:8px}
+.failure-example video{display:block;width:100%;max-width:820px;margin:0 auto;border-radius:10px;background:#102b40;border:1px solid #d3e0e9}
+.drift-example a{display:block;margin:18px 0;border:1px solid #dbe3e8;border-radius:9px;overflow:hidden}
+.drift-example img{display:block;width:100%;height:auto}
+.other-results article{margin:0 0 30px}
+.other-results h3{font-size:21px;font-weight:600;color:#173e5a;line-height:1.4;margin:0 0 10px}
+.other-results p{font-size:18px;line-height:1.65;margin:0;color:#293b47;text-wrap:pretty}
+@media(max-width:600px){.results-story{padding:0 20px;margin:50px auto}.failure-example h3,.other-results h3{font-size:18px}.other-results p{font-size:16px}.results-story>h2{font-size:27px}}
 .technical-introduction{max-width:1100px;padding:0 32px;margin:0 auto 35px}
 .technical-introduction h2{margin:0 0 22px;text-align:center}
 .technical-introduction p,.technical-prose{font-size:18px;line-height:1.65;color:#293b47;text-wrap:pretty}
