@@ -33,7 +33,7 @@ function setTask(i){
   document.querySelector('#task-name').textContent=t.name;
   document.querySelector('#task-description').textContent=t.description;
   document.querySelector('#task-goals').replaceChildren(...t.goals.map(g=>{const e=document.createElement('li');e.textContent=g;return e}));
-  document.querySelector('#task-counter').textContent=`${taskIndex+1} / ${tasks.length} · ${t.note}`;
+  document.querySelector('#task-counter').textContent=`${taskIndex+1} / ${tasks.length}${t.engine==='cook'?' · 3×':''}`;
   document.querySelectorAll('[data-engine]').forEach(b=>{if(b.tagName==='BUTTON')b.setAttribute('aria-pressed',b.dataset.engine===t.engine)});
   [...thumbs.children].forEach((b,j)=>b.setAttribute('aria-pressed',j===taskIndex));
   const selected=thumbs.children[taskIndex];thumbs.scrollTo({left:Math.max(0,selected.offsetLeft-thumbs.offsetLeft-thumbs.clientWidth/2+selected.offsetWidth/2),behavior:reduced?'instant':'smooth'});
