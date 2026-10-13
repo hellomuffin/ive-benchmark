@@ -75,18 +75,19 @@ const axes=[
  {key:'speed',title:'Execution speed',levels:['Cautious','Balanced','Quick']},
  {key:'interruption',title:'Interruption preference',levels:['Step-by-step','Moderate','Necessary only']},
 ];
-const excerpts={
- skill:['You are new to this kind of kitchen work, and the routines still take effort to picture.','You are comfortable with ordinary kitchen tasks and can usually translate a cooking goal into practical steps.','You are very experienced in the kitchen and tend to keep the whole workflow in mind. You naturally think ahead about timing, dependencies, tools, and likely failure points, and you can explain those considerations in concrete cooking terms.'],
- trust:["You are cautious about the assistant's claims about what happened in your work, especially when they do not match your own memory. Your first instinct in that mismatch is to question what it actually saw and compare the claim with the state of the kitchen before changing course.","You treat the assistant as potentially helpful but not automatically right. If its account conflicts with yours, you tend to look for a sensible reason before revising your view.","You generally regard the assistant as a useful extra set of eyes and are inclined to take its observations seriously."],
- speed:['You strongly prefer a methodical, cautious approach to cooking, believing that a slow, correct dish is better than a rushed, ruined one.','You prefer a balanced pace. You like steady progress and are comfortable with some efficiency, but not at the cost of making the work feel rushed or brittle.','You are driven by efficiency and want to complete the dish as quickly as possible. You are drawn to momentum, overlap, and avoiding wasted pauses when the situation seems manageable.'],
- interruption:['You prefer close guidance as the task unfolds. You are comfortable having the assistant break things down and keep you oriented, because frequent direction reduces uncertainty.','You prefer a middle-ground interruption style. You can absorb comments while working, but you also appreciate some respect for the rhythm of the task.','You prefer not to be interrupted unless there is a real need. Extra commentary during active work can feel intrusive, especially if it is not urgent or directly useful.'],
-};
-function instruction(axis,level){document.querySelector('#persona-instruction-title').textContent=`${axis.title} · ${axis.levels[level]}`;document.querySelector('#persona-instruction-text').textContent=excerpts[axis.key][level];}
 for(const axis of axes){
  const row=document.createElement('fieldset');row.className='persona-row';const title=document.createElement('legend');title.textContent=axis.title;const choices=document.createElement('div');choices.className='persona-levels';
- axis.levels.forEach((label,i)=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-pressed',i===(axis.key==='interruption'?2:1));b.addEventListener('click',()=>{[...choices.children].forEach((s,j)=>s.setAttribute('aria-pressed',i===j));instruction(axis,i);});choices.append(b);});
+ axis.levels.forEach((label,i)=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-pressed',i===(axis.key==='interruption'?2:1));b.addEventListener('click',()=>{[...choices.children].forEach((s,j)=>s.setAttribute('aria-pressed',i===j));});choices.append(b);});
  row.append(title,choices);document.querySelector('#persona-controls').append(row);
 }
-instruction(axes[3],2);
+fetch(new URL('./persona-clips.json',import.meta.url)).then(r=>r.json()).then(clips=>{
+ document.querySelectorAll('[data-persona-clip]').forEach(card=>{
+  const v=card.querySelector('video'),band=card.querySelector('.persona-live-dialogue'),cues=clips[card.dataset.personaClip];
+  const update=()=>{const cue=cues.find(c=>v.currentTime>=c.start&&v.currentTime<c.end);band.classList.toggle('user',cue?.speaker==='User');band.querySelector('b').textContent=cue?.speaker??'';band.querySelector('p').textContent=cue?.text??''};
+  v.addEventListener('timeupdate',update);v.addEventListener('seeked',update);
+  v.addEventListener('play',()=>document.querySelectorAll('[data-persona-clip] video').forEach(other=>{if(other!==v)other.pause()}));
+  update();
+ })
+});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)document.querySelectorAll('.technical-section video').forEach(v=>v.pause());});
 new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)e.target.pause();}),{threshold:0}).observe(video);

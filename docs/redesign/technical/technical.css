@@ -15,6 +15,19 @@
 .harness-steps{font-size:18px;line-height:1.65;padding-left:25px;margin:0 0 35px;color:#293b47}
 .harness-steps li{padding-left:7px;margin:12px 0}
 .persona-example-intro{margin-top:32px}
+.persona-explorer{display:block!important}
+.persona-controls{grid-template-columns:1fr 1fr;column-gap:32px!important}
+.persona-video-pair{display:grid;grid-template-columns:1fr 1fr;gap:22px;font-family:IVGInterface,system-ui,sans-serif}
+.persona-video-card{min-width:0;border:1px solid #d4e1eb;border-radius:12px;overflow:hidden;background:white}
+.persona-video-card h4{font-size:15px;line-height:1.5;margin:0;padding:17px 18px;color:#173e5a}
+.persona-film{position:relative;background:#edf5fb}
+.persona-film video{display:block;width:100%;height:auto}
+.persona-view-labels{position:absolute;top:8px;left:8px;right:8px;display:grid;grid-template-columns:1fr 1fr;pointer-events:none;gap:8px}
+.persona-view-labels span{justify-self:start;background:#173e5ace;color:white;font-size:9px;padding:3px 7px;border-radius:12px}
+.persona-live-dialogue{background:#082f52;color:white;height:145px;padding:15px 18px}
+.persona-live-dialogue b{font-size:11px;color:#9ed5ff}.persona-live-dialogue.user b{color:#a5eadc}
+.persona-live-dialogue p{font-size:13px;line-height:1.6;margin:7px 0 0}
+@media(max-width:700px){.persona-video-pair{grid-template-columns:1fr}.persona-controls{grid-template-columns:1fr}.persona-live-dialogue{height:155px}}
 .persona-comparison{font-family:IVGInterface,system-ui,sans-serif;border:1px solid #d4e1eb;border-radius:13px;overflow:hidden}
 .persona-comparison>header{display:flex;justify-content:space-between;gap:12px;padding:18px 22px;background:#eff5fa;font-size:14px;color:#244c69}
 .persona-comparison>header span{font-size:13px}

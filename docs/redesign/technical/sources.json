@@ -20,7 +20,7 @@
     "event-question": "cooksim-slides/talk/dv_g3_question_aplus.gif"
   },
   "persona_source": "cook-bench-engine/cooksim/interact/persona_v2.py",
-  "persona_comparison": {"selection":"experiment/06_human_study/persona_examples/README.md", "novice":"cook-bench-engine/tmp/formal_v5/frames/classic_novice/gpt-6-astra/b3_master_nops_hard_map_5.json", "expert":"cook-bench-engine/tmp/formal_v5/frames/classic_expert/gpt-6-astra/b3_master_nops_hard_map_5.json", "excerpt_ticks":{"novice":[34,45],"expert":[134,142]}},
+  "persona_comparison": {"selection":"Original August 4 persona contrast slide clips specified by the author", "skilled_clip":"cook-bench-engine/tmp/talk4/clip1_v3.mp4", "skilled_window_seconds":[24,54], "skilled_record":"cook-bench-engine/tmp/v5/rank/rank__creative_uninterruptible__frames__r1.json.bak", "novice_clip":"cook-bench-engine/tmp/talk4/clip2_fixed.mp4", "novice_record":"cook-bench-engine/tmp/v5/intent/intent__qa_pan_contents__novice_stepwise__aplus.json", "novice_full_video_start_seconds":94.9, "novice_playback_speed":1.0533333333333332, "method":"Original recorded motion and audio, cropped to two views and restyled with synchronized captions. Skilled captions aligned to original burned-in caption transitions at 0.1-second resolution; novice captions use original film timeline. The examples differ in assistant observation tier and event schedule; not a controlled persona-only comparison."},
   "persona_axes": [
     "skill",
     "trust",

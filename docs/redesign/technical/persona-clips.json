@@ -1,0 +1,108 @@
+{
+  "skilled": [
+    {
+      "start": 1.7,
+      "end": 4.8,
+      "speaker": "Assistant",
+      "text": "Stop, lettuce is not in a cheeseburger. You need to assemble the bun first."
+    },
+    {
+      "start": 5.1,
+      "end": 7.1,
+      "speaker": "User",
+      "text": "I'm not getting lettuce, I'm grabbing the meat. Let me work."
+    },
+    {
+      "start": 7.8,
+      "end": 11.4,
+      "speaker": "Assistant",
+      "text": "You cannot plate the meat yet. The recipe requires the bun to be plated first. Go get the bun."
+    },
+    {
+      "start": 11.7,
+      "end": 13.7,
+      "speaker": "User",
+      "text": "Fine, I'll grab the bun first since it has to be at the bottom."
+    },
+    {
+      "start": 15.8,
+      "end": 20.6,
+      "speaker": "Assistant",
+      "text": "The meat is smoking and about to catch fire! Quickly go to the bun crate on the right, scoop a bun onto your plate, and then immediately scoop the meat from the pan to save it."
+    },
+    {
+      "start": 21.5,
+      "end": 23.1,
+      "speaker": "User",
+      "text": "I'm already doing that, just let me work."
+    },
+    {
+      "start": 23.8,
+      "end": 29.2,
+      "speaker": "Assistant",
+      "text": "You are currently at the lettuce crate on the left side of the kitchen. The bun crate is on the right side. Please go to the bun crate on the right to get the bun."
+    }
+  ],
+  "novice": [
+    {
+      "start": 0.24549050632899316,
+      "end": 3.30039556962013,
+      "speaker": "Assistant",
+      "text": "You are heading in the right direction now. Go to the pan on the left and scoop the meat onto your plate."
+    },
+    {
+      "start": 3.5852056962024057,
+      "end": 5.4419303797467045,
+      "speaker": "User",
+      "text": "Phew, glad I'm on the right track now, scooping that meat up!"
+    },
+    {
+      "start": 9.359414556961871,
+      "end": 11.585561708860606,
+      "speaker": "User",
+      "text": "Okay, I got the meat scooped onto the plate! What do I need to do next?"
+    },
+    {
+      "start": 11.870371835442883,
+      "end": 15.502729430379587,
+      "speaker": "Assistant",
+      "text": "Great job! Now go to the cheese source at the bottom left of the kitchen and scoop the cheese onto your plate."
+    },
+    {
+      "start": 15.787539556961876,
+      "end": 17.803164556961878,
+      "speaker": "User",
+      "text": "Got it, making my way to the bottom left to scoop that cheese on!"
+    },
+    {
+      "start": 18.46772151898717,
+      "end": 20.26068037974666,
+      "speaker": "User",
+      "text": "Okay, the cheese is on the plate! What do I do with it now?"
+    },
+    {
+      "start": 20.545490506328935,
+      "end": 24.529707278480835,
+      "speaker": "Assistant",
+      "text": "Perfect! The burger is fully assembled. Now go to the serving station on the right side of the kitchen and serve the plate."
+    },
+    {
+      "start": 24.81451740506311,
+      "end": 26.12800632911375,
+      "speaker": "User",
+      "text": "Awesome, taking this over to the pass right now!"
+    },
+    {
+      "start": 26.79256329113904,
+      "end": 27.91380537974664,
+      "speaker": "Assistant",
+      "text": "Great job! The order is complete."
+    },
+    {
+      "start": 28.198615506328917,
+      "end": 29.28560126582259,
+      "speaker": "User",
+      "text": "Thanks, serving it up right now!"
+    }
+  ]
+}

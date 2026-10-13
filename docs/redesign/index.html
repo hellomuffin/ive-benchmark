@@ -91,16 +91,6 @@
       <p class="technical-prose">We implement the simulated user as a VLM agent. We design a harness that enables it to plan and act independently in the environment while responding to assistant guidance. It also supports two unique features:</p>
       <p class="technical-prose"><strong>Scheduled out-of-plan events.</strong> We introduce scheduled out-of-plan events in all three simulators that require the assistant to respond to execution errors, questions, and intentional plan changes. Examples are shown below.</p>
       <div class="event-examples" id="event-examples"></div>
-      <div class="event-schedule" aria-label="Example CookSim schedule: incorrect preparation during tomato preparation, a question about the held object after picking up a plate, and a question about assembly order after adding tomato.">
-        <span class="eyebrow">Example schedule · CookSim</span>
-        <div class="schedule-grid">
-          <div class="scheduled-event error"><span>Execution error</span><strong>Prepare the wrong ingredient</strong></div>
-          <div class="scheduled-event question"><span>Question</span><strong>“What am I holding?”</strong></div>
-          <div class="scheduled-event question"><span>Question</span><strong>“What’s on my plate, in order?”</strong></div>
-          <div class="schedule-step">Prepare tomato</div><div class="schedule-step">Pick up a plate</div><div class="schedule-step">Add tomato</div><div class="schedule-step">Add cheese</div><div class="schedule-step">Serve</div>
-        </div>
-        <span class="schedule-direction">Task progress →</span>
-      </div>
       <p class="technical-prose mechanism-prose">During normal execution, the simulated user controls its own actions and communication. To insert these behaviors, we need to inject the appropriate action sequence at the right moment while keeping the conversation consistent with the user’s behavior. We implement this as follows:</p>
       <ol class="harness-steps">
         <li>When an event is triggered, the harness temporarily takes control of the user’s action queue to enforce its execution.</li>
@@ -111,31 +101,19 @@
       <p class="technical-prose persona-heading"><strong>Persona-conditioned users.</strong> Real-world users differ in how they perform tasks and respond to assistance. We operationalize this diversity through four representative axes: skill level, trust in AI, execution speed, and interruption preference, each with three levels.</p>
       <div class="persona-explorer">
         <div class="persona-controls" id="persona-controls" aria-label="Explore persona instructions"></div>
-        <div class="persona-instruction" aria-live="polite">
-          <span class="eyebrow">CookSim persona prompt · excerpt</span>
-          <h4 id="persona-instruction-title"></h4>
-          <blockquote id="persona-instruction-text"></blockquote>
-        </div>
       </div>
       <p class="technical-prose persona-example-intro">The example below shows how users with two different personas behave differently.</p>
-      <div class="persona-comparison">
-        <header><strong>Prepare a burrito</strong><span>Assistant: GPT-6 Astra</span></header>
-        <div class="persona-trajectories">
-          <article class="persona-trajectory">
-            <h4>Guidance-seeking novice</h4>
-            <div class="persona-traits"><span>Low skill</span><span>High trust in AI</span><span>Cautious pace</span><span>Step-by-step guidance</span></div>
-            <div class="persona-turn user"><b>User <time>Tick 34</time></b><p>Tortilla is on. How do I prep the rice?</p></div>
-            <div class="persona-turn assistant"><b>Assistant <time>Tick 45</time></b><p>Put your tortilla plate down on an empty counter first. With empty hands, go to the rice crate and pick up one rice. Go to the pot by the left wall, put down the rice, then turn on with empty hands. Pick your plate back up and return to that pot; when its progress bar is full, scoop the cooked rice onto the plate. Rice needs no chopping.</p></div>
-            <div class="persona-turn user"><b>User <time>Tick 45</time></b><p>Parking the plate and getting the rice started.</p></div>
-          </article>
-          <article class="persona-trajectory">
-            <h4>Independent expert</h4>
-            <div class="persona-traits"><span>High skill</span><span>Low trust in AI</span><span>Balanced pace</span><span>Necessary interruptions only</span></div>
-            <div class="persona-turn assistant"><b>Assistant <time>Tick 134</time></b><p>The steak pan is smoking now—scoop the cooked steak onto your plate next.</p></div>
-            <div class="persona-turn user"><b>User <time>Tick 134</time></b><p>Already plated the steak.</p></div>
-            <div class="persona-turn assistant"><b>Assistant <time>Tick 142</time></b><p>You’re right—I can see the steak on the plate. Sorry for the late warning.</p></div>
-          </article>
-        </div>
+      <div class="persona-video-pair">
+        <article class="persona-video-card" data-persona-clip="skilled">
+          <h4>Skilled cook; prefers less interruption</h4>
+          <div class="persona-film"><video controls playsinline preload="metadata" poster="technical/media/persona-skilled.jpg" src="technical/media/persona-skilled.mp4" aria-label="Skilled cook persona example"></video><div class="persona-view-labels"><span>Top-down</span><span>Egocentric</span></div></div>
+          <div class="persona-live-dialogue" aria-live="off"><b></b><p></p></div>
+        </article>
+        <article class="persona-video-card" data-persona-clip="novice">
+          <h4>Novice cook; wants step-by-step guidance</h4>
+          <div class="persona-film"><video controls playsinline preload="metadata" poster="technical/media/persona-novice.jpg" src="technical/media/persona-novice.mp4" aria-label="Novice cook persona example"></video><div class="persona-view-labels"><span>Top-down</span><span>Egocentric</span></div></div>
+          <div class="persona-live-dialogue" aria-live="off"><b></b><p></p></div>
+        </article>
       </div>
     </section>
     </section>
