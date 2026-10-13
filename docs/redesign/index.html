@@ -21,7 +21,7 @@
         <a href="#abstract">Abstract</a>
         <a href="#evaluation">Demonstrations</a>
         <a href="#leaderboard-section">Leaderboard</a>
-        <a href="#environment-simulation">Framework</a>
+        <a href="#technical-details">Technical details</a>
       </div>
     </nav>
   </header>
@@ -48,9 +48,14 @@
       <h2 id="leaderboard-title">IVG-Bench Leaderboard</h2>
       <div id="leaderboard"></div>
     </section>
+    <section id="technical-details" class="technical-details" aria-labelledby="technical-title">
+      <header class="technical-introduction">
+        <h2 id="technical-title">Technical details</h2>
+        <p>Here we briefly discuss the features of our environment simulation and user simulation, which jointly support rollouts to test visual assistant capabilities.</p>
+      </header>
     <section id="environment-simulation" class="technical-section" aria-labelledby="environment-title">
-      <h2 id="environment-title">Environment Simulation</h2>
-      <p class="section-intro">Executable everyday tasks, with visual observations and human-aligned actions.</p>
+      <h3 id="environment-title" class="technical-subtitle">Environment simulation</h3>
+      <p class="technical-prose"><strong>Simulating everyday tasks.</strong> Our environment simulators simulate procedural physical tasks in three different domains: cooking, household activities, and mobile interface use. Example tasks for each environment are shown below.</p>
       <div class="task-gallery" aria-label="Example task completion videos">
         <div class="gallery-toolbar">
           <div class="engine-tabs" role="group" aria-label="Choose an environment">
@@ -72,7 +77,7 @@
         <div class="task-thumbnails" id="task-thumbnails" aria-label="Select a task"></div>
       </div>
 
-      <div class="subsection-heading"><h3>Human-Aligned Action Space</h3><p>Actions expressed at the level people use to communicate.</p></div>
+      <p class="technical-prose action-prose"><strong>Human-communicable action space.</strong> Unlike most embodied AI simulators, our simulators support an action space at a more abstract semantic level, referring to objects and intended operations. This is closer to how humans communicate—you would not typically tell someone to “move forward one meter”—and hence more suitable for visual assistants that aim to assist humans.</p>
       <div class="action-examples" id="action-examples"></div>
       <div class="grounding-flow" aria-label="Action grounding and execution">
         <div><span class="flow-number">1</span><p><strong>Ground references</strong><span>“The pan on your left” → an object identifier</span></p></div>
@@ -82,7 +87,7 @@
     </section>
 
     <section id="user-simulation" class="technical-section" aria-labelledby="user-simulation-title">
-      <h2 id="user-simulation-title">User Simulation</h2>
+      <h3 id="user-simulation-title" class="technical-subtitle">User simulation</h3>
       <p class="section-intro user-intro">A VLM agent plans and acts independently, responding to assistant guidance according to its persona. The harness introduces scheduled events during task execution.</p>
       <div class="subsection-heading"><h3>Scheduled Out-of-Plan Events</h3><p>Events are triggered by conditions on task progress.</p></div>
       <div class="event-examples" id="event-examples"></div>
@@ -110,6 +115,7 @@
           <blockquote id="persona-instruction-text"></blockquote>
         </div>
       </div>
+    </section>
     </section>
   </main>
 

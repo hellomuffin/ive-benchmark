@@ -27,6 +27,14 @@ function select(next,direction=1){
  $('#episode-tabs').innerHTML=episodes.map((x,i)=>`<button role="tab" aria-selected="${i===index}" data-index="${i}">${x.engine}</button>`).join('');
  $('#episode-tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>select(Number(b.dataset.index),Number(b.dataset.index)>index?1:-1));
  $('.left-preview .preview-title').textContent=episodes[(index+2)%3].engine;$('.right-preview .preview-title').textContent=episodes[(index+1)%3].engine;
+ for(const [selector,other] of [['.left-preview',episodes[(index+2)%3]],['.right-preview',episodes[(index+1)%3]]]){
+  const preview=$(selector);
+  if(!preview.querySelector('.preview-task')){const task=document.createElement('span');task.className='preview-task';preview.querySelector('.preview-title').after(task);const dialogue=document.createElement('span');dialogue.className='preview-dialogue';dialogue.innerHTML='<b></b><span></span>';preview.querySelector('canvas').after(dialogue)}
+  preview.querySelector('.preview-task').textContent=other.task;
+  const line=other.dialogue.find(d=>d.text?.length>25)??other.dialogue[0];
+  preview.querySelector('.preview-dialogue b').textContent=line?.speaker==='user'?'User':`Assistant · ${other.assistant}`;
+  preview.querySelector('.preview-dialogue span').textContent=line?.text??'';
+ }
  $('.left-preview').setAttribute('aria-label',`Watch ${episodes[(index+2)%3].engine}`);$('.right-preview').setAttribute('aria-label',`Watch ${episodes[(index+1)%3].engine}`);
  $('#seek').max=e.duration;$('.film').classList.toggle('started',v.currentTime>0);$('#play').textContent='▶';$('#play').setAttribute('aria-label','Play episode');
  $('#episode-card').classList.remove('turn-left','turn-right');void $('#episode-card').offsetWidth;$('#episode-card').classList.add(direction>0?'turn-right':'turn-left');
@@ -51,6 +59,8 @@ $('#play').onclick=toggle;$('#start').onclick=toggle;$('#seek').oninput=e=>{vide
 $('#previous').onclick=$('.left-preview').onclick=()=>select(index-1,-1);$('#next').onclick=$('.right-preview').onclick=()=>select(index+1,1);
 document.addEventListener('keydown',e=>{if(e.target.matches('input'))return;if(e.key==='ArrowRight'){e.preventDefault();select(index+1,1)}if(e.key==='ArrowLeft'){e.preventDefault();select(index-1,-1)}});
 let touchStart=null;$('#episode-card').addEventListener('touchstart',e=>{if(!e.target.closest('.playback'))touchStart=e.touches[0].clientX},{passive:true});$('#episode-card').addEventListener('touchend',e=>{if(touchStart!==null){const dx=e.changedTouches[0].clientX-touchStart;if(Math.abs(dx)>70)select(index+(dx<0?1:-1),dx<0?1:-1)}touchStart=null},{passive:true});
+function sizePreviews(){const card=$('#episode-card');$('.episode-carousel').style.setProperty('--preview-height',`${Math.round(card.getBoundingClientRect().height*.88)}px`)}
+new ResizeObserver(sizePreviews).observe($('#episode-card'));
 function notifySize(){if(window.parent!==window)window.parent.postMessage({type:'ivg-demo-height',height:Math.ceil(document.body.getBoundingClientRect().height)},location.origin)}
 new ResizeObserver(notifySize).observe(document.body);window.addEventListener('resize',render);select(0);
 if('requestVideoFrameCallback' in HTMLVideoElement.prototype){videos.forEach((v,i)=>{const frame=()=>{if(index===i)render();v.requestVideoFrameCallback(frame)};v.requestVideoFrameCallback(frame)})}else{const frame=()=>{if(!videos[index].paused)render();requestAnimationFrame(frame)};requestAnimationFrame(frame)}
