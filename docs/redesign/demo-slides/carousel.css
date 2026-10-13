@@ -16,3 +16,11 @@ main{padding:0 0 20px;overflow:hidden}.episode-carousel{max-width:1440px;margin:
 .right-preview .preview-title{text-align:right}.dialogue-stage{height:76px}.task-heading p{min-height:18px}.task-heading{margin-bottom:14px}
 @media(max-width:760px){.dialogue-stage{height:118px}.task-heading p{min-height:0}}
 .playback button svg{width:16px;height:16px;fill:currentColor;vertical-align:middle}.event-pin:after{content:'';position:absolute;inset:-5px}
+.event-track{height:43px}
+.event-pin{transform:translateX(-50%);border-radius:50%}
+.event-pin:before{transform:none}
+.event-label{position:absolute;top:20px;left:50%;transform:translateX(calc(-1 * var(--anchor)));white-space:nowrap;font-size:11px;font-weight:600;line-height:1.3;background:#fff4e6;color:#85521f;border:1px solid #e7cbaa;border-radius:5px;padding:3px 7px;visibility:hidden;pointer-events:none;z-index:3}
+.event-pin.current .event-label,.event-pin:hover .event-label,.event-pin:focus-visible .event-label{visibility:visible}
+.event-track:has(.event-pin:hover) .event-pin:not(:hover) .event-label,.event-track:has(.event-pin:focus-visible) .event-pin:not(:focus-visible) .event-label{visibility:hidden}
+.event-status{display:none}
+@media(max-width:760px){.event-label{font-size:10px}}
