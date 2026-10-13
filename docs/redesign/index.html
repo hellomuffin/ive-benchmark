@@ -118,6 +118,7 @@
     </section>
     <section id="recurring-problems" class="technical-section results-story" aria-labelledby="problems-title">
       <h3 id="problems-title" class="technical-subtitle">Recurring problems across assistant types exposed by our dynamic evaluation</h3>
+      <div class="failure-grid">
       <article class="failure-example">
         <h4><span>(a)</span> Response delays can render guidance irrelevant or incorrect, frustrating users.</h4>
         <video controls playsinline preload="none" poster="technical/media/failure-delay.jpg" src="technical/media/failure-delay.mp4" aria-label="Delayed guidance from Gemini 3.1 Pro in VHSim"></video>
@@ -128,9 +129,12 @@
       </article>
       <article class="failure-example drift-example">
         <h4><span>(c)</span> Interaction quality drifts during rollouts, especially for open-weight models.</h4>
+        <div class="drift-plots">
         <a href="technical/media/drift-qwen.png" target="_blank" rel="noopener"><img src="technical/media/drift-qwen.png" loading="lazy" alt="Qwen3.8-27B: factual grounding, situational relevance and actionable guidance across episode progress, as shown in the slides."></a>
         <a href="technical/media/drift-glimmer.png" target="_blank" rel="noopener"><img src="technical/media/drift-glimmer.png" loading="lazy" alt="Muse Glimmer: factual grounding, situational relevance and actionable guidance across episode progress, as shown in the slides."></a>
+        </div>
       </article>
+      </div>
     </section>
     <section id="other-results" class="technical-section results-story other-results" aria-labelledby="other-results-title">
       <h3 id="other-results-title" class="technical-subtitle">Other results</h3>
