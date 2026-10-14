@@ -23,6 +23,17 @@ main{padding:0 0 20px;overflow:hidden}.episode-carousel{max-width:1440px;margin:
 .event-pin.current .event-label,.event-pin:hover .event-label,.event-pin:focus-visible .event-label{visibility:visible}
 .event-track:has(.event-pin:hover) .event-pin:not(:hover) .event-label,.event-track:has(.event-pin:focus-visible) .event-pin:not(:focus-visible) .event-label{visibility:hidden}
 .event-status{display:none}
+.event-question{border-color:#9b88c8;background:#f2edf9;color:#70549f}
+.event-question.triggered{background:#b09bd5;border-color:#896bb7}
+.event-question.active{background:#8060b0;border-color:#70549f;box-shadow:0 0 0 3px #8060b026}
+.event-question .event-label{background:#f3eefb;color:#65498e;border-color:#cdbbe5}
+.event-legend{display:flex;align-items:center;gap:10px;margin-left:auto;margin-right:10px;font-weight:400;color:#5a6e80}
+.event-legend span{display:inline-flex;align-items:center;gap:4px}
+.event-legend i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#bd8042}
+.event-legend .question i{background:#8060b0}
+.milestone{flex-direction:column;align-items:flex-start;gap:4px}
+.milestone:last-child{flex:1}
+.step-label{font-size:10px}
 @media(max-width:760px){.event-label{font-size:10px}}
 .episode-carousel{position:relative}
 .episode-navigation{position:absolute;top:265px;left:0;right:0;margin:0;justify-content:space-between;padding:0 max(20px,calc((100% - 1140px)/2));pointer-events:none;z-index:5}

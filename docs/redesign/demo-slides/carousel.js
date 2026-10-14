@@ -9,7 +9,8 @@ const previewContexts=[$('.left-preview canvas').getContext('2d'),$('.right-prev
 const clock=t=>`${Math.floor((t+.001)/60)}:${String(Math.floor((t+.001)%60)).padStart(2,'0')}`;
 function score(label,value,type,detail,tip){return `<div class="score ${type} ${value===null?'missing':''} ${type==='completion'&&value===0?'failed':''}" title="${tip??''}"><div class="dial"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="43"/><circle class="arc" cx="50" cy="50" r="43" pathLength="100" style="--value:${type==='completion'?value*100:value??0}"/></svg><div class="number">${value===null?'—':type==='completion'?(value?'✓':'×'):Number(value.toFixed(1))}${value!==null&&type!=='completion'?'<small>%</small>':''}</div></div><div class="score-label">${label}</div><div class="score-detail">${detail??''}</div></div>`}
 function positionEvent(e,tick){
- const points=[{tick:0,pos:0},...e.steps.map((s,i)=>({tick:s.tick,pos:(i+.5)/e.steps.length})).filter(s=>s.tick!==null),{tick:e.ticks,pos:1}].sort((a,b)=>a.tick-b.tick);
+ const completed=e.steps.filter(s=>s.tick!==null).map(s=>s.tick).sort((a,b)=>a-b);
+ const points=[{tick:0,pos:0},...completed.map((t,i)=>({tick:t,pos:(i+1)/e.steps.length})),{tick:e.ticks,pos:completed.length/e.steps.length}];
  const a=points.filter(p=>p.tick<=tick).at(-1)??points[0],b=points.find(p=>p.tick>tick)??points.at(-1);
  return b.tick===a.tick?a.pos:a.pos+(b.pos-a.pos)*(tick-a.tick)/(b.tick-a.tick);
 }
@@ -22,7 +23,7 @@ function select(next,direction=1){
  $('#score-note').textContent=e.quality===null?'— No matching rubric grade for this recording; no scheduled QA or proactive-request tests.':'';
  $('#milestones').innerHTML=e.steps.map((s,i)=>`<div class="milestone"><span class="step-dot">${i+1}</span><span class="step-label">${s.label}</span></div>`).join('');
  const used=[];
- $('#events').innerHTML=e.events.map((event,i)=>{let pos=Math.max(1,Math.min(99,positionEvent(e,event.tick)*100));while(used.some(p=>Math.abs(p-pos)<3))pos+=3;used.push(pos);return `<button class="event-pin" style="left:${pos}%" data-event="${i}" aria-label="${event.label}, tick ${event.tick}" title="${event.label} · tick ${event.tick}${event.detail?' — '+event.detail.replaceAll('"','&quot;'):''}"><span class="event-label" style="--anchor:${pos<25?0:pos>75?100:50}%">${event.label}</span></button>`}).join('');
+ $('#events').innerHTML=e.events.map((event,i)=>{let pos=Math.max(1,Math.min(99,positionEvent(e,event.tick)*100));while(used.some(p=>Math.abs(p-pos)<3)&&pos<96)pos+=3;used.push(pos);const kind=event.kind.startsWith('qa_')?'question':'mistake';const type=event.kind==='qa_proactive'?'Proactive request':kind==='question'?'Question':'Mistake';return `<button class="event-pin event-${kind}" style="left:${pos}%" data-event="${i}" aria-label="${type}: ${event.label}, tick ${event.tick}" title="${type}: ${event.label} · tick ${event.tick}${event.detail?' — '+event.detail.replaceAll('"','&quot;'):''}"><span class="event-label" style="--anchor:${pos<25?0:pos>75?100:50}%">${event.label}</span></button>`}).join('');
  $('#events').querySelectorAll('button').forEach(b=>b.onclick=()=>{const event=e.events[Number(b.dataset.event)];const s=e.segments.find(s=>s.tick>=event.tick);v.currentTime=s?.start??0;render()});
  $('#episode-tabs').innerHTML=episodes.map((x,i)=>`<button role="tab" aria-selected="${i===index}" data-index="${i}">${x.engine}</button>`).join('');
  $('#episode-tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>select(Number(b.dataset.index),Number(b.dataset.index)>index?1:-1));
