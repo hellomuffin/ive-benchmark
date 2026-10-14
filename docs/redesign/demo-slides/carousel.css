@@ -34,7 +34,7 @@ main{padding:0 0 20px;overflow:hidden}.episode-carousel{max-width:1440px;margin:
 .milestone{flex-direction:column;align-items:flex-start;gap:4px}
 .milestone:last-child{flex:1}
 .step-label{font-size:10px}
-@media(max-width:760px){.event-label{font-size:10px}}
+@media(max-width:760px){.event-label{font-size:10px}.step-label{font-size:9px;max-width:100%;overflow-wrap:anywhere;padding-right:0}}
 .episode-carousel{position:relative}
 .episode-navigation{position:absolute;top:265px;left:0;right:0;margin:0;justify-content:space-between;padding:0 max(20px,calc((100% - 1140px)/2));pointer-events:none;z-index:5}
 .episode-navigation>button{pointer-events:auto;width:58px;height:76px;border-radius:16px;border:1px solid #cbdce9;background:#ffffffed;box-shadow:0 4px 16px #173b5a15;display:grid;place-items:center;transition:background .2s,transform .2s}
