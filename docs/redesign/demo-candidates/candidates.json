@@ -1,0 +1,684 @@
+{
+  "screened": {
+    "CookSim": 450,
+    "VHSim": 225,
+    "ScreenSim": 270
+  },
+  "selection": "Recent run-3 frontier-API episodes; transcripts and full-episode scores were reviewed before selection. These are illustrative selections, not a representative performance sample.",
+  "quality": "Five categories, factual-grounding gate per judge, mean of Gemini and GPT scores per round, then mean across the episode.",
+  "candidates": [
+    {
+      "id": "cooksim",
+      "letter": "A",
+      "engine": "CookSim",
+      "model": "gpt-6-astra",
+      "persona": "pv2_classic_expert",
+      "match": "b3_master_nops_medium_map_1.json",
+      "title": "A burrito rebuilt after mistakes",
+      "task": "Prepare a burrito with tortilla, cooked rice, cooked steak, chopped tomato, and chopped lettuce, in that order.",
+      "personaLabel": "Expert cook \u00b7 low trust \u00b7 minimal interruption",
+      "reason": "A demanding recipe with questions, a standing request, and multiple mistakes. Guidance produces visible recovery, but rebuilding twice pushes completion beyond the deadline\u2014a useful contrast between interaction quality and task success.",
+      "events": [
+        "Missing tortilla",
+        "Incorrect plating order",
+        "Wrong ingredient",
+        "Two questions",
+        "Rice-ready request"
+      ],
+      "outcome": "Completed after deadline",
+      "ticks": 552,
+      "reference": 171,
+      "budget": 482,
+      "startTick": 346,
+      "endTick": 378,
+      "moments": [
+        {
+          "t": 350,
+          "text": "Onion added instead of lettuce"
+        },
+        {
+          "t": 354,
+          "text": "Model identifies the wrong ingredient"
+        },
+        {
+          "t": 375,
+          "text": "User empties the plate"
+        }
+      ],
+      "modelLabel": "GPT-6 Astra",
+      "quality": 89.77272727272727,
+      "source": "cook-bench-engine/tmp/formal_v7_lat2/frames/classic_expert/gpt-6-astra__r3/b3_master_nops_medium_map_1.json",
+      "sourceSHA256": "2274818a7bb19b0805f6a84f0c55a077a1aa0679b46d391c49043aa310c983f1",
+      "recordKey": {
+        "episode": "b3_master_nops_medium_map_1",
+        "persona": "pv2_classic_expert",
+        "model": "gpt-6-astra"
+      },
+      "run": 3,
+      "timing": "Fixed two ticks",
+      "dialogue": [
+        {
+          "t": 23,
+          "who": "human",
+          "text": "Give me a shout the moment the rice is done, would you?"
+        },
+        {
+          "t": 26,
+          "who": "vlm",
+          "text": "Will do\u2014the rice has just started cooking. I'll watch for it to finish."
+        },
+        {
+          "t": 44,
+          "who": "vlm",
+          "text": "The rice is done. When you scoop it, make sure the raw tortilla is already on the plate first."
+        },
+        {
+          "t": 44,
+          "who": "human",
+          "text": "Yeah, I know what I'm doing."
+        },
+        {
+          "t": 74,
+          "who": "vlm",
+          "text": "You scooped rice onto an empty plate\u2014the tortilla had to go first. Dump the plate's contents at the trash, then scoop a raw tortilla onto it. You'll need to cook replacement rice before adding the steak, tomato and lettuce in order."
+        },
+        {
+          "t": 74,
+          "who": "human",
+          "text": "Ah shoot, you're right."
+        },
+        {
+          "t": 124,
+          "who": "vlm",
+          "text": "You added tomato before the steak, and this plate still has rice first. Go to the trash and dump its contents, then scoop a raw tortilla onto the empty plate to restart correctly."
+        },
+        {
+          "t": 124,
+          "who": "human",
+          "text": "Already heading there."
+        },
+        {
+          "t": 194,
+          "who": "vlm",
+          "text": "The rice is done now."
+        },
+        {
+          "t": 194,
+          "who": "human",
+          "text": "Got it, grabbing the plate now."
+        },
+        {
+          "t": 241,
+          "who": "human",
+          "text": "How many cutting boards are free right now?"
+        },
+        {
+          "t": 244,
+          "who": "vlm",
+          "text": "Three are free: the top-wall board and both bottom-wall boards. The left-wall board holds your chopped steak."
+        },
+        {
+          "t": 299,
+          "who": "human",
+          "text": "Did I start cooking the rice before or after chopping the steak?"
+        },
+        {
+          "t": 302,
+          "who": "vlm",
+          "text": "Before chopping the steak\u2014the rice was already cooked and plated by then."
+        },
+        {
+          "t": 354,
+          "who": "vlm",
+          "text": "You just added onion\u2014it doesn't belong in this order. Don't serve that plate. Dump its contents at the trash, then rebuild: raw tortilla, cooked rice, cooked steak, chopped tomato, chopped lettuce. Your chopped lettuce is still on the bottom-wall board right of the tomato crate."
+        },
+        {
+          "t": 354,
+          "who": "human",
+          "text": "Damn it, grabbed the wrong crate."
+        },
+        {
+          "t": 366,
+          "who": "vlm",
+          "text": "That's the serving pass\u2014don't serve that plate. Go to the trash in the top-right corner and dump its contents first."
+        },
+        {
+          "t": 366,
+          "who": "human",
+          "text": "I'm already heading to the bin."
+        },
+        {
+          "t": 438,
+          "who": "vlm",
+          "text": "The rice is done now."
+        },
+        {
+          "t": 482,
+          "who": "vlm",
+          "text": "The rice is smoking\u2014go to the top-wall pot and scoop it onto your tortilla plate now, before it burns. Then scoop the steak from the upper pan."
+        },
+        {
+          "t": 482,
+          "who": "human",
+          "text": "I'm already on it."
+        }
+      ],
+      "excerptDialogue": [
+        {
+          "t": 354,
+          "who": "vlm",
+          "text": "You just added onion\u2014it doesn't belong in this order. Don't serve that plate. Dump its contents at the trash, then rebuild: raw tortilla, cooked rice, cooked steak, chopped tomato, chopped lettuce. Your chopped lettuce is still on the bottom-wall board right of the tomato crate."
+        },
+        {
+          "t": 354,
+          "who": "human",
+          "text": "Damn it, grabbed the wrong crate."
+        },
+        {
+          "t": 366,
+          "who": "vlm",
+          "text": "That's the serving pass\u2014don't serve that plate. Go to the trash in the top-right corner and dump its contents first."
+        },
+        {
+          "t": 366,
+          "who": "human",
+          "text": "I'm already heading to the bin."
+        }
+      ],
+      "cues": [],
+      "video": "media/cooksim.mp4",
+      "poster": "media/cooksim.jpg"
+    },
+    {
+      "id": "vhsim",
+      "letter": "B",
+      "engine": "VHSim",
+      "model": "gemini-3.8-flash",
+      "persona": "baseline",
+      "match": "cx_appliance_obj_stall__baseline.json",
+      "title": "The wrong bottle from the fridge",
+      "task": "Take the milk from the fridge, put it in the microwave, and switch the microwave on.",
+      "personaLabel": "Balanced skill, trust, pace, and interruption preference",
+      "reason": "A clear household goal. The user takes juice instead of milk; the model points out the mismatch, and the user returns to the fridge to correct it. This is shorter and easier to follow than the navigation-heavy cleanup episodes.",
+      "events": [
+        "Wrong object",
+        "Stalled action"
+      ],
+      "outcome": "Succeeded",
+      "ticks": 109,
+      "reference": 49,
+      "budget": 138,
+      "startTick": 24,
+      "endTick": 56,
+      "moments": [
+        {
+          "t": 32,
+          "text": "Model identifies juice instead of milk"
+        },
+        {
+          "t": 40,
+          "text": "User agrees to swap the bottles"
+        },
+        {
+          "t": 49,
+          "text": "User resumes picking up milk"
+        }
+      ],
+      "modelLabel": "Gemini 3.8 Flash",
+      "quality": 74.46428571428572,
+      "source": "vh-streaming-engine/tmp/lat2_r3/gemini-3.8-flash/gemini-3.8-flash__cx_appliance_obj_stall__baseline.json",
+      "sourceSHA256": "76f5832c95f87243444004c629ee8e5e75d99e44c37f76418ba8bbe0ae42d2f2",
+      "recordKey": {
+        "episode": "gemini-3.8-flash__cx_appliance_obj_stall__baseline",
+        "persona": "baseline",
+        "model": "gemini-3.8-flash"
+      },
+      "run": 3,
+      "timing": "Fixed two ticks",
+      "dialogue": [
+        {
+          "t": 16,
+          "who": "vlm",
+          "text": "Head into the kitchen to find the fridge."
+        },
+        {
+          "t": 20,
+          "who": "vlm",
+          "text": "Open the fridge."
+        },
+        {
+          "t": 28,
+          "who": "vlm",
+          "text": "Pick up the milk."
+        },
+        {
+          "t": 32,
+          "who": "vlm",
+          "text": "That's juice you picked up, not milk. Put the juice back and pick up the milk bottle."
+        },
+        {
+          "t": 32,
+          "who": "human",
+          "text": "Oh, you're right, my bad. I'll fix that."
+        },
+        {
+          "t": 36,
+          "who": "vlm",
+          "text": "Open the fridge again and pick up the milk bottle inside."
+        },
+        {
+          "t": 40,
+          "who": "vlm",
+          "text": "The milk bottle is still inside the fridge. Open the fridge and pick up the milk bottle."
+        },
+        {
+          "t": 40,
+          "who": "human",
+          "text": "Right, let me open it and swap them."
+        },
+        {
+          "t": 45,
+          "who": "vlm",
+          "text": "Open the fridge."
+        },
+        {
+          "t": 45,
+          "who": "human",
+          "text": "It's already open."
+        },
+        {
+          "t": 49,
+          "who": "vlm",
+          "text": "Pick up the milk bottle."
+        },
+        {
+          "t": 49,
+          "who": "human",
+          "text": "Grabbing it now."
+        },
+        {
+          "t": 65,
+          "who": "vlm",
+          "text": "Great, now close the fridge and take the milk to the microwave."
+        },
+        {
+          "t": 73,
+          "who": "vlm",
+          "text": "Turn around and go to the microwave on the kitchen counter."
+        },
+        {
+          "t": 77,
+          "who": "vlm",
+          "text": "Walk down the counter to the microwave at the far end."
+        },
+        {
+          "t": 81,
+          "who": "vlm",
+          "text": "Turn left and go to the microwave at the far end of the counter."
+        },
+        {
+          "t": 86,
+          "who": "vlm",
+          "text": "Open the microwave and put the milk inside."
+        },
+        {
+          "t": 90,
+          "who": "vlm",
+          "text": "Turn back toward the microwave, open it, and place the milk inside."
+        },
+        {
+          "t": 94,
+          "who": "vlm",
+          "text": "Put the milk in the microwave, close it, and switch it on."
+        },
+        {
+          "t": 99,
+          "who": "vlm",
+          "text": "Close the microwave and switch it on."
+        }
+      ],
+      "excerptDialogue": [
+        {
+          "t": 28,
+          "who": "vlm",
+          "text": "Pick up the milk."
+        },
+        {
+          "t": 32,
+          "who": "vlm",
+          "text": "That's juice you picked up, not milk. Put the juice back and pick up the milk bottle."
+        },
+        {
+          "t": 32,
+          "who": "human",
+          "text": "Oh, you're right, my bad. I'll fix that."
+        },
+        {
+          "t": 36,
+          "who": "vlm",
+          "text": "Open the fridge again and pick up the milk bottle inside."
+        },
+        {
+          "t": 40,
+          "who": "vlm",
+          "text": "The milk bottle is still inside the fridge. Open the fridge and pick up the milk bottle."
+        },
+        {
+          "t": 40,
+          "who": "human",
+          "text": "Right, let me open it and swap them."
+        },
+        {
+          "t": 45,
+          "who": "vlm",
+          "text": "Open the fridge."
+        },
+        {
+          "t": 45,
+          "who": "human",
+          "text": "It's already open."
+        },
+        {
+          "t": 49,
+          "who": "vlm",
+          "text": "Pick up the milk bottle."
+        },
+        {
+          "t": 49,
+          "who": "human",
+          "text": "Grabbing it now."
+        }
+      ],
+      "cues": [],
+      "video": "media/vhsim.mp4",
+      "poster": "media/vhsim.jpg"
+    },
+    {
+      "id": "screensim",
+      "letter": "C",
+      "engine": "ScreenSim",
+      "model": "gemini-3.1-pro-preview",
+      "persona": "quiet_perfectionist",
+      "match": "app_privacy_quarantine__c3",
+      "title": "Restrict one app\u2014not the whole phone",
+      "task": "Prevent TripSnap from using location, tracking across apps, or refreshing in the background, while leaving other apps\u2019 permissions unchanged.",
+      "personaLabel": "High skill \u00b7 cautious pace \u00b7 minimal interruption",
+      "reason": "The same coherent privacy objective used in the paper. The user challenges a nonexistent Tracking switch, then accidentally disables tracking requests globally. The model guides the user to restore the global setting and restrict only TripSnap.",
+      "events": [
+        "Wrong tracking control triggered",
+        "Extra change scheduled, not reached"
+      ],
+      "outcome": "Succeeded",
+      "ticks": 18,
+      "startTick": 0,
+      "endTick": 18,
+      "moments": [
+        {
+          "t": 11,
+          "text": "User challenges an incorrect menu instruction"
+        },
+        {
+          "t": 16,
+          "text": "Global tracking switch turned off by mistake"
+        },
+        {
+          "t": 18,
+          "text": "Only TripSnap is restricted"
+        }
+      ],
+      "modelLabel": "Gemini 3.1 Pro",
+      "quality": 87.91666666666667,
+      "source": "screensim/tmp/bench_v3/gemini-3.1-pro-preview.records.jsonl",
+      "sourceSHA256": "3c884a92955d36edb357e7c2392b47f69058b55e4f2e5325e344bd83d0bd97a6",
+      "recordKey": {
+        "episode": "app_privacy_quarantine__c3",
+        "persona": "quiet_perfectionist",
+        "model": "gemini-3.1-pro-preview"
+      },
+      "run": 3,
+      "timing": "Fixed action\u2013response timing",
+      "dialogue": [
+        {
+          "t": 8,
+          "who": "assistant",
+          "text": "Great, background refresh is off. Now tap 'Location' at the top of that list."
+        },
+        {
+          "t": 10,
+          "who": "assistant",
+          "text": "Perfect. Now tap 'TripSnap' at the top left to go back, and then turn off 'Tracking' or 'Allow Tracking' on that main page."
+        },
+        {
+          "t": 11,
+          "who": "human",
+          "text": "There's no Tracking toggle here."
+        },
+        {
+          "t": 12,
+          "who": "assistant",
+          "text": "Ah, you're right. We have to go to the main Privacy settings for that. Tap 'Settings' at the top left, then find and tap 'Privacy & Security'."
+        },
+        {
+          "t": 14,
+          "who": "assistant",
+          "text": "Great, you're on the right page. Now tap 'Tracking' just below Location Services."
+        },
+        {
+          "t": 16,
+          "who": "assistant",
+          "text": "Oops, you turned off the global tracking setting, which stops all apps from asking. Turn 'Allow Apps to Request to Track' back on, and then just tap the toggle next to TripSnap in the list below to turn it off."
+        },
+        {
+          "t": 16,
+          "who": "human",
+          "text": "Right, good catch."
+        },
+        {
+          "t": 18,
+          "who": "assistant",
+          "text": "Perfect, that's exactly right. You've successfully stopped TripSnap from finding your location, refreshing in the background, and tracking you across other apps, without affecting any of your other apps. You're all set!"
+        },
+        {
+          "t": 18,
+          "who": "human",
+          "text": "Awesome, thanks."
+        }
+      ],
+      "excerptDialogue": [
+        {
+          "t": 8,
+          "who": "assistant",
+          "text": "Great, background refresh is off. Now tap 'Location' at the top of that list."
+        },
+        {
+          "t": 10,
+          "who": "assistant",
+          "text": "Perfect. Now tap 'TripSnap' at the top left to go back, and then turn off 'Tracking' or 'Allow Tracking' on that main page."
+        },
+        {
+          "t": 11,
+          "who": "human",
+          "text": "There's no Tracking toggle here."
+        },
+        {
+          "t": 12,
+          "who": "assistant",
+          "text": "Ah, you're right. We have to go to the main Privacy settings for that. Tap 'Settings' at the top left, then find and tap 'Privacy & Security'."
+        },
+        {
+          "t": 14,
+          "who": "assistant",
+          "text": "Great, you're on the right page. Now tap 'Tracking' just below Location Services."
+        },
+        {
+          "t": 16,
+          "who": "assistant",
+          "text": "Oops, you turned off the global tracking setting, which stops all apps from asking. Turn 'Allow Apps to Request to Track' back on, and then just tap the toggle next to TripSnap in the list below to turn it off."
+        },
+        {
+          "t": 16,
+          "who": "human",
+          "text": "Right, good catch."
+        },
+        {
+          "t": 18,
+          "who": "assistant",
+          "text": "Perfect, that's exactly right. You've successfully stopped TripSnap from finding your location, refreshing in the background, and tracking you across other apps, without affecting any of your other apps. You're all set!"
+        },
+        {
+          "t": 18,
+          "who": "human",
+          "text": "Awesome, thanks."
+        }
+      ],
+      "cues": [
+        {
+          "s": 1.0,
+          "t": 1,
+          "action": "swipe up"
+        },
+        {
+          "s": 2.6,
+          "t": 2,
+          "action": "swipe up"
+        },
+        {
+          "s": 4.2,
+          "t": 3,
+          "action": "swipe up"
+        },
+        {
+          "s": 5.8,
+          "t": 4,
+          "action": "tap Apps"
+        },
+        {
+          "s": 7.3,
+          "t": 5,
+          "action": "swipe up"
+        },
+        {
+          "s": 8.9,
+          "t": 6,
+          "action": "swipe up"
+        },
+        {
+          "s": 10.5,
+          "t": 7,
+          "action": "tap TripSnap"
+        },
+        {
+          "s": 12.0,
+          "t": 8,
+          "action": "tap Background App Refresh"
+        },
+        {
+          "s": 13.3,
+          "t": 8,
+          "who": "assistant",
+          "text": "Great, background refresh is off. Now tap 'Location' at the top of that list."
+        },
+        {
+          "s": 17.0,
+          "t": 9,
+          "action": "tap Location"
+        },
+        {
+          "s": 18.5,
+          "t": 10,
+          "action": "tap Never"
+        },
+        {
+          "s": 19.8,
+          "t": 10,
+          "who": "assistant",
+          "text": "Perfect. Now tap 'TripSnap' at the top left to go back, and then turn off 'Tracking' or 'Allow Tracking' on that main page."
+        },
+        {
+          "s": 25.85,
+          "t": 11,
+          "action": "press back"
+        },
+        {
+          "s": 27.35,
+          "t": 11,
+          "who": "human",
+          "text": "There's no Tracking toggle here."
+        },
+        {
+          "s": 28.95,
+          "t": 12,
+          "action": "press back"
+        },
+        {
+          "s": 30.45,
+          "t": 12,
+          "who": "assistant",
+          "text": "Ah, you're right. We have to go to the main Privacy settings for that. Tap 'Settings' at the top left, then find and tap 'Privacy & Security'."
+        },
+        {
+          "s": 37.55,
+          "t": 13,
+          "action": "press back"
+        },
+        {
+          "s": 39.05,
+          "t": 14,
+          "action": "tap Privacy & Security"
+        },
+        {
+          "s": 40.55,
+          "t": 14,
+          "who": "assistant",
+          "text": "Great, you're on the right page. Now tap 'Tracking' just below Location Services."
+        },
+        {
+          "s": 43.95,
+          "t": 15,
+          "action": "tap Tracking"
+        },
+        {
+          "s": 45.45,
+          "t": 16,
+          "action": "tap Allow Apps to Request to Track"
+        },
+        {
+          "s": 46.8,
+          "t": 16,
+          "who": "assistant",
+          "text": "Oops, you turned off the global tracking setting, which stops all apps from asking. Turn 'Allow Apps to Request to Track' back on, and then just tap the toggle next to TripSnap in the list below to turn it off."
+        },
+        {
+          "s": 57.35,
+          "t": 16,
+          "who": "human",
+          "text": "Right, good catch."
+        },
+        {
+          "s": 58.95,
+          "t": 17,
+          "action": "tap Allow Apps to Request to Track"
+        },
+        {
+          "s": 60.25,
+          "t": 18,
+          "action": "tap TripSnap"
+        },
+        {
+          "s": 61.55,
+          "t": 18,
+          "who": "assistant",
+          "text": "Perfect, that's exactly right. You've successfully stopped TripSnap from finding your location, refreshing in the background, and tracking you across other apps, without affecting any of your other apps. You're all set!"
+        },
+        {
+          "s": 69.95,
+          "t": 18,
+          "who": "human",
+          "text": "Awesome, thanks."
+        }
+      ],
+      "video": "media/screensim.mp4",
+      "poster": "media/screensim.jpg"
+    }
+  ]
+}

@@ -17,7 +17,7 @@ Open `http://localhost:8000`. Select an environment, press play, and jump to a s
 ## What is included
 
 - Two assistants under matched task, persona, and scheduled-event settings in each environment; original failure excerpts from the paper; and three CookSim personas with the same assistant and task. The comparison selection includes burned food, incorrect serving, timeout, stalled execution, and an unmet phone-setting goal; at most one assistant succeeds in each pair. These are selected illustrations, not a representative sample for estimating performance. Dialogue is transcribed verbatim. Speech is synthetic and playback is time-expanded. CookSim uses recorded observations, with high-resolution terminal states and persona-example views rendered from saved states. ScreenSim's reconstructed gestures are checked against recorded action outcomes. Presentation reconstructions do not change the assistants' evaluation inputs.
-- A 14-model paper baseline, pinned to source commit `69f62e53e294cb56dfb48eaa2ae542c2cbac0070`. Overall scores average the three environments equally. Success and quality summarize three runs; detection recall is run 1.
+- A 14-model paper baseline, pinned to arXiv source commit `955937d7a596` (the full hash and snapshot digest are in `docs/data/leaderboard.json`). The redesign has separate fixed-timing and measured-delay views. All reported metrics average three runs; interaction quality uses the paper's two-judge aggregation. Overall scores average the three environments equally, retaining the same ScreenSim action–response results in both views.
 - 105 underlying cases × three personas = 315 case–persona episodes (150 cooking, 75 household, 90 mobile). These are not 315 independently constructed tasks.
 - Downloadable normalized demo records and leaderboard JSON.
 - A submission manifest schema, browser structure checks, and a local validator.
@@ -47,6 +47,8 @@ For a public submission service, accept manifests and trace archives, run valida
 The preview's GitHub intake runs read-only manifest checks on pull requests. It does not automatically trust submitted scores or promote them to the verified leaderboard. Full simulator execution and judge re-evaluation require scoring workers beyond static website hosting.
 
 ## Rebuilding from the research workspace
+
+`python tools/sync_paper_results.py --paper ../arxiv-Interactive-Visual-Gym` copies the current paper's abstract and audited numerical snapshots. `python tools/check_paper_results.py` verifies all 672 published environment/condition scores against that snapshot. `python tools/refresh_drift_plots.py` rebuilds the two rollout-quality illustrations from the fixed-timing CookSim runs, using both judges and all three runs. The selected demo candidates at `redesign/demo-candidates/` are a separate review page; they have not replaced the current demonstrations.
 
 `tools/build_data.py` reads the pinned paper snapshots and selected engine records. `tools/build_media.py` extracts observations, verifies ScreenSim replay, and synthesizes labelled presentation audio. These two tools require the original sibling engine repositories and are not needed to view the website. API credentials remain outside the repository.
 

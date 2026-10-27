@@ -1,24 +1,26 @@
 const host=document.querySelector('#leaderboard');
 const dataURL=new URL('../../data/leaderboard.json',import.meta.url);
+dataURL.searchParams.set('v','955937d');
 const data=await fetch(dataURL).then(r=>r.json());
 const families=[{key:'Frontier API',label:'API · Non-streaming',color:'#397cac'},{key:'Streaming API',label:'API · Streaming',color:'#67acc8'},{key:'Open non-streaming',label:'Open · Non-streaming',color:'#b99a55'},{key:'Open streaming',label:'Open · Streaming',color:'#bc704e'}];
-let environment='overall',sort='success',selection=null,familyFilter=null,xMax=60,yMax=80;
+let condition='fixed',environment='overall',sort='success',selection=null,familyFilter=null,xMax=60,yMax=80;
 const modelNames={'Kimi-VL-A3B-Thinking':'Kimi-VL-Thinking'};
 const safe=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
-const values=m=>environment==='overall'?m.overall:m.engines[environment];
+const values=(m,c=condition)=>environment==='overall'?m.conditions[c].overall:m.conditions[c].engines[environment];
 const color=m=>families.find(f=>f.key===m.family).color;
 host.className='lb';
-host.innerHTML=`<div class="lb-toolbar"><div class="lb-tabs" role="tablist" aria-label="Leaderboard environment">${[['overall','Overall'],['cooksim','CookSim'],['vhhome','VHSim'],['screensim','ScreenSim']].map(([k,n])=>`<button role="tab" data-env="${k}" aria-selected="${k===environment}">${n}</button>`).join('')}</div></div><div class="lb-layout"><div class="lb-plot"><div class="lb-plot-heading">Task success × interaction quality</div><svg class="lb-chart" viewBox="0 0 500 415" aria-label="Task success versus interaction quality"></svg><div class="lb-tooltip" hidden></div><div class="lb-legend">${families.map(f=>`<button data-family="${f.key}" aria-pressed="false" style="--family:${f.color}"><i></i>${f.label}</button>`).join('')}</div><div class="lb-selection"></div></div><div class="lb-table-wrap"><table><colgroup><col><col><col><col></colgroup><thead><tr><th>Assistant</th><th><button data-sort="success">In-time<br>success (%)</button></th><th><button data-sort="quality">Interaction<br>quality (%)</button></th><th><button data-sort="recall">Detection<br>recall (%)</button></th></tr></thead><tbody></tbody></table></div></div><div class="lb-footer"><a href="${dataURL.href}" download="ivg-bench-leaderboard.json">Results data ↓</a></div>`;
+host.innerHTML=`<div class="lb-toolbar"><div class="lb-conditions" role="tablist" aria-label="Assistant response timing">${Object.entries(data.conditions).map(([k,c])=>`<button role="tab" data-condition="${k}" aria-selected="${k===condition}" title="${k==='fixed'?'Fixed response timing: two ticks in CookSim and VHSim; zero ticks in ScreenSim':'Measured latency in CookSim and VHSim; the same ScreenSim action–response results'}">${c.label}</button>`).join('')}</div><div class="lb-tabs" role="tablist" aria-label="Leaderboard environment">${[['overall','Overall'],['cooksim','CookSim'],['vhhome','VHSim'],['screensim','ScreenSim']].map(([k,n])=>`<button role="tab" data-env="${k}" aria-selected="${k===environment}">${n}</button>`).join('')}</div></div><div class="lb-layout"><div class="lb-plot"><div class="lb-plot-heading">Task success × interaction quality</div><svg class="lb-chart" viewBox="0 0 500 415" aria-label="Task success versus interaction quality"></svg><div class="lb-tooltip" hidden></div><div class="lb-legend">${families.map(f=>`<button data-family="${f.key}" aria-pressed="false" style="--family:${f.color}"><i></i>${f.label}</button>`).join('')}</div><div class="lb-selection"></div></div><div class="lb-table-wrap"><table><colgroup><col><col><col><col></colgroup><thead><tr><th>Model</th><th><button data-sort="success">In-time<br>success (%)</button></th><th><button data-sort="quality">Interaction<br>quality (%)</button></th><th><button data-sort="recall">Detection<br>recall (%)</button></th></tr></thead><tbody></tbody></table></div></div><div class="lb-footer"><a href="${dataURL.href}" download="ivg-bench-leaderboard.json">Results data ↓</a></div>`;
 const $=s=>host.querySelector(s);let ordered=[];
 function render(){
+ host.querySelectorAll('[data-condition]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.condition===condition)));
  ordered=families.flatMap(f=>data.models.filter(m=>m.family===f.key).sort((a,b)=>values(b)[sort]-values(a)[sort]));
  host.querySelectorAll('[data-env]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.env===environment)));
  host.querySelectorAll('[data-sort]').forEach(b=>{b.classList.toggle('sorting',b.dataset.sort===sort);b.parentElement.setAttribute('aria-sort',b.dataset.sort===sort?'descending':'none')});
  const max=Object.fromEntries(['success','quality','recall'].map(k=>[k,Math.max(...ordered.map(m=>values(m)[k]??-1))]));
  $('tbody').innerHTML=families.map(f=>`<tr class="family-row"><th colspan="4" style="--family:${f.color}"><i></i>${f.label}</th></tr>`+ordered.filter(m=>m.family===f.key).map(m=>{const i=ordered.indexOf(m),v=values(m);return `<tr class="model-row" data-model="${i}" tabindex="0" style="--family:${f.color}" aria-label="${safe(m.model)}, success ${v.success.toFixed(1)}, quality ${v.quality.toFixed(1)}"><td><span class="model-name"><span class="model-number">${i+1}</span>${modelNames[m.model]??m.model}</span></td>${['success','quality','recall'].map(k=>`<td><span class="cell-value ${v[k]===max[k]?'best':''}" style="--score:${v[k]??0}">${v[k]==null?'—':v[k].toFixed(1)}</span></td>`).join('')}</tr>`}).join('')).join('');
  const W=500,H=415,L=54,R=21,T=20,B=54,PW=W-L-R,PH=H-T-B;
- xMax=Math.min(100,Math.ceil((Math.max(...ordered.map(m=>values(m).success))+5)/20)*20);
- yMax=Math.min(100,Math.ceil((Math.max(...ordered.map(m=>values(m).quality))+5)/20)*20);
+ xMax=Math.min(100,Math.ceil((Math.max(...ordered.flatMap(m=>Object.keys(data.conditions).map(c=>values(m,c).success)))+5)/20)*20);
+ yMax=Math.min(100,Math.ceil((Math.max(...ordered.flatMap(m=>Object.keys(data.conditions).map(c=>values(m,c).quality)))+5)/20)*20);
  const x=v=>L+v/xMax*PW,y=v=>T+(yMax-v)/yMax*PH;
  let svg=`<rect class="plot-frame" x="${L}" y="${T}" width="${PW}" height="${PH}" rx="2"/>`;
  for(let n=0;n<=xMax;n+=xMax<=40?10:20)svg+=`<line class="grid" x1="${x(n)}" y1="${T}" x2="${x(n)}" y2="${H-B}"/><text class="tick" x="${x(n)}" y="${H-B+20}" text-anchor="middle">${n}</text>`;
@@ -43,6 +45,7 @@ function highlight(i){
  if(m){const v=values(m),x=54+v.success/xMax*425,y=20+(yMax-v.quality)/yMax*341;lines.innerHTML=`<path class="crosshair" d="M54 ${y}H${x}V361"/>`;$('.lb-selection').innerHTML=`<div><strong>${m.model}</strong><p>${families.find(f=>f.key===m.family).label}</p></div><div class="lb-selected-scores"><div><b>${v.success.toFixed(1)}</b><span>Task success</span></div><div><b>${v.quality.toFixed(1)}</b><span>Interaction quality</span></div></div>`}
  else{lines.innerHTML='';$('.lb-selection').innerHTML=''}
 }
+host.querySelectorAll('[data-condition]').forEach(b=>b.onclick=()=>{condition=b.dataset.condition;selection=null;render()});
 host.querySelectorAll('[data-env]').forEach(b=>b.onclick=()=>{environment=b.dataset.env;selection=null;render()});
 host.querySelectorAll('[data-sort]').forEach(b=>b.onclick=()=>{sort=b.dataset.sort;selection=null;render()});
 host.querySelectorAll('[data-family]').forEach(b=>b.onclick=()=>{familyFilter=familyFilter===b.dataset.family?null:b.dataset.family;selection=null;highlight(null)});

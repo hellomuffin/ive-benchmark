@@ -12,3 +12,10 @@
 @media(max-width:430px){.lb .model-name{font-size:9px}.lb th{font-size:9px}.lb .cell-value{font-size:12px}}
 .lb-chart .crosshair{fill:none}
 .lb .model-row.dimmed{opacity:.65}.lb-chart .point.dimmed{opacity:.35}
+.lb-toolbar{flex-wrap:wrap;gap:14px}
+.lb-conditions{display:flex;gap:3px;border:1px solid #bacbd8;background:#edf3f7;padding:4px;border-radius:9px}
+.lb-conditions button{border:0;border-radius:6px;background:transparent;color:#526c80;padding:11px 15px;font-size:13px;white-space:nowrap}
+.lb-conditions button[aria-selected=true]{background:#244d6b;color:#fff;box-shadow:0 2px 5px #16354b20;font-weight:600}
+@media(max-width:780px){.lb-conditions{width:100%}.lb-conditions button{flex:1;font-size:12px;padding:10px 8px}.lb-toolbar{align-items:stretch}}
+.lb-selection:empty{display:none}
+@media(max-width:430px){.lb col:first-child{width:44%}.lb col:not(:first-child){width:18.666%}.lb th:not(:first-child){padding-left:2px;padding-right:4px}.lb th button{white-space:normal}.lb .model-name{gap:5px}}

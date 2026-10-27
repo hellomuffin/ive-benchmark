@@ -1,0 +1,155 @@
+{
+  "fidelity": {
+    "mismatches": [],
+    "final_tick": 18,
+    "recorded_tick": 18,
+    "goal": true,
+    "recorded_goal": true
+  },
+  "cues": [
+    {
+      "s": 1.0,
+      "t": 1,
+      "action": "swipe up"
+    },
+    {
+      "s": 2.6,
+      "t": 2,
+      "action": "swipe up"
+    },
+    {
+      "s": 4.2,
+      "t": 3,
+      "action": "swipe up"
+    },
+    {
+      "s": 5.8,
+      "t": 4,
+      "action": "tap Apps"
+    },
+    {
+      "s": 7.3,
+      "t": 5,
+      "action": "swipe up"
+    },
+    {
+      "s": 8.9,
+      "t": 6,
+      "action": "swipe up"
+    },
+    {
+      "s": 10.5,
+      "t": 7,
+      "action": "tap TripSnap"
+    },
+    {
+      "s": 12.0,
+      "t": 8,
+      "action": "tap Background App Refresh"
+    },
+    {
+      "s": 13.3,
+      "t": 8,
+      "who": "assistant",
+      "text": "Great, background refresh is off. Now tap 'Location' at the top of that list."
+    },
+    {
+      "s": 17.0,
+      "t": 9,
+      "action": "tap Location"
+    },
+    {
+      "s": 18.5,
+      "t": 10,
+      "action": "tap Never"
+    },
+    {
+      "s": 19.8,
+      "t": 10,
+      "who": "assistant",
+      "text": "Perfect. Now tap 'TripSnap' at the top left to go back, and then turn off 'Tracking' or 'Allow Tracking' on that main page."
+    },
+    {
+      "s": 25.85,
+      "t": 11,
+      "action": "press back"
+    },
+    {
+      "s": 27.35,
+      "t": 11,
+      "who": "human",
+      "text": "There's no Tracking toggle here."
+    },
+    {
+      "s": 28.95,
+      "t": 12,
+      "action": "press back"
+    },
+    {
+      "s": 30.45,
+      "t": 12,
+      "who": "assistant",
+      "text": "Ah, you're right. We have to go to the main Privacy settings for that. Tap 'Settings' at the top left, then find and tap 'Privacy & Security'."
+    },
+    {
+      "s": 37.55,
+      "t": 13,
+      "action": "press back"
+    },
+    {
+      "s": 39.05,
+      "t": 14,
+      "action": "tap Privacy & Security"
+    },
+    {
+      "s": 40.55,
+      "t": 14,
+      "who": "assistant",
+      "text": "Great, you're on the right page. Now tap 'Tracking' just below Location Services."
+    },
+    {
+      "s": 43.95,
+      "t": 15,
+      "action": "tap Tracking"
+    },
+    {
+      "s": 45.45,
+      "t": 16,
+      "action": "tap Allow Apps to Request to Track"
+    },
+    {
+      "s": 46.8,
+      "t": 16,
+      "who": "assistant",
+      "text": "Oops, you turned off the global tracking setting, which stops all apps from asking. Turn 'Allow Apps to Request to Track' back on, and then just tap the toggle next to TripSnap in the list below to turn it off."
+    },
+    {
+      "s": 57.35,
+      "t": 16,
+      "who": "human",
+      "text": "Right, good catch."
+    },
+    {
+      "s": 58.95,
+      "t": 17,
+      "action": "tap Allow Apps to Request to Track"
+    },
+    {
+      "s": 60.25,
+      "t": 18,
+      "action": "tap TripSnap"
+    },
+    {
+      "s": 61.55,
+      "t": 18,
+      "who": "assistant",
+      "text": "Perfect, that's exactly right. You've successfully stopped TripSnap from finding your location, refreshing in the background, and tracking you across other apps, without affecting any of your other apps. You're all set!"
+    },
+    {
+      "s": 69.95,
+      "t": 18,
+      "who": "human",
+      "text": "Awesome, thanks."
+    }
+  ]
+}

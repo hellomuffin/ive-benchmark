@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Interactive Visual Gym: Evaluating visual assistants with simulated human users in interactive worlds.">
+  <meta name="description" content="Interactive Visual Gym: Evaluating visual interaction models with simulated human users in interactive worlds.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#ffffff">
   <title>Interactive Visual Gym</title>
@@ -29,7 +29,7 @@
 
   <main id="top">
     <section class="publication-header" aria-labelledby="paper-title">
-      <h1 id="paper-title"><span class="title-name">Interactive Visual Gym:</span> <span class="title-description">Evaluating visual assistants with simulated human users in interactive worlds</span></h1>
+      <h1 id="paper-title"><span class="title-name">Interactive Visual Gym:</span> <span class="title-description">Evaluating visual interaction models with simulated human users in interactive worlds</span></h1>
       <div class="publication-links">
         <a class="resource-link" href="" onclick="return false" aria-disabled="true">Paper</a>
         <a class="resource-link" href="" onclick="return false" aria-disabled="true">Benchmark code</a>
@@ -39,7 +39,7 @@
 
     <section id="abstract" class="abstract-section" aria-labelledby="abstract-title">
       <h2 id="abstract-title">Abstract</h2>
-      <p class="abstract-copy">Visual assistants that support users during ongoing physical tasks require evaluation in closed loop, where assistant responses can change subsequent user behavior and task outcomes. Existing benchmarks largely rely on offline replay and therefore cannot capture these effects. We introduce <strong>Interactive Visual Gym</strong>, a framework for closed-loop evaluation and training of visual assistants through joint simulation of executable task environments and human users. We contribute three simulators that recreate everyday tasks and human-aligned action spaces across cooking, household manipulation, and mobile-interface domains, together with a persona-conditioned user simulation harness that collaborates with the assistant while incorporating controlled execution errors and other out-of-plan behaviors. We instantiate the framework as the <strong>IVG-Bench</strong> benchmark with 315 interaction episodes. Evaluating state-of-the-art VLMs as visual assistants reveals substantial limitations: the best-performing model, GPT6-Astra, completes only 44.2% of tasks within the time limit, exhibits significant weaknesses in factual grounding and actionable guidance, and is often too slow to prevent errors in time. We further show that the environments provide useful learning signals: in a proof-of-concept GRPO experiment, closed-loop training improves both task success and interaction behavior.</p>
+      <p class="abstract-copy">Visual interaction models that support users during ongoing physical tasks require evaluation in closed loop, where assistant responses can change subsequent user behavior and task outcomes. Existing benchmarks largely rely on offline replay and therefore cannot capture these effects. We introduce <strong>Interactive Visual Gym</strong>, a framework for closed-loop evaluation and training of visual interaction models through joint simulation of executable task environments and human users. We contribute three simulators that recreate everyday tasks and human-aligned action spaces across cooking, household manipulation, and mobile-interface domains, together with a persona-conditioned user simulation harness that collaborates with the assistant while incorporating controlled execution errors and other out-of-plan behaviors. We instantiate the framework as <strong>IVG-Bench</strong>, a benchmark with 315 interaction episodes. Evaluating state-of-the-art VLMs as visual interaction models reveals substantial limitations: the best-performing model, Gemini 3.1 Pro, completes only 49.7% of tasks within the time limit, averaged across the three environments, exhibits significant weaknesses in factual grounding and actionable guidance, and is often too slow to prevent errors when measured response latency is considered. We further show that the environments provide useful learning signals: in a proof-of-concept GRPO experiment, closed-loop training improves both task success and interaction behavior.</p>
     </section>
     <section id="evaluation" class="demo-section" aria-labelledby="evaluation-title">
       <h2 id="evaluation-title">Demo of Interactions Between Simulated Users and Visual Assistants</h2>
@@ -131,8 +131,8 @@
       <article class="failure-example drift-example">
         <h4><span>(c)</span> Interaction quality drifts during rollouts, especially for open-weight models.</h4>
         <div class="drift-plots">
-        <a href="technical/media/drift-qwen.png" target="_blank" rel="noopener"><img src="technical/media/drift-qwen.png" loading="lazy" alt="Qwen3.8-27B: factual grounding, situational relevance and actionable guidance across episode progress, as shown in the slides."></a>
-        <a href="technical/media/drift-glimmer.png" target="_blank" rel="noopener"><img src="technical/media/drift-glimmer.png" loading="lazy" alt="Muse Glimmer: factual grounding, situational relevance and actionable guidance across episode progress, as shown in the slides."></a>
+        <a href="technical/media/drift-qwen.png" target="_blank" rel="noopener"><img src="technical/media/drift-qwen.png" loading="lazy" alt="Qwen3.8-27B: factual grounding, situational relevance and actionable guidance across episode progress, averaged over three fixed-timing CookSim runs."></a>
+        <a href="technical/media/drift-glimmer.png" target="_blank" rel="noopener"><img src="technical/media/drift-glimmer.png" loading="lazy" alt="Muse Glimmer: factual grounding, situational relevance and actionable guidance across episode progress, averaged over three fixed-timing CookSim runs."></a>
         </div>
       </article>
       </div>
@@ -145,11 +145,11 @@
       </article>
       <article>
         <h4>Does our simulated user behave like a real human?</h4>
-        <p>We examine this through a human study and find broadly similar behavior. The main difference is in communication: VLM-based users speak much more frequently and are more polite than human participants.</p>
+        <p>Our human study finds similar persona-dependent behavior across most axes, with weaker agreement in action parallelism. Simulated users speak much more frequently than human participants, despite similar utterance lengths. Our interaction-quality metric agrees with human preferences in <strong>78.5%</strong> of comparisons (pooled Kendall’s τ = <strong>+0.57</strong>).</p>
       </article>
       <article>
         <h4>Is benchmark performance sensitive to the model controlling the simulated user?</h4>
-        <p>Performance remains relatively stable when switching between GPT and Gemini models. It varies substantially with the open-weight models we tested, which often struggle to follow the instructions required to serve as simulated users.</p>
+        <p>GPT-6 Astra and Gemini 3.7 Flash yield similar task-success rates when serving as simulated users; Gemini 3.1 Pro differs more. The local open-weight models we tested yield much lower success rates, potentially reflecting difficulty following the instructions required to simulate user behavior.</p>
       </article>
     </section>
     </section>
