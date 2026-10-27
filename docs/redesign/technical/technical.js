@@ -8,7 +8,7 @@ const tasks = [
   {id:'task-bedroom', engine:'vh', name:'Tidy the bedroom', short:'Tidy the bedroom', description:'Restore the bedroom and take the used mug to the kitchen.', goals:['Return the book to the desk','Turn off the lamp and close the cabinet','Take the mug to the kitchen table'], note:'Task completion'},
   {id:'task-phone', engine:'screen', name:'Restrict an app’s access', short:'App privacy', description:'Restrict TripSnap’s access without changing permissions for other apps.', goals:['Disable location access','Disable cross-app tracking','Disable background refresh'], note:'Task completion'},
   {id:'task-readability', engine:'screen', name:'Make a phone easier to read', short:'Readability', description:'Make text larger and bolder, clarify buttons, increase contrast, and reduce motion.', goals:['Enlarge and bold the text','Enable button shapes and increase contrast','Reduce motion'], note:'Task completion'},
-  {id:'task-bedside', engine:'screen', name:'Set up a quiet bedside clock', short:'Bedside clock', description:'Keep StandBy and Night Mode on while disabling Always On, Motion to Wake, and notifications.', goals:['Keep StandBy and Night Mode on','Disable Motion to Wake and notifications','Disable Always On'], note:'Task completion'},
+  {id:'task-bedside', engine:'screen', name:'Set up a quiet bedside clock', short:'Bedside clock', description:'Make this phone a quiet bedside clock, without an always-on display, motion-triggered waking, or notifications.', goals:['Keep StandBy and Night Mode on','Disable Motion to Wake and notifications','Disable Always On'], note:'Task completion'},
 ];
 const names = {cook:'CookSim',vh:'VHSim',screen:'ScreenSim'};
 let taskIndex=0;
