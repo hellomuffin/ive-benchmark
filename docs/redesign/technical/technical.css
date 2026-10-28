@@ -24,6 +24,17 @@
 :root:not([data-style]) .technical-details #user-simulation{--section-tint:#eef6f3;--section-edge:#dbe9e3;padding-top:24px}
 :root:not([data-style]) #recurring-problems{--section-tint:#f3f1f8;--section-edge:#e5dfef}
 :root:not([data-style]) #other-results{--section-tint:#faf4ec;--section-edge:#eee3d5}
+:root:not([data-style]) #reinforcement-learning{--section-tint:#eef5f6;--section-edge:#d8e7e9}
+.rl-results{max-width:680px;margin:0 auto 20px;border:1px solid #d8e4e7;border-radius:10px;overflow:hidden;background:#fff}
+.rl-results table{width:100%;border-collapse:collapse;font-size:18px;font-variant-numeric:tabular-nums}
+.rl-results th,.rl-results td{padding:14px 20px;text-align:right}
+.rl-results th:first-child{text-align:left}
+.rl-results thead{background:#e5eff2;color:#365b6a;font-size:14px}
+.rl-results tbody th{font-weight:500;color:#293b47}
+.rl-results tbody tr+tr{border-top:1px solid #e4ecee}
+.rl-results tbody td:last-child{background:#f2f8f7;color:#246c62}
+#reinforcement-learning .rl-conclusion{margin-bottom:0}
+@media(max-width:600px){.rl-results table{font-size:16px}.rl-results th,.rl-results td{padding:12px 10px}.rl-results thead{font-size:12px}}
 :root:not([data-style]) .technical-introduction p,:root:not([data-style]) .technical-prose,:root:not([data-style]) .harness-steps,:root:not([data-style]) .other-results p{line-height:1.48}
 :root:not([data-style]) .technical-prose{margin-bottom:20px}
 :root:not([data-style]) .harness-steps li{margin-top:8px;margin-bottom:8px}

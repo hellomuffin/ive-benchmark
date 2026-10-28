@@ -137,12 +137,23 @@
       </article>
       </div>
     </section>
+    <section id="reinforcement-learning" class="technical-section results-story" aria-labelledby="rl-title">
+      <h3 id="rl-title" class="technical-subtitle">Learning through interaction</h3>
+      <p class="technical-prose">Our environments also support training visual interaction models through reinforcement learning. We train Qwen3.5-4B with GRPO in CookSim, rewarding task completion and error prevention while penalizing false alarms and excessive interaction turns.</p>
+      <p class="technical-prose">After 12 training updates, evaluation on held-out validation scenarios with a Gemini 3.8 Flash simulated user shows:</p>
+      <div class="rl-results">
+        <table aria-label="CookSim validation results before and after reinforcement learning">
+          <thead><tr><th scope="col">Metric</th><th scope="col">Before RL</th><th scope="col">After RL</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">In-time task success</th><td>64.4%</td><td><strong>67.8%</strong></td></tr>
+            <tr><th scope="row">Interaction quality</th><td>24.3%</td><td><strong>30.2%</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="technical-prose rl-conclusion">These preliminary results show that learning through interaction can improve both task completion and interaction quality.</p>
+    </section>
     <section id="other-results" class="technical-section results-story other-results" aria-labelledby="other-results-title">
       <h3 id="other-results-title" class="technical-subtitle">Other results</h3>
-      <article>
-        <h4>Can our environments be used for RL?</h4>
-        <p>Yes! Training Qwen3.5-4B with GRPO in our environments, using a separate set of training tasks, improves task success and interaction quality.</p>
-      </article>
       <article>
         <h4>Does our simulated user behave like a real human?</h4>
         <p>Our human study finds similar persona-dependent behavior across most axes, with weaker agreement in action parallelism. Simulated users speak much more frequently than human participants, despite similar utterance lengths. Our interaction-quality metric agrees with human preferences in <strong>78.5%</strong> of comparisons (pooled Kendall’s τ = <strong>+0.57</strong>).</p>
