@@ -1,0 +1,26 @@
+{
+  "tool": "built-in image_gen",
+  "mode": "generate",
+  "assets": [
+    {
+      "file": "assets/opening-triptych.png",
+      "prompt": "Create one polished cinematic editorial triptych, ultra-wide landscape composition 3:1, intended as the starting artwork for a scientific demo film about visual AI assistance in everyday tasks. Three equal-width vertical scenes side by side with no borders and no text. Left: over-the-shoulder realistic photographic view of an adult woman preparing a tortilla burrito at a bright ordinary home kitchen counter, a small pan of cooked rice, steak, chopped tomato and lettuce clearly arranged; hands and food accurate, not commercial stock-photo smiling. Middle: a different adult person in a comfortable apartment kitchen opening a refrigerator and reaching for a milk carton, natural observed activity not posing; uncluttered scene. Right: close over-shoulder view of a third adult using a modern smartphone to adjust accessibility text size; phone visible, generic settings UI with slider but avoid legible lettering. Consistent soft daylight, refined muted blue, terracotta and warm cream palette, tactile real materials, believable people and hands, eye-level documentary style, beautiful but restrained research film editorial direction. NO robot, NO abstract AI brain, NO glowing holograms, NO logos, NO large typography, NO captions. Each scene must stand on its own when cropped into three separate equal-width panels. People actively working rather than looking at camera. High fidelity, detailed cinematic image.",
+      "use": "Earlier still-artwork study; superseded in the current opening.",
+      "download": "media/opening-triptych.png"
+    },
+    {
+      "file": "generated/opening-0.mp4",
+      "tool": "Gemini API",
+      "model": "gemini-omni-1.1-flash",
+      "prompt": "Create an 8-second polished photorealistic research-film opening, landscape 16:9. Three natural documentary shots with clean hard cuts, consistent soft daylight, warm neutral interiors, restrained premium cinematography, realistic hands and objects. Shot 1 (0\u20133 seconds): shoulder-height view of an adult home cook in a modest contemporary kitchen, assembling a burrito with rice, steak and chopped vegetables. A small smartphone on a stand faces the cook and worktop, plausibly allowing a remote visual assistant to observe; focus on the real cooking activity. Shot 2 (3\u20135.5 seconds): a different adult in a home kitchen places a used white plate into the open lower rack of a dishwasher, with a mug on the counter nearby. Shot 3 (5.5\u20138 seconds): over-the-shoulder close-up of an older adult holding a smartphone and deliberately sliding its text-size control to improve readability; show a plausible clean iPhone-like accessibility settings screen. These are everyday situations in which a visual AI assistant could guide a person. Human performs all actions. No robot, no hologram, no floating UI, no corporate office, no title cards, no added captions, no logos, no narration, no music. Only subtle room sound. Stable camera with a very gentle documentary push-in; natural real-time motion, no timelapse, no freeze frames, no cross-dissolves. Clearly distinct actions, anatomically correct hands, physically coherent interactions.",
+      "use": "Generated illustrative footage; not real participant recordings."
+    },
+    {
+      "file": "generated/user-study-0.mp4",
+      "tool": "Gemini API",
+      "model": "gemini-omni-1.1-flash",
+      "prompt": "Create an 8-second photorealistic documentary shot for an academic research film, 16:9 landscape, stable camera, natural daylight. In a normal domestic kitchen, an adult volunteer works through preparing a burrito at a counter. Another adult researcher sits a little to the side at a laptop and quietly observes and takes brief notes. A single small camera on a tabletop tripod faces the volunteer's hands and preparation area, clearly indicating an in-person user study. Mid-wide three-quarter view includes both people and the work surface. The volunteer naturally scoops cooked rice onto an open tortilla; the researcher watches attentively and types a short note. Realistic hand anatomy and physically coherent action. Subtle slow camera push-in. This is a modest research user-study session, not a business meeting, no lab coats, no robots, no futuristic graphics, no floating text, no captions, no logos, no music, no speech; only soft natural room sounds. Clean understated cinematography, warm neutral colors. One continuous shot, no cuts, no slow motion.",
+      "use": "Generated illustrative footage; not real participant recordings."
+    }
+  ]
+}

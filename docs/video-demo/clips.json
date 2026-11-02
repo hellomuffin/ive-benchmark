@@ -1,0 +1,101 @@
+[
+  {
+    "id": "01-motivation",
+    "title": "Motivation",
+    "duration": 22.5,
+    "summary": "Why evaluating visual assistance requires a changing world.",
+    "narration": "Visual AI assistants have the potential to guide us through everyday tasks, whether we’re repairing equipment, preparing a meal, or learning something new. Evaluating these assistants requires measuring how their guidance changes user actions and task outcomes. Fixed recordings cannot capture these effects, while repeated testing with real users is difficult to scale.",
+    "design": "Generated everyday-task footage with visual-assistant guidance overlays, followed by a structured slide: the effects of guidance on user actions and outcomes, and the limitations of fixed recordings and repeated real-user testing.",
+    "source": "Opening footage generated with Gemini Omni 1.1 Flash. Guidance overlays illustrate possible visual assistance; they are not measured model outputs. The evaluation slide is an explanatory animation.",
+    "audio": true,
+    "audioLabel": "Guide narration"
+  },
+  {
+    "id": "02-environments",
+    "title": "Three task domains",
+    "duration": 20.5,
+    "summary": "Task-completion footage on one shared canvas.",
+    "narration": "That’s why Salesforce AI Research developed Interactive Visual Gym. We create interactive simulated environments where AI assistants can practice guiding people through everyday tasks without putting real-world operations at risk. These tasks span cooking recipes, completing household routines, and configuring phone settings.",
+    "design": "Cooking and household task excerpts play at 3× speed; the iPhone task plays at 2×, then holds its final settings. Concrete task descriptions remain beneath the footage.",
+    "source": "CookSim: expert_nops_medium_map, verified WON in the source log. Cooking source ranges 0–24, 44–56, and 115.2–140.7 seconds at 3×; household ranges 0–6, 20–35, 46–55, 69–75, 82–94, and 99–112.5 seconds at 3×. VHSim: aftermeal_hard reference film. ScreenSim: parent_phone_readability, engine-verified reference plan with hand animation. These are task demonstrations, not benchmark assistant outcomes.",
+    "audio": true,
+    "audioLabel": "Guide narration"
+  },
+  {
+    "id": "03-interaction",
+    "title": "User–assistant interaction",
+    "duration": 22,
+    "summary": "Semantic actions, followed by the user–model–environment loop.",
+    "narration": "The simulators support high-level actions such as “go to the pan on the left” and “open the fridge,” expressed at the level people use to communicate. Inside these environments, a simulated user plans and acts to complete a task. The assistant monitors the visual stream and provides guidance, while the user decides how to respond and the environment changes.",
+    "design": "Three action commands lead into the interaction diagram. The phone shows the implemented command “swipe right on Text Size.” Only the simulated user acts on the environment; the visual assistant observes and communicates.",
+    "source": "CookSim action demonstration; VHSim fridge interaction from cx_appliance_nav_place; ScreenSim readability reference plan. Diagram arrows describe the framework, not fabricated dialogue.",
+    "audio": true,
+    "audioLabel": "Guide narration"
+  },
+  {
+    "id": "04-scheduled-events",
+    "title": "Scheduled events",
+    "duration": 16.5,
+    "summary": "Three recorded events attached to task progress.",
+    "narration": "We can schedule simulated users to make mistakes, ask questions, or change their plans at specific stages of a task.",
+    "design": "A shared simulation-time axis and engine-derived task milestones connect three event excerpts. The moving playhead follows actual recorded ticks; colored markers activate when each task-state trigger is reached.",
+    "source": "b3_master_nops_hard_map_4, Gemini 3.8 Flash, classic_expert. Recorded triggers: tick 23 (rice starts cooking), tick 168 (steak chopped), tick 228 (steak plated); corn is added at tick 243. The full episode contains additional events. Source dialogue is quoted exactly. No successful response is implied.",
+    "audio": true,
+    "audioLabel": "Guide narration"
+  },
+  {
+    "id": "04b-phone-error",
+    "title": "Phone-error example",
+    "duration": 13,
+    "summary": "A wrong page, a correction, and a change of action.",
+    "narration": "For example, when navigating to a phone setting, a user can be prompted to open the wrong page. The assistant must recognize what happened, respond at the right moment, and help the user get back on track.",
+    "design": "The phone footage shows the wrong page and the return to StandBy. A brief excerpt of the recorded model response stays beside the visual.",
+    "source": "ScreenSim round10, standby_bedside, classic_novice, Gemini 3.1 Pro. Excerpts from 9.1–11.1 s and 20.6–24.4 s of the project-page film; the intermediate dialogue is shortened on screen with an ellipsis.",
+    "audio": true,
+    "audioLabel": "Guide narration"
+  },
+  {
+    "id": "05-personas",
+    "title": "Simulating different users",
+    "duration": 39.29,
+    "summary": "Recorded multi-turn exchanges with two simulated users.",
+    "narration": "We can simulate different types of people, from beginners who need step-by-step instructions… [novice clip] …to experienced users who prefer fewer interruptions. [experienced clip] This allows us to evaluate how AI assistants adapt their guidance to different human behaviors and preferences.",
+    "design": "The novice asks for next-step guidance. In the later experienced-user excerpt, the user twice asks to continue working without further interruption. Four recorded turns are retained at 1.15× speed.",
+    "source": "Novice: original project-page clip, 9.15–18.00 s. Experienced: original August 4 episode rank__creative_uninterruptible__frames__r1 (videos_stale), 39.7–55.7 s; transcript from the .json.bak record. Original voices and chronological order preserved. These are illustrative episodes, not a controlled persona-only comparison.",
+    "audio": true,
+    "audioLabel": "Narration + recorded dialogue"
+  },
+  {
+    "id": "06-benchmark",
+    "title": "Benchmark results",
+    "duration": 21.5,
+    "summary": "Success and interaction quality shown together.",
+    "narration": "As a first instantiation of this framework, we introduce IVG-Bench, a benchmark of 315 interaction episodes across our three environments. We evaluate how well visual interaction models help users complete tasks and the quality of their guidance. Even the strongest model completes fewer than half of tasks within the time limit.",
+    "design": "The scatter plot and ranking show complementary measures. The strongest success rate is highlighted after the full comparison appears.",
+    "source": "Project-page leaderboard dataset, arXiv paper snapshot 955937d. Equal-weight mean across three environments; three-run mean within each environment. Fixed response timing. All 14 models are retained.",
+    "audio": true,
+    "audioLabel": "Guide narration"
+  },
+  {
+    "id": "07b-latency-plot",
+    "title": "Response delay",
+    "duration": 11,
+    "summary": "Measured delay changes task success and interaction quality.",
+    "narration": "Accounting for response delays also changes the leaderboard, as guidance can arrive after the user has already acted.",
+    "design": "Original positions remain as pale circles; solid points move to the measured-delay scores. This version emphasizes changes in both success and interaction quality.",
+    "source": "CookSim, same three-run dataset as the full ranking animation. Four explicitly selected models: Gemini 3.1 Pro, Gemini 3.8 Flash, GPT-6 Astra, and Muse Glimmer. Selected as the response-delay section.",
+    "audio": true,
+    "audioLabel": "Guide narration"
+  },
+  {
+    "id": "08-training",
+    "title": "Training with RL",
+    "duration": 21.5,
+    "summary": "Two held-out improvements after 12 training steps.",
+    "narration": "We can also use these environments to train visual interaction models. In a preliminary reinforcement learning experiment in our cooking simulator, just 12 training steps improve task success from 64.4% to 67.8% and interaction quality from 24.3% to 30.2% on held-out cooking scenarios.",
+    "design": "Two matched charts animate the before/after scores. Both improvements use the same evaluation setting.",
+    "source": "Qwen3.5-4B, CookSim, 12 GRPO training steps; Gemini 3.8 Flash simulated user. Latest paper RL table at commit 2eac828. Success 64.4→67.8; interaction quality 24.3→30.2.",
+    "audio": true,
+    "audioLabel": "Guide narration"
+  }
+]
