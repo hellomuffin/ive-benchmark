@@ -18,6 +18,7 @@ root = Path(__file__).resolve().parents[1]
 paper = args.paper.resolve()
 snapshot = paper / 'tables/v7_results_snapshot.json'
 data = json.loads(snapshot.read_text())
+display = json.loads((paper / 'tables/results_display.json').read_text())
 commit = subprocess.check_output(['git', '-C', str(paper), 'rev-parse', 'HEAD'], text=True).strip()
 families = ['Frontier API', 'Streaming API', 'Open non-streaming', 'Open streaming']
 engines = {'CookSim': 'cooksim', 'VHSim': 'vhhome', 'ScreenSim': 'screensim'}
@@ -37,6 +38,7 @@ output = {
 }
 for (family, tags), public_family in zip(data['families'], families):
     for tag in tags:
+        if tag not in display['main_models']: continue
         model = {'id': tag, 'model': data['names'][tag], 'family': public_family, 'conditions': {}}
         for condition in output['conditions']:
             rows = {}

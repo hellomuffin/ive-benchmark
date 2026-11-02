@@ -1,6 +1,6 @@
 const host=document.querySelector('#leaderboard');
 const dataURL=new URL('../../data/leaderboard.json',import.meta.url);
-dataURL.searchParams.set('v','gemini4-20261102');
+dataURL.searchParams.set('v','main14-20261102');
 const data=await fetch(dataURL).then(r=>r.json());
 const families=[{key:'Frontier API',label:'API · Non-streaming',color:'#397cac'},{key:'Streaming API',label:'API · Streaming',color:'#67acc8'},{key:'Open non-streaming',label:'Open · Non-streaming',color:'#b99a55'},{key:'Open streaming',label:'Open · Streaming',color:'#bc704e'}];
 let condition='fixed',environment='overall',sort='success',selection=null,familyFilter=null,xMax=60,yMax=80;
