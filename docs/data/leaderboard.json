@@ -1,6 +1,6 @@
 {
   "version": "IVG-Bench \u00b7 arXiv paper results",
-  "sourceCommit": "05ff424f43417283b43b583565691ae7b6cb25b6",
+  "sourceCommit": "a59f9ccf70105765166c94c8d08c3ef41c043300",
   "sourceRepository": "https://github.com/hellomuffin/-arxiv-Interactive-Visual-Gym",
   "sourceSnapshotSHA256": "bb327cf564d6eefabd77a59a7cdf0e44631193ddaf6d7b410b54879116e5402d",
   "defaultCondition": "fixed",

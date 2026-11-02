@@ -3,9 +3,14 @@ from pathlib import Path
 from statistics import fmean
 import json
 import math
+import html
+import re
+import hashlib
 
 ROOT=Path(__file__).resolve().parents[1]
-paper=json.loads((ROOT.parent/'arxiv-Interactive-Visual-Gym/tables/v7_results_snapshot.json').read_text())
+PAPER=ROOT.parent/'arxiv-Interactive-Visual-Gym'
+snapshot=PAPER/'tables/v7_results_snapshot.json'
+paper=json.loads(snapshot.read_text())
 site=json.loads((ROOT/'docs/data/leaderboard.json').read_text())
 assert len(site['models'])==15
 checks=0
@@ -21,6 +26,16 @@ for m in site['models']:
     assert m['engines']==m['conditions']['fixed']['engines']
     assert m['conditions']['fixed']['engines']['screensim']==m['conditions']['measured']['engines']['screensim']
 page=(ROOT/'docs/redesign/index.html').read_text()
-assert '53.4%' in page and 'Gemini 4 Argon' in page
+tex=' '.join(line for line in (PAPER/'sections/abstract_body.tex').read_text().splitlines() if not line.lstrip().startswith('%'))
+tex=re.sub(r'\\textbf\{([^{}]+)\}',r'\1',tex).replace(r'\%', '%')
+web=re.search(r'<p class="abstract-copy">(.*?)</p>',page,re.S).group(1)
+web=html.unescape(re.sub(r'<[^>]+>','',web))
+assert ' '.join(tex.split())==' '.join(web.split()), 'Website abstract differs from the active paper abstract'
+assert site['sourceSnapshotSHA256']==hashlib.sha256(snapshot.read_bytes()).hexdigest()
+best=max(site['models'],key=lambda m:m['conditions']['fixed']['overall']['success'])
+headline=f"{best['conditions']['fixed']['overall']['success']:.1f}"
+for filename in ['abstract_body.tex','intro.tex','quantitative_v7.tex']:
+    text='\n'.join(line for line in (PAPER/'sections'/filename).read_text().splitlines() if not line.lstrip().startswith('%'))
+    assert best['model'] in text and headline+r'\%' in text,filename
 assert 'visual interaction models' in page
-print(f'PASS: {checks} scores match the paper; three-run means and both cross-environment views verified.')
+print(f'PASS: {checks} scores match the paper; three-run means and both cross-environment views verified; exact abstract and headline agreement verified.')
