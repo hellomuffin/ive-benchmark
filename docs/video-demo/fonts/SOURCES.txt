@@ -1,0 +1,5 @@
+Salesforce brand fonts, sourced from Salesforce’s public website. These are proprietary brand assets, not open-source fonts. Included for editing this Salesforce AI Research project.
+
+SalesforceSans-Regular: https://www.salesforce.com/blog/wp-content/themes/salesforce-blog/dist/fonts/salesforce-sans/SalesforceSans-Regular.woff2
+SalesforceSans-Semibold: https://www.salesforce.com/blog/wp-content/themes/salesforce-blog/dist/fonts/salesforce-sans/SalesforceSans-Semibold.woff2
+AvantGarde-Salesforce: https://a.sfdcstatic.com/shared/fonts/avant-garde/AvantGardeForSalesforceW05-Dm.woff2
