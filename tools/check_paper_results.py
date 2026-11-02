@@ -7,7 +7,7 @@ import math
 ROOT=Path(__file__).resolve().parents[1]
 paper=json.loads((ROOT.parent/'arxiv-Interactive-Visual-Gym/tables/v7_results_snapshot.json').read_text())
 site=json.loads((ROOT/'docs/data/leaderboard.json').read_text())
-assert len(site['models'])==14
+assert len(site['models'])==15
 checks=0
 for m in site['models']:
     for cond in ['fixed','measured']:
@@ -21,6 +21,6 @@ for m in site['models']:
     assert m['engines']==m['conditions']['fixed']['engines']
     assert m['conditions']['fixed']['engines']['screensim']==m['conditions']['measured']['engines']['screensim']
 page=(ROOT/'docs/redesign/index.html').read_text()
-assert '49.7%' in page and '44.2%' not in page
+assert '53.4%' in page and 'Gemini 4 Argon' in page
 assert 'visual interaction models' in page
 print(f'PASS: {checks} scores match the paper; three-run means and both cross-environment views verified.')

@@ -68,11 +68,11 @@
   {
     "id": "06-benchmark",
     "title": "Benchmark results",
-    "duration": 21.5,
+    "duration": 22.5,
     "summary": "Success and interaction quality shown together.",
-    "narration": "As a first instantiation of this framework, we introduce IVG-Bench, a benchmark of 315 interaction episodes across our three environments. We evaluate how well visual interaction models help users complete tasks and the quality of their guidance. Even the strongest model completes fewer than half of tasks within the time limit.",
+    "narration": "As a first instantiation of this framework, we introduce IVG-Bench, a benchmark of 315 interaction episodes across our three environments. We evaluate how well visual interaction models help users complete tasks and the quality of their guidance. Even the strongest model completes only 53.4 percent of tasks within the time limit.",
     "design": "The scatter plot and ranking show complementary measures. The strongest success rate is highlighted after the full comparison appears.",
-    "source": "Project-page leaderboard dataset, arXiv paper snapshot 955937d. Equal-weight mean across three environments; three-run mean within each environment. Fixed response timing. All 14 models are retained.",
+    "source": "Project-page leaderboard dataset, arXiv paper results updated with Gemini 4 Argon on 2 November 2026. Equal-weight mean across three environments; three-run mean within each environment. Fixed response timing. All 15 models are retained.",
     "audio": true,
     "audioLabel": "Guide narration"
   },
@@ -83,7 +83,7 @@
     "summary": "Measured delay changes task success and interaction quality.",
     "narration": "Accounting for response delays also changes the leaderboard, as guidance can arrive after the user has already acted.",
     "design": "Original positions remain as pale circles; solid points move to the measured-delay scores. This version emphasizes changes in both success and interaction quality.",
-    "source": "CookSim, same three-run dataset as the full ranking animation. Four explicitly selected models: Gemini 3.1 Pro, Gemini 3.8 Flash, GPT-6 Astra, and Muse Glimmer. Selected as the response-delay section.",
+    "source": "CookSim, same three-run dataset as the full ranking animation. Five selected models: Gemini 4 Argon, Gemini 3.1 Pro, Gemini 3.8 Flash, GPT-6 Astra, and Muse Glimmer. Selected as the response-delay section.",
     "audio": true,
     "audioLabel": "Guide narration"
   },

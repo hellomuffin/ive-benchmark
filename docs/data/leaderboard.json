@@ -1,8 +1,8 @@
 {
   "version": "IVG-Bench \u00b7 arXiv paper results",
-  "sourceCommit": "955937d7a59614a96a214dd5b0c512b9e001f92d",
+  "sourceCommit": "05ff424f43417283b43b583565691ae7b6cb25b6",
   "sourceRepository": "https://github.com/hellomuffin/-arxiv-Interactive-Visual-Gym",
-  "sourceSnapshotSHA256": "49e7bebd76b5ff222af9cb013e11dee84a13702ff1e45654d7ad860edc2e29a1",
+  "sourceSnapshotSHA256": "bb327cf564d6eefabd77a59a7cdf0e44631193ddaf6d7b410b54879116e5402d",
   "defaultCondition": "fixed",
   "conditions": {
     "fixed": {
@@ -1098,6 +1098,362 @@
         "success": 46.54320987654321,
         "quality": 77.98887560903059,
         "recall": 82.64178529508727
+      }
+    },
+    {
+      "id": "gemini-4-argon",
+      "model": "Gemini 4 Argon",
+      "family": "Frontier API",
+      "conditions": {
+        "fixed": {
+          "engines": {
+            "cooksim": {
+              "success": 60.88888888888889,
+              "quality": 63.829556048908266,
+              "recall": 80.22190776918214,
+              "successSD": 2.2662308949301275,
+              "rubrics": {
+                "truthful": 70.17354859205268,
+                "sensible": 90.10436976510684,
+                "helpful": 71.43936423819702,
+                "listens": 82.22457203379273,
+                "economy": 76.93057554471726
+              },
+              "runs": [
+                {
+                  "run": 1,
+                  "episodes": 150,
+                  "success": 64.0,
+                  "quality": 63.50079598334557,
+                  "recall": 81.10831234256926
+                },
+                {
+                  "run": 2,
+                  "episodes": 150,
+                  "success": 58.666666666666664,
+                  "quality": 64.53225055303295,
+                  "recall": 80.59701492537313
+                },
+                {
+                  "run": 3,
+                  "episodes": 150,
+                  "success": 60.0,
+                  "quality": 63.45562161034627,
+                  "recall": 78.96039603960396
+                }
+              ]
+            },
+            "vhhome": {
+              "success": 15.555555555555555,
+              "quality": 55.56442584795845,
+              "recall": 81.18058360744031,
+              "successSD": 3.1426968052735456,
+              "rubrics": {
+                "truthful": 60.26091274687651,
+                "sensible": 90.66814857815785,
+                "helpful": 60.8324289835574,
+                "listens": 83.1993755481219,
+                "economy": 84.80137789500012
+              },
+              "runs": [
+                {
+                  "run": 1,
+                  "episodes": 75,
+                  "success": 20.0,
+                  "quality": 57.509878169245965,
+                  "recall": 81.3953488372093
+                },
+                {
+                  "run": 2,
+                  "episodes": 75,
+                  "success": 13.333333333333334,
+                  "quality": 54.77753517709849,
+                  "recall": 79.83870967741935
+                },
+                {
+                  "run": 3,
+                  "episodes": 75,
+                  "success": 13.333333333333334,
+                  "quality": 54.40586419753086,
+                  "recall": 82.3076923076923
+                }
+              ]
+            },
+            "screensim": {
+              "success": 83.7037037037037,
+              "quality": 87.12815112655092,
+              "recall": 100.0,
+              "successSD": 2.0951312035156997,
+              "rubrics": {
+                "truthful": 91.02416983192639,
+                "sensible": 95.54609782418595,
+                "helpful": 86.45463226583382,
+                "listens": 87.07083876575402,
+                "economy": 95.09323501909175
+              },
+              "runs": [
+                {
+                  "run": 1,
+                  "episodes": 90,
+                  "success": 82.22222222222221,
+                  "quality": 84.73693502824858,
+                  "recall": 100.0
+                },
+                {
+                  "run": 2,
+                  "episodes": 90,
+                  "success": 86.66666666666667,
+                  "quality": 87.55913978494623,
+                  "recall": 100.0
+                },
+                {
+                  "run": 3,
+                  "episodes": 90,
+                  "success": 82.22222222222221,
+                  "quality": 89.0883785664579,
+                  "recall": 100.0
+                }
+              ]
+            }
+          },
+          "overall": {
+            "success": 53.382716049382715,
+            "quality": 68.84071100780588,
+            "recall": 87.13416379220747
+          }
+        },
+        "measured": {
+          "engines": {
+            "cooksim": {
+              "success": 33.111111111111114,
+              "quality": 57.85992963372188,
+              "recall": 66.89880067886162,
+              "successSD": 1.6629588385661955,
+              "rubrics": {
+                "truthful": 65.2868470292935,
+                "sensible": 84.91778701139783,
+                "helpful": 63.03080801227787,
+                "listens": 85.95868512369599,
+                "economy": 71.0918579440373
+              },
+              "runs": [
+                {
+                  "run": 1,
+                  "episodes": 150,
+                  "success": 35.333333333333336,
+                  "quality": 57.62619213770645,
+                  "recall": 69.87341772151898
+                },
+                {
+                  "run": 2,
+                  "episodes": 150,
+                  "success": 31.333333333333336,
+                  "quality": 57.606582725867014,
+                  "recall": 65.17412935323384
+                },
+                {
+                  "run": 3,
+                  "episodes": 150,
+                  "success": 32.666666666666664,
+                  "quality": 58.3470140375922,
+                  "recall": 65.64885496183206
+                }
+              ]
+            },
+            "vhhome": {
+              "success": 12.88888888888889,
+              "quality": 43.119439061929384,
+              "recall": 71.44242257145483,
+              "successSD": 0.6285393610547091,
+              "rubrics": {
+                "truthful": 49.537826519364,
+                "sensible": 79.11634611578906,
+                "helpful": 43.72500188343481,
+                "listens": 76.98526710633573,
+                "economy": 75.96249264202471
+              },
+              "runs": [
+                {
+                  "run": 1,
+                  "episodes": 75,
+                  "success": 13.333333333333334,
+                  "quality": 41.92471159684275,
+                  "recall": 70.94017094017094
+                },
+                {
+                  "run": 2,
+                  "episodes": 75,
+                  "success": 13.333333333333334,
+                  "quality": 43.00264550264551,
+                  "recall": 73.38709677419355
+                },
+                {
+                  "run": 3,
+                  "episodes": 75,
+                  "success": 12.0,
+                  "quality": 44.43096008629988,
+                  "recall": 70.0
+                }
+              ]
+            },
+            "screensim": {
+              "success": 83.7037037037037,
+              "quality": 87.12815112655092,
+              "recall": 100.0,
+              "successSD": 2.0951312035156997,
+              "rubrics": {
+                "truthful": 91.02416983192639,
+                "sensible": 95.54609782418595,
+                "helpful": 86.45463226583382,
+                "listens": 87.07083876575402,
+                "economy": 95.09323501909175
+              },
+              "runs": [
+                {
+                  "run": 1,
+                  "episodes": 90,
+                  "success": 82.22222222222221,
+                  "quality": 84.73693502824858,
+                  "recall": 100.0
+                },
+                {
+                  "run": 2,
+                  "episodes": 90,
+                  "success": 86.66666666666667,
+                  "quality": 87.55913978494623,
+                  "recall": 100.0
+                },
+                {
+                  "run": 3,
+                  "episodes": 90,
+                  "success": 82.22222222222221,
+                  "quality": 89.0883785664579,
+                  "recall": 100.0
+                }
+              ]
+            }
+          },
+          "overall": {
+            "success": 43.23456790123456,
+            "quality": 62.70250660740073,
+            "recall": 79.44707441677214
+          }
+        }
+      },
+      "engines": {
+        "cooksim": {
+          "success": 60.88888888888889,
+          "quality": 63.829556048908266,
+          "recall": 80.22190776918214,
+          "successSD": 2.2662308949301275,
+          "rubrics": {
+            "truthful": 70.17354859205268,
+            "sensible": 90.10436976510684,
+            "helpful": 71.43936423819702,
+            "listens": 82.22457203379273,
+            "economy": 76.93057554471726
+          },
+          "runs": [
+            {
+              "run": 1,
+              "episodes": 150,
+              "success": 64.0,
+              "quality": 63.50079598334557,
+              "recall": 81.10831234256926
+            },
+            {
+              "run": 2,
+              "episodes": 150,
+              "success": 58.666666666666664,
+              "quality": 64.53225055303295,
+              "recall": 80.59701492537313
+            },
+            {
+              "run": 3,
+              "episodes": 150,
+              "success": 60.0,
+              "quality": 63.45562161034627,
+              "recall": 78.96039603960396
+            }
+          ]
+        },
+        "vhhome": {
+          "success": 15.555555555555555,
+          "quality": 55.56442584795845,
+          "recall": 81.18058360744031,
+          "successSD": 3.1426968052735456,
+          "rubrics": {
+            "truthful": 60.26091274687651,
+            "sensible": 90.66814857815785,
+            "helpful": 60.8324289835574,
+            "listens": 83.1993755481219,
+            "economy": 84.80137789500012
+          },
+          "runs": [
+            {
+              "run": 1,
+              "episodes": 75,
+              "success": 20.0,
+              "quality": 57.509878169245965,
+              "recall": 81.3953488372093
+            },
+            {
+              "run": 2,
+              "episodes": 75,
+              "success": 13.333333333333334,
+              "quality": 54.77753517709849,
+              "recall": 79.83870967741935
+            },
+            {
+              "run": 3,
+              "episodes": 75,
+              "success": 13.333333333333334,
+              "quality": 54.40586419753086,
+              "recall": 82.3076923076923
+            }
+          ]
+        },
+        "screensim": {
+          "success": 83.7037037037037,
+          "quality": 87.12815112655092,
+          "recall": 100.0,
+          "successSD": 2.0951312035156997,
+          "rubrics": {
+            "truthful": 91.02416983192639,
+            "sensible": 95.54609782418595,
+            "helpful": 86.45463226583382,
+            "listens": 87.07083876575402,
+            "economy": 95.09323501909175
+          },
+          "runs": [
+            {
+              "run": 1,
+              "episodes": 90,
+              "success": 82.22222222222221,
+              "quality": 84.73693502824858,
+              "recall": 100.0
+            },
+            {
+              "run": 2,
+              "episodes": 90,
+              "success": 86.66666666666667,
+              "quality": 87.55913978494623,
+              "recall": 100.0
+            },
+            {
+              "run": 3,
+              "episodes": 90,
+              "success": 82.22222222222221,
+              "quality": 89.0883785664579,
+              "recall": 100.0
+            }
+          ]
+        }
+      },
+      "overall": {
+        "success": 53.382716049382715,
+        "quality": 68.84071100780588,
+        "recall": 87.13416379220747
       }
     },
     {
