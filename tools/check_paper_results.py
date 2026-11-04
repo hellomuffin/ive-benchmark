@@ -39,5 +39,12 @@ headline=f"{best['conditions']['fixed']['overall']['success']:.1f}"
 for filename in ['abstract_body.tex','intro.tex','quantitative_v7.tex']:
     text='\n'.join(line for line in (PAPER/'sections'/filename).read_text().splitlines() if not line.lstrip().startswith('%'))
     assert best['model'] in text and headline+r'\%' in text,filename
-assert 'visual interaction models' in page
+
+source=re.sub(r'(?<!\\)%[^\n]*','',(PAPER/'iclr2027_conference.tex').read_text())
+title=' '.join(re.search(r'\\title\{([^{}]+)\}',source)[1].split())
+heading=re.search(r'<h1\b[^>]*id="paper-title"[^>]*>(.*?)</h1>',page,re.S)[1]
+assert ' '.join(html.unescape(re.sub(r'<[^>]+>','',heading)).split())==title
+assert html.unescape(re.search(r'<title>(.*?)</title>',page,re.S)[1])==title
+assert html.unescape(re.search(r'<meta name="description" content="([^"]*)">',page)[1])==title
+
 print(f'PASS: {checks} scores match the paper; three-run means and both cross-environment views verified; exact abstract and headline agreement verified.')

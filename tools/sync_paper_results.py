@@ -67,6 +67,17 @@ page = root / 'docs/redesign/index.html'
 text = page.read_text()
 text, count = re.subn(r'(<p class="abstract-copy">).*?(</p>)', lambda m: m[1]+abstract+m[2], text, count=1, flags=re.S)
 assert count == 1
-text = text.replace('Evaluating visual assistants with simulated human users in interactive worlds', 'Evaluating visual interaction models with simulated human users in interactive worlds')
+# Use the active paper title for the heading and browser/search metadata.
+source = re.sub(r'(?<!\\)%[^\n]*', '', (paper/'iclr2027_conference.tex').read_text())
+match = re.search(r'\\title\{([^{}]+)\}', source)
+assert match, 'Expected a plain-text paper title'
+title = ' '.join(match[1].split())
+name, separator, subtitle = title.partition(':')
+heading = ('<span class="title-name">'+html.escape(name+separator)+'</span> '
+           '<span class="title-description">'+html.escape(subtitle.strip())+'</span>') if separator else html.escape(title)
+text, count = re.subn(r'(<h1\b[^>]*id="paper-title"[^>]*>).*?(</h1>)', lambda m: m[1]+heading+m[2], text, count=1, flags=re.S)
+assert count == 1
+text = re.sub(r'<title>.*?</title>', lambda m: '<title>'+html.escape(title)+'</title>', text, count=1, flags=re.S)
+text = re.sub(r'<meta name="description" content="[^"]*">', lambda m: '<meta name="description" content="'+html.escape(title, quote=True)+'">', text, count=1)
 page.write_text(text)
 print(f'Exported {len(output["models"])} models × 2 timing conditions from {commit[:12]}')
