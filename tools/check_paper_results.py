@@ -14,7 +14,7 @@ paper=json.loads(snapshot.read_text())
 site=json.loads((ROOT/'docs/data/leaderboard.json').read_text())
 display=json.loads((PAPER/'tables/results_display.json').read_text())
 assert {m['id'] for m in site['models']}==set(display['main_models'])
-assert len(site['models'])==14
+assert len(site['models'])==15
 checks=0
 for m in site['models']:
     for cond in ['fixed','measured']:
